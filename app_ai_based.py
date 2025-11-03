@@ -1,0 +1,623 @@
+"""
+MT5 AI-Powered Trading Expert Advisor
+Analyzes technical indicators and generates professional trading signals
+"""
+
+import MetaTrader5 as mt5
+import pandas as pd
+import numpy as np
+from datetime import datetime, timedelta
+import time
+import json
+from dataclasses import dataclass
+from typing import Dict, List, Optional, Tuple
+import anthropic
+import openai
+import os
+from dotenv import load_dotenv
+import requests
+
+# Load environment variables from .env file
+load_dotenv()
+
+
+@dataclass
+class TradingSignal:
+    """Trading signal with complete trade parameters"""
+    symbol: str
+    signal_type: str  # 'LONG', 'SHORT', 'NEUTRAL'
+    entry_price: float
+    stop_loss: float
+    take_profit_1: float
+    take_profit_2: float
+    take_profit_3: float
+    position_size: float
+    confidence: str
+    reasoning: str
+    timestamp: datetime
+    indicators: Dict
+
+
+class TechnicalAnalyzer:
+    """Calculate technical indicators"""
+    
+    @staticmethod
+    def calculate_atr(df: pd.DataFrame, period: int = 14) -> float:
+        """Calculate Average True Range"""
+        high = df['high']
+        low = df['low']
+        close = df['close']
+        
+        tr1 = high - low
+        tr2 = abs(high - close.shift())
+        tr3 = abs(low - close.shift())
+        
+        tr = pd.concat([tr1, tr2, tr3], axis=1).max(axis=1)
+        atr = tr.rolling(window=period).mean().iloc[-1]
+        
+        return atr
+    
+    @staticmethod
+    def calculate_rsi(df: pd.DataFrame, period: int = 14) -> float:
+        """Calculate Relative Strength Index"""
+        close = df['close']
+        delta = close.diff()
+        
+        gain = (delta.where(delta > 0, 0)).rolling(window=period).mean()
+        loss = (-delta.where(delta < 0, 0)).rolling(window=period).mean()
+        
+        rs = gain / loss
+        rsi = 100 - (100 / (1 + rs))
+        
+        return rsi.iloc[-1]
+    
+    @staticmethod
+    def calculate_macd(df: pd.DataFrame, fast: int = 12, slow: int = 26, signal: int = 9) -> Tuple[float, float]:
+        """Calculate MACD and Signal line"""
+        close = df['close']
+        
+        ema_fast = close.ewm(span=fast, adjust=False).mean()
+        ema_slow = close.ewm(span=slow, adjust=False).mean()
+        
+        macd = ema_fast - ema_slow
+        signal_line = macd.ewm(span=signal, adjust=False).mean()
+        
+        return macd.iloc[-1], signal_line.iloc[-1]
+    
+    @staticmethod
+    def calculate_cci(df: pd.DataFrame, period: int = 20) -> float:
+        """Calculate Commodity Channel Index"""
+        typical_price = (df['high'] + df['low'] + df['close']) / 3
+        sma = typical_price.rolling(window=period).mean()
+        mean_deviation = typical_price.rolling(window=period).apply(
+            lambda x: np.abs(x - x.mean()).mean()
+        )
+        
+        cci = (typical_price - sma) / (0.015 * mean_deviation)
+        
+        return cci.iloc[-1]
+    
+    @staticmethod
+    def calculate_stochastic(df: pd.DataFrame, period: int = 14, smooth: int = 3) -> float:
+        """Calculate Stochastic Oscillator"""
+        low_min = df['low'].rolling(window=period).min()
+        high_max = df['high'].rolling(window=period).max()
+        
+        k = 100 * (df['close'] - low_min) / (high_max - low_min)
+        stoch = k.rolling(window=smooth).mean()
+        
+        return stoch.iloc[-1]
+
+
+class AITradingAgent:
+    """AI Agent for market analysis and signal generation"""
+
+    def __init__(self, api_key: str, provider: str = "anthropic"):
+        """Initialize AI client (Anthropic Claude, OpenAI GPT, DeepSeek, or Grok)"""
+        self.provider = provider.lower()
+        if self.provider == "anthropic":
+            self.client = anthropic.Anthropic(api_key=api_key)
+        elif self.provider == "openai":
+            self.client = openai.OpenAI(api_key=api_key)
+        elif self.provider == "deepseek":
+            self.api_key = api_key
+            self.base_url = "https://api.deepseek.com/v1"
+        elif self.provider == "grok":
+            self.api_key = api_key
+            self.base_url = "https://api.x.ai/v1"
+            self.model_name = "grok-4-latest"  # Use the correct model name
+        elif self.provider == "kilo_code":
+            self.api_key = api_key
+            self.base_url = "https://api.kilocode.com/v1"
+        else:
+            raise ValueError("Provider must be 'anthropic', 'openai', 'deepseek', 'grok', or 'kilo_code'")
+    
+    def analyze_market(self, indicators: Dict, symbol: str, timeframe: str) -> Dict:
+        """
+        Send indicators to Claude AI for professional analysis
+        Returns trading signal with complete parameters
+        """
+        
+        prompt = f"""Analyze {symbol} {timeframe} data: ATR={indicators['atr']:.4f}({indicators['volatility_level'][:1]}), RSI={indicators['rsi']:.1f}, MACD={indicators['macd']:.4f}/{indicators['macd_signal']:.4f}, CCI={indicators['cci']:.1f}, Stoch={indicators['stochastic']:.1f}, Bias={indicators['bias'][:3]}.
+
+Return JSON: {{"signal":"LONG/SHORT/NEUTRAL","confidence":"HIGH/MEDIUM/LOW","trend":"BULLISH/BEARISH/NEUTRAL/CONSOLIDATION","entry_strategy":"IMMEDIATE/WAIT_PULLBACK/WAIT_BREAKOUT","stop_loss_atr_multiplier":1.3-2.0,"take_profit_1_atr_multiplier":1.5,"take_profit_2_atr_multiplier":2.0,"take_profit_3_atr_multiplier":3.0,"position_size_adjustment":0.5-1.0,"reasoning":"Brief analysis","key_observations":["obs1","obs2","obs3"]}}"""
+
+        try:
+            if self.provider == "anthropic":
+                message = self.client.messages.create(
+                    model="claude-sonnet-4-20250514",
+                    max_tokens=512,
+                    messages=[
+                        {"role": "user", "content": prompt}
+                    ]
+                )
+                response_text = message.content[0].text
+                usage = getattr(message, 'usage', None)
+                input_tokens = getattr(usage, 'input_tokens', 0) if usage else 0
+                output_tokens = getattr(usage, 'output_tokens', 0) if usage else 0
+            elif self.provider == "openai":
+                response = self.client.chat.completions.create(
+                    model="gpt-4o-mini",
+                    messages=[
+                        {"role": "user", "content": prompt}
+                    ],
+                    max_tokens=512,
+                    temperature=0.7
+                )
+                response_text = response.choices[0].message.content
+                usage = getattr(response, 'usage', None)
+                input_tokens = getattr(usage, 'prompt_tokens', 0) if usage else 0
+                output_tokens = getattr(usage, 'completion_tokens', 0) if usage else 0
+            elif self.provider == "deepseek":
+                headers = {
+                    "Authorization": f"Bearer {self.api_key}",
+                    "Content-Type": "application/json"
+                }
+                data = {
+                    "model": "deepseek-chat",
+                    "messages": [
+                        {"role": "user", "content": prompt}
+                    ],
+                    "stream": False,
+                    "max_tokens": 512,
+                    "temperature": 0.7
+                }
+                response = requests.post(f"{self.base_url}/chat/completions", headers=headers, json=data)
+                response.raise_for_status()
+                response_data = response.json()
+                response_text = response_data["choices"][0]["message"]["content"]
+                usage = response_data.get("usage", {})
+                input_tokens = usage.get("prompt_tokens", 0)
+                output_tokens = usage.get("completion_tokens", 0)
+            elif self.provider == "grok":
+                headers = {
+                    "Authorization": f"Bearer {self.api_key}",
+                    "Content-Type": "application/json"
+                }
+                data = {
+                    "model": "grok-beta",
+                    "messages": [
+                        {"role": "user", "content": prompt}
+                    ],
+                    "max_tokens": 512,
+                    "temperature": 0.7,
+                    "stream": False
+                }
+                response = requests.post(f"{self.base_url}/chat/completions", headers=headers, json=data)
+                response.raise_for_status()
+                response_data = response.json()
+                response_text = response_data["choices"][0]["message"]["content"]
+                usage = response_data.get("usage", {})
+                input_tokens = usage.get("prompt_tokens", 0)
+                output_tokens = usage.get("completion_tokens", 0)
+            elif self.provider == "kilo_code":
+                headers = {
+                    "Authorization": f"Bearer {self.api_key}",
+                    "Content-Type": "application/json"
+                }
+                data = {
+                    "model": "grok-code-fast-1",
+                    "messages": [
+                        {"role": "user", "content": prompt}
+                    ],
+                    "max_tokens": 512,
+                    "temperature": 0.7,
+                    "stream": False
+                }
+                response = requests.post(f"{self.base_url}/chat/completions", headers=headers, json=data)
+                response.raise_for_status()
+                response_data = response.json()
+                response_text = response_data["choices"][0]["message"]["content"]
+                usage = response_data.get("usage", {})
+                input_tokens = usage.get("prompt_tokens", 0)
+                output_tokens = usage.get("completion_tokens", 0)
+
+            # Extract JSON from response
+            start = response_text.find('{')
+            end = response_text.rfind('}') + 1
+            json_str = response_text[start:end]
+
+            analysis = json.loads(json_str)
+            # Add token usage to analysis
+            analysis['token_usage'] = {
+                'input_tokens': input_tokens,
+                'output_tokens': output_tokens,
+                'total_tokens': input_tokens + output_tokens
+            }
+            return analysis
+
+        except Exception as e:
+            print(f"AI Analysis Error ({self.provider}): {e}")
+            return self._default_analysis()
+    
+    def _default_analysis(self) -> Dict:
+        """Fallback analysis if AI fails"""
+        return {
+            "signal": "NEUTRAL",
+            "confidence": "LOW",
+            "trend": "NEUTRAL",
+            "entry_strategy": "WAIT_BREAKOUT",
+            "stop_loss_atr_multiplier": 1.5,
+            "take_profit_1_atr_multiplier": 1.5,
+            "take_profit_2_atr_multiplier": 2.0,
+            "take_profit_3_atr_multiplier": 3.0,
+            "position_size_adjustment": 0.5,
+            "reasoning": "AI analysis unavailable - using conservative defaults",
+            "key_observations": ["Awaiting clear market direction"]
+        }
+
+
+class MT5TradingEA:
+    """Main Expert Advisor class"""
+    
+    def __init__(self, symbol: str, timeframe: int, lookback: int,
+                  ai_api_key: str, account_risk_percent: float = 1.0, ai_provider: str = "anthropic"):
+        """
+        Initialize MT5 Trading EA
+
+        Args:
+            symbol: Trading symbol (e.g., 'XAUUSD')
+            timeframe: MT5 timeframe (e.g., mt5.TIMEFRAME_H1)
+            lookback: Number of candles to analyze
+            ai_api_key: API key for AI provider (Anthropic or OpenAI)
+            account_risk_percent: Risk per trade as % of account
+            ai_provider: AI provider ('anthropic' or 'openai')
+        """
+        self.symbol = symbol
+        self.timeframe = timeframe
+        self.lookback = lookback
+        self.account_risk_percent = account_risk_percent
+        self.ai_provider = ai_provider
+
+        self.analyzer = TechnicalAnalyzer()
+        self.ai_agent = AITradingAgent(ai_api_key, ai_provider)
+        
+        self.current_signal: Optional[TradingSignal] = None
+        
+    def connect_mt5(self) -> bool:
+        """Connect to MT5 terminal"""
+        if not mt5.initialize():
+            print(f"MT5 initialization failed: {mt5.last_error()}")
+            return False
+        
+        print(f"MT5 Connected: {mt5.version()}")
+        print(f"Account: {mt5.account_info().login}")
+        return True
+    
+    def disconnect_mt5(self):
+        """Disconnect from MT5"""
+        mt5.shutdown()
+        print("MT5 Disconnected")
+    
+    def get_market_data(self) -> Optional[pd.DataFrame]:
+        """Fetch market data from MT5"""
+        rates = mt5.copy_rates_from_pos(self.symbol, self.timeframe, 0, self.lookback)
+        
+        if rates is None or len(rates) == 0:
+            print(f"Failed to get data for {self.symbol}")
+            return None
+        
+        df = pd.DataFrame(rates)
+        df['time'] = pd.to_datetime(df['time'], unit='s')
+        
+        return df
+    
+    def calculate_indicators(self, df: pd.DataFrame) -> Dict:
+        """Calculate all technical indicators"""
+        indicators = {
+            'atr': self.analyzer.calculate_atr(df),
+            'rsi': self.analyzer.calculate_rsi(df),
+            'macd': 0.0,
+            'macd_signal': 0.0,
+            'cci': self.analyzer.calculate_cci(df),
+            'stochastic': self.analyzer.calculate_stochastic(df),
+            'current_price': df['close'].iloc[-1]
+        }
+        
+        macd, signal = self.analyzer.calculate_macd(df)
+        indicators['macd'] = macd
+        indicators['macd_signal'] = signal
+        
+        # Ensure ATR is valid
+        if not np.isfinite(indicators['atr']) or indicators['atr'] <= 0:
+            indicators['atr'] = 1.0  # Default ATR if invalid
+
+        # Volatility classification
+        if indicators['atr'] > 15:
+            indicators['volatility_level'] = "Very High Volatility"
+        elif indicators['atr'] > 10:
+            indicators['volatility_level'] = "High Volatility"
+        elif indicators['atr'] > 5:
+            indicators['volatility_level'] = "Medium Volatility"
+        else:
+            indicators['volatility_level'] = "Low Volatility"
+
+        # Market bias based on last candle
+        indicators['bias'] = 'bullish' if df['close'].iloc[-1] > df['open'].iloc[-1] else 'bearish'
+
+        return indicators
+    
+    def generate_signal(self, indicators: Dict) -> TradingSignal:
+        """Generate trading signal using AI analysis"""
+        
+        # Get timeframe name
+        timeframe_map = {
+            mt5.TIMEFRAME_M1: "M1", mt5.TIMEFRAME_M5: "M5", 
+            mt5.TIMEFRAME_M15: "M15", mt5.TIMEFRAME_M30: "M30",
+            mt5.TIMEFRAME_H1: "H1", mt5.TIMEFRAME_H4: "H4",
+            mt5.TIMEFRAME_D1: "D1"
+        }
+        tf_name = timeframe_map.get(self.timeframe, "H1")
+        
+        # Get AI analysis
+        ai_analysis = self.ai_agent.analyze_market(indicators, self.symbol, tf_name)
+        
+        # Calculate trade parameters
+        current_price = indicators['current_price']
+        atr = indicators['atr']
+        
+        signal_type = ai_analysis['signal']
+        
+        # Calculate position size based on risk
+        account_info = mt5.account_info()
+        account_balance = account_info.balance
+        risk_amount = account_balance * (self.account_risk_percent / 100)
+        
+        # Adjust for volatility
+        position_adjustment = ai_analysis.get('position_size_adjustment', 1.0)
+        
+        if signal_type == "LONG":
+            stop_loss = current_price - (atr * ai_analysis['stop_loss_atr_multiplier'])
+            tp1 = current_price + (atr * ai_analysis['take_profit_1_atr_multiplier'])
+            tp2 = current_price + (atr * ai_analysis['take_profit_2_atr_multiplier'])
+            tp3 = current_price + (atr * ai_analysis['take_profit_3_atr_multiplier'])
+            
+        elif signal_type == "SHORT":
+            stop_loss = current_price + (atr * ai_analysis['stop_loss_atr_multiplier'])
+            tp1 = current_price - (atr * ai_analysis['take_profit_1_atr_multiplier'])
+            tp2 = current_price - (atr * ai_analysis['take_profit_2_atr_multiplier'])
+            tp3 = current_price - (atr * ai_analysis['take_profit_3_atr_multiplier'])
+            
+        else:  # NEUTRAL
+            stop_loss = current_price - (atr * 1.5)  # Default SL for neutral
+            tp1 = current_price + (atr * 1.5)  # Default TP for neutral
+            tp2 = current_price + (atr * 2.0)
+            tp3 = current_price + (atr * 3.0)
+        
+        # Calculate lot size
+        symbol_info = mt5.symbol_info(self.symbol)
+        point = symbol_info.point
+        stop_distance = abs(current_price - stop_loss)
+        
+        # Risk per pip
+        lot_size = risk_amount / (stop_distance / point * symbol_info.trade_contract_size)
+        lot_size *= position_adjustment
+        
+        # Round to allowed lot size
+        lot_size = max(symbol_info.volume_min, 
+                      min(lot_size, symbol_info.volume_max))
+        lot_size = round(lot_size / symbol_info.volume_step) * symbol_info.volume_step
+        
+        # Create signal
+        signal = TradingSignal(
+            symbol=self.symbol,
+            signal_type=signal_type,
+            entry_price=current_price,
+            stop_loss=stop_loss,
+            take_profit_1=tp1,
+            take_profit_2=tp2,
+            take_profit_3=tp3,
+            position_size=lot_size,
+            confidence=ai_analysis['confidence'],
+            reasoning=ai_analysis['reasoning'],
+            timestamp=datetime.now(),
+            indicators=indicators
+        )
+        
+        return signal
+    
+    def print_signal(self, signal: TradingSignal):
+        """Display trading signal in professional format"""
+        print("\n" + "="*80)
+        print(f"🤖 AI TRADING SIGNAL - {signal.symbol}")
+        print("="*80)
+        print(f"Timestamp: {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"\n📊 MARKET ANALYSIS:")
+        print(f"  ATR: {signal.indicators['atr']:.6f} ({signal.indicators['volatility_level']})")
+        print(f"  RSI: {signal.indicators['rsi']:.2f}")
+        print(f"  MACD: {signal.indicators['macd']:.6f} | Signal: {signal.indicators['macd_signal']:.6f}")
+        print(f"  CCI: {signal.indicators['cci']:.2f}")
+        print(f"  Stochastic: {signal.indicators['stochastic']:.2f}")
+        print(f"  Market Bias: {signal.indicators['bias']}")
+        
+        print(f"\n🎯 TRADING SIGNAL: {signal.signal_type}")
+        print(f"  Confidence: {signal.confidence}")
+        print(f"  Entry Price: {signal.entry_price:.5f}")
+        print(f"  Position Size: {signal.position_size:.2f} lots")
+        
+        print(f"\n🛡️ RISK MANAGEMENT:")
+        stop_distance = abs(signal.entry_price - signal.stop_loss)
+        print(f"  Stop Loss: {signal.stop_loss:.5f} ({stop_distance:.5f} pts)")
+
+        if stop_distance > 0:
+            rr1 = abs(signal.take_profit_1 - signal.entry_price) / stop_distance
+            rr2 = abs(signal.take_profit_2 - signal.entry_price) / stop_distance
+            rr3 = abs(signal.take_profit_3 - signal.entry_price) / stop_distance
+            print(f"  Take Profit 1: {signal.take_profit_1:.5f} (R:R {rr1:.2f})")
+            print(f"  Take Profit 2: {signal.take_profit_2:.5f} (R:R {rr2:.2f})")
+            print(f"  Take Profit 3: {signal.take_profit_3:.5f} (R:R {rr3:.2f})")
+        else:
+            print(f"  Take Profit 1: {signal.take_profit_1:.5f} (R:R N/A)")
+            print(f"  Take Profit 2: {signal.take_profit_2:.5f} (R:R N/A)")
+            print(f"  Take Profit 3: {signal.take_profit_3:.5f} (R:R N/A)")
+        
+        print(f"\n💡 AI REASONING:")
+        print(f"  {signal.reasoning}")
+        print("="*80 + "\n")
+    
+    def execute_trade(self, signal: TradingSignal, auto_execute: bool = False) -> bool:
+        """
+        Execute trade on MT5
+        
+        Args:
+            signal: TradingSignal object
+            auto_execute: If True, execute without confirmation
+        """
+        if signal.signal_type == "NEUTRAL":
+            print("⚠️  No trade signal - Market is NEUTRAL")
+            return False
+        
+        if not auto_execute:
+            response = input(f"\n Execute {signal.signal_type} trade? (yes/no): ")
+            if response.lower() not in ['yes', 'y']:
+                print("❌ Trade execution cancelled")
+                return False
+        
+        # Prepare trade request
+        order_type = mt5.ORDER_TYPE_BUY if signal.signal_type == "LONG" else mt5.ORDER_TYPE_SELL
+        
+        request = {
+            "action": mt5.TRADE_ACTION_DEAL,
+            "symbol": signal.symbol,
+            "volume": signal.position_size,
+            "type": order_type,
+            "price": signal.entry_price,
+            "sl": signal.stop_loss,
+            "tp": signal.take_profit_1,  # Set first TP by default
+            "deviation": 20,
+            "magic": 234000,
+            "comment": f"AI_EA_{signal.confidence}",
+            "type_time": mt5.ORDER_TIME_GTC,
+            "type_filling": mt5.ORDER_FILLING_IOC,
+        }
+        
+        # Send order
+        result = mt5.order_send(request)
+        
+        if result.retcode != mt5.TRADE_RETCODE_DONE:
+            print(f"❌ Trade execution failed: {result.comment}")
+            return False
+        
+        print(f"✅ Trade executed successfully!")
+        print(f"   Order: {result.order}")
+        print(f"   Volume: {result.volume}")
+        print(f"   Price: {result.price}")
+        
+        return True
+    
+    def run(self, interval_seconds: int = 300, auto_execute: bool = False):
+        """
+        Run EA continuously
+        
+        Args:
+            interval_seconds: Time between analysis cycles
+            auto_execute: Automatically execute trades
+        """
+        if not self.connect_mt5():
+            return
+        
+        print(f"\n🚀 AI Trading EA Started")
+        print(f"   Symbol: {self.symbol}")
+        print(f"   Timeframe: {self.timeframe}")
+        print(f"   Lookback: {self.lookback} candles")
+        print(f"   Risk per trade: {self.account_risk_percent}%")
+        print(f"   AI Provider: {self.ai_provider}")
+        print(f"   Auto-execute: {auto_execute}")
+        print(f"   Analysis interval: {interval_seconds}s\n")
+        
+        try:
+            while True:
+                # Get market data
+                df = self.get_market_data()
+                if df is None:
+                    time.sleep(interval_seconds)
+                    continue
+                
+                # Calculate indicators
+                indicators = self.calculate_indicators(df)
+                
+                # Generate signal
+                signal = self.generate_signal(indicators)
+                self.current_signal = signal
+                
+                # Display signal
+                self.print_signal(signal)
+                
+                # Execute if configured
+                if signal.signal_type != "NEUTRAL" and auto_execute:
+                    self.execute_trade(signal, auto_execute=True)
+                
+                # Wait for next cycle
+                print(f"⏳ Next analysis in {interval_seconds} seconds...")
+                time.sleep(interval_seconds)
+                
+        except KeyboardInterrupt:
+            print("\n\n⛔ EA stopped by user")
+        finally:
+            self.disconnect_mt5()
+
+
+def main():
+    """Main execution function"""
+
+    # Configuration
+    SYMBOL = "Volatility 75 Index"
+    TIMEFRAME = mt5.TIMEFRAME_H1
+    LOOKBACK = 150
+    RISK_PERCENT = 1.0  # Risk 1% per trade
+
+    # AI Provider selection
+    print("Select AI Provider:")
+    print("1. Anthropic Claude")
+    print("2. OpenAI GPT")
+    choice = input("Enter choice (1 or 2): ").strip()
+
+    if choice == "1":
+        AI_PROVIDER = "anthropic"
+        API_KEY = os.getenv("ANTHROPIC_API_KEY", "your-anthropic-api-key-here")
+    elif choice == "2":
+        AI_PROVIDER = "openai"
+        API_KEY = os.getenv("OPENAI_API_KEY", openai.api_key)
+    else:
+        print("Invalid choice, defaulting to Anthropic Claude")
+        AI_PROVIDER = "anthropic"
+        API_KEY = os.getenv("ANTHROPIC_API_KEY", "your-anthropic-api-key-here")
+
+    # Create EA instance
+    ea = MT5TradingEA(
+        symbol=SYMBOL,
+        timeframe=TIMEFRAME,
+        lookback=LOOKBACK,
+        ai_api_key=API_KEY,
+        account_risk_percent=RISK_PERCENT,
+        ai_provider=AI_PROVIDER
+    )
+
+    # Run EA
+    # Set auto_execute=True to automatically execute trades
+    # Set auto_execute=False to manually confirm each trade
+    ea.run(interval_seconds=300, auto_execute=False)
+
+
+if __name__ == "__main__":
+    main()
