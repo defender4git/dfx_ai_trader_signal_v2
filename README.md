@@ -1,11 +1,11 @@
-# AI Trading Expert Advisor
+# AI Trading Signal Generatoe
 
 A professional AI-powered trading system that analyzes technical indicators and generates trading signals using multiple AI providers. Features a modern web interface for real-time market analysis and automated trading execution.
 
 ## 🚀 Features
 
 ### Core Functionality
-- **Multi-Provider AI Analysis**: Support for 5 different AI providers (Anthropic Claude, OpenAI GPT, DeepSeek, Grok, Kilo Code)
+- **Multi-Provider AI Analysis**: Support for 5 different AI providers (Anthropic Claude, OpenAI GPT, DeepSeek, Grok)
 - **Real-time Market Analysis**: Live technical indicator calculations (ATR, RSI, MACD, CCI, Stochastic)
 - **Professional Trading Signals**: Complete trade parameters with risk management
 - **Dynamic Symbol Loading**: Automatically loads available symbols from connected MT5 broker
