@@ -24,22 +24,33 @@ from app_ai_based import MT5TradingEA, TradingSignal
 # Import Flask extensions for user management
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from flask_sqlalchemy import SQLAlchemy
+from flask_mail import Mail, Message
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__,
             template_folder='templates',
             static_folder='static')
 
-# Flask configuration for user managementyour-secret-key-here
+# Flask configuration for user management
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'lIMITED123!XsfegthhhttbMF34R9FSSWW')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Flask-Mail configuration
+app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER', 'smtp.gmail.com')
+app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT', 587))
+app.config['MAIL_USE_TLS'] = os.getenv('MAIL_USE_TLS', 'True').lower() == 'true'
+app.config['MAIL_USE_SSL'] = os.getenv('MAIL_USE_SSL', 'False').lower() == 'true'
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_DEFAULT_SENDER', app.config['MAIL_USERNAME'])
 
 # Initialize extensions
 db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
+mail = Mail(app)
 
 # Global variables to store the EA instance and current signal
 ea_instance = None
@@ -53,6 +64,7 @@ class User(UserMixin, db.Model):
     password_hash = db.Column(db.String(150), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     is_admin = db.Column(db.Boolean, default=False)
+    email_notifications = db.Column(db.Boolean, default=True)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -63,6 +75,55 @@ class User(UserMixin, db.Model):
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
+
+def send_signal_alert(user_email, signal_data):
+    """Send email alert for new trading signal"""
+    if not app.config['MAIL_USERNAME'] or not app.config['MAIL_PASSWORD']:
+        print("⚠️  Email configuration not found - skipping alert")
+        return
+
+    try:
+        subject = f"🚨 AI Trading Signal Alert - {signal_data['symbol']}"
+
+        body = f"""
+AI Trading Signal Generator Alert
+
+📊 Signal Details:
+• Symbol: {signal_data['symbol']}
+• Signal Type: {signal_data['signal_type']}
+• Confidence: {signal_data['confidence']}
+• Entry Price: {signal_data['entry_price']:.5f}
+• Stop Loss: {signal_data['stop_loss']:.5f}
+• Take Profit 1: {signal_data['take_profit_1']:.5f}
+• Position Size: {signal_data['position_size']:.2f} lots
+
+💡 AI Reasoning:
+{signal_data['reasoning']}
+
+📈 Technical Indicators:
+• ATR: {signal_data.get('atr', 'N/A')}
+• RSI: {signal_data.get('rsi', 'N/A')}
+• MACD: {signal_data.get('macd', 'N/A')}
+• CCI: {signal_data.get('cci', 'N/A')}
+
+⏰ Generated: {signal_data['timestamp']}
+
+---
+AI Trading Signal Generator
+Real-time market analysis and automated signals
+        """
+
+        msg = Message(
+            subject=subject,
+            recipients=[user_email],
+            body=body
+        )
+
+        mail.send(msg)
+        print(f"✅ Signal alert sent to {user_email}")
+
+    except Exception as e:
+        print(f"❌ Failed to send email alert: {e}")
 
 @app.route('/')
 def index():
@@ -216,6 +277,29 @@ def run_ai_analysis():
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+    # Send email alerts to all users with notifications enabled
+    try:
+        users_with_notifications = User.query.filter_by(email_notifications=True).all()
+        for user in users_with_notifications:
+            signal_alert_data = {
+                'symbol': signal.symbol,
+                'signal_type': signal.signal_type,
+                'confidence': signal.confidence,
+                'entry_price': signal.entry_price,
+                'stop_loss': signal.stop_loss,
+                'take_profit_1': signal.take_profit_1,
+                'position_size': signal.position_size,
+                'reasoning': signal.reasoning,
+                'timestamp': signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC'),
+                'atr': indicators.get('atr', 0),
+                'rsi': indicators.get('rsi', 0),
+                'macd': indicators.get('macd', 0),
+                'cci': indicators.get('cci', 0)
+            }
+            send_signal_alert(user.email, signal_alert_data)
+    except Exception as e:
+        print(f"⚠️  Error sending email alerts: {e}")
 
 @app.route('/get_current_signal')
 @login_required
