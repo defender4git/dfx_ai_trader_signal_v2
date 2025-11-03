@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # 🤖 AI Trading Signal Generator
+=======
+# AI Trading Signal Generator
+>>>>>>> fde187184aa8c6c5ea01ae626ab26ece046c86c8
 
 <div align="center">
 
@@ -8,7 +12,17 @@
 ![MetaTrader 5](https://img.shields.io/badge/MetaTrader--5-FFD700?style=flat-square&logo=metatrader&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
+<<<<<<< HEAD
 **Professional AI-Powered Trading System with Modern Web Interface**
+=======
+### Core Functionality
+- **Multi-Provider AI Analysis**: Support for 5 different AI providers (Anthropic Claude, OpenAI GPT, DeepSeek, Grok)
+- **Real-time Market Analysis**: Live technical indicator calculations (ATR, RSI, MACD, CCI, Stochastic)
+- **Professional Trading Signals**: Complete trade parameters with risk management
+- **Dynamic Symbol Loading**: Automatically loads available symbols from connected MT5 broker
+- **Token Usage Tracking**: Real-time monitoring of API usage and TPM limits
+- **Web-based Interface**: Modern, responsive UI built with Tailwind CSS
+>>>>>>> fde187184aa8c6c5ea01ae626ab26ece046c86c8
 
 *Real-time market analysis, automated trading signals, and comprehensive risk management*
 
@@ -329,6 +343,7 @@ Execute trading signal
 
 ---
 
+<<<<<<< HEAD
 ## 🛡️ Security & Best Practices
 
 ### 🔐 API Security
@@ -501,3 +516,6 @@ This software is provided "as-is" for educational and informational purposes onl
 *Happy Trading with AI Trading Signal Generator!* 🚀📈
 
 </div>
+=======
+**Happy Trading!** 📈💰
+>>>>>>> fde187184aa8c6c5ea01ae626ab26ece046c86c8
