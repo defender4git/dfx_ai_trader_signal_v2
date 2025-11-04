@@ -465,10 +465,24 @@ def get_user_signals():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    # Create database tables
+    # Create database tables and handle migrations
     with app.app_context():
+        # Create all tables
         db.create_all()
 
-    print("🚀 Starting AI Trading Signal Generator Web Interface...")
-    print("📊 Open your browser to http://localhost:9000")
+        # Add email_notifications column if it doesn't exist (migration)
+        try:
+            # Check if column exists by trying to query it
+            User.query.filter_by(email_notifications=True).first()
+        except Exception as e:
+            if 'no such column' in str(e):
+                print("Adding email_notifications column to User table...")
+                # For SQLAlchemy 2.0+, use connection.execute()
+                with db.engine.connect() as conn:
+                    conn.execute(db.text('ALTER TABLE user ADD COLUMN email_notifications BOOLEAN DEFAULT 1'))
+                    conn.commit()
+                print("Database migration completed")
+
+    print("Starting AI Trading Signal Generator Web Interface...")
+    print("Open your browser to http://localhost:9000")
     app.run(debug=True, host='0.0.0.0', port=9000)
