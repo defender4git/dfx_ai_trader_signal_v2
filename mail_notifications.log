@@ -232,3 +232,7 @@
 2025-11-05 16:59:31 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSDm
 2025-11-05 16:59:33 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSDm
 2025-11-05 16:59:33 - INFO - 127.0.0.1 - - [05/Nov/2025 16:59:33] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-05 17:34:07 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-05 17:34:10 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-05 17:34:21 - WARNING -  * Debugger is active!
+2025-11-05 17:34:21 - INFO -  * Debugger PIN: 169-689-135

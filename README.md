@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # 🤖 AI Trading Signal Generator
-=======
-# AI Trading Signal Generator
->>>>>>> fde187184aa8c6c5ea01ae626ab26ece046c86c8
 
 <div align="center">
 
@@ -12,19 +8,20 @@
 ![MetaTrader 5](https://img.shields.io/badge/MetaTrader--5-FFD700?style=flat-square&logo=metatrader&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
-<<<<<<< HEAD
-**Professional AI-Powered Trading System with Modern Web Interface**
-=======
+**Professional AI-Powered Trading System with Modern Web Interface & Email Notifications**
+
 ### Core Functionality
-- **Multi-Provider AI Analysis**: Support for 5 different AI providers (Anthropic Claude, OpenAI GPT, DeepSeek, Grok)
+- **Multi-Provider AI Analysis**: Support for 5 different AI providers (Anthropic Claude, OpenAI GPT, DeepSeek, Grok, Kilo Code)
 - **Real-time Market Analysis**: Live technical indicator calculations (ATR, RSI, MACD, CCI, Stochastic)
 - **Professional Trading Signals**: Complete trade parameters with risk management
 - **Dynamic Symbol Loading**: Automatically loads available symbols from connected MT5 broker
 - **Token Usage Tracking**: Real-time monitoring of API usage and TPM limits
 - **Web-based Interface**: Modern, responsive UI built with Tailwind CSS
->>>>>>> fde187184aa8c6c5ea01ae626ab26ece046c86c8
+- **Email Notifications**: Automated email alerts for trading signals with activity logging
+- **User Management**: Secure authentication, registration, and profile management
+- **Activity Logging**: Comprehensive tracking of email notifications and system activities
 
-*Real-time market analysis, automated trading signals, and comprehensive risk management*
+*Real-time market analysis, automated trading signals, email notifications, and comprehensive risk management*
 
 [🚀 Quick Start](#-installation) • [📖 Documentation](#-features) • [🔧 API Reference](#-api-reference) • [📞 Support](#-contact)
 
@@ -42,6 +39,7 @@
 - [🎯 Usage](#-usage)
 - [🔧 API Reference](#-api-reference)
 - [📊 Token Management](#-token-management)
+- [📧 Email Notifications](#-email-notifications)
 - [🛡️ Security & Best Practices](#️-security--best-practices)
 - [🐛 Troubleshooting](#-troubleshooting)
 - [📈 Performance Optimization](#-performance-optimization)
@@ -56,7 +54,7 @@
 
 **AI Trading Signal Generator** is a cutting-edge, professional-grade trading system that leverages multiple AI providers to deliver sophisticated market analysis and automated trading signals. Built with modern web technologies and comprehensive risk management, it provides traders with institutional-quality tools in an accessible, user-friendly interface.
 
-The system integrates seamlessly with MetaTrader 5, offering real-time technical analysis, multi-timeframe support, and intelligent position sizing with advanced risk controls.
+The system integrates seamlessly with MetaTrader 5, offering real-time technical analysis, multi-timeframe support, intelligent position sizing with advanced risk controls, and automated email notifications for trading signals.
 
 ---
 
@@ -78,6 +76,14 @@ The system integrates seamlessly with MetaTrader 5, offering real-time technical
 - **Real-Time Updates**: Live market data and signal monitoring
 - **User Management**: Secure authentication and personalized dashboards
 - **Token Tracking**: Comprehensive API usage monitoring
+- **Activity Logging**: Complete history of email notifications and system activities
+
+### 📧 Email Notification System
+- **Automated Alerts**: Instant email notifications for new trading signals
+- **Rich Content**: Detailed signal information with technical indicators
+- **Delivery Tracking**: Success/failure logging for all email attempts
+- **User Preferences**: Configurable notification settings per user
+- **Activity History**: Complete audit trail in user profile
 
 ### 🛡️ Risk Management
 - **Dynamic Position Sizing**: Account balance and volatility-based calculations
@@ -111,6 +117,7 @@ The system integrates seamlessly with MetaTrader 5, offering real-time technical
 - **AI Provider Account**: At least one supported AI service
 - **Trading Account**: MetaTrader 5 account with market data access
 - **Broker Permissions**: Automated trading enabled
+- **Email Service**: SMTP server access for notifications (Gmail, Outlook, etc.)
 
 ---
 
@@ -171,6 +178,15 @@ DEEPSEEKER_API_KEY=sk-your-deepseek-key-here
 GROK_API_KEY=xai-your-grok-key-here
 KILO_CODE_API_KEY=your-kilo-code-key-here
 
+# EMAIL CONFIGURATION
+MAIL_SERVER=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USE_TLS=True
+MAIL_USE_SSL=False
+MAIL_USERNAME=your-email@gmail.com
+MAIL_PASSWORD=your-app-password
+MAIL_DEFAULT_SENDER=your-email@gmail.com
+
 # APPLICATION SETTINGS
 SECRET_KEY=your-secure-random-secret-key-here
 AI_PROVIDER=anthropic
@@ -194,6 +210,31 @@ DEFAULT_SYMBOL=XAUUSD
 
 ---
 
+## 📧 Email Notifications
+
+### Setup Process
+
+1. **Choose Email Provider**: Gmail, Outlook, Yahoo, or custom SMTP
+2. **Generate App Password**: For Gmail/Outlook, create app-specific password
+3. **Configure Environment**: Update `.env` file with email settings
+4. **Test Configuration**: Use the web interface to verify email delivery
+
+### Email Features
+
+- **Signal Alerts**: Automatic notifications when AI generates trading signals
+- **Rich Formatting**: Professional email layout with signal details
+- **Technical Data**: Includes ATR, RSI, MACD, CCI, and other indicators
+- **Risk Parameters**: Complete trade setup information
+- **Delivery Tracking**: Success/failure logging in activity log
+
+### User Preferences
+
+- **Notification Toggle**: Enable/disable email notifications per user
+- **Activity History**: View all email delivery attempts in profile
+- **Status Tracking**: Monitor success/failure of notifications
+
+---
+
 ## 🎯 Usage
 
 ### Web Interface (Recommended)
@@ -208,16 +249,18 @@ Navigate to `http://localhost:9000` and log in to access the trading dashboard.
 #### Dashboard Features:
 - **📊 Real-time Analysis**: Live market data and indicator monitoring
 - **🎯 Signal Generation**: AI-powered trading signals with full parameters
+- **📧 Email Notifications**: Automatic alerts for new signals
 - **📱 Responsive Design**: Optimized for all device types
 - **👤 User Management**: Secure authentication and profile management
 - **📈 Performance Tracking**: Historical signal analysis and filtering
+- **📋 Activity Log**: Complete history of email notifications and activities
 
-### Command Line Operation
+### User Registration & Authentication
 
-```bash
-# Run console-based analysis
-python app_ai_based.py
-```
+1. **Register**: Create account with email for notifications
+2. **Login**: Secure authentication with session management
+3. **Profile**: Manage notification preferences and view activity log
+4. **Settings**: Configure email notification preferences
 
 ### Configuration Panel Options
 
@@ -225,7 +268,8 @@ python app_ai_based.py
 2. **Timeframe**: M1, M5, M15, M30, H1, H4, D1
 3. **AI Provider**: Select based on preference and token limits
 4. **Risk Management**: 0.1% to 5.0% per trade
-5. **Analysis Control**: Start/stop automated analysis
+5. **Email Settings**: Configure notification preferences
+6. **Analysis Control**: Start/stop automated analysis
 
 ---
 
@@ -255,7 +299,7 @@ User registration
 ### Trading Endpoints
 
 #### `POST /run_ai_analysis`
-Execute market analysis
+Execute market analysis and send email notifications
 ```json
 {
   "symbol": "XAUUSD",
@@ -315,6 +359,14 @@ Execute trading signal
 }
 ```
 
+### Notification Endpoints
+
+#### `GET /profile`
+User profile with activity log
+- Shows email notification history
+- Displays success/failure status
+- Includes detailed activity tracking
+
 ---
 
 ## 📊 Token Management
@@ -343,7 +395,6 @@ Execute trading signal
 
 ---
 
-<<<<<<< HEAD
 ## 🛡️ Security & Best Practices
 
 ### 🔐 API Security
@@ -351,6 +402,12 @@ Execute trading signal
 - **Key Rotation**: Regular key updates and monitoring
 - **Access Control**: IP whitelisting and rate limiting
 - **Encryption**: Secure storage of sensitive data
+
+### 📧 Email Security
+- **App Passwords**: Use application-specific passwords for Gmail/Outlook
+- **SMTP Encryption**: TLS encryption for secure email transmission
+- **Rate Limiting**: Prevent email spam and abuse
+- **User Consent**: Opt-in notification preferences
 
 ### 📈 Trading Safety
 - **Demo Testing**: Always test on demo account first
@@ -381,6 +438,12 @@ python -c "import MetaTrader5 as mt5; print(mt5.initialize())"
   - Add localhost to WebRequest URLs
   - Check firewall settings
 
+#### Email Configuration Issues
+- **Gmail Setup**: Enable 2FA and generate app password
+- **Port Issues**: Verify SMTP ports (587 for TLS, 465 for SSL)
+- **Authentication**: Check username/password in `.env`
+- **Firewall**: Ensure SMTP ports are not blocked
+
 #### AI API Errors
 - **Rate Limits**: Switch providers or reduce frequency
 - **Invalid Keys**: Verify API keys in `.env` file
@@ -404,6 +467,7 @@ python web_app.py
 - Review web interface analysis logs
 - Monitor token usage in dashboard footer
 - Examine MT5 terminal logs
+- Check `mail_notifications.log` for email delivery status
 
 ---
 
@@ -426,6 +490,7 @@ python web_app.py
 - **Success Rates**: Signal accuracy and execution success
 - **Resource Usage**: Memory, CPU, and network monitoring
 - **Error Rates**: Comprehensive error tracking and alerting
+- **Email Delivery**: Notification success/failure tracking
 
 ---
 
@@ -483,7 +548,7 @@ This software is provided "as-is" for educational and informational purposes onl
 
 ### Developer Information
 
-**Kilo Code**  
+**Kilo Code**
 *AI-Powered Software Development Agent*
 
 ### Support Channels
@@ -516,6 +581,3 @@ This software is provided "as-is" for educational and informational purposes onl
 *Happy Trading with AI Trading Signal Generator!* 🚀📈
 
 </div>
-=======
-**Happy Trading!** 📈💰
->>>>>>> fde187184aa8c6c5ea01ae626ab26ece046c86c8
