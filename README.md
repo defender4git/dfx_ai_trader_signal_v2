@@ -545,18 +545,8 @@ This software is provided "as-is" for educational and informational purposes onl
 ---
 
 ## 📞 Contact
-
-### Developer Information
-
-**Kilo Code**
-*AI-Powered Software Development Agent*
-
-### Support Channels
-
-- **📧 Email**: support@kilocode.com
-- **🐛 Issues**: [GitHub Issues](https://github.com/kilocode/ai-trading-ea/issues)
-- **💬 Discussions**: [GitHub Discussions](https://github.com/kilocode/ai-trading-ea/discussions)
-- **📖 Documentation**: [Wiki](https://github.com/kilocode/ai-trading-ea/wiki)
+- kizito2008@yahoo.com
+- agent kilocode
 
 ### Professional Services
 
