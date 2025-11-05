@@ -341,33 +341,35 @@ def run_ai_analysis():
             })
         }
 
+        # Send email alerts to all users with notifications enabled
+        try:
+            users_with_notifications = User.query.filter_by(email_notifications=True).all()
+            for user in users_with_notifications:
+                signal_alert_data = {
+                    'symbol': signal.symbol,
+                    'signal_type': signal.signal_type,
+                    'confidence': signal.confidence,
+                    'entry_price': signal.entry_price,
+                    'stop_loss': signal.stop_loss,
+                    'take_profit_1': signal.take_profit_1,
+                    'take_profit_2': signal.take_profit_2,
+                    'take_profit_3': signal.take_profit_3,
+                    'position_size': signal.position_size,
+                    'reasoning': signal.reasoning,
+                    'timestamp': signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC'),
+                    # 'atr': indicators.get('atr', 0),
+                    # 'rsi': indicators.get('rsi', 0),
+                    # 'macd': indicators.get('macd', 0),
+                    # 'cci': indicators.get('cci', 0)
+                }
+                send_signal_alert(user.email, signal_alert_data)
+        except Exception as e:
+            print(f"⚠️  Error sending email alerts: {e}")
+
         return jsonify(response)
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-
-    # Send email alerts to all users with notifications enabled
-    try:
-        users_with_notifications = User.query.filter_by(email_notifications=True).all()
-        for user in users_with_notifications:
-            signal_alert_data = {
-                'symbol': signal.symbol,
-                'signal_type': signal.signal_type,
-                'confidence': signal.confidence,
-                'entry_price': signal.entry_price,
-                'stop_loss': signal.stop_loss,
-                'take_profit_1': signal.take_profit_1,
-                'position_size': signal.position_size,
-                'reasoning': signal.reasoning,
-                'timestamp': signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC'),
-                'atr': indicators.get('atr', 0),
-                'rsi': indicators.get('rsi', 0),
-                'macd': indicators.get('macd', 0),
-                'cci': indicators.get('cci', 0)
-            }
-            send_signal_alert(user.email, signal_alert_data)
-    except Exception as e:
-        print(f"⚠️  Error sending email alerts: {e}")
 
 @app.route('/get_current_signal')
 @login_required
