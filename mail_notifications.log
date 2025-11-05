@@ -228,3 +228,7 @@
 2025-11-05 16:42:58 - INFO -  * Restarting with watchdog (windowsapi)
 2025-11-05 16:43:03 - WARNING -  * Debugger is active!
 2025-11-05 16:43:03 - INFO -  * Debugger PIN: 169-689-135
+2025-11-05 16:59:27 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-05 16:59:31 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSDm
+2025-11-05 16:59:33 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSDm
+2025-11-05 16:59:33 - INFO - 127.0.0.1 - - [05/Nov/2025 16:59:33] "POST /run_ai_analysis HTTP/1.1" 200 -
