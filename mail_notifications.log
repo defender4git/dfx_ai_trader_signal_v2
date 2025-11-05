@@ -1,0 +1,78 @@
+2025-11-04 22:27:42 - WARNING -  * Debugger is active!
+2025-11-04 22:27:42 - INFO -  * Debugger PIN: 169-689-135
+2025-11-04 22:28:59 - INFO - 127.0.0.1 - - [04/Nov/2025 22:28:59] "[32mGET / HTTP/1.1[0m" 302 -
+2025-11-04 22:28:59 - INFO - 127.0.0.1 - - [04/Nov/2025 22:28:59] "GET /login HTTP/1.1" 200 -
+2025-11-04 22:29:01 - INFO - 127.0.0.1 - - [04/Nov/2025 22:29:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-04 22:29:13 - INFO - 127.0.0.1 - - [04/Nov/2025 22:29:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-11-04 22:29:13 - INFO - 127.0.0.1 - - [04/Nov/2025 22:29:13] "GET / HTTP/1.1" 200 -
+2025-11-04 22:29:14 - INFO - 127.0.0.1 - - [04/Nov/2025 22:29:14] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-04 22:29:25 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-04 22:29:25 - INFO - 10.179.2.207 - - [04/Nov/2025 22:29:25] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2025-11-04 22:29:51 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-04 22:29:51 - INFO - 127.0.0.1 - - [04/Nov/2025 22:29:51] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-04 22:33:53 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-04 22:33:59 - WARNING -  * Debugger is active!
+2025-11-04 22:33:59 - INFO -  * Debugger PIN: 169-689-135
+2025-11-04 22:34:08 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-04 22:34:16 - WARNING -  * Debugger is active!
+2025-11-04 22:34:16 - INFO -  * Debugger PIN: 169-689-135
+2025-11-04 22:34:39 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-04 22:34:45 - WARNING -  * Debugger is active!
+2025-11-04 22:34:45 - INFO -  * Debugger PIN: 169-689-135
+2025-11-04 22:39:20 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-04 22:39:20 - INFO - 10.179.2.207 - - [04/Nov/2025 22:39:20] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-04 22:39:30 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.179.2.207:9000
+2025-11-04 22:39:30 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-04 22:39:30 - INFO -  * Restarting with stat
+2025-11-04 22:39:34 - WARNING -  * Debugger is active!
+2025-11-04 22:39:34 - INFO -  * Debugger PIN: 169-689-135
+2025-11-04 22:40:23 - INFO - 127.0.0.1 - - [04/Nov/2025 22:40:23] "GET / HTTP/1.1" 200 -
+2025-11-04 22:40:24 - INFO - 127.0.0.1 - - [04/Nov/2025 22:40:24] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-04 22:41:15 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-04 22:41:15 - INFO - 127.0.0.1 - - [04/Nov/2025 22:41:15] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-04 22:41:34 - INFO - 127.0.0.1 - - [04/Nov/2025 22:41:34] "GET /profile HTTP/1.1" 200 -
+2025-11-04 22:41:35 - INFO - 127.0.0.1 - - [04/Nov/2025 22:41:35] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-04 22:42:55 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-04 22:42:56 - INFO -  * Restarting with stat
+2025-11-04 22:43:08 - WARNING -  * Debugger is active!
+2025-11-04 22:43:08 - INFO -  * Debugger PIN: 169-689-135
+2025-11-04 22:43:25 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-04 22:43:25 - INFO -  * Restarting with stat
+2025-11-04 22:43:31 - WARNING -  * Debugger is active!
+2025-11-04 22:43:31 - INFO -  * Debugger PIN: 169-689-135
+2025-11-04 22:43:44 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.179.2.207:9000
+2025-11-04 22:43:44 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-04 22:43:44 - INFO -  * Restarting with stat
+2025-11-04 22:43:47 - WARNING -  * Debugger is active!
+2025-11-04 22:43:47 - INFO -  * Debugger PIN: 169-689-135
+2025-11-04 22:44:18 - INFO - 127.0.0.1 - - [04/Nov/2025 22:44:18] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-11-04 22:44:18 - INFO - 127.0.0.1 - - [04/Nov/2025 22:44:18] "GET /login HTTP/1.1" 200 -
+2025-11-04 22:44:28 - INFO - 127.0.0.1 - - [04/Nov/2025 22:44:28] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-11-04 22:44:29 - INFO - 127.0.0.1 - - [04/Nov/2025 22:44:29] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-11-04 22:44:29 - INFO - 127.0.0.1 - - [04/Nov/2025 22:44:29] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-11-04 22:44:29 - INFO - 127.0.0.1 - - [04/Nov/2025 22:44:29] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-11-04 22:44:29 - INFO - 127.0.0.1 - - [04/Nov/2025 22:44:29] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=ETfj120CHVuZ9m9Mn8w9 HTTP/1.1" 200 -
+2025-11-04 22:44:29 - INFO - 127.0.0.1 - - [04/Nov/2025 22:44:29] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-11-04 22:45:18 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-04 22:45:18 - INFO -  * Restarting with stat
+2025-11-04 22:45:24 - WARNING -  * Debugger is active!
+2025-11-04 22:45:24 - INFO -  * Debugger PIN: 169-689-135
+2025-11-04 22:46:01 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.179.2.207:9000
+2025-11-04 22:46:01 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-04 22:46:01 - INFO -  * Restarting with stat
+2025-11-04 22:46:05 - WARNING -  * Debugger is active!
+2025-11-04 22:46:05 - INFO -  * Debugger PIN: 169-689-135
+2025-11-04 22:46:16 - INFO - 127.0.0.1 - - [04/Nov/2025 22:46:16] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-11-04 22:46:16 - INFO - 127.0.0.1 - - [04/Nov/2025 22:46:16] "GET / HTTP/1.1" 200 -
+2025-11-04 22:46:18 - INFO - 127.0.0.1 - - [04/Nov/2025 22:46:18] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-04 22:46:57 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-04 22:46:57 - INFO - 127.0.0.1 - - [04/Nov/2025 22:46:57] "POST /run_ai_analysis HTTP/1.1" 200 -

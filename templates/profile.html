@@ -97,6 +97,44 @@
             </div>
         </div>
 
+        <!-- Activity Log -->
+        <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 mt-6 sm:mt-8 card-hover">
+            <h2 class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center">
+                <i data-lucide="activity" class="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-blue-600"></i>
+                Activity Log
+            </h2>
+
+            <div id="activityLog" class="space-y-3 sm:space-y-4">
+                {% if activity_logs %}
+                    {% for log in activity_logs %}
+                        <div class="border border-gray-200 rounded-lg p-3 sm:p-4">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 space-y-1 sm:space-y-0">
+                                <h3 class="text-sm sm:text-base font-medium">{{ log.description }}</h3>
+                                <span class="px-2 py-1 rounded-full text-xs font-medium self-start sm:self-auto {{
+                                    'bg-green-100 text-green-800' if log.status == 'success' else 'bg-red-100 text-red-800'
+                                }}">{{ log.status.title() }}</span>
+                            </div>
+                            <div class="text-xs sm:text-sm text-gray-600">
+                                <span>{{ log.activity_type.replace('_', ' ').title() }}</span>
+                                <span class="mx-2">•</span>
+                                <span>{{ log.timestamp.strftime('%B %d, %Y %H:%M') }}</span>
+                            </div>
+                            {% if log.details %}
+                                <div class="mt-2 text-xs text-gray-500">
+                                    {{ log.details }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="text-center py-6 sm:py-8">
+                        <i data-lucide="clock" class="w-10 h-10 sm:w-12 sm:h-12 mx-auto text-gray-300 mb-4"></i>
+                        <p class="text-gray-500 text-sm sm:text-base">No activity recorded yet</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
         <!-- User Signals Filter -->
         <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6 mt-6 sm:mt-8 card-hover">
             <h2 class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center">

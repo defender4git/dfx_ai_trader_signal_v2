@@ -156,18 +156,27 @@ Return JSON: {{"signal":"LONG/SHORT/NEUTRAL","confidence":"HIGH/MEDIUM/LOW","tre
                 input_tokens = getattr(usage, 'input_tokens', 0) if usage else 0
                 output_tokens = getattr(usage, 'output_tokens', 0) if usage else 0
             elif self.provider == "openai":
-                response = self.client.chat.completions.create(
-                    model="gpt-4o-mini",
-                    messages=[
-                        {"role": "user", "content": prompt}
-                    ],
-                    max_tokens=512,
-                    temperature=0.7
-                )
-                response_text = response.choices[0].message.content
-                usage = getattr(response, 'usage', None)
-                input_tokens = getattr(usage, 'prompt_tokens', 0) if usage else 0
-                output_tokens = getattr(usage, 'completion_tokens', 0) if usage else 0
+                try:
+                    response = self.client.chat.completions.create(
+                        model="gpt-4o-mini",
+                        messages=[
+                            {"role": "user", "content": prompt}
+                        ],
+                        max_tokens=512,
+                        temperature=0.7
+                    )
+                    response_text = response.choices[0].message.content
+                    usage = getattr(response, 'usage', None)
+                    input_tokens = getattr(usage, 'prompt_tokens', 0) if usage else 0
+                    output_tokens = getattr(usage, 'completion_tokens', 0) if usage else 0
+
+                    # Debug: Check if response_text is empty or not JSON
+                    if not response_text or not response_text.strip():
+                        print(f"OpenAI returned empty response")
+                        return self._default_analysis()
+                except Exception as api_error:
+                    print(f"OpenAI API Error: {api_error}")
+                    return self._default_analysis()
             elif self.provider == "deepseek":
                 headers = {
                     "Authorization": f"Bearer {self.api_key}",
@@ -237,7 +246,17 @@ Return JSON: {{"signal":"LONG/SHORT/NEUTRAL","confidence":"HIGH/MEDIUM/LOW","tre
             end = response_text.rfind('}') + 1
             json_str = response_text[start:end]
 
-            analysis = json.loads(json_str)
+            if not json_str:
+                print(f"AI Analysis Error ({self.provider}): No JSON found in response")
+                print(f"Raw response: {response_text}")
+                return self._default_analysis()
+
+            try:
+                analysis = json.loads(json_str)
+            except json.JSONDecodeError as e:
+                print(f"AI Analysis Error ({self.provider}): Invalid JSON - {e}")
+                print(f"JSON string: {json_str}")
+                return self._default_analysis()
             # Add token usage to analysis
             analysis['token_usage'] = {
                 'input_tokens': input_tokens,
@@ -248,6 +267,8 @@ Return JSON: {{"signal":"LONG/SHORT/NEUTRAL","confidence":"HIGH/MEDIUM/LOW","tre
 
         except Exception as e:
             print(f"AI Analysis Error ({self.provider}): {e}")
+            if self.provider == "openai":
+                print(f"OpenAI response details: {getattr(response, 'choices', 'No choices')}")
             return self._default_analysis()
     
     def _default_analysis(self) -> Dict:

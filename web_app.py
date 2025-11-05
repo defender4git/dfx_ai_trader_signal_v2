@@ -7,6 +7,7 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for, s
 import sys
 import os
 import json
+import logging
 from datetime import datetime
 
 import openai
@@ -45,6 +46,14 @@ app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
 app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
 app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_DEFAULT_SENDER', app.config['MAIL_USERNAME'])
 
+# Configure logging
+logging.basicConfig(
+    filename='mail_notifications.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+
 # Initialize extensions
 db = SQLAlchemy(app)
 login_manager = LoginManager()
@@ -72,13 +81,42 @@ class User(UserMixin, db.Model):
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
 
+# Activity Log model
+class ActivityLog(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    activity_type = db.Column(db.String(100), nullable=False)  # e.g., 'email_notification'
+    description = db.Column(db.Text, nullable=False)
+    status = db.Column(db.String(50), nullable=False)  # 'success', 'failure'
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+    details = db.Column(db.Text)  # Additional details like error messages
+
+    user = db.relationship('User', backref=db.backref('activity_logs', lazy=True))
+
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
 
 def send_signal_alert(user_email, signal_data):
     """Send email alert for new trading signal"""
+    # Get user from database
+    user = User.query.filter_by(email=user_email).first()
+    if not user:
+        logging.error(f"User not found for email {user_email}")
+        return
+
     if not app.config['MAIL_USERNAME'] or not app.config['MAIL_PASSWORD']:
+        logging.warning("Email configuration not found - skipping alert")
+        # Log to activity log
+        activity_log = ActivityLog(
+            user_id=user.id,
+            activity_type='email_notification',
+            description=f'Failed to send signal alert for {signal_data["symbol"]} - Email configuration missing',
+            status='failure',
+            details='MAIL_USERNAME or MAIL_PASSWORD not configured'
+        )
+        db.session.add(activity_log)
+        db.session.commit()
         print("⚠️  Email configuration not found - skipping alert")
         return
 
@@ -120,9 +158,34 @@ Real-time market analysis and automated signals
         )
 
         mail.send(msg)
+
+        # Log success to activity log
+        activity_log = ActivityLog(
+            user_id=user.id,
+            activity_type='email_notification',
+            description=f'Signal alert sent for {signal_data["symbol"]} ({signal_data["signal_type"]})',
+            status='success',
+            details=f'Signal: {signal_data["signal_type"]}, Confidence: {signal_data["confidence"]}'
+        )
+        db.session.add(activity_log)
+        db.session.commit()
+
+        logging.info(f"Signal alert sent successfully to {user_email} for symbol {signal_data['symbol']}")
         print(f"✅ Signal alert sent to {user_email}")
 
     except Exception as e:
+        # Log failure to activity log
+        activity_log = ActivityLog(
+            user_id=user.id,
+            activity_type='email_notification',
+            description=f'Failed to send signal alert for {signal_data["symbol"]}',
+            status='failure',
+            details=str(e)
+        )
+        db.session.add(activity_log)
+        db.session.commit()
+
+        logging.error(f"Failed to send email alert to {user_email}: {str(e)}")
         print(f"❌ Failed to send email alert: {e}")
 
 @app.route('/')
@@ -182,7 +245,12 @@ def logout():
 @login_required
 def profile():
     """User profile page"""
-    return render_template('profile.html')
+    # Get recent activity logs for the user
+    activity_logs = ActivityLog.query.filter_by(user_id=current_user.id)\
+        .order_by(ActivityLog.timestamp.desc())\
+        .limit(20)\
+        .all()
+    return render_template('profile.html', activity_logs=activity_logs)
 
 @app.route('/run_ai_analysis', methods=['POST'])
 @login_required
@@ -482,6 +550,15 @@ if __name__ == '__main__':
                     conn.execute(db.text('ALTER TABLE user ADD COLUMN email_notifications BOOLEAN DEFAULT 1'))
                     conn.commit()
                 print("Database migration completed")
+
+        # Create ActivityLog table if it doesn't exist
+        try:
+            ActivityLog.query.first()
+        except Exception as e:
+            if 'no such table' in str(e):
+                print("Creating ActivityLog table...")
+                db.create_all()
+                print("ActivityLog table created")
 
     print("Starting AI Trading Signal Generator Web Interface...")
     print("Open your browser to http://localhost:9000")
