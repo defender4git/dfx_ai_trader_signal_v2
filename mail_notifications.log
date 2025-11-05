@@ -236,3 +236,144 @@
 2025-11-05 17:34:10 - INFO -  * Restarting with watchdog (windowsapi)
 2025-11-05 17:34:21 - WARNING -  * Debugger is active!
 2025-11-05 17:34:21 - INFO -  * Debugger PIN: 169-689-135
+2025-11-05 17:43:26 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\__init__.py', reloading
+2025-11-05 17:43:28 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-05 17:43:46 - WARNING -  * Debugger is active!
+2025-11-05 17:43:46 - INFO -  * Debugger PIN: 169-689-135
+2025-11-05 17:43:46 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\dataclasses_json\\__init__.py', reloading
+2025-11-05 17:43:46 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\dataclasses_json\\api.py', reloading
+2025-11-05 17:43:46 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\dataclasses_json\\cfg.py', reloading
+2025-11-05 17:43:46 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\dataclasses_json\\undefined.py', reloading
+2025-11-05 17:43:46 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\debugpy\\__init__.py', reloading
+2025-11-05 17:43:46 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\debugpy\\public_api.py', reloading
+2025-11-05 17:43:46 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\distro\\__init__.py', reloading
+2025-11-05 17:43:46 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\distro\\distro.py', reloading
+2025-11-05 17:43:46 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\docstring_parser\\__init__.py', reloading
+2025-11-05 17:43:46 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\docstring_parser\\common.py', reloading
+2025-11-05 17:43:46 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\docstring_parser\\parser.py', reloading
+2025-11-05 17:43:46 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\docstring_parser\\util.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\emoji\\__init__.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\emoji\\core.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\emoji\\unicode_codes\\__init__.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\emoji\\tokenizer.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\emoji\\unicode_codes\\data_dict.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\engineio\\__init__.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\engineio\\client.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\engineio\\middleware.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\engineio\\server.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\engineio\\async_server.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\engineio\\async_client.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\engineio\\async_drivers\\asgi.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\engineio\\async_drivers\\tornado.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\executing\\__init__.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\executing\\executing.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\executing\\_pytest_utils.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\faiss\\__init__.py', reloading
+2025-11-05 17:43:47 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastjsonschema\\__init__.py', reloading
+2025-11-05 17:43:48 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-05 17:43:55 - WARNING -  * Debugger is active!
+2025-11-05 17:43:55 - INFO -  * Debugger PIN: 169-689-135
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbconvert\\exporters\\asciidoc.py', reloading
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbconvert\\exporters\\exporter.py', reloading
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbconvert\\exporters\\base.py', reloading
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbconvert\\exporters\\html.py', reloading
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbconvert\\exporters\\latex.py', reloading
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbconvert\\exporters\\markdown.py', reloading
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbconvert\\exporters\\notebook.py', reloading
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbconvert\\exporters\\pdf.py', reloading
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbconvert\\exporters\\python.py', reloading
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbconvert\\exporters\\qtpdf.py', reloading
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbconvert\\exporters\\qtpng.py', reloading
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbconvert\\exporters\\rst.py', reloading
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbconvert\\exporters\\script.py', reloading
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbconvert\\exporters\\slides.py', reloading
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbconvert\\exporters\\templateexporter.py', reloading
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbconvert\\exporters\\webpdf.py', reloading
+2025-11-05 17:43:55 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbformat\\__init__.py', reloading
+2025-11-05 17:43:56 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbformat\\_version.py', reloading
+2025-11-05 17:43:56 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbformat\\sentinel.py', reloading
+2025-11-05 17:43:56 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbformat\\converter.py', reloading
+2025-11-05 17:43:56 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbformat\\notebooknode.py', reloading
+2025-11-05 17:43:56 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbformat\\v4\\__init__.py', reloading
+2025-11-05 17:43:56 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbformat\\v4\\nbbase.py', reloading
+2025-11-05 17:43:56 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbformat\\validator.py', reloading
+2025-11-05 17:43:56 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nbformat\\json_compat.py', reloading
+2025-11-05 17:43:56 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\nltk\\__init__.py', reloading
+2025-11-05 17:43:56 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\notebook\\__init__.py', reloading
+2025-11-05 17:43:56 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\notebook_shim\\__init__.py', reloading
+2025-11-05 17:43:56 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\numba\\__init__.py', reloading
+2025-11-05 17:43:56 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\numba\\core\\errors.py', reloading
+2025-11-05 17:43:57 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-05 17:44:03 - WARNING -  * Debugger is active!
+2025-11-05 17:44:03 - INFO -  * Debugger PIN: 169-689-135
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\platformdirs\\__init__.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\platformdirs\\api.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\platformdirs\\version.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\plotly\\__init__.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prometheus_client\\__init__.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prometheus_client\\exposition.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prometheus_client\\asgi.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prometheus_client\\gc_collector.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prometheus_client\\metrics.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prometheus_client\\metrics_core.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prometheus_client\\platform_collector.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prometheus_client\\process_collector.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prometheus_client\\registry.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prompt_toolkit\\__init__.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prompt_toolkit\\application\\__init__.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prompt_toolkit\\application\\application.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prompt_toolkit\\formatted_text\\__init__.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prompt_toolkit\\formatted_text\\ansi.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prompt_toolkit\\formatted_text\\html.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prompt_toolkit\\shortcuts\\__init__.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prompt_toolkit\\shortcuts\\prompt.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prompt_toolkit\\shortcuts\\choice_input.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\prompt_toolkit\\shortcuts\\utils.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\propcache\\__init__.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\propcache\\api.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\propcache\\_helpers.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pure_eval\\__init__.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pure_eval\\core.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pure_eval\\utils.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pure_eval\\my_getattr_static.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pure_eval\\version.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pycparser\\__init__.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pyparsing\\__init__.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pyparsing\\util.py', reloading
+2025-11-05 17:44:04 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pyparsing\\exceptions.py', reloading
+2025-11-05 17:44:05 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pyparsing\\actions.py', reloading
+2025-11-05 17:44:05 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pyparsing\\results.py', reloading
+2025-11-05 17:44:05 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pyparsing\\core.py', reloading
+2025-11-05 17:44:05 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pyparsing\\helpers.py', reloading
+2025-11-05 17:44:05 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pyparsing\\unicode.py', reloading
+2025-11-05 17:44:05 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-05 17:44:13 - WARNING -  * Debugger is active!
+2025-11-05 17:44:13 - INFO -  * Debugger PIN: 169-689-135
+2025-11-05 17:44:13 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\version.py', reloading
+2025-11-05 17:44:13 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\__config__.py', reloading
+2025-11-05 17:44:13 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\__init__.py', reloading
+2025-11-05 17:44:13 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\simple_websocket\\__init__.py', reloading
+2025-11-05 17:44:13 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sniffio\\__init__.py', reloading
+2025-11-05 17:44:13 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sniffio\\_impl.py', reloading
+2025-11-05 17:44:13 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\__init__.py', reloading
+2025-11-05 17:44:13 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\client.py', reloading
+2025-11-05 17:44:13 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\simple_client.py', reloading
+2025-11-05 17:44:13 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\manager.py', reloading
+2025-11-05 17:44:13 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\pubsub_manager.py', reloading
+2025-11-05 17:44:13 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\kombu_manager.py', reloading
+2025-11-05 17:44:13 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\redis_manager.py', reloading
+2025-11-05 17:44:14 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\kafka_manager.py', reloading
+2025-11-05 17:44:14 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\zmq_manager.py', reloading
+2025-11-05 17:44:14 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\server.py', reloading
+2025-11-05 17:44:14 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\namespace.py', reloading
+2025-11-05 17:44:14 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\middleware.py', reloading
+2025-11-05 17:44:14 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\tornado.py', reloading
+2025-11-05 17:44:14 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\async_client.py', reloading
+2025-11-05 17:44:14 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\async_simple_client.py', reloading
+2025-11-05 17:44:14 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\async_server.py', reloading
+2025-11-05 17:44:14 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\async_manager.py', reloading
+2025-11-05 17:44:14 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\async_namespace.py', reloading
+2025-11-05 17:44:14 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\socketio\\async_redis_manager.py', reloading
+2025-11-05 17:44:15 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-05 17:44:22 - WARNING -  * Debugger is active!
+2025-11-05 17:44:22 - INFO -  * Debugger PIN: 169-689-135
