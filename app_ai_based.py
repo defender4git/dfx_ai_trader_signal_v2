@@ -15,6 +15,9 @@ import anthropic
 import openai
 import os
 from dotenv import load_dotenv
+import twilio
+from twilio.rest import Client as TwilioClient
+import telegram
 import requests
 
 # Load environment variables from .env file
@@ -35,6 +38,111 @@ class TradingSignal:
     confidence: str
     reasoning: str
     timestamp: datetime
+    trend: str
+    entry_strategy: str
+    indicators: Dict
+class NotificationManager:
+    """Handles notifications via Telegram and WhatsApp"""
+
+    def __init__(self):
+        # Twilio for WhatsApp
+        self.twilio_client = TwilioClient(
+            os.getenv("TWILIO_ACCOUNT_SID"),
+            os.getenv("TWILIO_AUTH_TOKEN")
+        )
+        self.twilio_whatsapp_number = os.getenv("TWILIO_WHATSAPP_NUMBER")
+        self.recipient_whatsapp_number = os.getenv("RECIPIENT_WHATSAPP_NUMBER")
+
+        # Telegram
+        self.telegram_bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
+        self.telegram_chat_id = os.getenv("TELEGRAM_CHAT_ID")
+
+    def send_whatsapp_message(self, message: str) -> bool:
+        """Send message via WhatsApp"""
+        try:
+            message = self.twilio_client.messages.create(
+                from_=self.twilio_whatsapp_number,
+                body=message,
+                to=self.recipient_whatsapp_number
+            )
+            print(f"WhatsApp message sent: {message.sid}")
+            return True
+        except Exception as e:
+            print(f"WhatsApp send failed: {e}")
+            return False
+
+    def send_telegram_message(self, message: str) -> bool:
+        """Send message via Telegram"""
+        try:
+            url = f"https://api.telegram.org/bot{self.telegram_bot_token}/sendMessage"
+            data = {
+                "chat_id": self.telegram_chat_id,
+                "text": message,
+                "parse_mode": "Markdown"
+            }
+            response = requests.post(url, data=data)
+            if response.status_code == 200:
+                print("Telegram message sent successfully")
+                return True
+            else:
+                print(f"Telegram send failed: {response.text}")
+                return False
+        except Exception as e:
+            print(f"Telegram send failed: {e}")
+            return False
+
+    def send_signal_notification(self, signal: TradingSignal):
+        """Send notification only for HIGH confidence signals"""
+        if signal.confidence.upper() != "HIGH":
+            print(f"Signal confidence is {signal.confidence}, skipping notification")
+            return
+
+        message = self._format_signal_message(signal)
+
+        # Send to both channels
+        whatsapp_sent = self.send_whatsapp_message(message)
+        telegram_sent = self.send_telegram_message(message)
+
+        if whatsapp_sent and telegram_sent:
+            print("Signal notification sent to both WhatsApp and Telegram")
+        elif whatsapp_sent:
+            print("Signal notification sent to WhatsApp only")
+        elif telegram_sent:
+            print("Signal notification sent to Telegram only")
+        else:
+            print("Failed to send signal notification to any channel")
+
+    def _format_signal_message(self, signal: TradingSignal) -> str:
+        """Format signal for notification"""
+        direction_emoji = "🟢" if signal.signal_type == "LONG" else "🔴"
+        message = f"""
+🚨 *AI TRADING SIGNAL ALERT* 🚨
+
+{direction_emoji} *{signal.signal_type}* on {signal.symbol}
+📊 *Confidence:* {signal.confidence}
+
+💰 *Entry Price:* {signal.entry_price:.5f}
+📏 *Position Size:* {signal.position_size:.2f} lots
+
+🛡️ *Risk Management:*
+• Stop Loss: {signal.stop_loss:.5f}
+• Take Profit 1: {signal.take_profit_1:.5f}
+• Take Profit 2: {signal.take_profit_2:.5f}
+• Take Profit 3: {signal.take_profit_3:.5f}
+
+📈 *Technical Indicators:*
+• ATR: {signal.indicators['atr']:.4f} ({signal.indicators['volatility_level']})
+• RSI: {signal.indicators['rsi']:.1f}
+• MACD: {signal.indicators['macd']:.4f}
+• CCI: {signal.indicators['cci']:.1f}
+
+💡 *AI Reasoning:* {signal.reasoning}
+
+⏰ *Time:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
+        """.strip()
+
+        return message
+
     indicators: Dict
 
 
@@ -292,7 +400,7 @@ class MT5TradingEA:
     """Main Expert Advisor class"""
     
     def __init__(self, symbol: str, timeframe: int, lookback: int,
-                  ai_api_key: str, account_risk_percent: float = 1.0, ai_provider: str = "anthropic"):
+                 ai_api_key: str, account_risk_percent: float = 1.0, ai_provider: str = "anthropic"):
         """
         Initialize MT5 Trading EA
 
@@ -312,7 +420,8 @@ class MT5TradingEA:
 
         self.analyzer = TechnicalAnalyzer()
         self.ai_agent = AITradingAgent(ai_api_key, ai_provider)
-        
+        self.notification_manager = NotificationManager()
+
         self.current_signal: Optional[TradingSignal] = None
         
     def connect_mt5(self) -> bool:
@@ -452,7 +561,9 @@ class MT5TradingEA:
             confidence=ai_analysis['confidence'],
             reasoning=ai_analysis['reasoning'],
             timestamp=datetime.now(),
-            indicators=indicators
+            indicators=indicators,
+            trend=ai_analysis.get('trend', 'NEUTRAL'),
+            entry_strategy=ai_analysis.get('entry_strategy', 'IMMEDIATE')
         )
         
         return signal
@@ -583,11 +694,15 @@ class MT5TradingEA:
                 
                 # Display signal
                 self.print_signal(signal)
-                
+
+                # Send notification for HIGH confidence signals
+                if signal.confidence.upper() == "HIGH":
+                    self.notification_manager.send_signal_notification(signal)
+
                 # Execute if configured
                 if signal.signal_type != "NEUTRAL" and auto_execute:
                     self.execute_trade(signal, auto_execute=True)
-                
+
                 # Wait for next cycle
                 print(f"⏳ Next analysis in {interval_seconds} seconds...")
                 time.sleep(interval_seconds)
@@ -607,22 +722,16 @@ def main():
     LOOKBACK = 150
     RISK_PERCENT = 1.0  # Risk 1% per trade
 
-    # AI Provider selection
-    print("Select AI Provider:")
-    print("1. Anthropic Claude")
-    print("2. OpenAI GPT")
-    choice = input("Enter choice (1 or 2): ").strip()
-
-    if choice == "1":
-        AI_PROVIDER = "anthropic"
+    # AI Provider selection - default to OpenAI from .env
+    AI_PROVIDER = os.getenv("AI_PROVIDER", "openai").lower()
+    if AI_PROVIDER == "anthropic":
         API_KEY = os.getenv("ANTHROPIC_API_KEY", "your-anthropic-api-key-here")
-    elif choice == "2":
-        AI_PROVIDER = "openai"
+    elif AI_PROVIDER == "openai":
         API_KEY = os.getenv("OPENAI_API_KEY", openai.api_key)
     else:
-        print("Invalid choice, defaulting to Anthropic Claude")
-        AI_PROVIDER = "anthropic"
-        API_KEY = os.getenv("ANTHROPIC_API_KEY", "your-anthropic-api-key-here")
+        print("Invalid AI provider in .env, defaulting to OpenAI")
+        AI_PROVIDER = "openai"
+        API_KEY = os.getenv("OPENAI_API_KEY", openai.api_key)
 
     # Create EA instance
     ea = MT5TradingEA(

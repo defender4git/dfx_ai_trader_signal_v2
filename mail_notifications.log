@@ -377,3 +377,122 @@
 2025-11-05 17:44:15 - INFO -  * Restarting with watchdog (windowsapi)
 2025-11-05 17:44:22 - WARNING -  * Debugger is active!
 2025-11-05 17:44:22 - INFO -  * Debugger PIN: 169-689-135
+2025-11-05 21:56:48 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.179.2.207:9000
+2025-11-05 21:56:48 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-05 21:56:48 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-05 21:56:52 - WARNING -  * Debugger is active!
+2025-11-05 21:56:52 - INFO -  * Debugger PIN: 169-689-135
+2025-11-05 21:57:12 - INFO - 127.0.0.1 - - [05/Nov/2025 21:57:12] "GET / HTTP/1.1" 200 -
+2025-11-05 21:57:24 - INFO - 127.0.0.1 - - [05/Nov/2025 21:57:24] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-05 21:58:45 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-05 21:58:45 - INFO - 127.0.0.1 - - [05/Nov/2025 21:58:45] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2025-11-05 22:00:12 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AItrader\\venv\\Lib\\site-packages\\flask\\__init__.py', reloading
+2025-11-05 22:00:12 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AItrader\\venv\\Lib\\site-packages\\flask\\app.py', reloading
+2025-11-05 22:00:12 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AItrader\\venv\\Lib\\site-packages\\flask\\sansio\\app.py', reloading
+2025-11-05 22:00:12 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AItrader\\venv\\Lib\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2025-11-05 22:00:12 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AItrader\\venv\\Lib\\site-packages\\flask\\templating.py', reloading
+2025-11-05 22:00:12 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AItrader\\venv\\Lib\\site-packages\\jinja2\\__init__.py', reloading
+2025-11-05 22:00:13 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-05 22:08:12 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.179.2.207:9000
+2025-11-05 22:08:12 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-05 22:08:12 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-05 22:08:16 - WARNING -  * Debugger is active!
+2025-11-05 22:08:16 - INFO -  * Debugger PIN: 137-776-963
+2025-11-05 22:08:21 - INFO - 127.0.0.1 - - [05/Nov/2025 22:08:21] "GET / HTTP/1.1" 200 -
+2025-11-05 22:08:23 - INFO - 127.0.0.1 - - [05/Nov/2025 22:08:23] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-05 22:09:05 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-05 22:09:05 - INFO - 127.0.0.1 - - [05/Nov/2025 22:09:05] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2025-11-05 22:10:18 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-05 22:10:19 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-05 22:10:25 - WARNING -  * Debugger is active!
+2025-11-05 22:10:25 - INFO -  * Debugger PIN: 137-776-963
+2025-11-05 22:11:45 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-05 22:11:45 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-05 22:11:45 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-05 22:11:47 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-05 22:11:52 - WARNING -  * Debugger is active!
+2025-11-05 22:11:52 - INFO -  * Debugger PIN: 137-776-963
+2025-11-05 22:12:02 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-05 22:12:02 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-05 22:12:03 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-05 22:12:11 - WARNING -  * Debugger is active!
+2025-11-05 22:12:11 - INFO -  * Debugger PIN: 137-776-963
+2025-11-05 22:12:26 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-05 22:12:26 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-05 22:12:26 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-05 22:12:27 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-05 22:12:32 - WARNING -  * Debugger is active!
+2025-11-05 22:12:32 - INFO -  * Debugger PIN: 137-776-963
+2025-11-05 22:12:43 - INFO - 127.0.0.1 - - [05/Nov/2025 22:12:43] "GET / HTTP/1.1" 200 -
+2025-11-05 22:12:44 - INFO - 127.0.0.1 - - [05/Nov/2025 22:12:44] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-05 22:13:26 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-05 22:13:26 - INFO - 127.0.0.1 - - [05/Nov/2025 22:13:26] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2025-11-05 22:13:51 - INFO - 127.0.0.1 - - [05/Nov/2025 22:13:51] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 22:16:14 - INFO - Retrying request to /chat/completions in 0.490503 seconds
+2025-11-05 22:16:26 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-05 22:16:27 - INFO - 127.0.0.1 - - [05/Nov/2025 22:16:27] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2025-11-05 22:24:00 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\flask\\__init__.py', reloading
+2025-11-05 22:24:00 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\flask\\app.py', reloading
+2025-11-05 22:24:00 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\flask\\sansio\\app.py', reloading
+2025-11-05 22:24:02 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-05 22:24:13 - WARNING -  * Debugger is active!
+2025-11-05 22:24:13 - INFO -  * Debugger PIN: 137-776-963
+2025-11-05 23:16:20 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-05 23:16:20 - INFO - 127.0.0.1 - - [05/Nov/2025 23:16:20] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2025-11-06 05:07:10 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-06 05:07:10 - INFO - 127.0.0.1 - - [06/Nov/2025 05:07:10] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2025-11-06 05:07:21 - INFO - 127.0.0.1 - - [06/Nov/2025 05:07:21] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-11-06 05:07:21 - INFO - 127.0.0.1 - - [06/Nov/2025 05:07:21] "GET /login HTTP/1.1" 200 -
+2025-11-06 05:07:34 - INFO - 127.0.0.1 - - [06/Nov/2025 05:07:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-11-06 05:07:34 - INFO - 127.0.0.1 - - [06/Nov/2025 05:07:34] "GET / HTTP/1.1" 200 -
+2025-11-06 05:07:35 - INFO - 127.0.0.1 - - [06/Nov/2025 05:07:35] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-06 05:08:07 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-06 05:08:07 - INFO - 127.0.0.1 - - [06/Nov/2025 05:08:07] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2025-11-06 05:30:52 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.179.2.207:9000
+2025-11-06 05:30:52 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-06 05:30:52 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-06 05:30:55 - WARNING -  * Debugger is active!
+2025-11-06 05:30:55 - INFO -  * Debugger PIN: 137-776-963
+2025-11-06 05:31:11 - INFO - 127.0.0.1 - - [06/Nov/2025 05:31:11] "GET / HTTP/1.1" 200 -
+2025-11-06 05:31:12 - INFO - 127.0.0.1 - - [06/Nov/2025 05:31:12] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-06 05:31:51 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-06 05:31:51 - INFO - 127.0.0.1 - - [06/Nov/2025 05:31:51] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2025-11-06 05:34:03 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\__init__.py', reloading
+2025-11-06 05:34:03 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\app.py', reloading
+2025-11-06 05:34:04 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-06 05:34:12 - WARNING -  * Debugger is active!
+2025-11-06 05:34:12 - INFO -  * Debugger PIN: 137-776-963
+2025-11-06 05:34:24 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-06 05:34:24 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-06 05:34:25 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-06 05:34:30 - WARNING -  * Debugger is active!
+2025-11-06 05:34:30 - INFO -  * Debugger PIN: 137-776-963
+2025-11-06 05:35:39 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-06 05:35:39 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-06 05:35:39 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-06 05:35:41 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-06 05:35:47 - WARNING -  * Debugger is active!
+2025-11-06 05:35:47 - INFO -  * Debugger PIN: 137-776-963
+2025-11-06 05:36:57 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.179.2.207:9000
+2025-11-06 05:36:57 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-06 05:36:57 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-06 05:37:00 - WARNING -  * Debugger is active!
+2025-11-06 05:37:00 - INFO -  * Debugger PIN: 137-776-963
+2025-11-06 05:37:15 - INFO - 127.0.0.1 - - [06/Nov/2025 05:37:15] "GET / HTTP/1.1" 200 -
+2025-11-06 05:37:16 - INFO - 127.0.0.1 - - [06/Nov/2025 05:37:16] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-06 05:37:57 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-06 05:38:00 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSDm
+2025-11-06 05:38:03 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSDm
+2025-11-06 05:38:03 - INFO - 127.0.0.1 - - [06/Nov/2025 05:38:03] "POST /run_ai_analysis HTTP/1.1" 200 -
