@@ -308,6 +308,16 @@ def run_ai_analysis():
         signal = ea_instance.generate_signal(indicators)
         current_signal = signal
 
+        # Prepare detailed logs for frontend
+        logs = [
+            f"🔗 Connected to MT5 for symbol {symbol}",
+            f"📊 Retrieved market data: {len(df)} candles from MT5",
+            f"📈 Calculated technical indicators: ATR={indicators['atr']:.4f}, RSI={indicators['rsi']:.1f}, MACD={indicators['macd']:.4f}",
+            f"🎯 Generated trading signal: {signal.signal_type} with {signal.confidence} confidence",
+            f"💡 AI Analysis: {signal.reasoning[:100]}...",
+            f"✅ Analysis completed successfully for {symbol}"
+        ]
+
         # Prepare response
         response = {
             'signal': {
@@ -338,7 +348,8 @@ def run_ai_analysis():
                 'input_tokens': 0,
                 'output_tokens': 0,
                 'total_tokens': 0
-            })
+            }),
+            'logs': logs
         }
 
         # Send email alerts to all users with notifications enabled

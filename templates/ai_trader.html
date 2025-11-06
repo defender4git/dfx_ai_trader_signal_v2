@@ -495,8 +495,15 @@
             // Update token usage
             updateTokenUsage(result.token_usage);
 
-            // Log the analysis
-            logMessage(`Analysis completed for ${result.signal.symbol} at ${new Date().toLocaleTimeString()}`, 'success');
+            // Update analysis log with detailed logs from backend
+            if (result.logs && result.logs.length > 0) {
+                result.logs.forEach(log => {
+                    logMessage(log, 'info');
+                });
+            } else {
+                // Fallback if no logs provided
+                logMessage(`Analysis completed for ${result.signal.symbol} at ${new Date().toLocaleTimeString()}`, 'success');
+            }
 
             // Re-initialize icons
             lucide.createIcons();

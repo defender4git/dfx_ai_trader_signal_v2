@@ -38,6 +38,8 @@ class TradingSignal:
     confidence: str
     reasoning: str
     timestamp: datetime
+    trend: str
+    entry_strategy: str
 class NotificationManager:
     """Handles notifications via Telegram and WhatsApp"""
 
@@ -558,7 +560,9 @@ class MT5TradingEA:
             confidence=ai_analysis['confidence'],
             reasoning=ai_analysis['reasoning'],
             timestamp=datetime.now(),
-            indicators=indicators
+            indicators=indicators,
+            trend=ai_analysis.get('trend', 'NEUTRAL'),
+            entry_strategy=ai_analysis.get('entry_strategy', 'IMMEDIATE')
         )
         
         return signal
@@ -717,22 +721,16 @@ def main():
     LOOKBACK = 150
     RISK_PERCENT = 1.0  # Risk 1% per trade
 
-    # AI Provider selection
-    print("Select AI Provider:")
-    print("1. Anthropic Claude")
-    print("2. OpenAI GPT")
-    choice = input("Enter choice (1 or 2): ").strip()
-
-    if choice == "1":
-        AI_PROVIDER = "anthropic"
+    # AI Provider selection - default to OpenAI from .env
+    AI_PROVIDER = os.getenv("AI_PROVIDER", "openai").lower()
+    if AI_PROVIDER == "anthropic":
         API_KEY = os.getenv("ANTHROPIC_API_KEY", "your-anthropic-api-key-here")
-    elif choice == "2":
-        AI_PROVIDER = "openai"
+    elif AI_PROVIDER == "openai":
         API_KEY = os.getenv("OPENAI_API_KEY", openai.api_key)
     else:
-        print("Invalid choice, defaulting to Anthropic Claude")
-        AI_PROVIDER = "anthropic"
-        API_KEY = os.getenv("ANTHROPIC_API_KEY", "your-anthropic-api-key-here")
+        print("Invalid AI provider in .env, defaulting to OpenAI")
+        AI_PROVIDER = "openai"
+        API_KEY = os.getenv("OPENAI_API_KEY", openai.api_key)
 
     # Create EA instance
     ea = MT5TradingEA(
