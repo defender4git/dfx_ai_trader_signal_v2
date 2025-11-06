@@ -40,6 +40,7 @@ class TradingSignal:
     timestamp: datetime
     trend: str
     entry_strategy: str
+    indicators: Dict
 class NotificationManager:
     """Handles notifications via Telegram and WhatsApp"""
 
