@@ -13,3 +13,40 @@
 2025-11-06 05:38:00 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSDm
 2025-11-06 05:38:03 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSDm
 2025-11-06 05:38:03 - INFO - 127.0.0.1 - - [06/Nov/2025 05:38:03] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-06 10:38:00 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.217.151.136:9000
+2025-11-06 10:38:00 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-06 10:38:00 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-06 10:38:05 - WARNING -  * Debugger is active!
+2025-11-06 10:38:05 - INFO -  * Debugger PIN: 137-776-963
+2025-11-06 10:39:12 - INFO - 127.0.0.1 - - [06/Nov/2025 10:39:12] "[32mGET / HTTP/1.1[0m" 302 -
+2025-11-06 10:39:12 - INFO - 127.0.0.1 - - [06/Nov/2025 10:39:12] "GET /login HTTP/1.1" 200 -
+2025-11-06 10:39:14 - INFO - 127.0.0.1 - - [06/Nov/2025 10:39:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-06 10:39:38 - INFO - 127.0.0.1 - - [06/Nov/2025 10:39:38] "GET /login HTTP/1.1" 200 -
+2025-11-06 10:39:40 - INFO - 127.0.0.1 - - [06/Nov/2025 10:39:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-06 10:39:54 - INFO - 127.0.0.1 - - [06/Nov/2025 10:39:54] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-11-06 10:39:54 - INFO - 127.0.0.1 - - [06/Nov/2025 10:39:54] "GET / HTTP/1.1" 200 -
+2025-11-06 10:39:55 - INFO - 127.0.0.1 - - [06/Nov/2025 10:39:55] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-06 11:19:30 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\anthropic\\__init__.py', reloading
+2025-11-06 11:19:30 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\anthropic\\lib\\vertex\\__init__.py', reloading
+2025-11-06 11:19:30 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\anthropic\\lib\\bedrock\\__init__.py', reloading
+2025-11-06 11:19:30 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\anthropic\\lib\\streaming\\__init__.py', reloading
+2025-11-06 11:19:30 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\twilio\\__init__.py', reloading
+2025-11-06 11:19:30 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\twilio\\rest\\__init__.py', reloading
+2025-11-06 11:19:30 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\twilio\\base\\client_base.py', reloading
+2025-11-06 11:19:30 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\telegram\\__init__.py', reloading
+2025-11-06 11:19:31 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\twilio\\http\\__init__.py', reloading
+2025-11-06 11:19:31 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\twilio\\credential\\credential_provider.py', reloading
+2025-11-06 11:19:31 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\twilio\\rest\\api\\v2010\\account\\message\\__init__.py', reloading
+2025-11-06 11:19:31 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-06 11:19:39 - WARNING -  * Debugger is active!
+2025-11-06 11:19:39 - INFO -  * Debugger PIN: 137-776-963
+2025-11-06 11:19:40 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\openai\\types\\chat\\chat_completion_message_tool_call.py', reloading
+2025-11-06 11:19:40 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\openai\\types\\chat\\chat_completion_message_function_tool_call.py', reloading
+2025-11-06 11:19:40 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\openai\\types\\chat\\chat_completion_message_custom_tool_call.py', reloading
+2025-11-06 11:19:40 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\openai\\_utils\\_transform.py', reloading
+2025-11-06 11:19:41 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-06 11:19:47 - WARNING -  * Debugger is active!
+2025-11-06 11:19:47 - INFO -  * Debugger PIN: 137-776-963
