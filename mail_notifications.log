@@ -50,3 +50,33 @@
 2025-11-06 11:19:41 - INFO -  * Restarting with watchdog (windowsapi)
 2025-11-06 11:19:47 - WARNING -  * Debugger is active!
 2025-11-06 11:19:47 - INFO -  * Debugger PIN: 137-776-963
+2025-11-08 20:42:43 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.193.204.207:9000
+2025-11-08 20:42:43 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-08 20:42:43 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-08 20:42:47 - WARNING -  * Debugger is active!
+2025-11-08 20:42:47 - INFO -  * Debugger PIN: 137-776-963
+2025-11-08 20:43:01 - INFO - 127.0.0.1 - - [08/Nov/2025 20:43:01] "[32mGET / HTTP/1.1[0m" 302 -
+2025-11-08 20:43:01 - INFO - 127.0.0.1 - - [08/Nov/2025 20:43:01] "GET /login HTTP/1.1" 200 -
+2025-11-08 20:43:44 - INFO - 127.0.0.1 - - [08/Nov/2025 20:43:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-08 20:43:59 - INFO - 127.0.0.1 - - [08/Nov/2025 20:43:59] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-11-08 20:43:59 - INFO - 127.0.0.1 - - [08/Nov/2025 20:43:59] "GET / HTTP/1.1" 200 -
+2025-11-08 20:44:51 - INFO - 127.0.0.1 - - [08/Nov/2025 20:44:51] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-08 20:47:12 - INFO - 127.0.0.1 - - [08/Nov/2025 20:47:12] "GET / HTTP/1.1" 200 -
+2025-11-08 20:47:13 - INFO - 127.0.0.1 - - [08/Nov/2025 20:47:13] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-08 20:48:48 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-08 20:49:04 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol Volatility 10 (1s) Index
+2025-11-08 20:49:07 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol Volatility 10 (1s) Index
+2025-11-08 20:49:07 - INFO - 127.0.0.1 - - [08/Nov/2025 20:49:07] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-08 20:52:53 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-08 20:52:54 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-08 20:52:55 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-08 20:53:02 - WARNING -  * Debugger is active!
+2025-11-08 20:53:02 - INFO -  * Debugger PIN: 137-776-963
+2025-11-08 20:58:10 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_login\\utils.py', reloading
+2025-11-08 20:58:10 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\local.py', reloading
+2025-11-08 20:58:11 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-08 20:58:18 - WARNING -  * Debugger is active!
+2025-11-08 20:58:18 - INFO -  * Debugger PIN: 137-776-963

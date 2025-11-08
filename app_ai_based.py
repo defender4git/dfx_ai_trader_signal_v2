@@ -9,6 +9,7 @@ import numpy as np
 from datetime import datetime, timedelta
 import time
 import json
+import logging
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Tuple
 import anthropic
@@ -22,6 +23,13 @@ import requests
 
 # Load environment variables from .env file
 load_dotenv()
+
+# Configure logging
+logging.basicConfig(
+    filename='mail_notifications.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 
 @dataclass
@@ -46,70 +54,130 @@ class NotificationManager:
 
     def __init__(self):
         # Twilio for WhatsApp
-        self.twilio_client = TwilioClient(
-            os.getenv("TWILIO_ACCOUNT_SID"),
-            os.getenv("TWILIO_AUTH_TOKEN")
-        )
-        self.twilio_whatsapp_number = os.getenv("TWILIO_WHATSAPP_NUMBER")
-        self.recipient_whatsapp_number = os.getenv("RECIPIENT_WHATSAPP_NUMBER")
+        twilio_sid = os.getenv("TWILIO_ACCOUNT_SID")
+        twilio_token = os.getenv("TWILIO_AUTH_TOKEN")
+        twilio_whatsapp = os.getenv("TWILIO_WHATSAPP_NUMBER")
+        recipient_whatsapp = os.getenv("RECIPIENT_WHATSAPP_NUMBER")
+
+        # Validate Twilio configuration
+        if not all([twilio_sid, twilio_token, twilio_whatsapp, recipient_whatsapp]):
+            logging.error("WhatsApp notification disabled: Missing Twilio configuration")
+            self.twilio_client = None
+            self.twilio_whatsapp_number = None
+            self.recipient_whatsapp_number = None
+        else:
+            try:
+                self.twilio_client = TwilioClient(twilio_sid, twilio_token)
+                self.twilio_whatsapp_number = twilio_whatsapp
+                self.recipient_whatsapp_number = recipient_whatsapp
+                logging.info("WhatsApp notification initialized successfully")
+            except Exception as e:
+                logging.error(f"Failed to initialize Twilio client: {e}")
+                self.twilio_client = None
+                self.twilio_whatsapp_number = None
+                self.recipient_whatsapp_number = None
 
         # Telegram
         self.telegram_bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
         self.telegram_chat_id = os.getenv("TELEGRAM_CHAT_ID")
 
-    def send_whatsapp_message(self, message: str) -> bool:
-        """Send message via WhatsApp"""
-        try:
-            message = self.twilio_client.messages.create(
-                from_=self.twilio_whatsapp_number,
-                body=message,
-                to=self.recipient_whatsapp_number
-            )
-            print(f"WhatsApp message sent: {message.sid}")
-            return True
-        except Exception as e:
-            print(f"WhatsApp send failed: {e}")
+        # Rate limiting
+        self.last_notification_time = 0
+        self.min_interval_seconds = 60  # Minimum 1 minute between notifications
+
+    def send_whatsapp_message(self, message: str, max_retries: int = 3) -> bool:
+        """Send message via WhatsApp with retry logic"""
+        if not self.twilio_client:
+            logging.warning("WhatsApp client not initialized - skipping notification")
             return False
 
-    def send_telegram_message(self, message: str) -> bool:
-        """Send message via Telegram"""
-        try:
-            url = f"https://api.telegram.org/bot{self.telegram_bot_token}/sendMessage"
-            data = {
-                "chat_id": self.telegram_chat_id,
-                "text": message,
-                "parse_mode": "Markdown"
-            }
-            response = requests.post(url, data=data)
-            if response.status_code == 200:
-                print("Telegram message sent successfully")
+        # Rate limiting check
+        current_time = time.time()
+        if current_time - self.last_notification_time < self.min_interval_seconds:
+            logging.info("Rate limit exceeded - skipping WhatsApp notification")
+            return False
+
+        for attempt in range(max_retries):
+            try:
+                twilio_message = self.twilio_client.messages.create(
+                    from_=self.twilio_whatsapp_number,
+                    body=message,
+                    to=self.recipient_whatsapp_number
+                )
+                self.last_notification_time = current_time
+                logging.info(f"WhatsApp message sent successfully: SID {twilio_message.sid}")
+                print(f"WhatsApp message sent: {twilio_message.sid}")
                 return True
-            else:
-                print(f"Telegram send failed: {response.text}")
-                return False
-        except Exception as e:
-            print(f"Telegram send failed: {e}")
+            except Exception as e:
+                wait_time = 2 ** attempt  # Exponential backoff
+                logging.warning(f"WhatsApp send attempt {attempt + 1} failed: {e}. Retrying in {wait_time}s")
+                if attempt < max_retries - 1:
+                    time.sleep(wait_time)
+
+        logging.error(f"WhatsApp send failed after {max_retries} attempts")
+        return False
+
+    def send_telegram_message(self, message: str, max_retries: int = 3) -> bool:
+        """Send message via Telegram with retry logic"""
+        if not self.telegram_bot_token or not self.telegram_chat_id:
+            logging.warning("Telegram configuration missing - skipping notification")
             return False
 
-    def send_signal_notification(self, signal: TradingSignal):
+        for attempt in range(max_retries):
+            try:
+                url = f"https://api.telegram.org/bot{self.telegram_bot_token}/sendMessage"
+                data = {
+                    "chat_id": self.telegram_chat_id,
+                    "text": message,
+                    "parse_mode": "Markdown"
+                }
+                response = requests.post(url, data=data, timeout=10)
+                if response.status_code == 200:
+                    logging.info("Telegram message sent successfully")
+                    print("Telegram message sent successfully")
+                    return True
+                else:
+                    logging.warning(f"Telegram send failed: HTTP {response.status_code} - {response.text}")
+                    if attempt < max_retries - 1:
+                        time.sleep(2 ** attempt)
+            except Exception as e:
+                logging.warning(f"Telegram send attempt {attempt + 1} failed: {e}")
+                if attempt < max_retries - 1:
+                    time.sleep(2 ** attempt)
+
+        logging.error(f"Telegram send failed after {max_retries} attempts")
+        return False
+
+    def send_signal_notification(self, signal: TradingSignal, test_mode: bool = False):
         """Send notification only for HIGH confidence signals"""
         if signal.confidence.upper() != "HIGH":
+            logging.info(f"Signal confidence is {signal.confidence}, skipping notification")
             print(f"Signal confidence is {signal.confidence}, skipping notification")
             return
 
         message = self._format_signal_message(signal)
+
+        # In test mode, log the message without sending
+        if test_mode:
+            logging.info(f"TEST MODE: Would send notification - {message[:100]}...")
+            print(f"TEST MODE: Notification would be sent (not actually sent)")
+            return
 
         # Send to both channels
         whatsapp_sent = self.send_whatsapp_message(message)
         telegram_sent = self.send_telegram_message(message)
 
         if whatsapp_sent and telegram_sent:
+            logging.info("Signal notification sent to both WhatsApp and Telegram")
             print("Signal notification sent to both WhatsApp and Telegram")
         elif whatsapp_sent:
+            logging.info("Signal notification sent to WhatsApp only")
             print("Signal notification sent to WhatsApp only")
         elif telegram_sent:
+            logging.info("Signal notification sent to Telegram only")
             print("Signal notification sent to Telegram only")
         else:
+            logging.error("Failed to send signal notification to any channel")
             print("Failed to send signal notification to any channel")
 
     def _format_signal_message(self, signal: TradingSignal) -> str:
@@ -657,17 +725,18 @@ class MT5TradingEA:
         
         return True
     
-    def run(self, interval_seconds: int = 300, auto_execute: bool = False):
+    def run(self, interval_seconds: int = 300, auto_execute: bool = False, test_notifications: bool = False):
         """
         Run EA continuously
-        
+
         Args:
             interval_seconds: Time between analysis cycles
             auto_execute: Automatically execute trades
+            test_notifications: Enable test mode for notifications (no actual sending)
         """
         if not self.connect_mt5():
             return
-        
+
         print(f"\n🚀 AI Trading EA Started")
         print(f"   Symbol: {self.symbol}")
         print(f"   Timeframe: {self.timeframe}")
@@ -675,8 +744,9 @@ class MT5TradingEA:
         print(f"   Risk per trade: {self.account_risk_percent}%")
         print(f"   AI Provider: {self.ai_provider}")
         print(f"   Auto-execute: {auto_execute}")
+        print(f"   Test notifications: {test_notifications}")
         print(f"   Analysis interval: {interval_seconds}s\n")
-        
+
         try:
             while True:
                 # Get market data
@@ -684,20 +754,20 @@ class MT5TradingEA:
                 if df is None:
                     time.sleep(interval_seconds)
                     continue
-                
+
                 # Calculate indicators
                 indicators = self.calculate_indicators(df)
-                
+
                 # Generate signal
                 signal = self.generate_signal(indicators)
                 self.current_signal = signal
-                
+
                 # Display signal
                 self.print_signal(signal)
 
                 # Send notification for HIGH confidence signals
                 if signal.confidence.upper() == "HIGH":
-                    self.notification_manager.send_signal_notification(signal)
+                    self.notification_manager.send_signal_notification(signal, test_mode=test_notifications)
 
                 # Execute if configured
                 if signal.signal_type != "NEUTRAL" and auto_execute:
@@ -706,7 +776,7 @@ class MT5TradingEA:
                 # Wait for next cycle
                 print(f"⏳ Next analysis in {interval_seconds} seconds...")
                 time.sleep(interval_seconds)
-                
+
         except KeyboardInterrupt:
             print("\n\n⛔ EA stopped by user")
         finally:
@@ -746,7 +816,8 @@ def main():
     # Run EA
     # Set auto_execute=True to automatically execute trades
     # Set auto_execute=False to manually confirm each trade
-    ea.run(interval_seconds=300, auto_execute=False)
+    # Set test_notifications=True to test notifications without sending
+    ea.run(interval_seconds=300, auto_execute=False, test_notifications=False)
 
 
 if __name__ == "__main__":
