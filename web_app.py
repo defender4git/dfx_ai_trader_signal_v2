@@ -134,16 +134,12 @@ AI Trading Signal Generator Alert
 • Entry Price: {signal_data['entry_price']:.5f}
 • Stop Loss: {signal_data['stop_loss']:.5f}
 • Take Profit 1: {signal_data['take_profit_1']:.5f}
+• Take Profit 2: {signal_data['take_profit_2']:.5f}
+• Take Profit 3: {signal_data['take_profit_3']:.5f}
 • Position Size: {signal_data['position_size']:.2f} lots
 
 💡 AI Reasoning:
 {signal_data['reasoning']}
-
-📈 Technical Indicators:
-• ATR: {signal_data.get('atr', 'N/A')}
-• RSI: {signal_data.get('rsi', 'N/A')}
-• MACD: {signal_data.get('macd', 'N/A')}
-• CCI: {signal_data.get('cci', 'N/A')}
 
 ⏰ Generated: {signal_data['timestamp']}
 
@@ -278,8 +274,7 @@ def run_ai_analysis():
             api_key = os.getenv('DEEPSEEKER_API_KEY', 'your-deepseek-api-key-here')
         elif ai_provider == 'grok':
             api_key = os.getenv('GROK_API_KEY', 'your-grok-api-key-here')
-        elif ai_provider == 'kilo_code':
-            api_key = os.getenv('KILO_CODE_API_KEY', 'your-kilo-code-api-key-here')
+        
         else:
             return jsonify({'error': 'Invalid AI provider'}), 400
 
