@@ -185,3 +185,116 @@
 2025-11-09 08:05:43,918 - INFO -  * Restarting with watchdog (windowsapi)
 2025-11-09 08:05:48,162 - WARNING -  * Debugger is active!
 2025-11-09 08:05:48,166 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:09:14,625 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\datastructures\\structures.py', reloading
+2025-11-09 08:09:15,068 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:09:19,534 - WARNING -  * Debugger is active!
+2025-11-09 08:09:19,541 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:09:43,646 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:09:43,648 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:09:43,649 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:09:45,503 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:09:51,386 - WARNING -  * Debugger is active!
+2025-11-09 08:09:51,390 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:10:51,808 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_rule_based.py', reloading
+2025-11-09 08:10:52,923 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:11:07,433 - WARNING -  * Debugger is active!
+2025-11-09 08:11:07,446 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:11:08,311 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_delta_event.py', reloading
+2025-11-09 08:11:08,314 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_delta.py', reloading
+2025-11-09 08:11:08,315 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_deleted.py', reloading
+2025-11-09 08:11:08,318 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_create_params.py', reloading
+2025-11-09 08:11:08,320 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_content_part_param.py', reloading
+2025-11-09 08:11:08,325 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_content_delta.py', reloading
+2025-11-09 08:11:08,326 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_content.py', reloading
+2025-11-09 08:11:08,329 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message.py', reloading
+2025-11-09 08:11:08,330 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_url_param.py', reloading
+2025-11-09 08:11:08,341 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_url_delta_block.py', reloading
+2025-11-09 08:11:08,342 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\__init__.py', reloading
+2025-11-09 08:11:08,342 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\__init__.py', reloading
+2025-11-09 08:11:08,343 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\session_update_event_param.py', reloading
+2025-11-09 08:11:08,343 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\web_search_tool_param.py', reloading
+2025-11-09 08:11:08,344 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_url_delta.py', reloading
+2025-11-09 08:11:08,344 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\session_update_event.py', reloading
+2025-11-09 08:11:08,345 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\web_search_tool.py', reloading
+2025-11-09 08:11:08,345 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_url_content_block_param.py', reloading
+2025-11-09 08:11:08,346 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\session_updated_event.py', reloading
+2025-11-09 08:11:08,346 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\web_search_preview_tool_param.py', reloading
+2025-11-09 08:11:08,347 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_url_content_block.py', reloading
+2025-11-09 08:11:08,347 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\session_created_event.py', reloading
+2025-11-09 08:11:08,348 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\web_search_preview_tool.py', reloading
+2025-11-09 08:11:08,348 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_url.py', reloading
+2025-11-09 08:11:08,349 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_text_done_event.py', reloading
+2025-11-09 08:11:08,349 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\tool_param.py', reloading
+2025-11-09 08:11:08,350 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_text_delta_event.py', reloading
+2025-11-09 08:11:08,350 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_file_param.py', reloading
+2025-11-09 08:11:08,351 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_output_item_done_event.py', reloading
+2025-11-09 08:11:08,351 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\tool_choice_types_param.py', reloading
+2025-11-09 08:11:08,352 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\tool_choice_types.py', reloading
+2025-11-09 08:11:08,352 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_output_item_added_event.py', reloading
+2025-11-09 08:11:08,354 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_mcp_call_in_progress.py', reloading
+2025-11-09 08:11:08,356 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\tool_choice_options.py', reloading
+2025-11-09 08:11:08,357 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_file_delta_block.py', reloading
+2025-11-09 08:11:08,357 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\tool_choice_mcp_param.py', reloading
+2025-11-09 08:11:08,358 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_mcp_call_failed.py', reloading
+2025-11-09 08:11:08,358 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_mcp_call_completed.py', reloading
+2025-11-09 08:11:08,359 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\tool_choice_mcp.py', reloading
+2025-11-09 08:11:08,360 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_mcp_call_arguments_done.py', reloading
+2025-11-09 08:11:08,360 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_mcp_call_arguments_delta.py', reloading
+2025-11-09 08:11:08,361 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_file_delta.py', reloading
+2025-11-09 08:11:08,361 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_function_call_arguments_done_event.py', reloading
+2025-11-09 08:11:08,362 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\tool_choice_function_param.py', reloading
+2025-11-09 08:11:08,362 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_file_content_block_param.py', reloading
+2025-11-09 08:11:08,363 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_function_call_arguments_delta_event.py', reloading
+2025-11-09 08:11:08,363 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_done_event.py', reloading
+2025-11-09 08:11:08,364 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_file_content_block.py', reloading
+2025-11-09 08:11:08,364 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_create_event_param.py', reloading
+2025-11-09 08:11:08,365 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\tool_choice_function.py', reloading
+2025-11-09 08:11:08,365 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_file.py', reloading
+2025-11-09 08:11:08,366 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_create_event.py', reloading
+2025-11-09 08:11:08,366 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\tool_choice_custom_param.py', reloading
+2025-11-09 08:11:08,367 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_created_event.py', reloading
+2025-11-09 08:11:08,367 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\file_path_delta_annotation.py', reloading
+2025-11-09 08:11:08,367 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_content_part_done_event.py', reloading
+2025-11-09 08:11:08,368 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\tool_choice_custom.py', reloading
+2025-11-09 08:11:08,369 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\file_path_annotation.py', reloading
+2025-11-09 08:11:08,369 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_content_part_added_event.py', reloading
+2025-11-09 08:11:08,375 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\tool_choice_allowed_param.py', reloading
+2025-11-09 08:11:08,375 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_cancel_event_param.py', reloading
+2025-11-09 08:11:08,376 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\file_citation_delta_annotation.py', reloading
+2025-11-09 08:11:08,376 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\tool_choice_allowed.py', reloading
+2025-11-09 08:11:08,377 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\file_citation_annotation.py', reloading
+2025-11-09 08:11:08,378 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_cancel_event.py', reloading
+2025-11-09 08:11:08,378 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\annotation_delta.py', reloading
+2025-11-09 08:11:08,378 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_audio_transcript_done_event.py', reloading
+2025-11-09 08:11:08,379 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\annotation.py', reloading
+2025-11-09 08:11:08,379 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\response_audio_transcript_delta_event.py', reloading
+2025-11-09 08:11:08,380 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\tool.py', reloading
+2025-11-09 08:11:08,380 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\thread.py', reloading
+2025-11-09 08:11:08,381 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\realtime_mcp_tool_call_param.py', reloading
+2025-11-09 08:11:08,381 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_named_tool_choice_custom_param.py', reloading
+2025-11-09 08:11:08,382 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\response_output_message_param.py', reloading
+2025-11-09 08:11:10,107 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:11:20,802 - WARNING -  * Debugger is active!
+2025-11-09 08:11:20,811 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:11:42,261 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:11:42,267 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:11:43,584 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:11:48,638 - WARNING -  * Debugger is active!
+2025-11-09 08:11:48,642 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:11:55,061 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:11:55,061 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:11:55,962 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:12:00,614 - WARNING -  * Debugger is active!
+2025-11-09 08:12:00,620 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:12:52,437 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:12:52,439 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:12:52,439 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:12:54,891 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:12:59,597 - WARNING -  * Debugger is active!
+2025-11-09 08:12:59,600 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:13:02,675 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:13:02,676 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:13:02,676 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:13:04,007 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:13:10,462 - WARNING -  * Debugger is active!
+2025-11-09 08:13:10,465 - INFO -  * Debugger PIN: 137-776-963

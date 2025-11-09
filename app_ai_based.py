@@ -298,15 +298,8 @@ class AITradingAgent:
         elif self.provider == "deepseek":
             self.api_key = api_key
             self.base_url = "https://api.deepseek.com/v1"
-        elif self.provider == "grok":
-            self.api_key = api_key
-            self.base_url = "https://api.x.ai/v1"
-            self.model_name = "grok-4-latest"  # Use the correct model name
-        elif self.provider == "kilo_code":
-            self.api_key = api_key
-            self.base_url = "https://api.kilocode.com/v1"
         else:
-            raise ValueError("Provider must be 'anthropic', 'openai', 'deepseek', 'grok', or 'kilo_code'")
+            raise ValueError("Provider must be 'anthropic', 'openai', or 'deepseek'")
     
     def analyze_market(self, indicators: Dict, symbol: str, timeframe: str) -> Dict:
         """
@@ -366,48 +359,6 @@ Return JSON: {{"signal":"LONG/SHORT/NEUTRAL","confidence":"HIGH/MEDIUM/LOW","tre
                     "stream": False,
                     "max_tokens": 512,
                     "temperature": 0.7
-                }
-                response = requests.post(f"{self.base_url}/chat/completions", headers=headers, json=data)
-                response.raise_for_status()
-                response_data = response.json()
-                response_text = response_data["choices"][0]["message"]["content"]
-                usage = response_data.get("usage", {})
-                input_tokens = usage.get("prompt_tokens", 0)
-                output_tokens = usage.get("completion_tokens", 0)
-            elif self.provider == "grok":
-                headers = {
-                    "Authorization": f"Bearer {self.api_key}",
-                    "Content-Type": "application/json"
-                }
-                data = {
-                    "model": "grok-beta",
-                    "messages": [
-                        {"role": "user", "content": prompt}
-                    ],
-                    "max_tokens": 512,
-                    "temperature": 0.7,
-                    "stream": False
-                }
-                response = requests.post(f"{self.base_url}/chat/completions", headers=headers, json=data)
-                response.raise_for_status()
-                response_data = response.json()
-                response_text = response_data["choices"][0]["message"]["content"]
-                usage = response_data.get("usage", {})
-                input_tokens = usage.get("prompt_tokens", 0)
-                output_tokens = usage.get("completion_tokens", 0)
-            elif self.provider == "kilo_code":
-                headers = {
-                    "Authorization": f"Bearer {self.api_key}",
-                    "Content-Type": "application/json"
-                }
-                data = {
-                    "model": "grok-code-fast-1",
-                    "messages": [
-                        {"role": "user", "content": prompt}
-                    ],
-                    "max_tokens": 512,
-                    "temperature": 0.7,
-                    "stream": False
                 }
                 response = requests.post(f"{self.base_url}/chat/completions", headers=headers, json=data)
                 response.raise_for_status()
