@@ -594,6 +594,12 @@
         }
 
         function generateAnalysisHTML(analysis) {
+            // Determine market bias styling
+            const isBullish = analysis.bias && analysis.bias.toLowerCase().includes('bullish');
+            const biasBgClass = isBullish ? 'bg-green-50' : 'bg-red-50';
+            const biasTextClass = isBullish ? 'text-green-600' : 'text-red-600';
+            const biasValueClass = isBullish ? 'text-green-800' : 'text-red-800';
+
             return `
                 <div class="space-y-4">
                     <div class="grid grid-cols-2 gap-4">
@@ -617,9 +623,11 @@
                         </div>
                     </div>
 
-                    <div class="p-3 bg-indigo-50 rounded-lg">
-                        <div class="text-sm text-indigo-600 font-medium">Market Bias</div>
-                        <div class="text-lg font-semibold text-indigo-800 capitalize">${analysis.bias}</div>
+                    <div class="p-3 ${biasBgClass} rounded-lg border-2 ${isBullish ? 'border-green-200' : 'border-red-200'}">
+                        <div class="text-sm ${biasTextClass} font-medium">Market Bias</div>
+                        <div class="text-lg font-semibold ${biasValueClass} capitalize flex items-center">
+                            ${isBullish ? '🟢' : '🔴'} ${analysis.bias}
+                        </div>
                     </div>
                 </div>
             `;

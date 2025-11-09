@@ -126,10 +126,9 @@ def send_signal_alert(user_email, signal_data):
         subject = f"🚨 AI Trading Signal Alert - {signal_data['symbol']}"
 
         # Check if signal is expired
-        from datetime import datetime
         expiry_time = datetime.strptime(signal_data['timestamp'], '%Y-%m-%d %H:%M:%S UTC') + timedelta(minutes=5)
-        is_expired = datetime.datetime.now(datetime.UTC) > expiry_time
-        expiry_status = "⚠️ SIGNAL EXPIRED" if is_expired else f"⏰ Valid for: {signal.time_remaining() if 'signal' in locals() else '5 minutes'}"
+        is_expired = datetime.now() > expiry_time
+        expiry_status = "⚠️ SIGNAL EXPIRED" if is_expired else "⏰ Valid for: 5 minutes"
 
         body = f"""
 AI Trading Signal Generator Alert

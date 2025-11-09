@@ -445,3 +445,80 @@
 2025-11-09 09:36:57,104 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
 2025-11-09 09:36:57,276 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\security.py', reloading
 2025-11-09 09:36:58,780 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 09:41:16,726 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.193.204.207:9000
+2025-11-09 09:41:16,726 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-09 09:41:16,745 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 09:41:20,565 - WARNING -  * Debugger is active!
+2025-11-09 09:41:20,571 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 09:41:32,304 - INFO - 127.0.0.1 - - [09/Nov/2025 09:41:32] "GET / HTTP/1.1" 200 -
+2025-11-09 09:41:34,166 - INFO - 127.0.0.1 - - [09/Nov/2025 09:41:34] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-09 09:41:52,449 - INFO - WhatsApp notification initialized successfully
+2025-11-09 09:41:54,393 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-09 09:41:54,393 - INFO - Retrying request to /chat/completions in 0.478763 seconds
+2025-11-09 09:41:55,164 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-09 09:41:55,165 - INFO - Retrying request to /chat/completions in 0.768338 seconds
+2025-11-09 09:42:00,538 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-09 09:42:00,619 - ERROR - Failed to send email alert to kizito2008@yahoo.com: type object 'datetime.datetime' has no attribute 'datetime'
+2025-11-09 09:42:00,637 - ERROR - Failed to send email alert to ict.tgil@gmail.com: type object 'datetime.datetime' has no attribute 'datetime'
+2025-11-09 09:42:00,639 - INFO - WhatsApp notification initialized successfully
+2025-11-09 09:42:00,917 - INFO - -- BEGIN Twilio API Request --
+2025-11-09 09:42:00,917 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-09 09:42:00,918 - INFO - Headers:
+2025-11-09 09:42:00,918 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-09 09:42:00,918 - INFO - Accept : application/json
+2025-11-09 09:42:00,918 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-09 09:42:00,918 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-09 09:42:00,918 - INFO - Accept-Charset : utf-8
+2025-11-09 09:42:00,918 - INFO - -- END Twilio API Request --
+2025-11-09 09:42:13,744 - INFO - Response Status Code: 201
+2025-11-09 09:42:13,744 - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1674', 'Connection': 'keep-alive', 'Date': 'Sun, 09 Nov 2025 08:42:14 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ39d10512ef2154fcca7ee5280bc88449', 'Twilio-Request-Duration': '0.108', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 3502b4da22916485af0d3edbb185fb9c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'Ne_Pi3xh_EANYMXs6iUfIqWUjsS0pDFtucY3KSoEBB-TPQXCBUzAPQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-09 09:42:13,744 - INFO - WhatsApp message sent successfully: SID SM39d10512ef2154fcca7ee5280bc88449
+2025-11-09 09:42:15,069 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-09 09:42:17,124 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-09 09:42:20,249 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-09 09:42:20,249 - ERROR - Telegram send failed after 3 attempts
+2025-11-09 09:42:20,251 - INFO - Signal notification sent to WhatsApp only
+2025-11-09 09:42:20,252 - INFO - Signal generated for Volatility 10 (1s) Index - Expires at 2025-11-09 09:47:00 UTC
+2025-11-09 09:42:20,253 - INFO - 127.0.0.1 - - [09/Nov/2025 09:42:20] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-09 09:49:06,567 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-09 09:49:06,576 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-09 09:49:08,311 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 09:49:14,129 - WARNING -  * Debugger is active!
+2025-11-09 09:49:14,135 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 10:12:00,495 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.193.204.207:9000
+2025-11-09 10:12:00,496 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-09 10:12:00,511 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 10:12:04,527 - WARNING -  * Debugger is active!
+2025-11-09 10:12:04,532 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 10:12:25,584 - INFO - 10.193.204.207 - - [09/Nov/2025 10:12:25] "[32mGET / HTTP/1.1[0m" 302 -
+2025-11-09 10:12:25,706 - INFO - 10.193.204.207 - - [09/Nov/2025 10:12:25] "GET /login HTTP/1.1" 200 -
+2025-11-09 10:12:27,403 - INFO - 10.193.204.207 - - [09/Nov/2025 10:12:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-09 10:12:53,055 - INFO - 10.193.204.207 - - [09/Nov/2025 10:12:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-11-09 10:12:53,079 - INFO - 10.193.204.207 - - [09/Nov/2025 10:12:53] "GET / HTTP/1.1" 200 -
+2025-11-09 10:12:54,178 - INFO - 10.193.204.207 - - [09/Nov/2025 10:12:54] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-09 10:13:18,034 - INFO - WhatsApp notification initialized successfully
+2025-11-09 10:13:31,011 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-09 10:13:31,021 - INFO - Retrying request to /chat/completions in 0.443951 seconds
+2025-11-09 10:13:48,367 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-09 10:14:20,657 - ERROR - Failed to send email alert to kizito2008@yahoo.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-11-09 10:14:41,737 - ERROR - Failed to send email alert to ict.tgil@gmail.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-11-09 10:14:41,738 - INFO - Signal generated for Volatility 10 (1s) Index - Expires at 2025-11-09 10:18:48 UTC
+2025-11-09 10:14:41,739 - INFO - 10.193.204.207 - - [09/Nov/2025 10:14:41] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-09 15:46:06,421 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-09 15:46:06,422 - INFO - Retrying request to /chat/completions in 0.470335 seconds
+2025-11-09 15:46:11,768 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-09 15:46:44,084 - ERROR - Failed to send email alert to kizito2008@yahoo.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-11-09 15:47:05,143 - ERROR - Failed to send email alert to ict.tgil@gmail.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-11-09 15:47:05,143 - INFO - Signal generated for Volatility 10 (1s) Index - Expires at 2025-11-09 15:51:11 UTC
+2025-11-09 15:47:05,144 - INFO - 10.193.204.207 - - [09/Nov/2025 15:47:05] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-09 16:13:27,984 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-09 16:14:00,288 - ERROR - Failed to send email alert to kizito2008@yahoo.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-11-09 16:14:21,334 - ERROR - Failed to send email alert to ict.tgil@gmail.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-11-09 16:14:21,336 - INFO - Signal generated for Volatility 10 (1s) Index - Expires at 2025-11-09 16:18:28 UTC
+2025-11-09 16:14:21,338 - INFO - 10.193.204.207 - - [09/Nov/2025 16:14:21] "POST /run_ai_analysis HTTP/1.1" 200 -
