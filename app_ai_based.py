@@ -46,9 +46,28 @@ class TradingSignal:
     confidence: str
     reasoning: str
     timestamp: datetime
+    expiry_timestamp: datetime
     trend: str
     entry_strategy: str
     indicators: Dict
+
+    def is_expired(self) -> bool:
+        """Check if the signal has expired (5 minutes validity)"""
+        return datetime.now() > self.expiry_timestamp
+
+    def time_remaining(self) -> str:
+        """Get remaining time before expiry in human readable format"""
+        if self.is_expired():
+            return "EXPIRED"
+
+        remaining = self.expiry_timestamp - datetime.now()
+        minutes = int(remaining.total_seconds() // 60)
+        seconds = int(remaining.total_seconds() % 60)
+
+        if minutes > 0:
+            return f"{minutes}m {seconds}s"
+        else:
+            return f"{seconds}s"
 class NotificationManager:
     """Handles notifications via Telegram and WhatsApp"""
 
@@ -183,11 +202,14 @@ class NotificationManager:
     def _format_signal_message(self, signal: TradingSignal) -> str:
         """Format signal for notification"""
         direction_emoji = "🟢" if signal.signal_type == "LONG" else "🔴"
+        expiry_status = "⚠️ EXPIRED" if signal.is_expired() else f"⏰ Valid for: {signal.time_remaining()}"
+
         message = f"""
 🚨 *AI TRADING SIGNAL ALERT* 🚨
 
 {direction_emoji} *{signal.signal_type}* on {signal.symbol}
 📊 *Confidence:* {signal.confidence}
+{expiry_status}
 
 💰 *Entry Price:* {signal.entry_price:.5f}
 📏 *Position Size:* {signal.position_size:.2f} lots
@@ -206,7 +228,8 @@ class NotificationManager:
 
 💡 *AI Reasoning:* {signal.reasoning}
 
-⏰ *Time:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
+⏰ *Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
+⏰ *Expires:* {signal.expiry_timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
         """.strip()
 
         return message
@@ -593,7 +616,8 @@ class MT5TradingEA:
                       min(lot_size, symbol_info.volume_max))
         lot_size = round(lot_size / symbol_info.volume_step) * symbol_info.volume_step
         
-        # Create signal
+        # Create signal with 5-minute expiry
+        expiry_time = datetime.now() + timedelta(minutes=5)
         signal = TradingSignal(
             symbol=self.symbol,
             signal_type=signal_type,
@@ -606,6 +630,7 @@ class MT5TradingEA:
             confidence=ai_analysis['confidence'],
             reasoning=ai_analysis['reasoning'],
             timestamp=datetime.now(),
+            expiry_timestamp=expiry_time,
             indicators=indicators,
             trend=ai_analysis.get('trend', 'NEUTRAL'),
             entry_strategy=ai_analysis.get('entry_strategy', 'IMMEDIATE')
@@ -619,6 +644,7 @@ class MT5TradingEA:
         print(f"🤖 AI TRADING SIGNAL - {signal.symbol}")
         print("="*80)
         print(f"Timestamp: {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"⏰ Signal Expiry: {signal.expiry_timestamp.strftime('%Y-%m-%d %H:%M:%S')} ({signal.time_remaining()})")
         print(f"\n📊 MARKET ANALYSIS:")
         print(f"  ATR: {signal.indicators['atr']:.6f} ({signal.indicators['volatility_level']})")
         print(f"  RSI: {signal.indicators['rsi']:.2f}")
@@ -626,12 +652,12 @@ class MT5TradingEA:
         print(f"  CCI: {signal.indicators['cci']:.2f}")
         print(f"  Stochastic: {signal.indicators['stochastic']:.2f}")
         print(f"  Market Bias: {signal.indicators['bias']}")
-        
+
         print(f"\n🎯 TRADING SIGNAL: {signal.signal_type}")
         print(f"  Confidence: {signal.confidence}")
         print(f"  Entry Price: {signal.entry_price:.5f}")
         print(f"  Position Size: {signal.position_size:.2f} lots")
-        
+
         print(f"\n🛡️ RISK MANAGEMENT:")
         stop_distance = abs(signal.entry_price - signal.stop_loss)
         print(f"  Stop Loss: {signal.stop_loss:.5f} ({stop_distance:.5f} pts)")
@@ -647,7 +673,7 @@ class MT5TradingEA:
             print(f"  Take Profit 1: {signal.take_profit_1:.5f} (R:R N/A)")
             print(f"  Take Profit 2: {signal.take_profit_2:.5f} (R:R N/A)")
             print(f"  Take Profit 3: {signal.take_profit_3:.5f} (R:R N/A)")
-        
+
         print(f"\n💡 AI REASONING:")
         print(f"  {signal.reasoning}")
         print("="*80 + "\n")
@@ -655,7 +681,7 @@ class MT5TradingEA:
     def execute_trade(self, signal: TradingSignal, auto_execute: bool = False) -> bool:
         """
         Execute trade on MT5
-        
+
         Args:
             signal: TradingSignal object
             auto_execute: If True, execute without confirmation
@@ -663,9 +689,14 @@ class MT5TradingEA:
         if signal.signal_type == "NEUTRAL":
             print("⚠️  No trade signal - Market is NEUTRAL")
             return False
-        
+
+        # Check if signal has expired
+        if signal.is_expired():
+            print(f"❌ Signal has expired! Cannot execute trade. Signal expired at {signal.expiry_timestamp}")
+            return False
+
         if not auto_execute:
-            response = input(f"\n Execute {signal.signal_type} trade? (yes/no): ")
+            response = input(f"\n Execute {signal.signal_type} trade? (Signal expires in {signal.time_remaining()}) (yes/no): ")
             if response.lower() not in ['yes', 'y']:
                 print("❌ Trade execution cancelled")
                 return False

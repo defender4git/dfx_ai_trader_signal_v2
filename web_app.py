@@ -3,12 +3,13 @@ AI Trading Signal Generator Web Interface
 Provides a professional web UI for the AI-based trading system
 """
 
+import signal
 from flask import Flask, render_template, request, jsonify, redirect, url_for, session
 import sys
 import os
 import json
 import logging
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import openai
 
@@ -124,6 +125,12 @@ def send_signal_alert(user_email, signal_data):
     try:
         subject = f"🚨 AI Trading Signal Alert - {signal_data['symbol']}"
 
+        # Check if signal is expired
+        from datetime import datetime
+        expiry_time = datetime.strptime(signal_data['timestamp'], '%Y-%m-%d %H:%M:%S UTC') + timedelta(minutes=5)
+        is_expired = datetime.datetime.now(datetime.UTC) > expiry_time
+        expiry_status = "⚠️ SIGNAL EXPIRED" if is_expired else f"⏰ Valid for: {signal.time_remaining() if 'signal' in locals() else '5 minutes'}"
+
         body = f"""
 AI Trading Signal Generator Alert
 
@@ -137,11 +144,13 @@ AI Trading Signal Generator Alert
 • Take Profit 2: {signal_data['take_profit_2']:.5f}
 • Take Profit 3: {signal_data['take_profit_3']:.5f}
 • Position Size: {signal_data['position_size']:.2f} lots
+• {expiry_status}
 
 💡 AI Reasoning:
 {signal_data['reasoning']}
 
 ⏰ Generated: {signal_data['timestamp']}
+⏰ Expires: {expiry_time.strftime('%Y-%m-%d %H:%M:%S UTC')}
 
 ---
 AI Trading Signal Generator
@@ -311,6 +320,7 @@ def run_ai_analysis():
             f"📊 Retrieved market data: {len(df)} candles from MT5",
             f"📈 Calculated technical indicators: ATR={indicators['atr']:.4f}, RSI={indicators['rsi']:.1f}, MACD={indicators['macd']:.4f}",
             f"🎯 Generated trading signal: {signal.signal_type} with {signal.confidence} confidence",
+            f"⏰ Signal validity: {signal.time_remaining()} (expires at {signal.expiry_timestamp.strftime('%H:%M:%S UTC')})",
             f"💡 AI Analysis: {signal.reasoning[:100]}...",
             f"✅ Analysis completed successfully for {symbol}"
         ]
@@ -328,7 +338,10 @@ def run_ai_analysis():
                 'position_size': signal.position_size,
                 'confidence': signal.confidence,
                 'reasoning': signal.reasoning,
-                'timestamp': signal.timestamp.isoformat()
+                'timestamp': signal.timestamp.isoformat(),
+                'expiry_timestamp': signal.expiry_timestamp.isoformat(),
+                'is_expired': signal.is_expired(),
+                'time_remaining': signal.time_remaining()
             },
             'analysis': {
                 'atr': indicators['atr'],
@@ -385,6 +398,10 @@ def run_ai_analysis():
         except Exception as e:
             logging.error(f"Error sending WhatsApp/Telegram notifications: {e}")
             print(f"⚠️  Error sending WhatsApp/Telegram notifications: {e}")
+
+        # Log expiry information
+        logging.info(f"Signal generated for {signal.symbol} - Expires at {signal.expiry_timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}")
+        print(f"📅 Signal expiry: {signal.expiry_timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')} ({signal.time_remaining()})")
 
         return jsonify(response)
 

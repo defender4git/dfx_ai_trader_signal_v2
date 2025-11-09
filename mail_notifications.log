@@ -371,3 +371,77 @@
 2025-11-09 08:30:44,868 - INFO - 127.0.0.1 - - [09/Nov/2025 08:30:44] "GET /get_symbols HTTP/1.1" 200 -
 2025-11-09 08:44:56,164 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\datetime.py', reloading
 2025-11-09 08:44:56,188 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\_pydatetime.py', reloading
+2025-11-09 08:44:57,526 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:45:01,463 - WARNING -  * Debugger is active!
+2025-11-09 08:45:01,468 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:50:07,549 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:50:07,553 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:50:07,554 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:50:09,433 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:50:14,147 - WARNING -  * Debugger is active!
+2025-11-09 08:50:14,150 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:50:19,409 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:50:19,409 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:50:20,590 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:50:25,748 - WARNING -  * Debugger is active!
+2025-11-09 08:50:25,753 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:50:33,661 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:50:33,664 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:50:33,665 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:50:34,240 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:50:39,363 - WARNING -  * Debugger is active!
+2025-11-09 08:50:39,367 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:50:45,631 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:50:45,631 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:50:45,632 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:50:46,674 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:50:51,429 - WARNING -  * Debugger is active!
+2025-11-09 08:50:51,438 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:50:57,369 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-09 08:50:57,763 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:51:02,474 - WARNING -  * Debugger is active!
+2025-11-09 08:51:02,478 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:51:08,202 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-09 08:51:08,202 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-09 08:51:08,978 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:51:13,523 - WARNING -  * Debugger is active!
+2025-11-09 08:51:13,526 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:51:18,303 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-09 08:51:18,306 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-09 08:51:18,306 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-09 08:51:18,738 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:51:23,556 - WARNING -  * Debugger is active!
+2025-11-09 08:51:23,559 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:51:28,920 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:51:30,690 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:51:36,272 - WARNING -  * Debugger is active!
+2025-11-09 08:51:36,279 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 09:16:00,564 - INFO - 127.0.0.1 - - [09/Nov/2025 09:16:00] "GET / HTTP/1.1" 200 -
+2025-11-09 09:16:02,188 - INFO - 127.0.0.1 - - [09/Nov/2025 09:16:02] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-09 09:20:49,488 - INFO - WhatsApp notification initialized successfully
+2025-11-09 09:20:51,494 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-09 09:20:51,494 - INFO - Retrying request to /chat/completions in 0.381251 seconds
+2025-11-09 09:20:52,182 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-09 09:20:52,183 - INFO - Retrying request to /chat/completions in 0.942902 seconds
+2025-11-09 09:21:01,612 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-09 09:21:01,655 - ERROR - Failed to send email alert to kizito2008@yahoo.com: name 'timedelta' is not defined
+2025-11-09 09:21:01,666 - ERROR - Failed to send email alert to ict.tgil@gmail.com: name 'timedelta' is not defined
+2025-11-09 09:21:01,667 - INFO - Signal generated for Volatility 10 (1s) Index - Expires at 2025-11-09 09:26:01 UTC
+2025-11-09 09:21:01,668 - INFO - 127.0.0.1 - - [09/Nov/2025 09:21:01] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-09 09:23:48,983 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-09 09:23:48,983 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-09 09:23:50,453 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 09:23:58,123 - WARNING -  * Debugger is active!
+2025-11-09 09:23:58,131 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 09:33:53,005 - INFO - 127.0.0.1 - - [09/Nov/2025 09:33:53] "GET / HTTP/1.1" 200 -
+2025-11-09 09:33:54,541 - INFO - 127.0.0.1 - - [09/Nov/2025 09:33:54] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-09 09:34:10,836 - INFO - WhatsApp notification initialized successfully
+2025-11-09 09:34:31,356 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-09 09:35:03,692 - ERROR - Failed to send email alert to kizito2008@yahoo.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-11-09 09:35:24,772 - ERROR - Failed to send email alert to ict.tgil@gmail.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-11-09 09:35:24,772 - INFO - Signal generated for Volatility 10 (1s) Index - Expires at 2025-11-09 09:39:31 UTC
+2025-11-09 09:35:24,774 - INFO - 127.0.0.1 - - [09/Nov/2025 09:35:24] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-09 09:36:57,104 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-09 09:36:57,104 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-09 09:36:57,276 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\security.py', reloading
+2025-11-09 09:36:58,780 - INFO -  * Restarting with watchdog (windowsapi)

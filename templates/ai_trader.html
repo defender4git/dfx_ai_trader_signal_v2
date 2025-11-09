@@ -537,13 +537,21 @@
             const signalClass = signal.signal_type === 'LONG' ? 'signal-long' :
                               signal.signal_type === 'SHORT' ? 'signal-short' : 'signal-neutral';
 
+            // Format expiry information
+            const expiryInfo = signal.is_expired ?
+                `<span class="text-red-200 font-semibold">⚠️ SIGNAL EXPIRED</span>` :
+                `<span class="text-green-200">⏰ Valid: ${signal.time_remaining}</span>`;
+
             return `
                 <div class="rounded-lg p-4 text-white ${signalClass}">
                     <div class="flex items-center justify-between mb-4">
                         <h3 class="text-lg font-semibold">${signal.symbol} Signal</h3>
-                        <span class="px-3 py-1 rounded-full text-sm font-medium bg-white bg-opacity-20">
-                            ${signal.confidence} Confidence
-                        </span>
+                        <div class="flex flex-col items-end space-y-1">
+                            <span class="px-3 py-1 rounded-full text-sm font-medium bg-white bg-opacity-20">
+                                ${signal.confidence} Confidence
+                            </span>
+                            <span class="text-xs">${expiryInfo}</span>
+                        </div>
                     </div>
 
                     <div class="space-y-3">
@@ -566,6 +574,14 @@
                         <div class="flex justify-between">
                             <span>Take Profit 1:</span>
                             <span class="font-mono">${signal.take_profit_1.toFixed(5)}</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Generated:</span>
+                            <span class="text-xs">${new Date(signal.timestamp).toLocaleString()}</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Expires:</span>
+                            <span class="text-xs">${new Date(signal.expiry_timestamp).toLocaleString()}</span>
                         </div>
                     </div>
                 </div>
