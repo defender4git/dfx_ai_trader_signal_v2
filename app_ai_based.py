@@ -300,13 +300,35 @@ class AITradingAgent:
             self.base_url = "https://api.deepseek.com/v1"
         else:
             raise ValueError("Provider must be 'anthropic', 'openai', or 'deepseek'")
+
+        # Rate limiting for API calls
+        self.request_times = []
+        self.max_requests_per_minute = 10  # Conservative limit to avoid rate limits
+        self.min_interval_seconds = 60.0 / self.max_requests_per_minute  # Minimum time between requests
     
     def analyze_market(self, indicators: Dict, symbol: str, timeframe: str) -> Dict:
         """
         Send indicators to Claude AI for professional analysis
         Returns trading signal with complete parameters
         """
-        
+
+        # Rate limiting check
+        current_time = time.time()
+        # Remove requests older than 1 minute
+        self.request_times = [t for t in self.request_times if current_time - t < 60]
+
+        if len(self.request_times) >= self.max_requests_per_minute:
+            logging.warning(f"Rate limit reached ({self.max_requests_per_minute} requests/minute). Skipping AI analysis.")
+            return self._default_analysis()
+
+        # Check minimum interval between requests
+        if self.request_times and current_time - self.request_times[-1] < self.min_interval_seconds:
+            wait_time = self.min_interval_seconds - (current_time - self.request_times[-1])
+            logging.info(f"Rate limiting: waiting {wait_time:.2f} seconds before next API call")
+            time.sleep(wait_time)
+
+        self.request_times.append(current_time)
+
         prompt = f"""Analyze {symbol} {timeframe} data: ATR={indicators['atr']:.4f}({indicators['volatility_level'][:1]}), RSI={indicators['rsi']:.1f}, MACD={indicators['macd']:.4f}/{indicators['macd_signal']:.4f}, CCI={indicators['cci']:.1f}, Stoch={indicators['stochastic']:.1f}, Bias={indicators['bias'][:3]}.
 
 Return JSON: {{"signal":"LONG/SHORT/NEUTRAL","confidence":"HIGH/MEDIUM/LOW","trend":"BULLISH/BEARISH/NEUTRAL/CONSOLIDATION","entry_strategy":"IMMEDIATE/WAIT_PULLBACK/WAIT_BREAKOUT","stop_loss_atr_multiplier":1.3-2.0,"take_profit_1_atr_multiplier":1.5,"take_profit_2_atr_multiplier":2.0,"take_profit_3_atr_multiplier":3.0,"position_size_adjustment":0.5-1.0,"reasoning":"Brief analysis","key_observations":["obs1","obs2","obs3"]}}"""
@@ -343,6 +365,10 @@ Return JSON: {{"signal":"LONG/SHORT/NEUTRAL","confidence":"HIGH/MEDIUM/LOW","tre
                     if not response_text or not response_text.strip():
                         print(f"OpenAI returned empty response")
                         return self._default_analysis()
+                except openai.RateLimitError as rate_error:
+                    logging.warning(f"OpenAI rate limit exceeded: {rate_error}")
+                    print(f"OpenAI rate limit exceeded - using fallback analysis")
+                    return self._default_analysis()
                 except Exception as api_error:
                     print(f"OpenAI API Error: {api_error}")
                     return self._default_analysis()

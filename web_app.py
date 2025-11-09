@@ -349,7 +349,7 @@ def run_ai_analysis():
             'logs': logs
         }
 
-        # Send email alerts to all users with notifications enabled
+        # Send email alerts to all users with notifications enabled (separate from WhatsApp/Telegram)
         try:
             users_with_notifications = User.query.filter_by(email_notifications=True).all()
             for user in users_with_notifications:
@@ -372,7 +372,19 @@ def run_ai_analysis():
                 }
                 send_signal_alert(user.email, signal_alert_data)
         except Exception as e:
+            logging.error(f"Error sending email alerts: {e}")
             print(f"⚠️  Error sending email alerts: {e}")
+
+        # Send WhatsApp/Telegram notifications for HIGH confidence signals (separate from email)
+        try:
+            if signal.confidence.upper() == "HIGH":
+                # Create notification manager instance for web app
+                from app_ai_based import NotificationManager
+                notification_manager = NotificationManager()
+                notification_manager.send_signal_notification(signal)
+        except Exception as e:
+            logging.error(f"Error sending WhatsApp/Telegram notifications: {e}")
+            print(f"⚠️  Error sending WhatsApp/Telegram notifications: {e}")
 
         return jsonify(response)
 

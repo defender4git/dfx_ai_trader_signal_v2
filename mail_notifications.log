@@ -298,3 +298,76 @@
 2025-11-09 08:13:04,007 - INFO -  * Restarting with watchdog (windowsapi)
 2025-11-09 08:13:10,462 - WARNING -  * Debugger is active!
 2025-11-09 08:13:10,465 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:14:11,265 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.193.204.207:9000
+2025-11-09 08:14:11,265 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-09 08:14:11,281 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:14:14,824 - WARNING -  * Debugger is active!
+2025-11-09 08:14:14,829 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:14:18,651 - INFO - 127.0.0.1 - - [09/Nov/2025 08:14:18] "GET / HTTP/1.1" 200 -
+2025-11-09 08:14:20,131 - INFO - 127.0.0.1 - - [09/Nov/2025 08:14:20] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-09 08:14:47,832 - INFO - WhatsApp notification initialized successfully
+2025-11-09 08:15:00,354 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-09 08:15:00,355 - INFO - Retrying request to /chat/completions in 0.414805 seconds
+2025-11-09 08:15:01,066 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-09 08:15:01,067 - INFO - Retrying request to /chat/completions in 0.871504 seconds
+2025-11-09 08:15:02,903 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-09 08:15:24,356 - ERROR - Failed to send email alert to kizito2008@yahoo.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-11-09 08:15:45,419 - ERROR - Failed to send email alert to ict.tgil@gmail.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-11-09 08:15:45,420 - INFO - 127.0.0.1 - - [09/Nov/2025 08:15:45] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-09 08:20:03,673 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:20:03,674 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:20:04,997 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:20:10,355 - WARNING -  * Debugger is active!
+2025-11-09 08:20:10,359 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:20:15,625 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:20:15,629 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:20:15,629 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:20:17,055 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:20:22,485 - WARNING -  * Debugger is active!
+2025-11-09 08:20:22,492 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:20:25,177 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\openai\\_exceptions.py', reloading
+2025-11-09 08:20:25,238 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:20:25,242 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:20:25,244 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-09 08:20:26,518 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:20:31,221 - WARNING -  * Debugger is active!
+2025-11-09 08:20:31,225 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:21:38,266 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.193.204.207:9000
+2025-11-09 08:21:38,267 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-09 08:21:38,281 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:21:41,974 - WARNING -  * Debugger is active!
+2025-11-09 08:21:41,978 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:21:45,068 - INFO - 127.0.0.1 - - [09/Nov/2025 08:21:45] "GET / HTTP/1.1" 200 -
+2025-11-09 08:21:46,569 - INFO - 127.0.0.1 - - [09/Nov/2025 08:21:46] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-09 08:22:01,422 - INFO - WhatsApp notification initialized successfully
+2025-11-09 08:22:14,015 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-09 08:22:14,016 - INFO - Retrying request to /chat/completions in 0.494380 seconds
+2025-11-09 08:22:22,062 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-09 08:22:54,350 - ERROR - Failed to send email alert to kizito2008@yahoo.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-11-09 08:23:15,413 - ERROR - Failed to send email alert to ict.tgil@gmail.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-11-09 08:23:15,414 - INFO - 127.0.0.1 - - [09/Nov/2025 08:23:15] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-09 08:25:45,935 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-09 08:25:45,938 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-09 08:25:45,939 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-09 08:25:46,895 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-09 08:25:51,554 - WARNING -  * Debugger is active!
+2025-11-09 08:25:51,558 - INFO -  * Debugger PIN: 137-776-963
+2025-11-09 08:28:27,780 - INFO - 127.0.0.1 - - [09/Nov/2025 08:28:27] "GET / HTTP/1.1" 200 -
+2025-11-09 08:28:29,126 - INFO - 127.0.0.1 - - [09/Nov/2025 08:28:29] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-09 08:28:52,603 - INFO - WhatsApp notification initialized successfully
+2025-11-09 08:28:54,144 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-09 08:28:54,145 - INFO - Retrying request to /chat/completions in 0.394098 seconds
+2025-11-09 08:29:02,182 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-09 08:29:23,703 - ERROR - Failed to send email alert to kizito2008@yahoo.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-11-09 08:29:44,751 - ERROR - Failed to send email alert to ict.tgil@gmail.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-11-09 08:29:44,753 - INFO - 127.0.0.1 - - [09/Nov/2025 08:29:44] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-09 08:30:43,822 - INFO - 127.0.0.1 - - [09/Nov/2025 08:30:43] "GET /profile HTTP/1.1" 200 -
+2025-11-09 08:30:44,868 - INFO - 127.0.0.1 - - [09/Nov/2025 08:30:44] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-09 08:44:56,164 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\datetime.py', reloading
+2025-11-09 08:44:56,188 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\_pydatetime.py', reloading
