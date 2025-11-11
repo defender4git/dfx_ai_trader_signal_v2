@@ -22,6 +22,7 @@ if os.path.exists(loadenv):
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from app_ai_based import MT5TradingEA, TradingSignal
+from apply_trade import apply_high_confidence_trade, TradeManager
 
 # Import Flask extensions for user management
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
@@ -63,9 +64,10 @@ login_manager.init_app(app)
 login_manager.login_view = 'login'
 mail = Mail(app)
 
-# Global variables to store the EA instance and current signal
+# Global variables to store the EA instance, current signal, and trade manager
 ea_instance = None
 current_signal = None
+trade_manager = None
 
 # User model
 class User(UserMixin, db.Model):
@@ -198,7 +200,17 @@ Real-time market analysis and automated signals
 def index():
     """Main page - redirect to login if not authenticated"""
     if current_user.is_authenticated:
-        return render_template('ai_trader.html')
+        # Retrieve saved settings from session
+        selected_symbol = session.get('selected_symbol', 'XAUUSD')
+        selected_timeframe = session.get('selected_timeframe', 16385)  # H1 default
+        selected_ai_provider = session.get('selected_ai_provider', 'anthropic')
+        selected_risk_percent = session.get('selected_risk_percent', 1.0)
+
+        return render_template('ai_trader.html',
+                             selected_symbol=selected_symbol,
+                             selected_timeframe=selected_timeframe,
+                             selected_ai_provider=selected_ai_provider,
+                             selected_risk_percent=selected_risk_percent)
     return redirect(url_for('login'))
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -262,7 +274,7 @@ def profile():
 @login_required
 def run_ai_analysis():
     """Run AI analysis and return results"""
-    global ea_instance, current_signal
+    global ea_instance, current_signal, trade_manager
 
     try:
         data = request.get_json()
@@ -272,6 +284,12 @@ def run_ai_analysis():
         timeframe = data.get('timeframe', 16385)  # H1 default
         ai_provider = data.get('aiProvider', 'anthropic')
         risk_percent = data.get('riskPercent', 1.0)
+
+        # Save settings to session for state preservation
+        session['selected_symbol'] = symbol
+        session['selected_timeframe'] = timeframe
+        session['selected_ai_provider'] = ai_provider
+        session['selected_risk_percent'] = risk_percent
 
         # Get API key based on provider
         if ai_provider == 'anthropic':
@@ -362,9 +380,9 @@ def run_ai_analysis():
         }
 
         # Send email alerts to all users with notifications enabled (separate from WhatsApp/Telegram)
-        # Only send for HIGH confidence signals
+        # Send for HIGH and MEDIUM confidence signals
         try:
-            if signal.confidence.upper() == "HIGH":
+            if signal.confidence.upper() in ["HIGH", "MEDIUM"]:
                 users_with_notifications = User.query.filter_by(email_notifications=True).all()
                 for user in users_with_notifications:
                     signal_alert_data = {
@@ -389,9 +407,9 @@ def run_ai_analysis():
             logging.error(f"Error sending email alerts: {e}")
             print(f"⚠️  Error sending email alerts: {e}")
 
-        # Send WhatsApp/Telegram notifications for HIGH confidence signals (separate from email)
+        # Send WhatsApp/Telegram notifications for HIGH and MEDIUM confidence signals (separate from email)
         try:
-            if signal.confidence.upper() == "HIGH":
+            if signal.confidence.upper() in ["HIGH", "MEDIUM"]:
                 # Create notification manager instance for web app
                 from app_ai_based import NotificationManager
                 notification_manager = NotificationManager()
@@ -412,8 +430,8 @@ def run_ai_analysis():
 @app.route('/get_current_signal')
 @login_required
 def get_current_signal():
-    """Get the current trading signal"""
-    global current_signal
+    """Get the current trading signal and trade manager status"""
+    global current_signal, trade_manager
 
     if current_signal is None:
         return jsonify({'error': 'No signal available'}), 404
@@ -430,28 +448,44 @@ def get_current_signal():
         'confidence': current_signal.confidence,
         'reasoning': current_signal.reasoning,
         'timestamp': current_signal.timestamp.isoformat(),
-        'indicators': current_signal.indicators
+        'indicators': current_signal.indicators,
+        'is_expired': current_signal.is_expired(),
+        'time_remaining': current_signal.time_remaining()
     }
+
+    # Include trade manager performance stats if available
+    if trade_manager:
+        response['trade_manager_stats'] = trade_manager.get_performance_stats()
 
     return jsonify(response)
 
 @app.route('/execute_trade', methods=['POST'])
 @login_required
 def execute_trade():
-    """Execute the current trading signal"""
-    global ea_instance, current_signal
+    """Execute the current trading signal using the advanced trade manager"""
+    global current_signal, trade_manager
 
-    if ea_instance is None or current_signal is None:
-        return jsonify({'error': 'No active EA or signal'}), 400
+    if current_signal is None:
+        return jsonify({'error': 'No signal available'}), 400
 
     try:
         data = request.get_json()
-        auto_execute = data.get('auto_execute', False)
+        filling_type = data.get('filling_type', 'IOC')  # IOC, FOK, or RETURN
 
-        success = ea_instance.execute_trade(current_signal, auto_execute)
+        # Initialize trade manager if not already done
+        if trade_manager is None:
+            trade_manager = TradeManager()
+
+        # Use the advanced trade manager for execution
+        success = trade_manager.execute_trade(current_signal, filling_type)
 
         if success:
-            return jsonify({'message': 'Trade executed successfully'})
+            # Get updated performance stats
+            stats = trade_manager.get_performance_stats()
+            return jsonify({
+                'message': 'Trade executed successfully with advanced risk management',
+                'performance_stats': stats
+            })
         else:
             return jsonify({'error': 'Trade execution failed'}), 500
 
@@ -461,18 +495,24 @@ def execute_trade():
 @app.route('/get_mt5_status')
 @login_required
 def get_mt5_status():
-    """Get MT5 connection status"""
+    """Get MT5 connection status and trade manager stats"""
     try:
         import MetaTrader5 as mt5
-        if mt5.initialize():
+        mt5_connected = mt5.initialize()
+
+        response = {'connected': bool(mt5_connected)}
+
+        if mt5_connected:
             account_info = mt5.account_info()
+            response['account'] = account_info.login if account_info else None
             mt5.shutdown()
-            return jsonify({
-                'connected': True,
-                'account': account_info.login if account_info else None
-            })
-        else:
-            return jsonify({'connected': False})
+
+        # Add trade manager performance stats if available
+        global trade_manager
+        if trade_manager:
+            response['trade_manager_stats'] = trade_manager.get_performance_stats()
+
+        return jsonify(response)
     except Exception as e:
         return jsonify({'connected': False, 'error': str(e)})
 
@@ -524,7 +564,7 @@ def get_symbols():
 @app.route('/get_user_signals')
 @login_required
 def get_user_signals():
-    """Get trading signals filtered by user parameters"""
+    """Get trading signals and trade manager performance stats"""
     try:
         # Get query parameters
         symbol = request.args.get('symbol')
@@ -535,39 +575,42 @@ def get_user_signals():
 
         # For now, return the current signal if it matches filters
         # In a real implementation, you'd query a database
-        global current_signal
+        global current_signal, trade_manager
 
-        if current_signal is None:
-            return jsonify({'signals': []})
+        signals = []
 
-        # Apply filters
-        matches = True
+        if current_signal is not None:
+            # Apply filters
+            matches = True
 
-        if symbol and current_signal.symbol != symbol:
-            matches = False
-        if signal_type and current_signal.signal_type != signal_type:
-            matches = False
-        if confidence and current_signal.confidence != confidence:
-            matches = False
+            if symbol and current_signal.symbol != symbol:
+                matches = False
+            if signal_type and current_signal.signal_type != signal_type:
+                matches = False
+            if confidence and current_signal.confidence != confidence:
+                matches = False
 
-        if matches:
-            signals = [{
-                'id': 1,
-                'symbol': current_signal.symbol,
-                'signal_type': current_signal.signal_type,
-                'entry_price': current_signal.entry_price,
-                'stop_loss': current_signal.stop_loss,
-                'take_profit_1': current_signal.take_profit_1,
-                'position_size': current_signal.position_size,
-                'confidence': current_signal.confidence,
-                'reasoning': current_signal.reasoning,
-                'timestamp': current_signal.timestamp.isoformat(),
-                'user_id': current_user.id
-            }]
-        else:
-            signals = []
+            if matches:
+                signals = [{
+                    'id': 1,
+                    'symbol': current_signal.symbol,
+                    'signal_type': current_signal.signal_type,
+                    'entry_price': current_signal.entry_price,
+                    'stop_loss': current_signal.stop_loss,
+                    'take_profit_1': current_signal.take_profit_1,
+                    'position_size': current_signal.position_size,
+                    'confidence': current_signal.confidence,
+                    'reasoning': current_signal.reasoning,
+                    'timestamp': current_signal.timestamp.isoformat(),
+                    'user_id': current_user.id
+                }]
 
-        return jsonify({'signals': signals})
+        # Include trade manager performance stats
+        response = {'signals': signals}
+        if trade_manager:
+            response['performance_stats'] = trade_manager.get_performance_stats()
+
+        return jsonify(response)
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
@@ -600,6 +643,14 @@ if __name__ == '__main__':
                 db.create_all()
                 print("ActivityLog table created")
 
-    print("Starting AI Trading Signal Generator Web Interface...")
+    print("Starting AI Trading Signal Generator Web Interface with Advanced Trade Management...")
+    print("Features:")
+    print("- AI-powered signal generation (HIGH/MEDIUM confidence)")
+    print("- Advanced trade execution with risk management")
+    print("- Win rate monitoring (target: 80%)")
+    print("- Partial take profit closures")
+    print("- Multi-channel notifications (Email/WhatsApp/Telegram)")
+    print("- Session state preservation")
+    print("")
     print("Open your browser to http://localhost:9000")
     app.run(debug=True, host='0.0.0.0', port=9000)

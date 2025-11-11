@@ -825,7 +825,7 @@ def main():
     # Set auto_execute=True to automatically execute trades
     # Set auto_execute=False to manually confirm each trade
     # Set test_notifications=True to test notifications without sending
-    ea.run(interval_seconds=300, auto_execute=False, test_notifications=False)
+    ea.run(interval_seconds=300, auto_execute=True, test_notifications=False)
 
 
 if __name__ == "__main__":

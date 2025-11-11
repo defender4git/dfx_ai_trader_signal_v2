@@ -522,3 +522,357 @@
 2025-11-09 16:14:21,334 - ERROR - Failed to send email alert to ict.tgil@gmail.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
 2025-11-09 16:14:21,336 - INFO - Signal generated for Volatility 10 (1s) Index - Expires at 2025-11-09 16:18:28 UTC
 2025-11-09 16:14:21,338 - INFO - 10.193.204.207 - - [09/Nov/2025 16:14:21] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 17:08:33,563 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.193.204.207:9000
+2025-11-11 17:08:33,564 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-11 17:08:33,602 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 17:08:37,630 - WARNING -  * Debugger is active!
+2025-11-11 17:08:37,642 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 17:11:49,350 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\pathlib\\_local.py', reloading
+2025-11-11 17:11:49,377 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\pathlib\\_abc.py', reloading
+2025-11-11 17:11:51,257 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 17:12:16,994 - WARNING -  * Debugger is active!
+2025-11-11 17:12:17,000 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 17:12:17,221 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\numpy\\typing\\__init__.py', reloading
+2025-11-11 17:12:17,238 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\numpy\\_typing\\_array_like.py', reloading
+2025-11-11 17:12:17,254 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\numpy\\_typing\\_shape.py', reloading
+2025-11-11 17:12:17,416 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\numpy\\_typing\\_nbit.py', reloading
+2025-11-11 17:12:17,472 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\numpy\\_typing\\_scalars.py', reloading
+2025-11-11 17:12:17,594 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\numpy\\_typing\\_nested_sequence.py', reloading
+2025-11-11 17:12:17,612 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\numpy\\_typing\\_dtype_like.py', reloading
+2025-11-11 17:12:17,652 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\anthropic\\_client.py', reloading
+2025-11-11 17:12:17,682 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\anthropic\\_base_client.py', reloading
+2025-11-11 17:12:17,734 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\pydantic\\__init__.py', reloading
+2025-11-11 17:12:17,754 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\pydantic\\errors.py', reloading
+2025-11-11 17:12:17,798 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\pydantic\\main.py', reloading
+2025-11-11 17:12:17,834 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\pydantic\\networks.py', reloading
+2025-11-11 17:12:17,867 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\pydantic\\types.py', reloading
+2025-11-11 17:12:17,914 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\pydantic\\deprecated\\tools.py', reloading
+2025-11-11 17:12:17,936 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\pydantic\\fields.py', reloading
+2025-11-11 17:12:17,972 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\pydantic_core\\__init__.py', reloading
+2025-11-11 17:12:18,045 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\pydantic\\aliases.py', reloading
+2025-11-11 17:12:18,060 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\pydantic\\_internal\\_internal_dataclass.py', reloading
+2025-11-11 17:12:18,079 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\pydantic\\_internal\\_repr.py', reloading
+2025-11-11 17:12:18,102 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\pydantic\\_migration.py', reloading
+2025-11-11 17:12:18,141 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\pydantic_core\\core_schema.py', reloading
+2025-11-11 17:12:18,711 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 17:12:23,947 - WARNING -  * Debugger is active!
+2025-11-11 17:12:23,951 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 17:15:43,633 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-11 17:15:45,022 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 17:15:49,402 - WARNING -  * Debugger is active!
+2025-11-11 17:15:49,407 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 17:15:51,652 - INFO - 127.0.0.1 - - [11/Nov/2025 17:15:51] "GET / HTTP/1.1" 200 -
+2025-11-11 17:15:54,096 - INFO - 127.0.0.1 - - [11/Nov/2025 17:15:54] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 17:16:16,208 - INFO - WhatsApp notification initialized successfully
+2025-11-11 17:16:22,292 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\apply_trade.py', reloading
+2025-11-11 17:16:24,442 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 17:16:33,415 - WARNING -  * Debugger is active!
+2025-11-11 17:16:33,426 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 17:16:34,530 - INFO - WhatsApp notification initialized successfully
+2025-11-11 17:16:48,385 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\apply_trade.py', reloading
+2025-11-11 17:16:48,388 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\apply_trade.py', reloading
+2025-11-11 17:16:48,389 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\apply_trade.py', reloading
+2025-11-11 17:16:49,767 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 17:16:54,474 - WARNING -  * Debugger is active!
+2025-11-11 17:16:54,481 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 17:20:39,140 - INFO - 127.0.0.1 - - [11/Nov/2025 17:20:39] "GET / HTTP/1.1" 200 -
+2025-11-11 17:21:00,975 - INFO - 127.0.0.1 - - [11/Nov/2025 17:21:00] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 17:21:55,884 - INFO - WhatsApp notification initialized successfully
+2025-11-11 17:21:57,570 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 17:21:57,570 - INFO - Retrying request to /chat/completions in 0.472701 seconds
+2025-11-11 17:22:09,754 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 17:22:09,792 - INFO - Signal generated for Volatility 10 (1s) Index - Expires at 2025-11-11 17:27:09 UTC
+2025-11-11 17:22:09,793 - INFO - 127.0.0.1 - - [11/Nov/2025 17:22:09] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 17:24:15,806 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.193.204.207:9000
+2025-11-11 17:24:15,807 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-11 17:24:15,827 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 17:24:19,315 - WARNING -  * Debugger is active!
+2025-11-11 17:24:19,319 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 17:24:33,409 - INFO - 127.0.0.1 - - [11/Nov/2025 17:24:33] "GET / HTTP/1.1" 200 -
+2025-11-11 17:24:34,515 - INFO - 127.0.0.1 - - [11/Nov/2025 17:24:34] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 17:36:52,307 - INFO - WhatsApp notification initialized successfully
+2025-11-11 17:36:54,006 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 17:36:54,006 - INFO - Retrying request to /chat/completions in 0.483393 seconds
+2025-11-11 17:37:04,416 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 17:37:25,712 - ERROR - Failed to send email alert to kizito2008@yahoo.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-11-11 17:37:46,828 - ERROR - Failed to send email alert to ict.tgil@gmail.com: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-11-11 17:37:46,899 - INFO - WhatsApp notification initialized successfully
+2025-11-11 17:37:47,176 - INFO - -- BEGIN Twilio API Request --
+2025-11-11 17:37:47,177 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-11 17:37:47,177 - INFO - Headers:
+2025-11-11 17:37:47,177 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-11 17:37:47,177 - INFO - Accept : application/json
+2025-11-11 17:37:47,177 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-11 17:37:47,177 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-11 17:37:47,177 - INFO - Accept-Charset : utf-8
+2025-11-11 17:37:47,177 - INFO - -- END Twilio API Request --
+2025-11-11 17:37:49,576 - INFO - Response Status Code: 201
+2025-11-11 17:37:49,576 - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1677', 'Connection': 'keep-alive', 'Date': 'Tue, 11 Nov 2025 16:37:50 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ8dcac0a5daf6b8a3b048b94c87beabb4', 'Twilio-Request-Duration': '0.119', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 7df0e12cb5a55cb5e64296e91e226fbe.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'k12xV4gA7dHIpLkWTOGaXeqtoDJWuU8IobeqFx2iIf6yVGvvnNXlHA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-11 17:37:49,577 - INFO - WhatsApp message sent successfully: SID SM8dcac0a5daf6b8a3b048b94c87beabb4
+2025-11-11 17:37:50,956 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-11 17:37:53,264 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-11 17:37:56,459 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-11 17:37:56,459 - ERROR - Telegram send failed after 3 attempts
+2025-11-11 17:37:56,461 - INFO - Signal notification sent to WhatsApp only
+2025-11-11 17:37:56,461 - INFO - Signal generated for Volatility 10 (1s) Index - Expires at 2025-11-11 17:42:04 UTC
+2025-11-11 17:37:56,462 - INFO - 127.0.0.1 - - [11/Nov/2025 17:37:56] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 17:38:56,379 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-11 17:38:56,382 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-11 17:38:58,798 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 17:39:05,588 - WARNING -  * Debugger is active!
+2025-11-11 17:39:05,593 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 17:41:21,380 - INFO - 127.0.0.1 - - [11/Nov/2025 17:41:21] "GET /profile HTTP/1.1" 200 -
+2025-11-11 17:41:22,870 - INFO - 127.0.0.1 - - [11/Nov/2025 17:41:22] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 17:41:57,097 - INFO - 127.0.0.1 - - [11/Nov/2025 17:41:57] "GET / HTTP/1.1" 200 -
+2025-11-11 17:41:58,158 - INFO - 127.0.0.1 - - [11/Nov/2025 17:41:58] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 17:43:42,678 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 17:43:42,681 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 17:43:42,682 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 17:43:43,847 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 17:43:49,810 - WARNING -  * Debugger is active!
+2025-11-11 17:43:49,821 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 17:43:51,677 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 17:43:51,679 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 17:43:51,680 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 17:43:53,192 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 17:43:58,936 - WARNING -  * Debugger is active!
+2025-11-11 17:43:58,942 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 17:45:06,302 - INFO - 127.0.0.1 - - [11/Nov/2025 17:45:06] "GET / HTTP/1.1" 200 -
+2025-11-11 17:45:07,500 - INFO - 127.0.0.1 - - [11/Nov/2025 17:45:07] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 17:45:27,369 - INFO - WhatsApp notification initialized successfully
+2025-11-11 17:45:29,449 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 17:45:29,450 - INFO - Retrying request to /chat/completions in 0.488079 seconds
+2025-11-11 17:45:30,270 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 17:45:30,270 - INFO - Retrying request to /chat/completions in 0.945560 seconds
+2025-11-11 17:45:31,528 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 17:45:31,533 - WARNING - OpenAI rate limit exceeded: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-mini in organization org-D1InZ3x7Bg7bmGy3XKuXMTSV on tokens per min (TPM): Limit 100000, Used 100000, Requested 140. Please try again in 1h0m28.8s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-11-11 17:45:31,535 - INFO - Signal generated for Volatility 10 (1s) Index - Expires at 2025-11-11 17:50:31 UTC
+2025-11-11 17:45:31,536 - INFO - 127.0.0.1 - - [11/Nov/2025 17:45:31] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 17:46:58,501 - INFO - 127.0.0.1 - - [11/Nov/2025 17:46:58] "GET /profile HTTP/1.1" 200 -
+2025-11-11 17:46:59,340 - INFO - 127.0.0.1 - - [11/Nov/2025 17:46:59] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 17:47:19,026 - INFO - 127.0.0.1 - - [11/Nov/2025 17:47:19] "GET /profile HTTP/1.1" 200 -
+2025-11-11 17:47:19,761 - INFO - 127.0.0.1 - - [11/Nov/2025 17:47:19] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 17:48:52,891 - INFO - 127.0.0.1 - - [11/Nov/2025 17:48:52] "GET / HTTP/1.1" 200 -
+2025-11-11 17:48:53,766 - INFO - 127.0.0.1 - - [11/Nov/2025 17:48:53] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 17:49:00,288 - INFO - 127.0.0.1 - - [11/Nov/2025 17:49:00] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-11-11 17:49:00,605 - INFO - 127.0.0.1 - - [11/Nov/2025 17:49:00] "GET /login HTTP/1.1" 200 -
+2025-11-11 17:49:08,968 - INFO - 127.0.0.1 - - [11/Nov/2025 17:49:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-11-11 17:49:08,980 - INFO - 127.0.0.1 - - [11/Nov/2025 17:49:08] "GET / HTTP/1.1" 200 -
+2025-11-11 17:49:10,181 - INFO - 127.0.0.1 - - [11/Nov/2025 17:49:10] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 17:49:17,892 - INFO - WhatsApp notification initialized successfully
+2025-11-11 17:49:19,233 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 17:49:19,233 - INFO - Retrying request to /chat/completions in 0.419504 seconds
+2025-11-11 17:49:33,802 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 17:49:33,819 - INFO - Signal generated for AUDCHF - Expires at 2025-11-11 17:54:33 UTC
+2025-11-11 17:49:33,820 - INFO - 127.0.0.1 - - [11/Nov/2025 17:49:33] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 17:51:12,288 - INFO - WhatsApp notification initialized successfully
+2025-11-11 17:51:24,364 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 17:51:24,364 - INFO - Retrying request to /chat/completions in 0.486117 seconds
+2025-11-11 17:51:25,181 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 17:51:25,181 - INFO - Retrying request to /chat/completions in 0.783425 seconds
+2025-11-11 17:51:32,144 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 17:51:32,146 - INFO - Signal generated for XAUUSD - Expires at 2025-11-11 17:56:32 UTC
+2025-11-11 17:51:32,147 - INFO - 127.0.0.1 - - [11/Nov/2025 17:51:32] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 17:53:06,236 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\apply_trade.py', reloading
+2025-11-11 17:53:06,240 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\apply_trade.py', reloading
+2025-11-11 17:53:06,240 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\apply_trade.py', reloading
+2025-11-11 17:53:07,083 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 17:53:11,971 - WARNING -  * Debugger is active!
+2025-11-11 17:53:11,978 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 17:53:16,150 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\apply_trade.py', reloading
+2025-11-11 17:53:16,153 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\apply_trade.py', reloading
+2025-11-11 17:53:16,154 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\apply_trade.py', reloading
+2025-11-11 17:53:17,226 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 17:53:23,405 - WARNING -  * Debugger is active!
+2025-11-11 17:53:23,411 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 17:53:53,874 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.193.204.207:9000
+2025-11-11 17:53:53,874 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-11 17:53:53,891 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 17:53:57,642 - WARNING -  * Debugger is active!
+2025-11-11 17:53:57,646 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 17:54:36,624 - INFO - 127.0.0.1 - - [11/Nov/2025 17:54:36] "GET / HTTP/1.1" 200 -
+2025-11-11 17:54:38,710 - INFO - 127.0.0.1 - - [11/Nov/2025 17:54:38] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 17:54:41,420 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\formparser.py', reloading
+2025-11-11 17:54:41,424 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\exceptions.py', reloading
+2025-11-11 17:54:41,558 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\serving.py', reloading
+2025-11-11 17:54:41,606 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\debug\\tbtools.py', reloading
+2025-11-11 17:54:41,610 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\test.py', reloading
+2025-11-11 17:54:41,612 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\security.py', reloading
+2025-11-11 17:54:41,613 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\debug\\repr.py', reloading
+2025-11-11 17:54:41,815 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2025-11-11 17:54:41,816 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\wsgi.py', reloading
+2025-11-11 17:54:41,939 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-11-11 17:54:41,940 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\__init__.py', reloading
+2025-11-11 17:54:41,941 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-11-11 17:54:41,941 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\_reloader.py', reloading
+2025-11-11 17:54:41,942 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-11-11 17:54:41,942 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\_internal.py', reloading
+2025-11-11 17:54:41,945 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\sansio\\utils.py', reloading
+2025-11-11 17:54:41,945 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\utils.py', reloading
+2025-11-11 17:54:41,946 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-11-11 17:54:41,946 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\user_agent.py', reloading
+2025-11-11 17:54:41,947 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\sansio\\multipart.py', reloading
+2025-11-11 17:54:41,948 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\urls.py', reloading
+2025-11-11 17:54:41,949 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\sansio\\http.py', reloading
+2025-11-11 17:54:41,949 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\debug\\__init__.py', reloading
+2025-11-11 17:54:41,950 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\testapp.py', reloading
+2025-11-11 17:54:43,412 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 17:55:02,445 - WARNING -  * Debugger is active!
+2025-11-11 17:55:02,451 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 17:55:03,260 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\httpcore\\_backends\\base.py', reloading
+2025-11-11 17:55:03,261 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\httpcore\\_async\\__init__.py', reloading
+2025-11-11 17:55:03,262 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\httpcore\\_backends\\auto.py', reloading
+2025-11-11 17:55:03,262 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\httpcore\\_async\\socks_proxy.py', reloading
+2025-11-11 17:55:03,263 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\httpcore\\_async\\interfaces.py', reloading
+2025-11-11 17:55:03,263 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\h11\\_abnf.py', reloading
+2025-11-11 17:55:03,264 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\httpcore\\_backends\\anyio.py', reloading
+2025-11-11 17:55:03,264 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\httpcore\\_async\\http_proxy.py', reloading
+2025-11-11 17:55:03,265 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\httpcore\\_async\\http2.py', reloading
+2025-11-11 17:55:04,771 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 17:55:14,114 - WARNING -  * Debugger is active!
+2025-11-11 17:55:14,118 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 17:56:02,317 - INFO - WhatsApp notification initialized successfully
+2025-11-11 17:56:02,351 - INFO - WhatsApp notification initialized successfully
+2025-11-11 17:56:02,518 - INFO - Rate limiting: waiting 5.94 seconds before next API call
+2025-11-11 17:56:04,117 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 17:56:04,117 - INFO - Retrying request to /chat/completions in 0.450028 seconds
+2025-11-11 17:56:14,931 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 17:56:14,931 - INFO - Retrying request to /chat/completions in 0.469102 seconds
+2025-11-11 17:56:15,729 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 17:56:15,729 - INFO - Retrying request to /chat/completions in 20.000000 seconds
+2025-11-11 17:56:22,888 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 17:56:22,913 - INFO - Signal generated for XAUUSD - Expires at 2025-11-11 18:01:22 UTC
+2025-11-11 17:56:22,915 - INFO - 127.0.0.1 - - [11/Nov/2025 17:56:22] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 17:56:36,426 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 17:56:36,426 - WARNING - OpenAI rate limit exceeded: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-mini in organization org-D1InZ3x7Bg7bmGy3XKuXMTSV on tokens per min (TPM): Limit 100000, Used 100000, Requested 135. Please try again in 58m19.2s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-11-11 17:56:36,427 - INFO - Signal generated for XAUUSD - Expires at 2025-11-11 18:01:36 UTC
+2025-11-11 17:56:36,429 - INFO - 127.0.0.1 - - [11/Nov/2025 17:56:36] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 18:11:09,940 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 18:11:09,942 - INFO - Signal generated for XAUUSD - Expires at 2025-11-11 18:16:09 UTC
+2025-11-11 18:11:09,943 - INFO - 127.0.0.1 - - [11/Nov/2025 18:11:09] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 21:09:22,522 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 21:09:22,523 - INFO - Retrying request to /chat/completions in 0.420235 seconds
+2025-11-11 21:09:23,632 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 21:09:23,633 - INFO - Retrying request to /chat/completions in 0.890463 seconds
+2025-11-11 21:09:25,492 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 21:09:25,493 - WARNING - OpenAI rate limit exceeded: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-mini in organization org-D1InZ3x7Bg7bmGy3XKuXMTSV on tokens per min (TPM): Limit 100000, Used 100000, Requested 135. Please try again in 58m19.2s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-11-11 21:09:25,494 - INFO - Signal generated for XAUUSD - Expires at 2025-11-11 21:14:25 UTC
+2025-11-11 21:09:25,495 - INFO - 127.0.0.1 - - [11/Nov/2025 21:09:25] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 21:10:57,404 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 21:10:57,404 - INFO - Retrying request to /chat/completions in 0.497907 seconds
+2025-11-11 21:11:06,503 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 21:11:20,781 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-11 21:11:24,314 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-11 21:11:24,315 - INFO - WhatsApp notification initialized successfully
+2025-11-11 21:11:24,528 - INFO - -- BEGIN Twilio API Request --
+2025-11-11 21:11:24,528 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-11 21:11:24,528 - INFO - Headers:
+2025-11-11 21:11:24,529 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-11 21:11:24,529 - INFO - Accept : application/json
+2025-11-11 21:11:24,529 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-11 21:11:24,529 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-11 21:11:24,529 - INFO - Accept-Charset : utf-8
+2025-11-11 21:11:24,529 - INFO - -- END Twilio API Request --
+2025-11-11 21:11:27,074 - INFO - Response Status Code: 201
+2025-11-11 21:11:27,074 - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1627', 'Connection': 'keep-alive', 'Date': 'Tue, 11 Nov 2025 20:11:28 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ5198de7704b599dbe434cfd745cc759e', 'Twilio-Request-Duration': '0.109', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 6fa053f932ff64f278d8eca328052602.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'MRS53-P3', 'X-Amz-Cf-Id': 'jCWBPxJLCzXUtQT_RefsjSCiU_K7rJnVW54Tu2HoLTxcq2qZxeXD2A==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-11 21:11:27,075 - INFO - WhatsApp message sent successfully: SID SM5198de7704b599dbe434cfd745cc759e
+2025-11-11 21:11:39,679 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-11 21:11:41,922 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-11 21:11:44,947 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-11 21:11:44,947 - ERROR - Telegram send failed after 3 attempts
+2025-11-11 21:11:44,948 - INFO - Signal notification sent to WhatsApp only
+2025-11-11 21:11:44,949 - INFO - Signal generated for XAUUSD - Expires at 2025-11-11 21:16:06 UTC
+2025-11-11 21:11:44,950 - INFO - 127.0.0.1 - - [11/Nov/2025 21:11:44] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 21:12:31,132 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:12:33,311 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 21:12:40,280 - WARNING -  * Debugger is active!
+2025-11-11 21:12:40,284 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 21:12:43,161 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:12:43,162 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:12:43,168 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:12:44,502 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 21:12:49,166 - WARNING -  * Debugger is active!
+2025-11-11 21:12:49,169 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 21:12:52,357 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:12:52,358 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:12:53,378 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 21:12:58,284 - WARNING -  * Debugger is active!
+2025-11-11 21:12:58,292 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 21:13:00,993 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:13:00,996 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:13:00,997 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:13:02,948 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 21:13:08,798 - WARNING -  * Debugger is active!
+2025-11-11 21:13:08,808 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 21:13:16,843 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:13:16,843 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:13:16,844 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:13:17,334 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 21:13:22,229 - WARNING -  * Debugger is active!
+2025-11-11 21:13:22,239 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 21:13:26,990 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:13:26,992 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:13:28,041 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 21:13:32,560 - WARNING -  * Debugger is active!
+2025-11-11 21:13:32,571 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 21:13:35,325 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:13:35,328 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:13:35,330 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:13:36,421 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 21:13:41,971 - WARNING -  * Debugger is active!
+2025-11-11 21:13:41,975 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 21:13:46,786 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:13:46,789 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:13:48,255 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 21:13:53,528 - WARNING -  * Debugger is active!
+2025-11-11 21:13:53,537 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 21:14:02,171 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:14:02,174 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:14:03,653 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 21:14:08,445 - WARNING -  * Debugger is active!
+2025-11-11 21:14:08,449 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 21:14:16,216 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:14:16,219 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:14:16,220 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-11 21:14:16,951 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 21:14:22,699 - WARNING -  * Debugger is active!
+2025-11-11 21:14:22,710 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 21:25:45,082 - INFO - WhatsApp notification initialized successfully
+2025-11-11 21:25:58,281 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 21:25:58,282 - INFO - Retrying request to /chat/completions in 0.414711 seconds
+2025-11-11 21:26:05,147 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 21:26:19,961 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-11 21:26:23,110 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-11 21:26:23,111 - INFO - WhatsApp notification initialized successfully
+2025-11-11 21:26:23,252 - INFO - -- BEGIN Twilio API Request --
+2025-11-11 21:26:23,252 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-11 21:26:23,252 - INFO - Headers:
+2025-11-11 21:26:23,252 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-11 21:26:23,252 - INFO - Accept : application/json
+2025-11-11 21:26:23,252 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-11 21:26:23,252 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-11 21:26:23,252 - INFO - Accept-Charset : utf-8
+2025-11-11 21:26:23,252 - INFO - -- END Twilio API Request --
+2025-11-11 21:26:36,056 - INFO - Response Status Code: 201
+2025-11-11 21:26:36,056 - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1745', 'Connection': 'keep-alive', 'Date': 'Tue, 11 Nov 2025 20:26:37 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ9838d66b73c2338971ce687907bdbb09', 'Twilio-Request-Duration': '0.098', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 e9e1982b26fa05631ca01b6aee8693be.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'agtITLA6DlhsBQnDy9HjO1t2hEK6AlI77a1ZDP9thGBUozPnZoo3zg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-11 21:26:36,056 - INFO - WhatsApp message sent successfully: SID SM9838d66b73c2338971ce687907bdbb09
+2025-11-11 21:26:38,114 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-11 21:26:40,163 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-11 21:26:43,140 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-11 21:26:43,140 - ERROR - Telegram send failed after 3 attempts
+2025-11-11 21:26:43,142 - INFO - Signal notification sent to WhatsApp only
+2025-11-11 21:26:43,142 - INFO - Signal generated for XAUUSD - Expires at 2025-11-11 21:31:05 UTC
+2025-11-11 21:26:43,144 - INFO - 127.0.0.1 - - [11/Nov/2025 21:26:43] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 21:27:13,443 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-11 21:27:14,990 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 21:27:19,088 - WARNING -  * Debugger is active!
+2025-11-11 21:27:19,092 - INFO -  * Debugger PIN: 137-776-963
