@@ -105,7 +105,7 @@ class NotificationManager:
         self.min_interval_seconds = 60  # Minimum 1 minute between notifications
 
     def send_whatsapp_message(self, message: str, max_retries: int = 3) -> bool:
-        """Send message via WhatsApp with retry logic"""
+        """Send message via WhatsApp with retry logic using Content Templates"""
         if not self.twilio_client:
             logging.warning("WhatsApp client not initialized - skipping notification")
             return False
@@ -116,12 +116,18 @@ class NotificationManager:
             logging.info("Rate limit exceeded - skipping WhatsApp notification")
             return False
 
+        # Get content SID and variables from environment
+        content_sid = os.getenv("TWILIO_CONTENT_SID", "HXb5b62575e6e4ff6129ad7c8efe1f983e")
+        content_variables = os.getenv("TWILIO_CONTENT_VARIABLES", '{"1":"Trading Signal"}')
+
         for attempt in range(max_retries):
             try:
+                # Use Content Templates API
                 twilio_message = self.twilio_client.messages.create(
-                    from_=self.twilio_whatsapp_number,
-                    body=message,
-                    to=self.recipient_whatsapp_number
+                    from_=f"whatsapp:{self.twilio_whatsapp_number}",
+                    content_sid=content_sid,
+                    content_variables=json.loads(content_variables),
+                    to=f"whatsapp:{self.recipient_whatsapp_number}"
                 )
                 self.last_notification_time = current_time
                 logging.info(f"WhatsApp message sent successfully: SID {twilio_message.sid}")

@@ -876,3 +876,480 @@
 2025-11-11 21:27:14,990 - INFO -  * Restarting with watchdog (windowsapi)
 2025-11-11 21:27:19,088 - WARNING -  * Debugger is active!
 2025-11-11 21:27:19,092 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 21:29:01,690 - INFO - 127.0.0.1 - - [11/Nov/2025 21:29:01] "GET / HTTP/1.1" 200 -
+2025-11-11 21:29:03,660 - INFO - 127.0.0.1 - - [11/Nov/2025 21:29:03] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 21:31:58,194 - INFO - WhatsApp notification initialized successfully
+2025-11-11 21:32:11,872 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 21:32:11,873 - INFO - Retrying request to /chat/completions in 0.492757 seconds
+2025-11-11 21:32:12,904 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 21:32:12,904 - INFO - Retrying request to /chat/completions in 0.922031 seconds
+2025-11-11 21:32:18,898 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 21:32:33,697 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol Volatility 10 (1s) Index
+2025-11-11 21:34:44,168 - ERROR - Failed to send email alert to ict.tgil@gmail.com: Connection unexpectedly closed
+2025-11-11 21:34:44,169 - INFO - WhatsApp notification initialized successfully
+2025-11-11 21:34:44,328 - INFO - -- BEGIN Twilio API Request --
+2025-11-11 21:34:44,328 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-11 21:34:44,328 - INFO - Headers:
+2025-11-11 21:34:44,328 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-11 21:34:44,328 - INFO - Accept : application/json
+2025-11-11 21:34:44,328 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-11 21:34:44,328 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-11 21:34:44,328 - INFO - Accept-Charset : utf-8
+2025-11-11 21:34:44,328 - INFO - -- END Twilio API Request --
+2025-11-11 21:34:57,105 - INFO - Response Status Code: 201
+2025-11-11 21:34:57,106 - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1646', 'Connection': 'keep-alive', 'Date': 'Tue, 11 Nov 2025 20:34:58 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQeeaf09f21ae83ea860e85cfcb297e9f6', 'Twilio-Request-Duration': '0.113', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 58323cef7927326b4721718ec24b0aae.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'NdRw_kZYGShJB6yH1tIxN6U_hNKeLZkUuyN2VcfbOK9M7Vak8P92dA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-11 21:34:57,106 - INFO - WhatsApp message sent successfully: SID SMeeaf09f21ae83ea860e85cfcb297e9f6
+2025-11-11 21:34:58,683 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-11 21:35:00,794 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-11 21:35:04,130 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-11 21:35:04,131 - ERROR - Telegram send failed after 3 attempts
+2025-11-11 21:35:04,132 - INFO - Signal notification sent to WhatsApp only
+2025-11-11 21:35:04,132 - INFO - Signal generated for Volatility 10 (1s) Index - Expires at 2025-11-11 21:37:18 UTC
+2025-11-11 21:35:04,133 - INFO - 127.0.0.1 - - [11/Nov/2025 21:35:04] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 21:36:46,667 - INFO - 127.0.0.1 - - [11/Nov/2025 21:36:46] "GET /profile HTTP/1.1" 200 -
+2025-11-11 21:36:47,897 - INFO - 127.0.0.1 - - [11/Nov/2025 21:36:47] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 21:37:09,013 - INFO - 127.0.0.1 - - [11/Nov/2025 21:37:09] "GET / HTTP/1.1" 200 -
+2025-11-11 21:37:10,279 - INFO - 127.0.0.1 - - [11/Nov/2025 21:37:10] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 21:37:16,219 - INFO - 127.0.0.1 - - [11/Nov/2025 21:37:16] "GET / HTTP/1.1" 200 -
+2025-11-11 21:37:16,895 - INFO - 127.0.0.1 - - [11/Nov/2025 21:37:16] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 21:37:19,597 - INFO - 127.0.0.1 - - [11/Nov/2025 21:37:19] "GET / HTTP/1.1" 200 -
+2025-11-11 21:37:20,377 - INFO - 127.0.0.1 - - [11/Nov/2025 21:37:20] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 21:37:33,172 - INFO - 127.0.0.1 - - [11/Nov/2025 21:37:33] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-11-11 21:37:33,319 - INFO - 127.0.0.1 - - [11/Nov/2025 21:37:33] "GET /login HTTP/1.1" 200 -
+2025-11-11 21:37:44,085 - INFO - 127.0.0.1 - - [11/Nov/2025 21:37:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-11-11 21:37:44,209 - INFO - 127.0.0.1 - - [11/Nov/2025 21:37:44] "GET / HTTP/1.1" 200 -
+2025-11-11 21:37:45,485 - INFO - 127.0.0.1 - - [11/Nov/2025 21:37:45] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 21:39:14,516 - INFO - 127.0.0.1 - - [11/Nov/2025 21:39:14] "[31m[1mGET /execute_trade HTTP/1.1[0m" 405 -
+2025-11-11 21:39:55,325 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.193.204.207:9000
+2025-11-11 21:39:55,326 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-11 21:39:55,342 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-11 21:39:59,120 - WARNING -  * Debugger is active!
+2025-11-11 21:39:59,126 - INFO -  * Debugger PIN: 137-776-963
+2025-11-11 21:40:03,621 - INFO - 127.0.0.1 - - [11/Nov/2025 21:40:03] "GET / HTTP/1.1" 200 -
+2025-11-11 21:40:05,048 - INFO - 127.0.0.1 - - [11/Nov/2025 21:40:05] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-11 21:40:32,995 - INFO - WhatsApp notification initialized successfully
+2025-11-11 21:40:42,642 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 21:41:10,597 - INFO - WhatsApp notification initialized successfully
+2025-11-11 21:41:33,223 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 21:43:03,879 - ERROR - Failed to send email alert to kizito2008@yahoo.com: Connection unexpectedly closed
+2025-11-11 21:43:07,354 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-11 21:43:07,356 - INFO - WhatsApp notification initialized successfully
+2025-11-11 21:43:07,356 - INFO - Signal confidence is MEDIUM, skipping notification
+2025-11-11 21:43:07,357 - INFO - Signal generated for XAUUSD - Expires at 2025-11-11 21:45:42 UTC
+2025-11-11 21:43:07,359 - INFO - 127.0.0.1 - - [11/Nov/2025 21:43:07] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 21:43:53,031 - ERROR - Failed to send email alert to kizito2008@yahoo.com: Connection unexpectedly closed
+2025-11-11 21:46:04,149 - ERROR - Failed to send email alert to ict.tgil@gmail.com: Connection unexpectedly closed
+2025-11-11 21:46:04,150 - INFO - WhatsApp notification initialized successfully
+2025-11-11 21:46:04,323 - INFO - -- BEGIN Twilio API Request --
+2025-11-11 21:46:04,323 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-11 21:46:04,323 - INFO - Headers:
+2025-11-11 21:46:04,323 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-11 21:46:04,323 - INFO - Accept : application/json
+2025-11-11 21:46:04,323 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-11 21:46:04,323 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-11 21:46:04,323 - INFO - Accept-Charset : utf-8
+2025-11-11 21:46:04,323 - INFO - -- END Twilio API Request --
+2025-11-11 21:46:17,050 - INFO - Response Status Code: 201
+2025-11-11 21:46:17,050 - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1675', 'Connection': 'keep-alive', 'Date': 'Tue, 11 Nov 2025 20:46:18 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQcbb5595dc071c3ab07d88eee94f3e3bf', 'Twilio-Request-Duration': '0.105', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 79a8bda299f9389df1f030913c73199e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'DY-Z0IAG-TQJACqpHe8in-w0R44yBzJIKJf9SJdzZBvfBZj7PzL6pg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-11 21:46:17,050 - INFO - WhatsApp message sent successfully: SID SMcbb5595dc071c3ab07d88eee94f3e3bf
+2025-11-11 21:46:18,502 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-11 21:46:20,620 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-11 21:46:23,625 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-11 21:46:23,625 - ERROR - Telegram send failed after 3 attempts
+2025-11-11 21:46:23,627 - INFO - Signal notification sent to WhatsApp only
+2025-11-11 21:46:23,628 - INFO - Signal generated for Volatility 10 (1s) Index - Expires at 2025-11-11 21:46:33 UTC
+2025-11-11 21:46:23,629 - INFO - 10.193.204.207 - - [11/Nov/2025 21:46:23] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 21:55:34,042 - INFO - WhatsApp notification initialized successfully
+2025-11-11 21:55:46,074 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 21:55:46,075 - INFO - Retrying request to /chat/completions in 0.409749 seconds
+2025-11-11 21:55:46,818 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-11 21:55:46,818 - INFO - Retrying request to /chat/completions in 0.793649 seconds
+2025-11-11 21:55:59,112 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-11 21:56:12,931 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-11 21:58:21,376 - ERROR - Failed to send email alert to ict.tgil@gmail.com: Connection unexpectedly closed
+2025-11-11 21:58:21,379 - INFO - WhatsApp notification initialized successfully
+2025-11-11 21:58:21,379 - INFO - Signal confidence is MEDIUM, skipping notification
+2025-11-11 21:58:21,380 - INFO - Signal generated for XAUUSD - Expires at 2025-11-11 22:00:59 UTC
+2025-11-11 21:58:21,381 - INFO - 127.0.0.1 - - [11/Nov/2025 21:58:21] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 22:30:31,954 - INFO - Retrying request to /chat/completions in 0.461603 seconds
+2025-11-11 22:30:44,446 - INFO - Retrying request to /chat/completions in 0.954658 seconds
+2025-11-11 22:30:45,403 - INFO - Signal generated for XAUUSD - Expires at 2025-11-11 22:35:45 UTC
+2025-11-11 22:30:45,404 - INFO - 127.0.0.1 - - [11/Nov/2025 22:30:45] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-11 22:40:45,595 - INFO - Retrying request to /chat/completions in 0.403621 seconds
+2025-11-11 22:40:46,001 - INFO - Retrying request to /chat/completions in 0.968918 seconds
+2025-11-11 22:40:46,973 - INFO - Signal generated for XAUUSD - Expires at 2025-11-11 22:45:46 UTC
+2025-11-11 22:40:46,974 - INFO - 127.0.0.1 - - [11/Nov/2025 22:40:46] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-12 06:47:23,276 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-12 06:47:23,338 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\openai\\lib\\_old_api.py', reloading
+2025-11-12 06:47:23,347 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\openai\\__init__.py', reloading
+2025-11-12 06:47:23,362 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\MetaTrader5\\__init__.py', reloading
+2025-11-12 06:47:23,468 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\twilio\\rest\\__init__.py', reloading
+2025-11-12 06:47:23,470 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-12 06:47:23,470 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\apply_trade.py', reloading
+2025-11-12 06:47:25,414 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 06:47:31,111 - WARNING -  * Debugger is active!
+2025-11-12 06:47:31,122 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 07:00:35,120 - INFO - WhatsApp notification initialized successfully
+2025-11-12 07:00:48,977 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 07:00:48,977 - INFO - Retrying request to /chat/completions in 0.401655 seconds
+2025-11-12 07:00:50,012 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 07:00:50,012 - INFO - Retrying request to /chat/completions in 0.896440 seconds
+2025-11-12 07:01:01,792 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 07:01:02,917 - INFO - 127.0.0.1 - - [12/Nov/2025 07:01:02] "GET / HTTP/1.1" 200 -
+2025-11-12 07:01:04,328 - INFO - 127.0.0.1 - - [12/Nov/2025 07:01:04] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-12 07:01:16,050 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-12 07:01:18,962 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-12 07:01:18,962 - INFO - WhatsApp notification initialized successfully
+2025-11-12 07:01:19,177 - INFO - -- BEGIN Twilio API Request --
+2025-11-12 07:01:19,177 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-12 07:01:19,177 - INFO - Headers:
+2025-11-12 07:01:19,178 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-12 07:01:19,178 - INFO - Accept : application/json
+2025-11-12 07:01:19,178 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-12 07:01:19,178 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-12 07:01:19,178 - INFO - Accept-Charset : utf-8
+2025-11-12 07:01:19,178 - INFO - -- END Twilio API Request --
+2025-11-12 07:01:23,153 - INFO - 127.0.0.1 - - [12/Nov/2025 07:01:23] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2025-11-12 07:01:31,751 - INFO - 127.0.0.1 - - [12/Nov/2025 07:01:31] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-11-12 07:01:32,106 - INFO - 127.0.0.1 - - [12/Nov/2025 07:01:32] "GET /login HTTP/1.1" 200 -
+2025-11-12 07:01:32,170 - INFO - Response Status Code: 201
+2025-11-12 07:01:32,171 - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1786', 'Connection': 'keep-alive', 'Date': 'Wed, 12 Nov 2025 06:01:31 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ9784bb873a9bcc50be5f79909760f76a', 'Twilio-Request-Duration': '0.113', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 58323cef7927326b4721718ec24b0aae.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '3XrpyA5CF5_ZRcfIVT8GCXvciosLmODZ4CxtPDiEPmNZBVNYFhs3WQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-12 07:01:32,171 - INFO - WhatsApp message sent successfully: SID SM9784bb873a9bcc50be5f79909760f76a
+2025-11-12 07:01:33,631 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 07:01:35,865 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 07:01:39,149 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 07:01:39,150 - ERROR - Telegram send failed after 3 attempts
+2025-11-12 07:01:39,152 - INFO - Signal notification sent to WhatsApp only
+2025-11-12 07:01:39,152 - INFO - Signal generated for XAUUSD - Expires at 2025-11-12 07:06:01 UTC
+2025-11-12 07:01:39,153 - INFO - 127.0.0.1 - - [12/Nov/2025 07:01:39] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-12 07:01:40,578 - INFO - 127.0.0.1 - - [12/Nov/2025 07:01:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-11-12 07:01:40,587 - INFO - 127.0.0.1 - - [12/Nov/2025 07:01:40] "GET / HTTP/1.1" 200 -
+2025-11-12 07:01:41,276 - INFO - 127.0.0.1 - - [12/Nov/2025 07:01:41] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-12 07:02:04,329 - INFO - 127.0.0.1 - - [12/Nov/2025 07:02:04] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2025-11-12 07:02:58,370 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.124.117.207:9000
+2025-11-12 07:02:58,371 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-12 07:02:58,387 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 07:03:01,893 - WARNING -  * Debugger is active!
+2025-11-12 07:03:01,899 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 07:03:08,572 - INFO - 127.0.0.1 - - [12/Nov/2025 07:03:08] "GET / HTTP/1.1" 200 -
+2025-11-12 07:03:31,011 - INFO - 127.0.0.1 - - [12/Nov/2025 07:03:31] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-12 07:03:50,382 - INFO - WhatsApp notification initialized successfully
+2025-11-12 07:04:00,439 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 07:04:03,040 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-12 07:04:05,583 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-12 07:04:05,584 - INFO - WhatsApp notification initialized successfully
+2025-11-12 07:04:05,742 - INFO - -- BEGIN Twilio API Request --
+2025-11-12 07:04:05,742 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-12 07:04:05,742 - INFO - Headers:
+2025-11-12 07:04:05,742 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-12 07:04:05,742 - INFO - Accept : application/json
+2025-11-12 07:04:05,742 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-12 07:04:05,743 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-12 07:04:05,743 - INFO - Accept-Charset : utf-8
+2025-11-12 07:04:05,743 - INFO - -- END Twilio API Request --
+2025-11-12 07:04:07,790 - INFO - Response Status Code: 201
+2025-11-12 07:04:07,790 - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1587', 'Connection': 'keep-alive', 'Date': 'Wed, 12 Nov 2025 06:04:07 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ51cc6fa1fa60412d29dcfc2aeafeb388', 'Twilio-Request-Duration': '0.101', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 39721a78218c7c28e95e60fe0370079c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'hnFBfVCxLhJP5fv3qIzzhqscrAaySUlDxADtiaURh6OawXiGEwu5hw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-12 07:04:07,790 - INFO - WhatsApp message sent successfully: SID SM51cc6fa1fa60412d29dcfc2aeafeb388
+2025-11-12 07:04:08,725 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 07:04:10,906 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 07:04:13,993 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 07:04:13,993 - ERROR - Telegram send failed after 3 attempts
+2025-11-12 07:04:13,995 - INFO - Signal notification sent to WhatsApp only
+2025-11-12 07:04:13,995 - INFO - Signal generated for XAUUSD - Expires at 2025-11-12 07:09:00 UTC
+2025-11-12 07:04:13,996 - INFO - 127.0.0.1 - - [12/Nov/2025 07:04:13] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-12 07:19:02,241 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 07:19:02,242 - INFO - Retrying request to /chat/completions in 0.395550 seconds
+2025-11-12 07:19:12,538 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 07:19:26,865 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-12 07:19:30,481 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-12 07:19:30,482 - INFO - WhatsApp notification initialized successfully
+2025-11-12 07:19:30,483 - INFO - -- BEGIN Twilio API Request --
+2025-11-12 07:19:30,483 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-12 07:19:30,483 - INFO - Headers:
+2025-11-12 07:19:30,483 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-12 07:19:30,483 - INFO - Accept : application/json
+2025-11-12 07:19:30,483 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-12 07:19:30,484 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-12 07:19:30,484 - INFO - Accept-Charset : utf-8
+2025-11-12 07:19:30,484 - INFO - -- END Twilio API Request --
+2025-11-12 07:19:43,252 - INFO - Response Status Code: 201
+2025-11-12 07:19:43,253 - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1615', 'Connection': 'keep-alive', 'Date': 'Wed, 12 Nov 2025 06:19:42 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQbe171b3ef96a5783132c82d899e4f8fb', 'Twilio-Request-Duration': '0.148', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 57683e1b4b68ffc4d35501f444414c4c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'OGLG0UwzqfmOltxU9q_124_gfRdHYpjDNGG2MWWDB4Hp88NpITKNHA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-12 07:19:43,253 - INFO - WhatsApp message sent successfully: SID SMbe171b3ef96a5783132c82d899e4f8fb
+2025-11-12 07:19:44,783 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 07:19:47,083 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 07:19:50,113 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 07:19:50,113 - ERROR - Telegram send failed after 3 attempts
+2025-11-12 07:19:50,114 - INFO - Signal notification sent to WhatsApp only
+2025-11-12 07:19:50,115 - INFO - Signal generated for XAUUSD - Expires at 2025-11-12 07:24:12 UTC
+2025-11-12 07:19:50,116 - INFO - 127.0.0.1 - - [12/Nov/2025 07:19:50] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-12 07:33:53,812 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 07:34:08,824 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-12 07:34:11,554 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-12 07:34:11,554 - INFO - WhatsApp notification initialized successfully
+2025-11-12 07:34:11,555 - INFO - -- BEGIN Twilio API Request --
+2025-11-12 07:34:11,555 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-12 07:34:11,555 - INFO - Headers:
+2025-11-12 07:34:11,555 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-12 07:34:11,555 - INFO - Accept : application/json
+2025-11-12 07:34:11,555 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-12 07:34:11,555 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-12 07:34:11,555 - INFO - Accept-Charset : utf-8
+2025-11-12 07:34:11,555 - INFO - -- END Twilio API Request --
+2025-11-12 07:34:25,201 - INFO - Response Status Code: 201
+2025-11-12 07:34:25,201 - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1648', 'Connection': 'keep-alive', 'Date': 'Wed, 12 Nov 2025 06:34:25 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQbf2d86e8a7a44b00d5388e399cb9383a', 'Twilio-Request-Duration': '0.108', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 4bae1b9f49186f171a3ffbfd1846acba.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'xVshLeJTIIulKhykkfz_Kt8YCsyQCTdsL4RHuKxMQBWmmt26BeeMXw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-12 07:34:25,201 - INFO - WhatsApp message sent successfully: SID SMbf2d86e8a7a44b00d5388e399cb9383a
+2025-11-12 07:34:26,277 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 07:34:28,353 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 07:34:31,259 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 07:34:31,259 - ERROR - Telegram send failed after 3 attempts
+2025-11-12 07:34:31,260 - INFO - Signal notification sent to WhatsApp only
+2025-11-12 07:34:31,261 - INFO - Signal generated for XAUUSD - Expires at 2025-11-12 07:38:53 UTC
+2025-11-12 07:34:31,262 - INFO - 127.0.0.1 - - [12/Nov/2025 07:34:31] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-12 07:49:02,579 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 07:49:02,579 - INFO - Retrying request to /chat/completions in 0.411540 seconds
+2025-11-12 07:49:03,322 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 07:49:03,323 - INFO - Retrying request to /chat/completions in 0.875552 seconds
+2025-11-12 07:49:11,278 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 07:49:25,180 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-12 07:49:28,184 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-12 07:49:28,184 - INFO - WhatsApp notification initialized successfully
+2025-11-12 07:49:28,184 - INFO - Signal confidence is MEDIUM, skipping notification
+2025-11-12 07:49:28,185 - INFO - Signal generated for XAUUSD - Expires at 2025-11-12 07:54:11 UTC
+2025-11-12 07:49:28,186 - INFO - 127.0.0.1 - - [12/Nov/2025 07:49:28] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-12 08:04:12,754 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 08:04:15,948 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-12 08:04:19,038 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-12 08:04:19,039 - INFO - WhatsApp notification initialized successfully
+2025-11-12 08:04:19,039 - INFO - Signal confidence is MEDIUM, skipping notification
+2025-11-12 08:04:19,039 - INFO - Signal generated for XAUUSD - Expires at 2025-11-12 08:09:12 UTC
+2025-11-12 08:04:19,041 - INFO - 127.0.0.1 - - [12/Nov/2025 08:04:19] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-12 08:18:51,456 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 08:18:51,456 - INFO - Retrying request to /chat/completions in 0.407056 seconds
+2025-11-12 08:19:02,518 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 08:19:05,099 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-12 08:19:07,647 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-12 08:19:07,648 - INFO - WhatsApp notification initialized successfully
+2025-11-12 08:19:07,648 - INFO - -- BEGIN Twilio API Request --
+2025-11-12 08:19:07,648 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-12 08:19:07,648 - INFO - Headers:
+2025-11-12 08:19:07,648 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-12 08:19:07,648 - INFO - Accept : application/json
+2025-11-12 08:19:07,648 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-12 08:19:07,648 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-12 08:19:07,648 - INFO - Accept-Charset : utf-8
+2025-11-12 08:19:07,648 - INFO - -- END Twilio API Request --
+2025-11-12 08:19:20,417 - INFO - Response Status Code: 201
+2025-11-12 08:19:20,418 - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1566', 'Connection': 'keep-alive', 'Date': 'Wed, 12 Nov 2025 07:19:20 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQd6a1bd112e26ce36eaec2feffccc2fdb', 'Twilio-Request-Duration': '0.106', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 29a90787d8a9611938ee5f68e42b9f66.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'CROyUt2sjH8iqfmtHm4Qpj2GRIhvby191VKx9ub1r0shrGY6q21ESw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-12 08:19:20,418 - INFO - WhatsApp message sent successfully: SID SMd6a1bd112e26ce36eaec2feffccc2fdb
+2025-11-12 08:19:21,607 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 08:19:23,548 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 08:19:26,514 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 08:19:26,514 - ERROR - Telegram send failed after 3 attempts
+2025-11-12 08:19:26,516 - INFO - Signal notification sent to WhatsApp only
+2025-11-12 08:19:26,516 - INFO - Signal generated for XAUUSD - Expires at 2025-11-12 08:24:02 UTC
+2025-11-12 08:19:26,517 - INFO - 127.0.0.1 - - [12/Nov/2025 08:19:26] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-12 10:03:22,229 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 10:03:36,325 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-12 10:03:38,958 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-12 10:03:38,959 - INFO - WhatsApp notification initialized successfully
+2025-11-12 10:03:38,960 - INFO - -- BEGIN Twilio API Request --
+2025-11-12 10:03:38,960 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-12 10:03:38,960 - INFO - Headers:
+2025-11-12 10:03:38,960 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-12 10:03:38,960 - INFO - Accept : application/json
+2025-11-12 10:03:38,960 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-12 10:03:38,960 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-12 10:03:38,960 - INFO - Accept-Charset : utf-8
+2025-11-12 10:03:38,960 - INFO - -- END Twilio API Request --
+2025-11-12 10:03:51,738 - INFO - Response Status Code: 201
+2025-11-12 10:03:51,739 - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1671', 'Connection': 'keep-alive', 'Date': 'Wed, 12 Nov 2025 09:03:51 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ0fa40da98500df0318b67c6ba6a56c79', 'Twilio-Request-Duration': '0.111', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 d2a65e6cd7ddc4f5373432734cb3111c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'lr59QZmt9PaJGGlqsZC2Cz-XgbtbhnOZ76WiKCB0wcW6CUOzDN1PIQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-12 10:03:51,739 - INFO - WhatsApp message sent successfully: SID SM0fa40da98500df0318b67c6ba6a56c79
+2025-11-12 10:03:53,346 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 10:03:55,532 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 10:03:58,677 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 10:03:58,678 - ERROR - Telegram send failed after 3 attempts
+2025-11-12 10:03:58,679 - INFO - Signal notification sent to WhatsApp only
+2025-11-12 10:03:58,679 - INFO - Signal generated for XAUUSD - Expires at 2025-11-12 10:08:22 UTC
+2025-11-12 10:03:58,682 - INFO - 127.0.0.1 - - [12/Nov/2025 10:03:58] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-12 10:19:47,593 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 10:20:01,663 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-12 10:20:04,453 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-12 10:20:04,454 - INFO - WhatsApp notification initialized successfully
+2025-11-12 10:20:04,454 - INFO - -- BEGIN Twilio API Request --
+2025-11-12 10:20:04,454 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-12 10:20:04,454 - INFO - Headers:
+2025-11-12 10:20:04,454 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-12 10:20:04,454 - INFO - Accept : application/json
+2025-11-12 10:20:04,454 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-12 10:20:04,454 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-12 10:20:04,454 - INFO - Accept-Charset : utf-8
+2025-11-12 10:20:04,455 - INFO - -- END Twilio API Request --
+2025-11-12 10:20:06,452 - INFO - Response Status Code: 201
+2025-11-12 10:20:06,452 - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1568', 'Connection': 'keep-alive', 'Date': 'Wed, 12 Nov 2025 09:20:06 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQcaddb878cc2446ae07b88cfb515c507b', 'Twilio-Request-Duration': '0.100', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 ff2012aca0ae72bb05b003fad40aa354.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'mUCYBs_CAQ3QwtF7cgk5UJG6gs2XJEMEScvLz1NvfEc10MFQHjQbtQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-12 10:20:06,453 - INFO - WhatsApp message sent successfully: SID SMcaddb878cc2446ae07b88cfb515c507b
+2025-11-12 10:20:18,646 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 10:20:20,700 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 10:20:23,661 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 10:20:23,662 - ERROR - Telegram send failed after 3 attempts
+2025-11-12 10:20:23,663 - INFO - Signal notification sent to WhatsApp only
+2025-11-12 10:20:23,663 - INFO - Signal generated for XAUUSD - Expires at 2025-11-12 10:24:47 UTC
+2025-11-12 10:20:23,664 - INFO - 127.0.0.1 - - [12/Nov/2025 10:20:23] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-12 10:25:00,105 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_sqlalchemy\\__init__.py', reloading
+2025-11-12 10:25:00,153 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_sqlalchemy\\extension.py', reloading
+2025-11-12 10:25:01,268 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 10:25:05,866 - WARNING -  * Debugger is active!
+2025-11-12 10:25:05,871 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 10:25:07,138 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_login\\__init__.py', reloading
+2025-11-12 10:25:07,169 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_login\\mixins.py', reloading
+2025-11-12 10:25:08,478 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 10:25:12,489 - WARNING -  * Debugger is active!
+2025-11-12 10:25:12,495 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 10:27:02,453 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\__init__.py', reloading
+2025-11-12 10:27:02,494 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\app.py', reloading
+2025-11-12 10:27:03,713 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 10:27:07,845 - WARNING -  * Debugger is active!
+2025-11-12 10:27:07,851 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 10:27:11,875 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\__init__.py', reloading
+2025-11-12 10:27:11,904 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\schema.py', reloading
+2025-11-12 10:27:11,942 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\schema.py', reloading
+2025-11-12 10:27:12,555 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 10:27:16,468 - WARNING -  * Debugger is active!
+2025-11-12 10:27:16,472 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 10:30:30,929 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_mail\\__init__.py', reloading
+2025-11-12 10:30:30,992 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_login\\login_manager.py', reloading
+2025-11-12 10:30:31,033 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_login\\utils.py', reloading
+2025-11-12 10:30:31,073 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\local.py', reloading
+2025-11-12 10:30:31,120 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\globals.py', reloading
+2025-11-12 10:30:31,146 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\json\\__init__.py', reloading
+2025-11-12 10:30:31,163 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\wrappers.py', reloading
+2025-11-12 10:30:31,178 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-11-12 10:30:31,201 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-11-12 10:30:31,241 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2025-11-12 10:30:31,679 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 10:30:35,892 - WARNING -  * Debugger is active!
+2025-11-12 10:30:35,899 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 10:34:27,899 - INFO - WhatsApp notification initialized successfully
+2025-11-12 10:34:40,720 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 10:34:40,732 - INFO - Retrying request to /chat/completions in 0.453015 seconds
+2025-11-12 10:34:41,869 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 10:34:41,869 - INFO - Retrying request to /chat/completions in 0.781056 seconds
+2025-11-12 10:34:50,531 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 10:35:05,157 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-12 10:35:07,917 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-12 10:35:07,918 - INFO - WhatsApp notification initialized successfully
+2025-11-12 10:35:08,129 - INFO - -- BEGIN Twilio API Request --
+2025-11-12 10:35:08,130 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-12 10:35:08,130 - INFO - Headers:
+2025-11-12 10:35:08,130 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-12 10:35:08,130 - INFO - Accept : application/json
+2025-11-12 10:35:08,130 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-12 10:35:08,131 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-12 10:35:08,131 - INFO - Accept-Charset : utf-8
+2025-11-12 10:35:08,131 - INFO - -- END Twilio API Request --
+2025-11-12 10:35:20,904 - INFO - Response Status Code: 201
+2025-11-12 10:35:20,905 - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1568', 'Connection': 'keep-alive', 'Date': 'Wed, 12 Nov 2025 09:35:20 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQcb05940bb80390e3e06ac6461e7a4f57', 'Twilio-Request-Duration': '0.108', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 4bae1b9f49186f171a3ffbfd1846acba.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '2pfwKqIAd4DofZdw_rM5LvRWffV1rTyEJxkKGspRwNbM-wJaNmAcKA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-12 10:35:20,905 - INFO - WhatsApp message sent successfully: SID SMcb05940bb80390e3e06ac6461e7a4f57
+2025-11-12 10:35:22,348 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 10:35:24,331 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 10:35:27,411 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 10:35:27,411 - ERROR - Telegram send failed after 3 attempts
+2025-11-12 10:35:27,414 - INFO - Signal notification sent to WhatsApp only
+2025-11-12 10:35:27,415 - INFO - Signal generated for XAUUSD - Expires at 2025-11-12 10:39:50 UTC
+2025-11-12 10:35:27,417 - INFO - 127.0.0.1 - - [12/Nov/2025 10:35:27] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-12 10:49:47,365 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 10:50:01,452 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-12 10:50:04,121 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-12 10:50:04,122 - INFO - WhatsApp notification initialized successfully
+2025-11-12 10:50:04,122 - INFO - -- BEGIN Twilio API Request --
+2025-11-12 10:50:04,122 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-12 10:50:04,122 - INFO - Headers:
+2025-11-12 10:50:04,122 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-12 10:50:04,122 - INFO - Accept : application/json
+2025-11-12 10:50:04,122 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-12 10:50:04,123 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-12 10:50:04,123 - INFO - Accept-Charset : utf-8
+2025-11-12 10:50:04,123 - INFO - -- END Twilio API Request --
+2025-11-12 10:50:16,523 - INFO - Response Status Code: 201
+2025-11-12 10:50:16,523 - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1735', 'Connection': 'keep-alive', 'Date': 'Wed, 12 Nov 2025 09:50:16 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ28051be799017f629de9ddf0e7efeae6', 'Twilio-Request-Duration': '0.111', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 552902bab7d1a219a13b7843f4afebae.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'PD-3yE5EdpNUZV6bDbhvFcQY7x-tT6gx6DieVDT_dOp0NN33eUdHSg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-12 10:50:16,524 - INFO - WhatsApp message sent successfully: SID SM28051be799017f629de9ddf0e7efeae6
+2025-11-12 10:50:17,662 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 10:50:19,643 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 10:50:22,801 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 10:50:22,801 - ERROR - Telegram send failed after 3 attempts
+2025-11-12 10:50:22,803 - INFO - Signal notification sent to WhatsApp only
+2025-11-12 10:50:22,803 - INFO - Signal generated for XAUUSD - Expires at 2025-11-12 10:54:47 UTC
+2025-11-12 10:50:22,804 - INFO - 127.0.0.1 - - [12/Nov/2025 10:50:22] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-12 11:04:28,204 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 11:04:28,205 - INFO - Retrying request to /chat/completions in 0.401201 seconds
+2025-11-12 11:04:33,575 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 11:04:47,594 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-12 11:04:50,071 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-12 11:04:50,072 - INFO - WhatsApp notification initialized successfully
+2025-11-12 11:04:50,072 - INFO - -- BEGIN Twilio API Request --
+2025-11-12 11:04:50,072 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-12 11:04:50,073 - INFO - Headers:
+2025-11-12 11:04:50,073 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-12 11:04:50,073 - INFO - Accept : application/json
+2025-11-12 11:04:50,073 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-12 11:04:50,073 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-12 11:04:50,073 - INFO - Accept-Charset : utf-8
+2025-11-12 11:04:50,073 - INFO - -- END Twilio API Request --
+2025-11-12 11:04:51,647 - INFO - Response Status Code: 201
+2025-11-12 11:04:51,647 - INFO - Response Headers: {'Content-Type': 'application/json;charset=utf-8', 'Content-Length': '1557', 'Connection': 'keep-alive', 'Date': 'Wed, 12 Nov 2025 10:04:51 GMT', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ240a0f7170aa41ad3dbe20168148b5cc', 'Twilio-Request-Duration': '0.106', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Miss from cloudfront', 'Via': '1.1 d4df04f0be711772e1710f5d9a876f60.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'fl8AgauX3GqaPWva4kK-0btfnUI8lVuAYPd6OUaq0pErYsLPYkG-_Q==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-12 11:04:51,647 - INFO - WhatsApp message sent successfully: SID SM240a0f7170aa41ad3dbe20168148b5cc
+2025-11-12 11:04:53,331 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 11:04:55,629 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 11:04:57,727 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\_pytest\\cacheprovider.py', reloading
+2025-11-12 11:04:58,179 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\_pytest\\capture.py', reloading
+2025-11-12 11:04:58,442 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\_pytest\\doctest.py', reloading
+2025-11-12 11:04:58,529 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\_pytest\\fixtures.py', reloading
+2025-11-12 11:04:59,627 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 11:05:06,101 - WARNING -  * Debugger is active!
+2025-11-12 11:05:06,106 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 11:05:43,584 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\anthropic\\__init__.py', reloading
+2025-11-12 11:05:43,606 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\anthropic\\lib\\vertex\\__init__.py', reloading
+2025-11-12 11:05:43,617 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\anthropic\\lib\\bedrock\\__init__.py', reloading
+2025-11-12 11:05:43,633 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\anthropic\\lib\\streaming\\__init__.py', reloading
+2025-11-12 11:05:43,657 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\anthropic\\_client.py', reloading
+2025-11-12 11:05:44,955 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 11:05:48,709 - WARNING -  * Debugger is active!
+2025-11-12 11:05:48,713 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 11:06:20,114 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\_pytest\\junitxml.py', reloading
+2025-11-12 11:06:20,257 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\_pytest\\legacypath.py', reloading
+2025-11-12 11:06:20,312 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\_pytest\\logging.py', reloading
+2025-11-12 11:06:21,302 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 11:06:25,757 - WARNING -  * Debugger is active!
+2025-11-12 11:06:25,762 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 11:07:59,201 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\twilio\\base\\client_base.py', reloading
+2025-11-12 11:07:59,224 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\twilio\\http\\__init__.py', reloading
+2025-11-12 11:07:59,306 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\twilio\\credential\\credential_provider.py', reloading
+2025-11-12 11:07:59,330 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\twilio\\rest\\api\\v2010\\account\\message\\__init__.py', reloading
+2025-11-12 11:07:59,378 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\twilio\\base\\list_resource.py', reloading
+2025-11-12 11:07:59,399 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\twilio\\base\\values.py', reloading
+2025-11-12 11:07:59,412 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\twilio\\base\\instance_resource.py', reloading
+2025-11-12 11:08:00,111 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 11:08:04,634 - WARNING -  * Debugger is active!
+2025-11-12 11:08:04,641 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 11:11:41,303 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-12 11:11:41,952 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 11:11:47,247 - WARNING -  * Debugger is active!
+2025-11-12 11:11:47,251 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 11:11:54,457 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-12 11:11:54,469 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-12 11:11:56,577 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 11:12:03,527 - WARNING -  * Debugger is active!
+2025-11-12 11:12:03,533 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 11:13:35,875 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.124.117.207:9000
+2025-11-12 11:13:35,876 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-12 11:13:35,892 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 11:13:41,484 - WARNING -  * Debugger is active!
+2025-11-12 11:13:41,487 - INFO -  * Debugger PIN: 137-776-963
