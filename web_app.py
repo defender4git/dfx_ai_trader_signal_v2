@@ -462,32 +462,44 @@ def get_current_signal():
 @app.route('/execute_trade', methods=['POST'])
 @login_required
 def execute_trade():
-    """Execute the current trading signal using the advanced trade manager"""
+    """Execute the current trading signal using the advanced trade manager with fallback filling types"""
     global current_signal, trade_manager
 
     if current_signal is None:
         return jsonify({'error': 'No signal available'}), 400
 
     try:
-        data = request.get_json()
-        filling_type = data.get('filling_type', 'IOC')  # IOC, FOK, or RETURN
-
         # Initialize trade manager if not already done
         if trade_manager is None:
             trade_manager = TradeManager()
 
-        # Use the advanced trade manager for execution
-        success = trade_manager.execute_trade(current_signal, filling_type)
+        # Try different filling types in order: IOC -> FOK -> RETURN
+        filling_types = ['IOC', 'FOK', 'RETURN']
+        last_error = None
 
-        if success:
-            # Get updated performance stats
-            stats = trade_manager.get_performance_stats()
-            return jsonify({
-                'message': 'Trade executed successfully with advanced risk management',
-                'performance_stats': stats
-            })
-        else:
-            return jsonify({'error': 'Trade execution failed'}), 500
+        for filling_type in filling_types:
+            try:
+                logging.info(f"Attempting trade execution with {filling_type} filling type")
+                success = trade_manager.execute_trade(current_signal, filling_type)
+
+                if success:
+                    # Get updated performance stats
+                    stats = trade_manager.get_performance_stats()
+                    return jsonify({
+                        'message': f'Trade executed successfully with {filling_type} filling type and advanced risk management',
+                        'filling_type_used': filling_type,
+                        'performance_stats': stats
+                    })
+
+            except Exception as e:
+                last_error = str(e)
+                logging.warning(f"Trade execution failed with {filling_type} filling type: {e}")
+                continue
+
+        # If all filling types failed
+        error_msg = f"Trade execution failed with all filling types (IOC, FOK, RETURN). Last error: {last_error}"
+        logging.error(error_msg)
+        return jsonify({'error': error_msg}), 500
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500

@@ -116,9 +116,11 @@ class NotificationManager:
             logging.info("Rate limit exceeded - skipping WhatsApp notification")
             return False
 
-        # Get content SID and variables from environment
+        # Get content SID from environment
         content_sid = os.getenv("TWILIO_CONTENT_SID", "HXb5b62575e6e4ff6129ad7c8efe1f983e")
-        content_variables = os.getenv("TWILIO_CONTENT_VARIABLES", '{"1":"Trading Signal"}')
+
+        # Use the signal message as content variable
+        content_variables = {"1": message}
 
         for attempt in range(max_retries):
             try:
@@ -126,7 +128,7 @@ class NotificationManager:
                 twilio_message = self.twilio_client.messages.create(
                     from_=f"whatsapp:{self.twilio_whatsapp_number}",
                     content_sid=content_sid,
-                    content_variables=json.loads(content_variables),
+                    content_variables=content_variables,
                     to=f"whatsapp:{self.recipient_whatsapp_number}"
                 )
                 self.last_notification_time = current_time
@@ -175,7 +177,7 @@ class NotificationManager:
 
     def send_signal_notification(self, signal: TradingSignal, test_mode: bool = False):
         """Send notification only for HIGH confidence signals"""
-        if signal.confidence.upper() != "HIGH":
+        if signal.confidence.upper() not in ["HIGH", "MEDIUM"]:
             logging.info(f"Signal confidence is {signal.confidence}, skipping notification")
             print(f"Signal confidence is {signal.confidence}, skipping notification")
             return

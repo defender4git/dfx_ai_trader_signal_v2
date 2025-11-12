@@ -1353,3 +1353,251 @@
 2025-11-12 11:13:35,892 - INFO -  * Restarting with watchdog (windowsapi)
 2025-11-12 11:13:41,484 - WARNING -  * Debugger is active!
 2025-11-12 11:13:41,487 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 12:11:52,586 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-12 12:11:52,742 - INFO - 127.0.0.1 - - [12/Nov/2025 12:11:52] "GET / HTTP/1.1" 200 -
+2025-11-12 12:11:54,313 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 12:12:00,503 - WARNING -  * Debugger is active!
+2025-11-12 12:12:00,507 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 12:12:00,977 - INFO - 127.0.0.1 - - [12/Nov/2025 12:12:00] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-12 12:12:01,777 - INFO - WhatsApp notification initialized successfully
+2025-11-12 12:12:15,287 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 12:12:15,287 - INFO - Retrying request to /chat/completions in 0.375572 seconds
+2025-11-12 12:12:25,010 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 12:12:38,898 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-12 12:12:41,443 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-12 12:12:41,444 - INFO - WhatsApp notification initialized successfully
+2025-11-12 12:12:41,654 - INFO - -- BEGIN Twilio API Request --
+2025-11-12 12:12:41,654 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-12 12:12:41,654 - INFO - Headers:
+2025-11-12 12:12:41,655 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-12 12:12:41,655 - INFO - Accept : application/json
+2025-11-12 12:12:41,655 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-12 12:12:41,655 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-12 12:12:41,655 - INFO - Accept-Charset : utf-8
+2025-11-12 12:12:41,655 - INFO - -- END Twilio API Request --
+2025-11-12 12:12:53,739 - INFO - Response Status Code: 400
+2025-11-12 12:12:53,739 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 12 Nov 2025 11:12:53 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQa160294ea30c4dc22dfec4e422a45445', 'Twilio-Request-Duration': '0.040', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 39721a78218c7c28e95e60fe0370079c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'CirmOQlkdIvSp3fa-giGsEoJ_FmLlw12GjXcDmcYmRpDYKDvoN3zSw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-12 12:12:53,740 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2025-11-12 12:12:54,740 - INFO - -- BEGIN Twilio API Request --
+2025-11-12 12:12:54,740 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-12 12:12:54,740 - INFO - Headers:
+2025-11-12 12:12:54,741 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-12 12:12:54,741 - INFO - Accept : application/json
+2025-11-12 12:12:54,741 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-12 12:12:54,741 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-12 12:12:54,741 - INFO - Accept-Charset : utf-8
+2025-11-12 12:12:54,741 - INFO - -- END Twilio API Request --
+2025-11-12 12:12:55,360 - INFO - Response Status Code: 400
+2025-11-12 12:12:55,360 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 12 Nov 2025 11:12:55 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ7d9290e186c70d9d55dcecc7a754ee68', 'Twilio-Request-Duration': '0.028', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 39721a78218c7c28e95e60fe0370079c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'lFlzr7jn2as-eZnuGJDTPqaSTRQ5FyOjObC9pOAD0jYAb_IMnyVXHg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-12 12:12:55,360 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2025-11-12 12:12:57,361 - INFO - -- BEGIN Twilio API Request --
+2025-11-12 12:12:57,361 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-12 12:12:57,361 - INFO - Headers:
+2025-11-12 12:12:57,361 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-12 12:12:57,361 - INFO - Accept : application/json
+2025-11-12 12:12:57,361 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-12 12:12:57,361 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-12 12:12:57,361 - INFO - Accept-Charset : utf-8
+2025-11-12 12:12:57,361 - INFO - -- END Twilio API Request --
+2025-11-12 12:12:57,952 - INFO - Response Status Code: 400
+2025-11-12 12:12:57,953 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 12 Nov 2025 11:12:57 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ1e114636a918f71a8130987969feba71', 'Twilio-Request-Duration': '0.025', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 39721a78218c7c28e95e60fe0370079c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '7dNUwVFwb7fLzM4P3JOXVsf6fDN2odQ8U7q2urwoUgy_qKpIGdJD7A==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-12 12:12:57,953 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2025-11-12 12:12:57,953 - ERROR - WhatsApp send failed after 3 attempts
+2025-11-12 12:12:59,028 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 12:13:01,067 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 12:13:04,083 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 12:13:04,083 - ERROR - Telegram send failed after 3 attempts
+2025-11-12 12:13:04,085 - ERROR - Failed to send signal notification to any channel
+2025-11-12 12:13:04,085 - INFO - Signal generated for XAUUSD - Expires at 2025-11-12 12:17:25 UTC
+2025-11-12 12:13:04,086 - INFO - 127.0.0.1 - - [12/Nov/2025 12:13:04] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-12 12:15:12,748 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-12 12:15:26,759 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2025-11-12 12:15:29,399 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2025-11-12 12:15:29,400 - INFO - WhatsApp notification initialized successfully
+2025-11-12 12:15:29,400 - INFO - -- BEGIN Twilio API Request --
+2025-11-12 12:15:29,400 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-12 12:15:29,400 - INFO - Headers:
+2025-11-12 12:15:29,400 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-12 12:15:29,400 - INFO - Accept : application/json
+2025-11-12 12:15:29,400 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-12 12:15:29,400 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-12 12:15:29,400 - INFO - Accept-Charset : utf-8
+2025-11-12 12:15:29,400 - INFO - -- END Twilio API Request --
+2025-11-12 12:15:41,905 - INFO - Response Status Code: 400
+2025-11-12 12:15:41,906 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 12 Nov 2025 11:15:41 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQfbb164c8370c25b8fbde409a77255c0c', 'Twilio-Request-Duration': '0.026', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 89a2789e584c965cee4a77ee2a943764.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'MbQTaM2AdCFgCLS2IhDEcGkkZgqaRX1t1-5YKagXkZ3GayO5RjD53Q==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-12 12:15:41,906 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2025-11-12 12:15:42,907 - INFO - -- BEGIN Twilio API Request --
+2025-11-12 12:15:42,907 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-12 12:15:42,907 - INFO - Headers:
+2025-11-12 12:15:42,907 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-12 12:15:42,907 - INFO - Accept : application/json
+2025-11-12 12:15:42,907 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-12 12:15:42,907 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-12 12:15:42,907 - INFO - Accept-Charset : utf-8
+2025-11-12 12:15:42,907 - INFO - -- END Twilio API Request --
+2025-11-12 12:15:43,145 - INFO - Response Status Code: 400
+2025-11-12 12:15:43,146 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 12 Nov 2025 11:15:43 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ0d8246fed474227b5d769a30e164cdbc', 'Twilio-Request-Duration': '0.026', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 89a2789e584c965cee4a77ee2a943764.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '69LcCWKqfW32ai3jR_hkI-gC_uxKNuerw2j98Kha7-15qh1wDygoXA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-12 12:15:43,146 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2025-11-12 12:15:45,147 - INFO - -- BEGIN Twilio API Request --
+2025-11-12 12:15:45,147 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2025-11-12 12:15:45,147 - INFO - Headers:
+2025-11-12 12:15:45,147 - INFO - Content-Type : application/x-www-form-urlencoded
+2025-11-12 12:15:45,147 - INFO - Accept : application/json
+2025-11-12 12:15:45,147 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2025-11-12 12:15:45,147 - INFO - X-Twilio-Client : python-9.8.5
+2025-11-12 12:15:45,147 - INFO - Accept-Charset : utf-8
+2025-11-12 12:15:45,147 - INFO - -- END Twilio API Request --
+2025-11-12 12:15:45,404 - INFO - Response Status Code: 400
+2025-11-12 12:15:45,405 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 12 Nov 2025 11:15:45 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQa0bfd722a91cefff52b8d3a822219328', 'Twilio-Request-Duration': '0.046', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 89a2789e584c965cee4a77ee2a943764.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'ZB3ig-XlYycrF2WSSndlAF2V5A0JLzRxKTG4rFTqOANFcib3HuBLjw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2025-11-12 12:15:45,405 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2025-11-12 12:15:45,405 - ERROR - WhatsApp send failed after 3 attempts
+2025-11-12 12:15:46,607 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 12:15:48,568 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 12:15:51,558 - WARNING - Telegram send failed: HTTP 404 - {"ok":false,"error_code":404,"description":"Not Found"}
+2025-11-12 12:15:51,558 - ERROR - Telegram send failed after 3 attempts
+2025-11-12 12:15:51,560 - ERROR - Failed to send signal notification to any channel
+2025-11-12 12:15:51,561 - INFO - Signal generated for XAUUSD - Expires at 2025-11-12 12:20:12 UTC
+2025-11-12 12:15:51,562 - INFO - 127.0.0.1 - - [12/Nov/2025 12:15:51] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-12 12:20:44,217 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-12 12:20:44,762 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 12:20:53,797 - WARNING -  * Debugger is active!
+2025-11-12 12:20:53,804 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 12:21:07,754 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-12 12:21:07,757 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2025-11-12 12:21:09,145 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 12:21:14,677 - WARNING -  * Debugger is active!
+2025-11-12 12:21:14,682 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 12:23:02,943 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\dataclasses.py', reloading
+2025-11-12 12:23:03,794 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 12:23:08,056 - WARNING -  * Debugger is active!
+2025-11-12 12:23:08,060 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 12:23:29,444 - INFO - 127.0.0.1 - - [12/Nov/2025 12:23:29] "GET / HTTP/1.1" 200 -
+2025-11-12 12:23:30,823 - INFO - 127.0.0.1 - - [12/Nov/2025 12:23:30] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-12 12:23:46,339 - INFO - WhatsApp notification initialized successfully
+2025-11-12 12:23:47,932 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 12:23:47,932 - INFO - Retrying request to /chat/completions in 0.396764 seconds
+2025-11-12 12:23:48,652 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 12:23:48,652 - INFO - Retrying request to /chat/completions in 0.941542 seconds
+2025-11-12 12:23:49,911 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-11-12 12:23:49,912 - WARNING - OpenAI rate limit exceeded: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o-mini in organization org-D1InZ3x7Bg7bmGy3XKuXMTSV on tokens per min (TPM): Limit 100000, Used 100000, Requested 135. Please try again in 58m19.2s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-11-12 12:23:49,913 - INFO - Signal generated for XAUUSD - Expires at 2025-11-12 12:28:49 UTC
+2025-11-12 12:23:49,914 - INFO - 127.0.0.1 - - [12/Nov/2025 12:23:49] "POST /run_ai_analysis HTTP/1.1" 200 -
+2025-11-12 12:26:30,414 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\apply_trade.py', reloading
+2025-11-12 12:26:30,457 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_rule_based.py', reloading
+2025-11-12 12:26:30,464 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_rule_based.py', reloading
+2025-11-12 12:26:30,679 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\typing_extensions.py', reloading
+2025-11-12 12:26:30,848 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\exceptions.py', reloading
+2025-11-12 12:26:30,868 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\formparser.py', reloading
+2025-11-12 12:26:30,901 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\formparser.py', reloading
+2025-11-12 12:26:30,902 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\exceptions.py', reloading
+2025-11-12 12:26:30,922 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\debug\\console.py', reloading
+2025-11-12 12:26:30,942 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\werkzeug\\debug\\repr.py', reloading
+2025-11-12 12:26:32,244 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 12:26:48,735 - WARNING -  * Debugger is active!
+2025-11-12 12:26:48,741 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 12:26:48,919 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_update_params.py', reloading
+2025-11-12 12:26:48,920 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\realtime\\realtime_response_create_params_param.py', reloading
+2025-11-12 12:26:48,921 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\responses\\response_mcp_list_tools_completed_event.py', reloading
+2025-11-12 12:26:48,922 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\venv\\Lib\\site-packages\\openai\\types\\beta\\realtime\\conversation_item_truncated_event.py', reloading
+2025-11-12 12:26:49,576 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 12:27:04,906 - WARNING -  * Debugger is active!
+2025-11-12 12:27:04,914 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 12:35:40,784 - INFO - 127.0.0.1 - - [12/Nov/2025 12:35:40] "GET / HTTP/1.1" 200 -
+2025-11-12 12:35:42,581 - INFO - 127.0.0.1 - - [12/Nov/2025 12:35:42] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-12 12:35:51,851 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-12 12:35:51,861 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-12 12:35:51,863 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2025-11-12 12:35:52,618 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 12:35:59,107 - WARNING -  * Debugger is active!
+2025-11-12 12:35:59,116 - INFO -  * Debugger PIN: 137-776-963
+2025-11-12 12:36:00,204 - INFO - 127.0.0.1 - - [12/Nov/2025 12:36:00] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-11-12 12:36:00,468 - INFO - 127.0.0.1 - - [12/Nov/2025 12:36:00] "GET /login HTTP/1.1" 200 -
+2025-11-12 12:36:11,112 - INFO - 127.0.0.1 - - [12/Nov/2025 12:36:11] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-11-12 12:36:11,154 - INFO - 127.0.0.1 - - [12/Nov/2025 12:36:11] "GET / HTTP/1.1" 200 -
+2025-11-12 12:36:12,411 - INFO - 127.0.0.1 - - [12/Nov/2025 12:36:12] "GET /get_symbols HTTP/1.1" 200 -
+2025-11-12 12:36:52,137 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.124.117.207:9000
+2025-11-12 12:36:52,137 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-12 12:36:52,156 - INFO -  * Restarting with watchdog (windowsapi)
+2025-11-12 12:36:56,369 - WARNING -  * Debugger is active!
+2025-11-12 12:36:56,373 - INFO -  * Debugger PIN: 137-776-963
