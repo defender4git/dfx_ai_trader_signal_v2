@@ -35,7 +35,7 @@ app = Flask(__name__,
             static_folder='static')
 
 # Flask configuration for user management
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'lIMITED123!XsfegthhhttbMF34R9FSSWW')
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', '')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
