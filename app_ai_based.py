@@ -176,7 +176,7 @@ class NotificationManager:
         return False
 
     def send_signal_notification(self, signal: TradingSignal, test_mode: bool = False):
-        """Send notification only for HIGH confidence signals"""
+        """Send notification only for HIGH and MEDIUM confidence signals"""
         if signal.confidence.upper() not in ["HIGH", "MEDIUM"]:
             logging.info(f"Signal confidence is {signal.confidence}, skipping notification")
             print(f"Signal confidence is {signal.confidence}, skipping notification")
@@ -206,6 +206,10 @@ class NotificationManager:
         else:
             logging.error("Failed to send signal notification to any channel")
             print("Failed to send signal notification to any channel")
+            # Log more details for debugging
+            logging.error(f"WhatsApp client initialized: {self.twilio_client is not None}")
+            logging.error(f"Telegram bot token: {bool(self.telegram_bot_token)}")
+            logging.error(f"Telegram chat ID: {bool(self.telegram_chat_id)}")
 
     def _format_signal_message(self, signal: TradingSignal) -> str:
         """Format signal for notification"""

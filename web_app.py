@@ -430,12 +430,13 @@ def run_ai_analysis():
 @app.route('/get_current_signal')
 @login_required
 def get_current_signal():
-    """Get the current trading signal and trade manager status"""
+    """Get the current trading signals (with and without patterns) and trade manager status"""
     global current_signal, trade_manager
 
     if current_signal is None:
         return jsonify({'error': 'No signal available'}), 404
 
+    # For backward compatibility, return the signal with patterns as the main signal
     response = {
         'symbol': current_signal.symbol,
         'signal_type': current_signal.signal_type,
