@@ -555,9 +555,7 @@ Developed by Nsikak Paulinus
 ### Support Channels
 
 - **📧 Email**: kizito2008@yahoo.com
-- **🐛 Issues**: [GitHub Issues](https://github.com/kilocode/ai-trading-ea/issues)
-- **💬 Discussions**: [GitHub Discussions](https://github.com/kilocode/ai-trading-ea/discussions)
-- **📖 Documentation**: [Wiki](https://github.com/kilocode/ai-trading-ea/wiki)
+
 
 ### Professional Services
 
