@@ -1,0 +1,420 @@
+2026-01-11 21:05:45,418 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.207.87.207:9000
+2026-01-11 21:05:45,419 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-11 21:05:45,443 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-11 21:05:48,912 - WARNING -  * Debugger is active!
+2026-01-11 21:05:48,926 - INFO -  * Debugger PIN: 146-140-033
+2026-01-11 21:06:04,091 - INFO - 127.0.0.1 - - [11/Jan/2026 21:06:04] "[32mGET / HTTP/1.1[0m" 302 -
+2026-01-11 21:06:04,169 - INFO - 127.0.0.1 - - [11/Jan/2026 21:06:04] "GET /login HTTP/1.1" 200 -
+2026-01-11 21:06:05,371 - INFO - 127.0.0.1 - - [11/Jan/2026 21:06:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-01-11 21:06:08,370 - INFO - 127.0.0.1 - - [11/Jan/2026 21:06:08] "POST /login HTTP/1.1" 200 -
+2026-01-11 21:06:12,580 - INFO - 127.0.0.1 - - [11/Jan/2026 21:06:12] "GET /register HTTP/1.1" 200 -
+2026-01-11 21:06:41,235 - INFO - 127.0.0.1 - - [11/Jan/2026 21:06:41] "POST /register HTTP/1.1" 200 -
+2026-01-11 21:06:50,734 - INFO - 127.0.0.1 - - [11/Jan/2026 21:06:50] "GET /login HTTP/1.1" 200 -
+2026-01-11 21:07:06,017 - INFO - 127.0.0.1 - - [11/Jan/2026 21:07:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-11 21:07:06,218 - INFO - 127.0.0.1 - - [11/Jan/2026 21:07:06] "GET / HTTP/1.1" 200 -
+2026-01-11 21:08:24,015 - INFO - 127.0.0.1 - - [11/Jan/2026 21:08:24] "GET /profile HTTP/1.1" 200 -
+2026-01-11 21:08:24,969 - INFO - 127.0.0.1 - - [11/Jan/2026 21:08:24] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-11 21:08:38,438 - INFO - 127.0.0.1 - - [11/Jan/2026 21:08:38] "GET / HTTP/1.1" 200 -
+2026-01-11 21:09:33,577 - INFO - WhatsApp notification initialized successfully
+2026-01-11 21:09:52,398 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-11 21:10:06,988 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2026-01-11 21:10:09,662 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2026-01-11 21:10:09,663 - INFO - WhatsApp notification initialized successfully
+2026-01-11 21:10:09,891 - INFO - -- BEGIN Twilio API Request --
+2026-01-11 21:10:09,891 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-11 21:10:09,891 - INFO - Headers:
+2026-01-11 21:10:09,892 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-11 21:10:09,892 - INFO - Accept : application/json
+2026-01-11 21:10:09,892 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-11 21:10:09,892 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-11 21:10:09,892 - INFO - Accept-Charset : utf-8
+2026-01-11 21:10:09,892 - INFO - -- END Twilio API Request --
+2026-01-11 21:10:22,710 - INFO - Response Status Code: 400
+2026-01-11 21:10:22,710 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Sun, 11 Jan 2026 20:10:17 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQb6fa9f9f323b79df3ace35feae794f21', 'Twilio-Request-Duration': '0.040', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 3502b4da22916485af0d3edbb185fb9c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'jmusQHnsHmRgOw_CrlhoiBDwntl9AeADjfmqyw43GLxOLyYANJEl1g==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-11 21:10:22,710 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-11 21:10:23,710 - INFO - -- BEGIN Twilio API Request --
+2026-01-11 21:10:23,711 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-11 21:10:23,711 - INFO - Headers:
+2026-01-11 21:10:23,711 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-11 21:10:23,711 - INFO - Accept : application/json
+2026-01-11 21:10:23,711 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-11 21:10:23,711 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-11 21:10:23,711 - INFO - Accept-Charset : utf-8
+2026-01-11 21:10:23,711 - INFO - -- END Twilio API Request --
+2026-01-11 21:10:24,103 - INFO - Response Status Code: 400
+2026-01-11 21:10:24,103 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Sun, 11 Jan 2026 20:10:18 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ3df5587d62b19e17e07544c041e350bc', 'Twilio-Request-Duration': '0.026', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 3502b4da22916485af0d3edbb185fb9c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'EI7_B8fet45Ek4nXpSUyn1aJ95mH1ZEIrxKZQUZ70hUbkkKZm6nQtg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-11 21:10:24,103 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-11 21:10:26,103 - INFO - -- BEGIN Twilio API Request --
+2026-01-11 21:10:26,103 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-11 21:10:26,104 - INFO - Headers:
+2026-01-11 21:10:26,104 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-11 21:10:26,104 - INFO - Accept : application/json
+2026-01-11 21:10:26,104 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-11 21:10:26,104 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-11 21:10:26,104 - INFO - Accept-Charset : utf-8
+2026-01-11 21:10:26,104 - INFO - -- END Twilio API Request --
+2026-01-11 21:10:26,373 - INFO - Response Status Code: 400
+2026-01-11 21:10:26,373 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Sun, 11 Jan 2026 20:10:20 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQf5d309ba8826ce2e56b6d6bf8e271ad1', 'Twilio-Request-Duration': '0.026', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 3502b4da22916485af0d3edbb185fb9c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'p2vgTxorPsRaeMEbk8YYr0UW_NcKd75UqVJfgJ2bc8fcGmVjYEosYw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-11 21:10:26,373 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-11 21:10:26,373 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-11 21:10:28,459 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-11 21:10:30,562 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-11 21:10:33,850 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-11 21:10:33,850 - ERROR - Telegram send failed after 3 attempts
+2026-01-11 21:10:33,852 - ERROR - Failed to send signal notification to any channel
+2026-01-11 21:10:33,853 - ERROR - WhatsApp client initialized: True
+2026-01-11 21:10:33,853 - ERROR - Telegram bot token: True
+2026-01-11 21:10:33,853 - ERROR - Telegram chat ID: True
+2026-01-11 21:10:33,853 - INFO - Signal generated for XAUUSD - Expires at 2026-01-11 21:14:52 UTC
+2026-01-11 21:10:33,854 - INFO - 127.0.0.1 - - [11/Jan/2026 21:10:33] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-11 21:14:56,109 - INFO - WhatsApp notification initialized successfully
+2026-01-11 21:15:14,626 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-11 21:15:30,419 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2026-01-11 21:15:33,117 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2026-01-11 21:15:33,118 - INFO - WhatsApp notification initialized successfully
+2026-01-11 21:15:33,118 - INFO - -- BEGIN Twilio API Request --
+2026-01-11 21:15:33,119 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-11 21:15:33,119 - INFO - Headers:
+2026-01-11 21:15:33,119 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-11 21:15:33,119 - INFO - Accept : application/json
+2026-01-11 21:15:33,119 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-11 21:15:33,119 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-11 21:15:33,119 - INFO - Accept-Charset : utf-8
+2026-01-11 21:15:33,119 - INFO - -- END Twilio API Request --
+2026-01-11 21:15:46,485 - INFO - Response Status Code: 400
+2026-01-11 21:15:46,485 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Sun, 11 Jan 2026 20:15:40 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQaca9fbd04020704d5a971055de79a811', 'Twilio-Request-Duration': '0.043', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 450b03d6f80e8a9a65630e947501047e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'KbDguCd_Kaq6ntX9OXlpFAmmTO6hYHIMBJ0-oN_WcRynonr6KGYhSQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-11 21:15:46,485 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-11 21:15:47,486 - INFO - -- BEGIN Twilio API Request --
+2026-01-11 21:15:47,486 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-11 21:15:47,486 - INFO - Headers:
+2026-01-11 21:15:47,486 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-11 21:15:47,486 - INFO - Accept : application/json
+2026-01-11 21:15:47,486 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-11 21:15:47,486 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-11 21:15:47,486 - INFO - Accept-Charset : utf-8
+2026-01-11 21:15:47,487 - INFO - -- END Twilio API Request --
+2026-01-11 21:15:48,457 - INFO - Response Status Code: 400
+2026-01-11 21:15:48,457 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Sun, 11 Jan 2026 20:15:42 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ462ef60dc1af93e57f5eb41bf209a533', 'Twilio-Request-Duration': '0.027', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 450b03d6f80e8a9a65630e947501047e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'SRoWr_Z2HeGN3DDLWfDBj_jqaooRyreikKz0gahv_-Z-1NlxCnaznQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-11 21:15:48,457 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-11 21:15:50,457 - INFO - -- BEGIN Twilio API Request --
+2026-01-11 21:15:50,458 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-11 21:15:50,458 - INFO - Headers:
+2026-01-11 21:15:50,458 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-11 21:15:50,458 - INFO - Accept : application/json
+2026-01-11 21:15:50,458 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-11 21:15:50,458 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-11 21:15:50,458 - INFO - Accept-Charset : utf-8
+2026-01-11 21:15:50,458 - INFO - -- END Twilio API Request --
+2026-01-11 21:15:51,200 - INFO - Response Status Code: 400
+2026-01-11 21:15:51,200 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Sun, 11 Jan 2026 20:15:45 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ578ecdd1f05d4a311dd20bdfa4a31a4d', 'Twilio-Request-Duration': '0.033', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 450b03d6f80e8a9a65630e947501047e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '_gwIa_hZdibZXvU94Rev2V8yIhD2_JbpUWOBDAV2WKkoXLbWGrUm1Q==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-11 21:15:51,200 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-11 21:15:51,200 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-11 21:16:04,116 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-11 21:16:06,123 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-11 21:16:09,116 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-11 21:16:09,116 - ERROR - Telegram send failed after 3 attempts
+2026-01-11 21:16:09,118 - ERROR - Failed to send signal notification to any channel
+2026-01-11 21:16:09,118 - ERROR - WhatsApp client initialized: True
+2026-01-11 21:16:09,118 - ERROR - Telegram bot token: True
+2026-01-11 21:16:09,118 - ERROR - Telegram chat ID: True
+2026-01-11 21:16:09,119 - INFO - Signal generated for XAUUSD - Expires at 2026-01-11 21:20:14 UTC
+2026-01-11 21:16:09,120 - INFO - 127.0.0.1 - - [11/Jan/2026 21:16:09] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-11 21:18:03,572 - INFO - 127.0.0.1 - - [11/Jan/2026 21:18:03] "GET /profile HTTP/1.1" 200 -
+2026-01-11 21:18:04,621 - INFO - 127.0.0.1 - - [11/Jan/2026 21:18:04] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-11 21:18:17,143 - INFO - 127.0.0.1 - - [11/Jan/2026 21:18:17] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-11 21:18:17,438 - INFO - 127.0.0.1 - - [11/Jan/2026 21:18:17] "GET /login HTTP/1.1" 200 -
+2026-01-11 21:18:22,564 - INFO - 127.0.0.1 - - [11/Jan/2026 21:18:22] "GET /register HTTP/1.1" 200 -
+2026-01-11 21:18:59,664 - INFO - 127.0.0.1 - - [11/Jan/2026 21:18:59] "[32mPOST /register HTTP/1.1[0m" 302 -
+2026-01-11 21:18:59,673 - INFO - 127.0.0.1 - - [11/Jan/2026 21:18:59] "GET /login HTTP/1.1" 200 -
+2026-01-11 21:22:13,736 - INFO - 127.0.0.1 - - [11/Jan/2026 21:22:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-11 21:22:13,749 - INFO - 127.0.0.1 - - [11/Jan/2026 21:22:13] "GET / HTTP/1.1" 200 -
+2026-01-11 21:22:26,547 - INFO - 127.0.0.1 - - [11/Jan/2026 21:22:26] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:24:37,292 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:24:37,296 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:24:37,296 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:24:38,257 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-11 21:24:44,490 - WARNING -  * Debugger is active!
+2026-01-11 21:24:44,497 - INFO -  * Debugger PIN: 146-140-033
+2026-01-11 21:24:45,346 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:24:45,347 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:24:45,348 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:24:46,140 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-11 21:24:49,989 - WARNING -  * Debugger is active!
+2026-01-11 21:24:49,993 - INFO -  * Debugger PIN: 146-140-033
+2026-01-11 21:25:28,335 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:25:28,336 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:25:28,337 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:25:28,957 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-11 21:25:34,012 - WARNING -  * Debugger is active!
+2026-01-11 21:25:34,019 - INFO -  * Debugger PIN: 146-140-033
+2026-01-11 21:26:01,513 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:26:01,516 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:26:01,517 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:26:02,516 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-11 21:26:06,490 - WARNING -  * Debugger is active!
+2026-01-11 21:26:06,496 - INFO -  * Debugger PIN: 146-140-033
+2026-01-11 21:26:23,406 - INFO - 127.0.0.1 - - [11/Jan/2026 21:26:23] "GET / HTTP/1.1" 200 -
+2026-01-11 21:26:39,389 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.207.87.207:9000
+2026-01-11 21:26:39,389 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-11 21:26:39,404 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-11 21:26:42,860 - WARNING -  * Debugger is active!
+2026-01-11 21:26:42,864 - INFO -  * Debugger PIN: 146-140-033
+2026-01-11 21:26:52,773 - INFO - 127.0.0.1 - - [11/Jan/2026 21:26:52] "GET / HTTP/1.1" 200 -
+2026-01-11 21:26:56,788 - INFO - 127.0.0.1 - - [11/Jan/2026 21:26:56] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-11 21:26:56,801 - INFO - 127.0.0.1 - - [11/Jan/2026 21:26:56] "GET /login HTTP/1.1" 200 -
+2026-01-11 21:27:00,117 - INFO - 127.0.0.1 - - [11/Jan/2026 21:27:00] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-11 21:27:00,126 - INFO - 127.0.0.1 - - [11/Jan/2026 21:27:00] "GET / HTTP/1.1" 200 -
+2026-01-11 21:27:08,710 - INFO - WhatsApp notification initialized successfully
+2026-01-11 21:27:08,726 - INFO - 127.0.0.1 - - [11/Jan/2026 21:27:08] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:29:13,007 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_rule_based.py', reloading
+2026-01-11 21:29:14,385 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-11 21:29:19,090 - WARNING -  * Debugger is active!
+2026-01-11 21:29:19,097 - INFO -  * Debugger PIN: 146-140-033
+2026-01-11 21:30:26,147 - INFO - 127.0.0.1 - - [11/Jan/2026 21:30:26] "GET / HTTP/1.1" 200 -
+2026-01-11 21:31:45,481 - INFO - WhatsApp notification initialized successfully
+2026-01-11 21:31:45,674 - INFO - 127.0.0.1 - - [11/Jan/2026 21:31:45] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:32:03,310 - INFO - 127.0.0.1 - - [11/Jan/2026 21:32:03] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-11 21:32:03,621 - INFO - 127.0.0.1 - - [11/Jan/2026 21:32:03] "GET /login HTTP/1.1" 200 -
+2026-01-11 21:32:40,436 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:32:40,437 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:32:41,368 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-11 21:32:46,976 - WARNING -  * Debugger is active!
+2026-01-11 21:32:46,982 - INFO -  * Debugger PIN: 146-140-033
+2026-01-11 21:32:56,756 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:32:56,757 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:32:58,284 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-11 21:33:03,915 - WARNING -  * Debugger is active!
+2026-01-11 21:33:03,920 - INFO -  * Debugger PIN: 146-140-033
+2026-01-11 21:34:00,228 - INFO - 127.0.0.1 - - [11/Jan/2026 21:34:00] "GET /login HTTP/1.1" 200 -
+2026-01-11 21:34:03,512 - INFO - 127.0.0.1 - - [11/Jan/2026 21:34:03] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-11 21:34:03,598 - INFO - 127.0.0.1 - - [11/Jan/2026 21:34:03] "GET / HTTP/1.1" 200 -
+2026-01-11 21:34:36,445 - INFO - 127.0.0.1 - - [11/Jan/2026 21:34:36] "GET /profile HTTP/1.1" 200 -
+2026-01-11 21:34:37,369 - INFO - 127.0.0.1 - - [11/Jan/2026 21:34:37] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-11 21:35:36,180 - INFO - 127.0.0.1 - - [11/Jan/2026 21:35:36] "GET / HTTP/1.1" 200 -
+2026-01-11 21:36:10,664 - INFO - 127.0.0.1 - - [11/Jan/2026 21:36:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-11 21:36:33,761 - INFO - WhatsApp notification initialized successfully
+2026-01-11 21:36:33,772 - INFO - 127.0.0.1 - - [11/Jan/2026 21:36:33] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:37:02,517 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\_pytest\\cacheprovider.py', reloading
+2026-01-11 21:37:02,564 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\_pytest\\fixtures.py', reloading
+2026-01-11 21:37:02,657 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\_pytest\\capture.py', reloading
+2026-01-11 21:37:02,720 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\_pytest\\doctest.py', reloading
+2026-01-11 21:37:03,176 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-11 21:37:07,153 - WARNING -  * Debugger is active!
+2026-01-11 21:37:07,161 - INFO -  * Debugger PIN: 146-140-033
+2026-01-11 21:37:09,660 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\MetaTrader5\\__init__.py', reloading
+2026-01-11 21:37:10,293 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\anthropic\\__init__.py', reloading
+2026-01-11 21:37:10,336 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\anthropic\\lib\\vertex\\__init__.py', reloading
+2026-01-11 21:37:10,386 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\anthropic\\lib\\bedrock\\__init__.py', reloading
+2026-01-11 21:37:10,390 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\anthropic\\lib\\streaming\\__init__.py', reloading
+2026-01-11 21:37:10,393 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\openai\\__init__.py', reloading
+2026-01-11 21:37:10,477 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\openai\\lib\\_old_api.py', reloading
+2026-01-11 21:37:10,549 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\dotenv\\__init__.py', reloading
+2026-01-11 21:37:10,553 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\dotenv\\main.py', reloading
+2026-01-11 21:37:11,129 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-11 21:37:18,769 - WARNING -  * Debugger is active!
+2026-01-11 21:37:18,775 - INFO -  * Debugger PIN: 146-140-033
+2026-01-11 21:37:18,966 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\datastructures\\mixins.py', reloading
+2026-01-11 21:37:18,996 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_login\\signals.py', reloading
+2026-01-11 21:37:19,000 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\signals.py', reloading
+2026-01-11 21:37:19,004 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\blinker\\__init__.py', reloading
+2026-01-11 21:37:19,023 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\blinker\\base.py', reloading
+2026-01-11 21:37:19,076 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\_typing.py', reloading
+2026-01-11 21:37:19,118 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\operators.py', reloading
+2026-01-11 21:37:19,175 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\lambdas.py', reloading
+2026-01-11 21:37:19,473 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\engine\\__init__.py', reloading
+2026-01-11 21:37:19,529 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\engine\\base.py', reloading
+2026-01-11 21:37:19,639 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\engine\\interfaces.py', reloading
+2026-01-11 21:37:19,743 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\engine\\reflection.py', reloading
+2026-01-11 21:37:19,861 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\compiler.py', reloading
+2026-01-11 21:37:20,826 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-11 21:37:24,611 - WARNING -  * Debugger is active!
+2026-01-11 21:37:24,621 - INFO -  * Debugger PIN: 146-140-033
+2026-01-11 21:37:27,934 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:37:27,934 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:37:27,935 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-11 21:37:28,465 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-11 21:37:32,211 - WARNING -  * Debugger is active!
+2026-01-11 21:37:32,218 - INFO -  * Debugger PIN: 146-140-033
+2026-01-11 21:37:33,739 - INFO - WhatsApp notification initialized successfully
+2026-01-11 21:37:33,755 - INFO - 127.0.0.1 - - [11/Jan/2026 21:37:33] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:38:34,201 - INFO - 127.0.0.1 - - [11/Jan/2026 21:38:34] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:39:35,190 - INFO - 127.0.0.1 - - [11/Jan/2026 21:39:35] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:40:36,199 - INFO - 127.0.0.1 - - [11/Jan/2026 21:40:36] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:41:37,193 - INFO - 127.0.0.1 - - [11/Jan/2026 21:41:37] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:42:42,189 - INFO - 127.0.0.1 - - [11/Jan/2026 21:42:42] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:43:41,885 - INFO - 127.0.0.1 - - [11/Jan/2026 21:43:41] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:44:42,198 - INFO - 127.0.0.1 - - [11/Jan/2026 21:44:42] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:46:42,206 - INFO - 127.0.0.1 - - [11/Jan/2026 21:46:42] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:47:43,192 - INFO - 127.0.0.1 - - [11/Jan/2026 21:47:43] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:48:44,192 - INFO - 127.0.0.1 - - [11/Jan/2026 21:48:44] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:49:45,194 - INFO - 127.0.0.1 - - [11/Jan/2026 21:49:45] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:50:46,205 - INFO - 127.0.0.1 - - [11/Jan/2026 21:50:46] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:51:47,198 - INFO - 127.0.0.1 - - [11/Jan/2026 21:51:47] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:52:48,189 - INFO - 127.0.0.1 - - [11/Jan/2026 21:52:48] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:53:49,196 - INFO - 127.0.0.1 - - [11/Jan/2026 21:53:49] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:54:50,193 - INFO - 127.0.0.1 - - [11/Jan/2026 21:54:50] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:55:51,195 - INFO - 127.0.0.1 - - [11/Jan/2026 21:55:51] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:56:52,200 - INFO - 127.0.0.1 - - [11/Jan/2026 21:56:52] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:57:53,198 - INFO - 127.0.0.1 - - [11/Jan/2026 21:57:53] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:58:54,203 - INFO - 127.0.0.1 - - [11/Jan/2026 21:58:54] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 21:59:55,194 - INFO - 127.0.0.1 - - [11/Jan/2026 21:59:55] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:00:56,191 - INFO - 127.0.0.1 - - [11/Jan/2026 22:00:56] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:01:57,195 - INFO - 127.0.0.1 - - [11/Jan/2026 22:01:57] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:02:58,190 - INFO - 127.0.0.1 - - [11/Jan/2026 22:02:58] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:03:59,193 - INFO - 127.0.0.1 - - [11/Jan/2026 22:03:59] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:05:00,195 - INFO - 127.0.0.1 - - [11/Jan/2026 22:05:00] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:06:01,189 - INFO - 127.0.0.1 - - [11/Jan/2026 22:06:01] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:07:02,192 - INFO - 127.0.0.1 - - [11/Jan/2026 22:07:02] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:08:03,206 - INFO - 127.0.0.1 - - [11/Jan/2026 22:08:03] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:09:04,197 - INFO - 127.0.0.1 - - [11/Jan/2026 22:09:04] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:10:05,201 - INFO - 127.0.0.1 - - [11/Jan/2026 22:10:05] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:11:06,204 - INFO - 127.0.0.1 - - [11/Jan/2026 22:11:06] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:12:07,191 - INFO - 127.0.0.1 - - [11/Jan/2026 22:12:07] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:13:08,197 - INFO - 127.0.0.1 - - [11/Jan/2026 22:13:08] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:14:09,201 - INFO - 127.0.0.1 - - [11/Jan/2026 22:14:09] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:15:10,202 - INFO - 127.0.0.1 - - [11/Jan/2026 22:15:10] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:16:11,194 - INFO - 127.0.0.1 - - [11/Jan/2026 22:16:11] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:17:12,201 - INFO - 127.0.0.1 - - [11/Jan/2026 22:17:12] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:18:13,193 - INFO - 127.0.0.1 - - [11/Jan/2026 22:18:13] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:19:14,208 - INFO - 127.0.0.1 - - [11/Jan/2026 22:19:14] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:20:15,198 - INFO - 127.0.0.1 - - [11/Jan/2026 22:20:15] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:21:16,195 - INFO - 127.0.0.1 - - [11/Jan/2026 22:21:16] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:22:17,192 - INFO - 127.0.0.1 - - [11/Jan/2026 22:22:17] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:23:18,194 - INFO - 127.0.0.1 - - [11/Jan/2026 22:23:18] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:24:19,195 - INFO - 127.0.0.1 - - [11/Jan/2026 22:24:19] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:25:20,200 - INFO - 127.0.0.1 - - [11/Jan/2026 22:25:20] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:26:21,199 - INFO - 127.0.0.1 - - [11/Jan/2026 22:26:21] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:27:22,200 - INFO - 127.0.0.1 - - [11/Jan/2026 22:27:22] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:28:23,192 - INFO - 127.0.0.1 - - [11/Jan/2026 22:28:23] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:29:24,203 - INFO - 127.0.0.1 - - [11/Jan/2026 22:29:24] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:30:25,215 - INFO - 127.0.0.1 - - [11/Jan/2026 22:30:25] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:31:26,198 - INFO - 127.0.0.1 - - [11/Jan/2026 22:31:26] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:32:27,188 - INFO - 127.0.0.1 - - [11/Jan/2026 22:32:27] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:33:28,201 - INFO - 127.0.0.1 - - [11/Jan/2026 22:33:28] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:34:29,198 - INFO - 127.0.0.1 - - [11/Jan/2026 22:34:29] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:35:30,202 - INFO - 127.0.0.1 - - [11/Jan/2026 22:35:30] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:36:31,198 - INFO - 127.0.0.1 - - [11/Jan/2026 22:36:31] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:37:32,191 - INFO - 127.0.0.1 - - [11/Jan/2026 22:37:32] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:38:33,194 - INFO - 127.0.0.1 - - [11/Jan/2026 22:38:33] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:39:34,191 - INFO - 127.0.0.1 - - [11/Jan/2026 22:39:34] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:40:35,188 - INFO - 127.0.0.1 - - [11/Jan/2026 22:40:35] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:41:36,197 - INFO - 127.0.0.1 - - [11/Jan/2026 22:41:36] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:42:37,189 - INFO - 127.0.0.1 - - [11/Jan/2026 22:42:37] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:43:38,194 - INFO - 127.0.0.1 - - [11/Jan/2026 22:43:38] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:44:39,198 - INFO - 127.0.0.1 - - [11/Jan/2026 22:44:39] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:45:40,196 - INFO - 127.0.0.1 - - [11/Jan/2026 22:45:40] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:46:41,192 - INFO - 127.0.0.1 - - [11/Jan/2026 22:46:41] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:47:40,893 - INFO - 127.0.0.1 - - [11/Jan/2026 22:47:40] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:48:42,197 - INFO - 127.0.0.1 - - [11/Jan/2026 22:48:42] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:49:43,187 - INFO - 127.0.0.1 - - [11/Jan/2026 22:49:43] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:50:44,189 - INFO - 127.0.0.1 - - [11/Jan/2026 22:50:44] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:51:45,195 - INFO - 127.0.0.1 - - [11/Jan/2026 22:51:45] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:52:46,195 - INFO - 127.0.0.1 - - [11/Jan/2026 22:52:46] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:53:47,200 - INFO - 127.0.0.1 - - [11/Jan/2026 22:53:47] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:54:48,198 - INFO - 127.0.0.1 - - [11/Jan/2026 22:54:48] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:55:49,198 - INFO - 127.0.0.1 - - [11/Jan/2026 22:55:49] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:56:50,193 - INFO - 127.0.0.1 - - [11/Jan/2026 22:56:50] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:57:51,200 - INFO - 127.0.0.1 - - [11/Jan/2026 22:57:51] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:58:52,198 - INFO - 127.0.0.1 - - [11/Jan/2026 22:58:52] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 22:59:53,193 - INFO - 127.0.0.1 - - [11/Jan/2026 22:59:53] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:00:54,194 - INFO - 127.0.0.1 - - [11/Jan/2026 23:00:54] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:01:55,191 - INFO - 127.0.0.1 - - [11/Jan/2026 23:01:55] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:02:56,200 - INFO - 127.0.0.1 - - [11/Jan/2026 23:02:56] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:03:57,192 - INFO - 127.0.0.1 - - [11/Jan/2026 23:03:57] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:04:58,205 - INFO - 127.0.0.1 - - [11/Jan/2026 23:04:58] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:05:59,201 - INFO - 127.0.0.1 - - [11/Jan/2026 23:05:59] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:07:00,197 - INFO - 127.0.0.1 - - [11/Jan/2026 23:07:00] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:08:01,189 - INFO - 127.0.0.1 - - [11/Jan/2026 23:08:01] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:09:02,195 - INFO - 127.0.0.1 - - [11/Jan/2026 23:09:02] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:10:03,201 - INFO - 127.0.0.1 - - [11/Jan/2026 23:10:03] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:11:04,196 - INFO - 127.0.0.1 - - [11/Jan/2026 23:11:04] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:12:05,202 - INFO - 127.0.0.1 - - [11/Jan/2026 23:12:05] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:13:06,199 - INFO - 127.0.0.1 - - [11/Jan/2026 23:13:06] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:14:07,190 - INFO - 127.0.0.1 - - [11/Jan/2026 23:14:07] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:15:08,197 - INFO - 127.0.0.1 - - [11/Jan/2026 23:15:08] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:16:09,206 - INFO - 127.0.0.1 - - [11/Jan/2026 23:16:09] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-11 23:17:10,193 - INFO - 127.0.0.1 - - [11/Jan/2026 23:17:10] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -

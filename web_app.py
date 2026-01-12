@@ -280,7 +280,7 @@ def run_ai_analysis():
         data = request.get_json()
 
         # Extract parameters
-        symbol = data.get('symbol', 'XAUUSD')
+        symbol = data.get('symbol', '')
         timeframe = data.get('timeframe', 16385)  # H1 default
         ai_provider = data.get('aiProvider', 'anthropic')
         risk_percent = data.get('riskPercent', 1.0)
