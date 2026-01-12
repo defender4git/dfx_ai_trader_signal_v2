@@ -545,8 +545,17 @@ This software is provided "as-is" for educational and informational purposes onl
 ---
 
 ## 📞 Contact
-- kizito2008@yahoo.com
-- agent kilocode
+
+### Developer Information
+Developed by Nsikak Paulinus 
+
+**Kilo Code**
+*AI-Powered Software Development Agent*
+
+### Support Channels
+
+- **📧 Email**: kizito2008@yahoo.com
+
 
 ### Professional Services
 

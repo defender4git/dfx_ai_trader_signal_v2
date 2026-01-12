@@ -9,6 +9,7 @@ import numpy as np
 from datetime import datetime, timedelta
 import time
 import json
+import logging
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Tuple
 import anthropic
@@ -22,6 +23,13 @@ import requests
 
 # Load environment variables from .env file
 load_dotenv()
+
+# Configure logging
+logging.basicConfig(
+    filename='mail_notifications.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 
 @dataclass
@@ -38,88 +46,182 @@ class TradingSignal:
     confidence: str
     reasoning: str
     timestamp: datetime
+    expiry_timestamp: datetime
     trend: str
     entry_strategy: str
     indicators: Dict
+
+    def is_expired(self) -> bool:
+        """Check if the signal has expired (5 minutes validity)"""
+        return datetime.now() > self.expiry_timestamp
+
+    def time_remaining(self) -> str:
+        """Get remaining time before expiry in human readable format"""
+        if self.is_expired():
+            return "EXPIRED"
+
+        remaining = self.expiry_timestamp - datetime.now()
+        minutes = int(remaining.total_seconds() // 60)
+        seconds = int(remaining.total_seconds() % 60)
+
+        if minutes > 0:
+            return f"{minutes}m {seconds}s"
+        else:
+            return f"{seconds}s"
 class NotificationManager:
     """Handles notifications via Telegram and WhatsApp"""
 
     def __init__(self):
         # Twilio for WhatsApp
-        self.twilio_client = TwilioClient(
-            os.getenv("TWILIO_ACCOUNT_SID"),
-            os.getenv("TWILIO_AUTH_TOKEN")
-        )
-        self.twilio_whatsapp_number = os.getenv("TWILIO_WHATSAPP_NUMBER")
-        self.recipient_whatsapp_number = os.getenv("RECIPIENT_WHATSAPP_NUMBER")
+        twilio_sid = os.getenv("TWILIO_ACCOUNT_SID")
+        twilio_token = os.getenv("TWILIO_AUTH_TOKEN")
+        twilio_whatsapp = os.getenv("TWILIO_WHATSAPP_NUMBER")
+        recipient_whatsapp = os.getenv("RECIPIENT_WHATSAPP_NUMBER")
+
+        # Validate Twilio configuration
+        if not all([twilio_sid, twilio_token, twilio_whatsapp, recipient_whatsapp]):
+            logging.error("WhatsApp notification disabled: Missing Twilio configuration")
+            self.twilio_client = None
+            self.twilio_whatsapp_number = None
+            self.recipient_whatsapp_number = None
+        else:
+            try:
+                self.twilio_client = TwilioClient(twilio_sid, twilio_token)
+                self.twilio_whatsapp_number = twilio_whatsapp
+                self.recipient_whatsapp_number = recipient_whatsapp
+                logging.info("WhatsApp notification initialized successfully")
+            except Exception as e:
+                logging.error(f"Failed to initialize Twilio client: {e}")
+                self.twilio_client = None
+                self.twilio_whatsapp_number = None
+                self.recipient_whatsapp_number = None
 
         # Telegram
         self.telegram_bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
         self.telegram_chat_id = os.getenv("TELEGRAM_CHAT_ID")
 
-    def send_whatsapp_message(self, message: str) -> bool:
-        """Send message via WhatsApp"""
-        try:
-            message = self.twilio_client.messages.create(
-                from_=self.twilio_whatsapp_number,
-                body=message,
-                to=self.recipient_whatsapp_number
-            )
-            print(f"WhatsApp message sent: {message.sid}")
-            return True
-        except Exception as e:
-            print(f"WhatsApp send failed: {e}")
+        # Rate limiting
+        self.last_notification_time = 0
+        self.min_interval_seconds = 60  # Minimum 1 minute between notifications
+
+    def send_whatsapp_message(self, message: str, max_retries: int = 3) -> bool:
+        """Send message via WhatsApp with retry logic using Content Templates"""
+        if not self.twilio_client:
+            logging.warning("WhatsApp client not initialized - skipping notification")
             return False
 
-    def send_telegram_message(self, message: str) -> bool:
-        """Send message via Telegram"""
-        try:
-            url = f"https://api.telegram.org/bot{self.telegram_bot_token}/sendMessage"
-            data = {
-                "chat_id": self.telegram_chat_id,
-                "text": message,
-                "parse_mode": "Markdown"
-            }
-            response = requests.post(url, data=data)
-            if response.status_code == 200:
-                print("Telegram message sent successfully")
+        # Rate limiting check
+        current_time = time.time()
+        if current_time - self.last_notification_time < self.min_interval_seconds:
+            logging.info("Rate limit exceeded - skipping WhatsApp notification")
+            return False
+
+        # Get content SID from environment
+        content_sid = os.getenv("TWILIO_CONTENT_SID", "")
+
+        # Use the signal message as content variable
+        content_variables = {"1": message}
+
+        for attempt in range(max_retries):
+            try:
+                # Use Content Templates API
+                twilio_message = self.twilio_client.messages.create(
+                    from_=f"whatsapp:{self.twilio_whatsapp_number}",
+                    content_sid=content_sid,
+                    content_variables=content_variables,
+                    to=f"whatsapp:{self.recipient_whatsapp_number}"
+                )
+                self.last_notification_time = current_time
+                logging.info(f"WhatsApp message sent successfully: SID {twilio_message.sid}")
+                print(f"WhatsApp message sent: {twilio_message.sid}")
                 return True
-            else:
-                print(f"Telegram send failed: {response.text}")
-                return False
-        except Exception as e:
-            print(f"Telegram send failed: {e}")
+            except Exception as e:
+                wait_time = 2 ** attempt  # Exponential backoff
+                logging.warning(f"WhatsApp send attempt {attempt + 1} failed: {e}. Retrying in {wait_time}s")
+                if attempt < max_retries - 1:
+                    time.sleep(wait_time)
+
+        logging.error(f"WhatsApp send failed after {max_retries} attempts")
+        return False
+
+    def send_telegram_message(self, message: str, max_retries: int = 3) -> bool:
+        """Send message via Telegram with retry logic"""
+        if not self.telegram_bot_token or not self.telegram_chat_id:
+            logging.warning("Telegram configuration missing - skipping notification")
             return False
 
-    def send_signal_notification(self, signal: TradingSignal):
-        """Send notification only for HIGH confidence signals"""
-        if signal.confidence.upper() != "HIGH":
+        for attempt in range(max_retries):
+            try:
+                url = f"https://api.telegram.org/bot{self.telegram_bot_token}/sendMessage"
+                data = {
+                    "chat_id": self.telegram_chat_id,
+                    "text": message,
+                    "parse_mode": "Markdown"
+                }
+                response = requests.post(url, data=data, timeout=10)
+                if response.status_code == 200:
+                    logging.info("Telegram message sent successfully")
+                    print("Telegram message sent successfully")
+                    return True
+                else:
+                    logging.warning(f"Telegram send failed: HTTP {response.status_code} - {response.text}")
+                    if attempt < max_retries - 1:
+                        time.sleep(2 ** attempt)
+            except Exception as e:
+                logging.warning(f"Telegram send attempt {attempt + 1} failed: {e}")
+                if attempt < max_retries - 1:
+                    time.sleep(2 ** attempt)
+
+        logging.error(f"Telegram send failed after {max_retries} attempts")
+        return False
+
+    def send_signal_notification(self, signal: TradingSignal, test_mode: bool = False):
+        """Send notification only for HIGH and MEDIUM confidence signals"""
+        if signal.confidence.upper() not in ["HIGH", "MEDIUM"]:
+            logging.info(f"Signal confidence is {signal.confidence}, skipping notification")
             print(f"Signal confidence is {signal.confidence}, skipping notification")
             return
 
         message = self._format_signal_message(signal)
+
+        # In test mode, log the message without sending
+        if test_mode:
+            logging.info(f"TEST MODE: Would send notification - {message[:100]}...")
+            print(f"TEST MODE: Notification would be sent (not actually sent)")
+            return
 
         # Send to both channels
         whatsapp_sent = self.send_whatsapp_message(message)
         telegram_sent = self.send_telegram_message(message)
 
         if whatsapp_sent and telegram_sent:
+            logging.info("Signal notification sent to both WhatsApp and Telegram")
             print("Signal notification sent to both WhatsApp and Telegram")
         elif whatsapp_sent:
+            logging.info("Signal notification sent to WhatsApp only")
             print("Signal notification sent to WhatsApp only")
         elif telegram_sent:
+            logging.info("Signal notification sent to Telegram only")
             print("Signal notification sent to Telegram only")
         else:
+            logging.error("Failed to send signal notification to any channel")
             print("Failed to send signal notification to any channel")
+            # Log more details for debugging
+            logging.error(f"WhatsApp client initialized: {self.twilio_client is not None}")
+            logging.error(f"Telegram bot token: {bool(self.telegram_bot_token)}")
+            logging.error(f"Telegram chat ID: {bool(self.telegram_chat_id)}")
 
     def _format_signal_message(self, signal: TradingSignal) -> str:
         """Format signal for notification"""
         direction_emoji = "🟢" if signal.signal_type == "LONG" else "🔴"
+        expiry_status = "⚠️ EXPIRED" if signal.is_expired() else f"⏰ Valid for: {signal.time_remaining()}"
+
         message = f"""
 🚨 *AI TRADING SIGNAL ALERT* 🚨
 
 {direction_emoji} *{signal.signal_type}* on {signal.symbol}
 📊 *Confidence:* {signal.confidence}
+{expiry_status}
 
 💰 *Entry Price:* {signal.entry_price:.5f}
 📏 *Position Size:* {signal.position_size:.2f} lots
@@ -138,7 +240,8 @@ class NotificationManager:
 
 💡 *AI Reasoning:* {signal.reasoning}
 
-⏰ *Time:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
+⏰ *Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
+⏰ *Expires:* {signal.expiry_timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
         """.strip()
 
         return message
@@ -230,22 +333,37 @@ class AITradingAgent:
         elif self.provider == "deepseek":
             self.api_key = api_key
             self.base_url = "https://api.deepseek.com/v1"
-        elif self.provider == "grok":
-            self.api_key = api_key
-            self.base_url = "https://api.x.ai/v1"
-            self.model_name = "grok-4-latest"  # Use the correct model name
-        elif self.provider == "kilo_code":
-            self.api_key = api_key
-            self.base_url = "https://api.kilocode.com/v1"
         else:
-            raise ValueError("Provider must be 'anthropic', 'openai', 'deepseek', 'grok', or 'kilo_code'")
+            raise ValueError("Provider must be 'anthropic', 'openai', or 'deepseek'")
+
+        # Rate limiting for API calls
+        self.request_times = []
+        self.max_requests_per_minute = 10  # Conservative limit to avoid rate limits
+        self.min_interval_seconds = 60.0 / self.max_requests_per_minute  # Minimum time between requests
     
     def analyze_market(self, indicators: Dict, symbol: str, timeframe: str) -> Dict:
         """
         Send indicators to Claude AI for professional analysis
         Returns trading signal with complete parameters
         """
-        
+
+        # Rate limiting check
+        current_time = time.time()
+        # Remove requests older than 1 minute
+        self.request_times = [t for t in self.request_times if current_time - t < 60]
+
+        if len(self.request_times) >= self.max_requests_per_minute:
+            logging.warning(f"Rate limit reached ({self.max_requests_per_minute} requests/minute). Skipping AI analysis.")
+            return self._default_analysis()
+
+        # Check minimum interval between requests
+        if self.request_times and current_time - self.request_times[-1] < self.min_interval_seconds:
+            wait_time = self.min_interval_seconds - (current_time - self.request_times[-1])
+            logging.info(f"Rate limiting: waiting {wait_time:.2f} seconds before next API call")
+            time.sleep(wait_time)
+
+        self.request_times.append(current_time)
+
         prompt = f"""Analyze {symbol} {timeframe} data: ATR={indicators['atr']:.4f}({indicators['volatility_level'][:1]}), RSI={indicators['rsi']:.1f}, MACD={indicators['macd']:.4f}/{indicators['macd_signal']:.4f}, CCI={indicators['cci']:.1f}, Stoch={indicators['stochastic']:.1f}, Bias={indicators['bias'][:3]}.
 
 Return JSON: {{"signal":"LONG/SHORT/NEUTRAL","confidence":"HIGH/MEDIUM/LOW","trend":"BULLISH/BEARISH/NEUTRAL/CONSOLIDATION","entry_strategy":"IMMEDIATE/WAIT_PULLBACK/WAIT_BREAKOUT","stop_loss_atr_multiplier":1.3-2.0,"take_profit_1_atr_multiplier":1.5,"take_profit_2_atr_multiplier":2.0,"take_profit_3_atr_multiplier":3.0,"position_size_adjustment":0.5-1.0,"reasoning":"Brief analysis","key_observations":["obs1","obs2","obs3"]}}"""
@@ -282,6 +400,10 @@ Return JSON: {{"signal":"LONG/SHORT/NEUTRAL","confidence":"HIGH/MEDIUM/LOW","tre
                     if not response_text or not response_text.strip():
                         print(f"OpenAI returned empty response")
                         return self._default_analysis()
+                except openai.RateLimitError as rate_error:
+                    logging.warning(f"OpenAI rate limit exceeded: {rate_error}")
+                    print(f"OpenAI rate limit exceeded - using fallback analysis")
+                    return self._default_analysis()
                 except Exception as api_error:
                     print(f"OpenAI API Error: {api_error}")
                     return self._default_analysis()
@@ -298,48 +420,6 @@ Return JSON: {{"signal":"LONG/SHORT/NEUTRAL","confidence":"HIGH/MEDIUM/LOW","tre
                     "stream": False,
                     "max_tokens": 512,
                     "temperature": 0.7
-                }
-                response = requests.post(f"{self.base_url}/chat/completions", headers=headers, json=data)
-                response.raise_for_status()
-                response_data = response.json()
-                response_text = response_data["choices"][0]["message"]["content"]
-                usage = response_data.get("usage", {})
-                input_tokens = usage.get("prompt_tokens", 0)
-                output_tokens = usage.get("completion_tokens", 0)
-            elif self.provider == "grok":
-                headers = {
-                    "Authorization": f"Bearer {self.api_key}",
-                    "Content-Type": "application/json"
-                }
-                data = {
-                    "model": "grok-beta",
-                    "messages": [
-                        {"role": "user", "content": prompt}
-                    ],
-                    "max_tokens": 512,
-                    "temperature": 0.7,
-                    "stream": False
-                }
-                response = requests.post(f"{self.base_url}/chat/completions", headers=headers, json=data)
-                response.raise_for_status()
-                response_data = response.json()
-                response_text = response_data["choices"][0]["message"]["content"]
-                usage = response_data.get("usage", {})
-                input_tokens = usage.get("prompt_tokens", 0)
-                output_tokens = usage.get("completion_tokens", 0)
-            elif self.provider == "kilo_code":
-                headers = {
-                    "Authorization": f"Bearer {self.api_key}",
-                    "Content-Type": "application/json"
-                }
-                data = {
-                    "model": "grok-code-fast-1",
-                    "messages": [
-                        {"role": "user", "content": prompt}
-                    ],
-                    "max_tokens": 512,
-                    "temperature": 0.7,
-                    "stream": False
                 }
                 response = requests.post(f"{self.base_url}/chat/completions", headers=headers, json=data)
                 response.raise_for_status()
@@ -548,7 +628,8 @@ class MT5TradingEA:
                       min(lot_size, symbol_info.volume_max))
         lot_size = round(lot_size / symbol_info.volume_step) * symbol_info.volume_step
         
-        # Create signal
+        # Create signal with 5-minute expiry
+        expiry_time = datetime.now() + timedelta(minutes=5)
         signal = TradingSignal(
             symbol=self.symbol,
             signal_type=signal_type,
@@ -561,6 +642,7 @@ class MT5TradingEA:
             confidence=ai_analysis['confidence'],
             reasoning=ai_analysis['reasoning'],
             timestamp=datetime.now(),
+            expiry_timestamp=expiry_time,
             indicators=indicators,
             trend=ai_analysis.get('trend', 'NEUTRAL'),
             entry_strategy=ai_analysis.get('entry_strategy', 'IMMEDIATE')
@@ -574,6 +656,7 @@ class MT5TradingEA:
         print(f"🤖 AI TRADING SIGNAL - {signal.symbol}")
         print("="*80)
         print(f"Timestamp: {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"⏰ Signal Expiry: {signal.expiry_timestamp.strftime('%Y-%m-%d %H:%M:%S')} ({signal.time_remaining()})")
         print(f"\n📊 MARKET ANALYSIS:")
         print(f"  ATR: {signal.indicators['atr']:.6f} ({signal.indicators['volatility_level']})")
         print(f"  RSI: {signal.indicators['rsi']:.2f}")
@@ -581,12 +664,12 @@ class MT5TradingEA:
         print(f"  CCI: {signal.indicators['cci']:.2f}")
         print(f"  Stochastic: {signal.indicators['stochastic']:.2f}")
         print(f"  Market Bias: {signal.indicators['bias']}")
-        
+
         print(f"\n🎯 TRADING SIGNAL: {signal.signal_type}")
         print(f"  Confidence: {signal.confidence}")
         print(f"  Entry Price: {signal.entry_price:.5f}")
         print(f"  Position Size: {signal.position_size:.2f} lots")
-        
+
         print(f"\n🛡️ RISK MANAGEMENT:")
         stop_distance = abs(signal.entry_price - signal.stop_loss)
         print(f"  Stop Loss: {signal.stop_loss:.5f} ({stop_distance:.5f} pts)")
@@ -602,7 +685,7 @@ class MT5TradingEA:
             print(f"  Take Profit 1: {signal.take_profit_1:.5f} (R:R N/A)")
             print(f"  Take Profit 2: {signal.take_profit_2:.5f} (R:R N/A)")
             print(f"  Take Profit 3: {signal.take_profit_3:.5f} (R:R N/A)")
-        
+
         print(f"\n💡 AI REASONING:")
         print(f"  {signal.reasoning}")
         print("="*80 + "\n")
@@ -610,7 +693,7 @@ class MT5TradingEA:
     def execute_trade(self, signal: TradingSignal, auto_execute: bool = False) -> bool:
         """
         Execute trade on MT5
-        
+
         Args:
             signal: TradingSignal object
             auto_execute: If True, execute without confirmation
@@ -618,9 +701,14 @@ class MT5TradingEA:
         if signal.signal_type == "NEUTRAL":
             print("⚠️  No trade signal - Market is NEUTRAL")
             return False
-        
+
+        # Check if signal has expired
+        if signal.is_expired():
+            print(f"❌ Signal has expired! Cannot execute trade. Signal expired at {signal.expiry_timestamp}")
+            return False
+
         if not auto_execute:
-            response = input(f"\n Execute {signal.signal_type} trade? (yes/no): ")
+            response = input(f"\n Execute {signal.signal_type} trade? (Signal expires in {signal.time_remaining()}) (yes/no): ")
             if response.lower() not in ['yes', 'y']:
                 print("❌ Trade execution cancelled")
                 return False
@@ -657,17 +745,18 @@ class MT5TradingEA:
         
         return True
     
-    def run(self, interval_seconds: int = 300, auto_execute: bool = False):
+    def run(self, interval_seconds: int = 300, auto_execute: bool = False, test_notifications: bool = False):
         """
         Run EA continuously
-        
+
         Args:
             interval_seconds: Time between analysis cycles
             auto_execute: Automatically execute trades
+            test_notifications: Enable test mode for notifications (no actual sending)
         """
         if not self.connect_mt5():
             return
-        
+
         print(f"\n🚀 AI Trading EA Started")
         print(f"   Symbol: {self.symbol}")
         print(f"   Timeframe: {self.timeframe}")
@@ -675,8 +764,9 @@ class MT5TradingEA:
         print(f"   Risk per trade: {self.account_risk_percent}%")
         print(f"   AI Provider: {self.ai_provider}")
         print(f"   Auto-execute: {auto_execute}")
+        print(f"   Test notifications: {test_notifications}")
         print(f"   Analysis interval: {interval_seconds}s\n")
-        
+
         try:
             while True:
                 # Get market data
@@ -684,20 +774,20 @@ class MT5TradingEA:
                 if df is None:
                     time.sleep(interval_seconds)
                     continue
-                
+
                 # Calculate indicators
                 indicators = self.calculate_indicators(df)
-                
+
                 # Generate signal
                 signal = self.generate_signal(indicators)
                 self.current_signal = signal
-                
+
                 # Display signal
                 self.print_signal(signal)
 
                 # Send notification for HIGH confidence signals
                 if signal.confidence.upper() == "HIGH":
-                    self.notification_manager.send_signal_notification(signal)
+                    self.notification_manager.send_signal_notification(signal, test_mode=test_notifications)
 
                 # Execute if configured
                 if signal.signal_type != "NEUTRAL" and auto_execute:
@@ -706,7 +796,7 @@ class MT5TradingEA:
                 # Wait for next cycle
                 print(f"⏳ Next analysis in {interval_seconds} seconds...")
                 time.sleep(interval_seconds)
-                
+
         except KeyboardInterrupt:
             print("\n\n⛔ EA stopped by user")
         finally:
@@ -746,7 +836,8 @@ def main():
     # Run EA
     # Set auto_execute=True to automatically execute trades
     # Set auto_execute=False to manually confirm each trade
-    ea.run(interval_seconds=300, auto_execute=False)
+    # Set test_notifications=True to test notifications without sending
+    ea.run(interval_seconds=300, auto_execute=True, test_notifications=False)
 
 
 if __name__ == "__main__":

@@ -3,12 +3,13 @@ AI Trading Signal Generator Web Interface
 Provides a professional web UI for the AI-based trading system
 """
 
+import signal
 from flask import Flask, render_template, request, jsonify, redirect, url_for, session
 import sys
 import os
 import json
 import logging
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import openai
 
@@ -21,6 +22,7 @@ if os.path.exists(loadenv):
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from app_ai_based import MT5TradingEA, TradingSignal
+from apply_trade import apply_high_confidence_trade, TradeManager
 
 # Import Flask extensions for user management
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
@@ -33,7 +35,7 @@ app = Flask(__name__,
             static_folder='static')
 
 # Flask configuration for user management
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'lIMITED123!XsfegthhhttbMF34R9FSSWW')
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', '')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -62,9 +64,10 @@ login_manager.init_app(app)
 login_manager.login_view = 'login'
 mail = Mail(app)
 
-# Global variables to store the EA instance and current signal
+# Global variables to store the EA instance, current signal, and trade manager
 ea_instance = None
 current_signal = None
+trade_manager = None
 
 # User model
 class User(UserMixin, db.Model):
@@ -124,6 +127,11 @@ def send_signal_alert(user_email, signal_data):
     try:
         subject = f"🚨 AI Trading Signal Alert - {signal_data['symbol']}"
 
+        # Check if signal is expired
+        expiry_time = datetime.strptime(signal_data['timestamp'], '%Y-%m-%d %H:%M:%S UTC') + timedelta(minutes=5)
+        is_expired = datetime.now() > expiry_time
+        expiry_status = "⚠️ SIGNAL EXPIRED" if is_expired else "⏰ Valid for: 5 minutes"
+
         body = f"""
 AI Trading Signal Generator Alert
 
@@ -134,18 +142,16 @@ AI Trading Signal Generator Alert
 • Entry Price: {signal_data['entry_price']:.5f}
 • Stop Loss: {signal_data['stop_loss']:.5f}
 • Take Profit 1: {signal_data['take_profit_1']:.5f}
+• Take Profit 2: {signal_data['take_profit_2']:.5f}
+• Take Profit 3: {signal_data['take_profit_3']:.5f}
 • Position Size: {signal_data['position_size']:.2f} lots
+• {expiry_status}
 
 💡 AI Reasoning:
 {signal_data['reasoning']}
 
-📈 Technical Indicators:
-• ATR: {signal_data.get('atr', 'N/A')}
-• RSI: {signal_data.get('rsi', 'N/A')}
-• MACD: {signal_data.get('macd', 'N/A')}
-• CCI: {signal_data.get('cci', 'N/A')}
-
 ⏰ Generated: {signal_data['timestamp']}
+⏰ Expires: {expiry_time.strftime('%Y-%m-%d %H:%M:%S UTC')}
 
 ---
 AI Trading Signal Generator
@@ -194,7 +200,17 @@ Real-time market analysis and automated signals
 def index():
     """Main page - redirect to login if not authenticated"""
     if current_user.is_authenticated:
-        return render_template('ai_trader.html')
+        # Retrieve saved settings from session
+        selected_symbol = session.get('selected_symbol', 'XAUUSD')
+        selected_timeframe = session.get('selected_timeframe', 16385)  # H1 default
+        selected_ai_provider = session.get('selected_ai_provider', 'anthropic')
+        selected_risk_percent = session.get('selected_risk_percent', 1.0)
+
+        return render_template('ai_trader.html',
+                             selected_symbol=selected_symbol,
+                             selected_timeframe=selected_timeframe,
+                             selected_ai_provider=selected_ai_provider,
+                             selected_risk_percent=selected_risk_percent)
     return redirect(url_for('login'))
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -258,7 +274,7 @@ def profile():
 @login_required
 def run_ai_analysis():
     """Run AI analysis and return results"""
-    global ea_instance, current_signal
+    global ea_instance, current_signal, trade_manager
 
     try:
         data = request.get_json()
@@ -269,6 +285,12 @@ def run_ai_analysis():
         ai_provider = data.get('aiProvider', 'anthropic')
         risk_percent = data.get('riskPercent', 1.0)
 
+        # Save settings to session for state preservation
+        session['selected_symbol'] = symbol
+        session['selected_timeframe'] = timeframe
+        session['selected_ai_provider'] = ai_provider
+        session['selected_risk_percent'] = risk_percent
+
         # Get API key based on provider
         if ai_provider == 'anthropic':
             api_key = os.getenv('ANTHROPIC_API_KEY', 'your-anthropic-api-key-here')
@@ -278,8 +300,7 @@ def run_ai_analysis():
             api_key = os.getenv('DEEPSEEKER_API_KEY', 'your-deepseek-api-key-here')
         elif ai_provider == 'grok':
             api_key = os.getenv('GROK_API_KEY', 'your-grok-api-key-here')
-        elif ai_provider == 'kilo_code':
-            api_key = os.getenv('KILO_CODE_API_KEY', 'your-kilo-code-api-key-here')
+        
         else:
             return jsonify({'error': 'Invalid AI provider'}), 400
 
@@ -316,6 +337,7 @@ def run_ai_analysis():
             f"📊 Retrieved market data: {len(df)} candles from MT5",
             f"📈 Calculated technical indicators: ATR={indicators['atr']:.4f}, RSI={indicators['rsi']:.1f}, MACD={indicators['macd']:.4f}",
             f"🎯 Generated trading signal: {signal.signal_type} with {signal.confidence} confidence",
+            f"⏰ Signal validity: {signal.time_remaining()} (expires at {signal.expiry_timestamp.strftime('%H:%M:%S UTC')})",
             f"💡 AI Analysis: {signal.reasoning[:100]}...",
             f"✅ Analysis completed successfully for {symbol}"
         ]
@@ -333,7 +355,10 @@ def run_ai_analysis():
                 'position_size': signal.position_size,
                 'confidence': signal.confidence,
                 'reasoning': signal.reasoning,
-                'timestamp': signal.timestamp.isoformat()
+                'timestamp': signal.timestamp.isoformat(),
+                'expiry_timestamp': signal.expiry_timestamp.isoformat(),
+                'is_expired': signal.is_expired(),
+                'time_remaining': signal.time_remaining()
             },
             'analysis': {
                 'atr': indicators['atr'],
@@ -354,30 +379,48 @@ def run_ai_analysis():
             'logs': logs
         }
 
-        # Send email alerts to all users with notifications enabled
+        # Send email alerts to all users with notifications enabled (separate from WhatsApp/Telegram)
+        # Send for HIGH and MEDIUM confidence signals
         try:
-            users_with_notifications = User.query.filter_by(email_notifications=True).all()
-            for user in users_with_notifications:
-                signal_alert_data = {
-                    'symbol': signal.symbol,
-                    'signal_type': signal.signal_type,
-                    'confidence': signal.confidence,
-                    'entry_price': signal.entry_price,
-                    'stop_loss': signal.stop_loss,
-                    'take_profit_1': signal.take_profit_1,
-                    'take_profit_2': signal.take_profit_2,
-                    'take_profit_3': signal.take_profit_3,
-                    'position_size': signal.position_size,
-                    'reasoning': signal.reasoning,
-                    'timestamp': signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC'),
-                    # 'atr': indicators.get('atr', 0),
-                    # 'rsi': indicators.get('rsi', 0),
-                    # 'macd': indicators.get('macd', 0),
-                    # 'cci': indicators.get('cci', 0)
-                }
-                send_signal_alert(user.email, signal_alert_data)
+            if signal.confidence.upper() in ["HIGH", "MEDIUM"]:
+                users_with_notifications = User.query.filter_by(email_notifications=True).all()
+                for user in users_with_notifications:
+                    signal_alert_data = {
+                        'symbol': signal.symbol,
+                        'signal_type': signal.signal_type,
+                        'confidence': signal.confidence,
+                        'entry_price': signal.entry_price,
+                        'stop_loss': signal.stop_loss,
+                        'take_profit_1': signal.take_profit_1,
+                        'take_profit_2': signal.take_profit_2,
+                        'take_profit_3': signal.take_profit_3,
+                        'position_size': signal.position_size,
+                        'reasoning': signal.reasoning,
+                        'timestamp': signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC'),
+                        # 'atr': indicators.get('atr', 0),
+                        # 'rsi': indicators.get('rsi', 0),
+                        # 'macd': indicators.get('macd', 0),
+                        # 'cci': indicators.get('cci', 0)
+                    }
+                    send_signal_alert(user.email, signal_alert_data)
         except Exception as e:
+            logging.error(f"Error sending email alerts: {e}")
             print(f"⚠️  Error sending email alerts: {e}")
+
+        # Send WhatsApp/Telegram notifications for HIGH and MEDIUM confidence signals (separate from email)
+        try:
+            if signal.confidence.upper() in ["HIGH", "MEDIUM"]:
+                # Create notification manager instance for web app
+                from app_ai_based import NotificationManager
+                notification_manager = NotificationManager()
+                notification_manager.send_signal_notification(signal)
+        except Exception as e:
+            logging.error(f"Error sending WhatsApp/Telegram notifications: {e}")
+            print(f"⚠️  Error sending WhatsApp/Telegram notifications: {e}")
+
+        # Log expiry information
+        logging.info(f"Signal generated for {signal.symbol} - Expires at {signal.expiry_timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}")
+        print(f"📅 Signal expiry: {signal.expiry_timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')} ({signal.time_remaining()})")
 
         return jsonify(response)
 
@@ -387,12 +430,13 @@ def run_ai_analysis():
 @app.route('/get_current_signal')
 @login_required
 def get_current_signal():
-    """Get the current trading signal"""
-    global current_signal
+    """Get the current trading signals (with and without patterns) and trade manager status"""
+    global current_signal, trade_manager
 
     if current_signal is None:
         return jsonify({'error': 'No signal available'}), 404
 
+    # For backward compatibility, return the signal with patterns as the main signal
     response = {
         'symbol': current_signal.symbol,
         'signal_type': current_signal.signal_type,
@@ -405,30 +449,58 @@ def get_current_signal():
         'confidence': current_signal.confidence,
         'reasoning': current_signal.reasoning,
         'timestamp': current_signal.timestamp.isoformat(),
-        'indicators': current_signal.indicators
+        'indicators': current_signal.indicators,
+        'is_expired': current_signal.is_expired(),
+        'time_remaining': current_signal.time_remaining()
     }
+
+    # Include trade manager performance stats if available
+    if trade_manager:
+        response['trade_manager_stats'] = trade_manager.get_performance_stats()
 
     return jsonify(response)
 
 @app.route('/execute_trade', methods=['POST'])
 @login_required
 def execute_trade():
-    """Execute the current trading signal"""
-    global ea_instance, current_signal
+    """Execute the current trading signal using the advanced trade manager with fallback filling types"""
+    global current_signal, trade_manager
 
-    if ea_instance is None or current_signal is None:
-        return jsonify({'error': 'No active EA or signal'}), 400
+    if current_signal is None:
+        return jsonify({'error': 'No signal available'}), 400
 
     try:
-        data = request.get_json()
-        auto_execute = data.get('auto_execute', False)
+        # Initialize trade manager if not already done
+        if trade_manager is None:
+            trade_manager = TradeManager()
 
-        success = ea_instance.execute_trade(current_signal, auto_execute)
+        # Try different filling types in order: IOC -> FOK -> RETURN
+        filling_types = ['IOC', 'FOK', 'RETURN']
+        last_error = None
 
-        if success:
-            return jsonify({'message': 'Trade executed successfully'})
-        else:
-            return jsonify({'error': 'Trade execution failed'}), 500
+        for filling_type in filling_types:
+            try:
+                logging.info(f"Attempting trade execution with {filling_type} filling type")
+                success = trade_manager.execute_trade(current_signal, filling_type)
+
+                if success:
+                    # Get updated performance stats
+                    stats = trade_manager.get_performance_stats()
+                    return jsonify({
+                        'message': f'Trade executed successfully with {filling_type} filling type and advanced risk management',
+                        'filling_type_used': filling_type,
+                        'performance_stats': stats
+                    })
+
+            except Exception as e:
+                last_error = str(e)
+                logging.warning(f"Trade execution failed with {filling_type} filling type: {e}")
+                continue
+
+        # If all filling types failed
+        error_msg = f"Trade execution failed with all filling types (IOC, FOK, RETURN). Last error: {last_error}"
+        logging.error(error_msg)
+        return jsonify({'error': error_msg}), 500
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
@@ -436,18 +508,24 @@ def execute_trade():
 @app.route('/get_mt5_status')
 @login_required
 def get_mt5_status():
-    """Get MT5 connection status"""
+    """Get MT5 connection status and trade manager stats"""
     try:
         import MetaTrader5 as mt5
-        if mt5.initialize():
+        mt5_connected = mt5.initialize()
+
+        response = {'connected': bool(mt5_connected)}
+
+        if mt5_connected:
             account_info = mt5.account_info()
+            response['account'] = account_info.login if account_info else None
             mt5.shutdown()
-            return jsonify({
-                'connected': True,
-                'account': account_info.login if account_info else None
-            })
-        else:
-            return jsonify({'connected': False})
+
+        # Add trade manager performance stats if available
+        global trade_manager
+        if trade_manager:
+            response['trade_manager_stats'] = trade_manager.get_performance_stats()
+
+        return jsonify(response)
     except Exception as e:
         return jsonify({'connected': False, 'error': str(e)})
 
@@ -499,7 +577,7 @@ def get_symbols():
 @app.route('/get_user_signals')
 @login_required
 def get_user_signals():
-    """Get trading signals filtered by user parameters"""
+    """Get trading signals and trade manager performance stats"""
     try:
         # Get query parameters
         symbol = request.args.get('symbol')
@@ -510,39 +588,42 @@ def get_user_signals():
 
         # For now, return the current signal if it matches filters
         # In a real implementation, you'd query a database
-        global current_signal
+        global current_signal, trade_manager
 
-        if current_signal is None:
-            return jsonify({'signals': []})
+        signals = []
 
-        # Apply filters
-        matches = True
+        if current_signal is not None:
+            # Apply filters
+            matches = True
 
-        if symbol and current_signal.symbol != symbol:
-            matches = False
-        if signal_type and current_signal.signal_type != signal_type:
-            matches = False
-        if confidence and current_signal.confidence != confidence:
-            matches = False
+            if symbol and current_signal.symbol != symbol:
+                matches = False
+            if signal_type and current_signal.signal_type != signal_type:
+                matches = False
+            if confidence and current_signal.confidence != confidence:
+                matches = False
 
-        if matches:
-            signals = [{
-                'id': 1,
-                'symbol': current_signal.symbol,
-                'signal_type': current_signal.signal_type,
-                'entry_price': current_signal.entry_price,
-                'stop_loss': current_signal.stop_loss,
-                'take_profit_1': current_signal.take_profit_1,
-                'position_size': current_signal.position_size,
-                'confidence': current_signal.confidence,
-                'reasoning': current_signal.reasoning,
-                'timestamp': current_signal.timestamp.isoformat(),
-                'user_id': current_user.id
-            }]
-        else:
-            signals = []
+            if matches:
+                signals = [{
+                    'id': 1,
+                    'symbol': current_signal.symbol,
+                    'signal_type': current_signal.signal_type,
+                    'entry_price': current_signal.entry_price,
+                    'stop_loss': current_signal.stop_loss,
+                    'take_profit_1': current_signal.take_profit_1,
+                    'position_size': current_signal.position_size,
+                    'confidence': current_signal.confidence,
+                    'reasoning': current_signal.reasoning,
+                    'timestamp': current_signal.timestamp.isoformat(),
+                    'user_id': current_user.id
+                }]
 
-        return jsonify({'signals': signals})
+        # Include trade manager performance stats
+        response = {'signals': signals}
+        if trade_manager:
+            response['performance_stats'] = trade_manager.get_performance_stats()
+
+        return jsonify(response)
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
@@ -575,6 +656,14 @@ if __name__ == '__main__':
                 db.create_all()
                 print("ActivityLog table created")
 
-    print("Starting AI Trading Signal Generator Web Interface...")
+    print("Starting AI Trading Signal Generator Web Interface with Advanced Trade Management...")
+    print("Features:")
+    print("- AI-powered signal generation (HIGH/MEDIUM confidence)")
+    print("- Advanced trade execution with risk management")
+    print("- Win rate monitoring (target: 80%)")
+    print("- Partial take profit closures")
+    print("- Multi-channel notifications (Email/WhatsApp/Telegram)")
+    print("- Session state preservation")
+    print("")
     print("Open your browser to http://localhost:9000")
     app.run(debug=True, host='0.0.0.0', port=9000)
