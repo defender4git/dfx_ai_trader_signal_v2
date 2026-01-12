@@ -418,3 +418,1279 @@
 2026-01-11 23:15:08,197 - INFO - 127.0.0.1 - - [11/Jan/2026 23:15:08] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
 2026-01-11 23:16:09,206 - INFO - 127.0.0.1 - - [11/Jan/2026 23:16:09] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
 2026-01-11 23:17:10,193 - INFO - 127.0.0.1 - - [11/Jan/2026 23:17:10] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-12 12:04:36,813 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.207.87.207:9000
+2026-01-12 12:04:36,814 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-12 12:04:36,851 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 12:04:43,385 - WARNING -  * Debugger is active!
+2026-01-12 12:04:43,401 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 12:07:31,323 - INFO - 127.0.0.1 - - [12/Jan/2026 12:07:31] "[32mGET / HTTP/1.1[0m" 302 -
+2026-01-12 12:07:31,346 - INFO - 127.0.0.1 - - [12/Jan/2026 12:07:31] "GET /login HTTP/1.1" 200 -
+2026-01-12 12:07:33,307 - INFO - 127.0.0.1 - - [12/Jan/2026 12:07:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-01-12 12:07:36,320 - INFO - 127.0.0.1 - - [12/Jan/2026 12:07:36] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-12 12:07:36,365 - INFO - 127.0.0.1 - - [12/Jan/2026 12:07:36] "GET / HTTP/1.1" 200 -
+2026-01-12 12:08:02,334 - INFO - WhatsApp notification initialized successfully
+2026-01-12 12:08:14,098 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-12 12:08:28,081 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2026-01-12 12:08:30,803 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2026-01-12 12:08:33,455 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSD
+2026-01-12 12:08:33,456 - INFO - WhatsApp notification initialized successfully
+2026-01-12 12:08:33,691 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 12:08:33,692 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 12:08:33,692 - INFO - Headers:
+2026-01-12 12:08:33,692 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 12:08:33,692 - INFO - Accept : application/json
+2026-01-12 12:08:33,693 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 12:08:33,693 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 12:08:33,693 - INFO - Accept-Charset : utf-8
+2026-01-12 12:08:33,693 - INFO - -- END Twilio API Request --
+2026-01-12 12:08:46,109 - INFO - Response Status Code: 400
+2026-01-12 12:08:46,109 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 11:08:46 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ821fd7ca9c1b7940dfd6f169d32fe01e', 'Twilio-Request-Duration': '0.051', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 65dad5a3f140e1233a6930efcf0d2078.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'NuWKF6aHzNdN4d6hwgybAAhVdVC4IVHnkkbVYyHtXmqTvtOJLEm1Zg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 12:08:46,109 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-12 12:08:47,110 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 12:08:47,110 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 12:08:47,110 - INFO - Headers:
+2026-01-12 12:08:47,110 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 12:08:47,111 - INFO - Accept : application/json
+2026-01-12 12:08:47,111 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 12:08:47,111 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 12:08:47,111 - INFO - Accept-Charset : utf-8
+2026-01-12 12:08:47,111 - INFO - -- END Twilio API Request --
+2026-01-12 12:08:47,372 - INFO - Response Status Code: 400
+2026-01-12 12:08:47,372 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 11:08:47 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ9a0e6840c4ab8f4bca78523e74804915', 'Twilio-Request-Duration': '0.028', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 65dad5a3f140e1233a6930efcf0d2078.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '3wnEt7UrVZvEIvMJQ7BCT3ACyIJnjL2duyW1q8tjYTT3rXN1B4dP-Q==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 12:08:47,372 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-12 12:08:49,373 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 12:08:49,373 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 12:08:49,373 - INFO - Headers:
+2026-01-12 12:08:49,373 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 12:08:49,373 - INFO - Accept : application/json
+2026-01-12 12:08:49,373 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 12:08:49,373 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 12:08:49,373 - INFO - Accept-Charset : utf-8
+2026-01-12 12:08:49,373 - INFO - -- END Twilio API Request --
+2026-01-12 12:08:49,654 - INFO - Response Status Code: 400
+2026-01-12 12:08:49,654 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 11:08:49 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ47daccff6910af9925a3d1b482cd0c8b', 'Twilio-Request-Duration': '0.028', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 65dad5a3f140e1233a6930efcf0d2078.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'JoPDz1UDxUvTvH0XQx7Di15VwicbsOPV4boSFt17cole9JVxZA_NoA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 12:08:49,654 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-12 12:08:49,654 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-12 12:08:51,057 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 12:08:53,144 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 12:08:56,231 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 12:08:56,231 - ERROR - Telegram send failed after 3 attempts
+2026-01-12 12:08:56,232 - ERROR - Failed to send signal notification to any channel
+2026-01-12 12:08:56,233 - ERROR - WhatsApp client initialized: True
+2026-01-12 12:08:56,233 - ERROR - Telegram bot token: True
+2026-01-12 12:08:56,233 - ERROR - Telegram chat ID: True
+2026-01-12 12:08:56,233 - INFO - Signal generated for XAUUSD - Expires at 2026-01-12 12:13:14 UTC
+2026-01-12 12:08:56,234 - INFO - 127.0.0.1 - - [12/Jan/2026 12:08:56] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-12 13:08:15,530 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-12 13:08:18,639 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2026-01-12 13:08:21,328 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2026-01-12 13:08:23,852 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSD
+2026-01-12 13:08:23,853 - INFO - WhatsApp notification initialized successfully
+2026-01-12 13:08:23,853 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 13:08:23,854 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 13:08:23,854 - INFO - Headers:
+2026-01-12 13:08:23,854 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 13:08:23,854 - INFO - Accept : application/json
+2026-01-12 13:08:23,854 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 13:08:23,854 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 13:08:23,854 - INFO - Accept-Charset : utf-8
+2026-01-12 13:08:23,854 - INFO - -- END Twilio API Request --
+2026-01-12 13:08:25,673 - INFO - Response Status Code: 400
+2026-01-12 13:08:25,673 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 12:08:25 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ2d650a640a5ce96444dad5999e287e82', 'Twilio-Request-Duration': '0.040', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 4375274d19e6a104d814374704f49a08.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'btSYT6_cp0nwMTPHg1YKcinxWN3MBjsTPFA3H5Ro318fCXmJXnXrfQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 13:08:25,673 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-12 13:08:26,674 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 13:08:26,674 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 13:08:26,674 - INFO - Headers:
+2026-01-12 13:08:26,675 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 13:08:26,675 - INFO - Accept : application/json
+2026-01-12 13:08:26,675 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 13:08:26,675 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 13:08:26,675 - INFO - Accept-Charset : utf-8
+2026-01-12 13:08:26,675 - INFO - -- END Twilio API Request --
+2026-01-12 13:08:26,937 - INFO - Response Status Code: 400
+2026-01-12 13:08:26,938 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 12:08:26 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ82edca6137fafc22f581f1faa8b93d21', 'Twilio-Request-Duration': '0.027', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 4375274d19e6a104d814374704f49a08.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'mOvXdIeYp1KyVJR2uxRAz73vXXhW_61MPqh6pKs7UHskhd9Yz6OuSA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 13:08:26,938 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-12 13:08:28,938 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 13:08:28,939 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 13:08:28,939 - INFO - Headers:
+2026-01-12 13:08:28,939 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 13:08:28,939 - INFO - Accept : application/json
+2026-01-12 13:08:28,939 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 13:08:28,939 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 13:08:28,939 - INFO - Accept-Charset : utf-8
+2026-01-12 13:08:28,939 - INFO - -- END Twilio API Request --
+2026-01-12 13:08:29,195 - INFO - Response Status Code: 400
+2026-01-12 13:08:29,195 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 12:08:29 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQc798b6db3d96a96c93c36d40d2ed0715', 'Twilio-Request-Duration': '0.025', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 4375274d19e6a104d814374704f49a08.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'Z--LU5rp2sGlbq4yLZpGF-hoPMH3yYT_7VQCXZYwr6H8dGSPpy0dSA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 13:08:29,195 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-12 13:08:29,195 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-12 13:08:30,552 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 13:08:32,649 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 13:08:35,644 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 13:08:35,645 - ERROR - Telegram send failed after 3 attempts
+2026-01-12 13:08:35,646 - ERROR - Failed to send signal notification to any channel
+2026-01-12 13:08:35,646 - ERROR - WhatsApp client initialized: True
+2026-01-12 13:08:35,646 - ERROR - Telegram bot token: True
+2026-01-12 13:08:35,646 - ERROR - Telegram chat ID: True
+2026-01-12 13:08:35,647 - INFO - Signal generated for XAUUSD - Expires at 2026-01-12 13:13:15 UTC
+2026-01-12 13:08:35,648 - INFO - 127.0.0.1 - - [12/Jan/2026 13:08:35] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-12 13:34:09,642 - INFO - 127.0.0.1 - - [12/Jan/2026 13:34:09] "GET /profile HTTP/1.1" 200 -
+2026-01-12 13:34:10,797 - INFO - 127.0.0.1 - - [12/Jan/2026 13:34:10] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 13:34:21,362 - INFO - 127.0.0.1 - - [12/Jan/2026 13:34:21] "GET /get_user_signals HTTP/1.1" 200 -
+2026-01-12 13:34:44,530 - INFO - 127.0.0.1 - - [12/Jan/2026 13:34:44] "GET / HTTP/1.1" 200 -
+2026-01-12 13:35:01,803 - INFO - WhatsApp notification initialized successfully
+2026-01-12 13:35:25,216 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-12 13:35:39,409 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2026-01-12 13:35:41,929 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2026-01-12 13:35:45,323 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSD
+2026-01-12 13:35:45,324 - INFO - WhatsApp notification initialized successfully
+2026-01-12 13:35:45,324 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 13:35:45,324 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 13:35:45,324 - INFO - Headers:
+2026-01-12 13:35:45,324 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 13:35:45,324 - INFO - Accept : application/json
+2026-01-12 13:35:45,324 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 13:35:45,325 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 13:35:45,325 - INFO - Accept-Charset : utf-8
+2026-01-12 13:35:45,325 - INFO - -- END Twilio API Request --
+2026-01-12 13:35:58,119 - INFO - Response Status Code: 400
+2026-01-12 13:35:58,119 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 12:35:58 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ1ec58e206e0629a013423b25447b34f5', 'Twilio-Request-Duration': '0.040', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 2c75ace4dd204c0629bda3cfca0f640c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'VFDwu1wHk1lt5EBOge3-20XfrvltueoEqFnUcNALOpAmkRYDfkTPUA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 13:35:58,120 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-12 13:35:59,120 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 13:35:59,121 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 13:35:59,121 - INFO - Headers:
+2026-01-12 13:35:59,121 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 13:35:59,121 - INFO - Accept : application/json
+2026-01-12 13:35:59,121 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 13:35:59,121 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 13:35:59,121 - INFO - Accept-Charset : utf-8
+2026-01-12 13:35:59,121 - INFO - -- END Twilio API Request --
+2026-01-12 13:35:59,374 - INFO - Response Status Code: 400
+2026-01-12 13:35:59,374 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 12:35:59 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ6d35c7408e89d2b5f1df0117f38b3374', 'Twilio-Request-Duration': '0.028', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 2c75ace4dd204c0629bda3cfca0f640c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'PL7QiRqX6GQvAGitM49AOElnR9KUHPeJnYKekZf_-27FrAQu2wDBQQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 13:35:59,374 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-12 13:36:01,375 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 13:36:01,375 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 13:36:01,376 - INFO - Headers:
+2026-01-12 13:36:01,376 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 13:36:01,376 - INFO - Accept : application/json
+2026-01-12 13:36:01,376 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 13:36:01,376 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 13:36:01,376 - INFO - Accept-Charset : utf-8
+2026-01-12 13:36:01,376 - INFO - -- END Twilio API Request --
+2026-01-12 13:36:01,645 - INFO - Response Status Code: 400
+2026-01-12 13:36:01,645 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 12:36:01 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQa9bdfeeba79de313a43bab372ea80dd3', 'Twilio-Request-Duration': '0.026', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 2c75ace4dd204c0629bda3cfca0f640c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'VHRQa1x5xhtJQHD5s68u0MmK0fOxRHMk_ey5CNXL6gDdGZMzvuNriA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 13:36:01,645 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-12 13:36:01,645 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-12 13:36:14,019 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 13:36:16,025 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 13:36:19,111 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 13:36:19,111 - ERROR - Telegram send failed after 3 attempts
+2026-01-12 13:36:19,113 - ERROR - Failed to send signal notification to any channel
+2026-01-12 13:36:19,113 - ERROR - WhatsApp client initialized: True
+2026-01-12 13:36:19,113 - ERROR - Telegram bot token: True
+2026-01-12 13:36:19,113 - ERROR - Telegram chat ID: True
+2026-01-12 13:36:19,113 - INFO - Signal generated for XAUUSD - Expires at 2026-01-12 13:40:25 UTC
+2026-01-12 13:36:19,114 - INFO - 127.0.0.1 - - [12/Jan/2026 13:36:19] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-12 13:43:37,826 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\__init__.py', reloading
+2026-01-12 13:43:37,844 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\app.py', reloading
+2026-01-12 13:43:41,395 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 13:43:59,067 - WARNING -  * Debugger is active!
+2026-01-12 13:43:59,073 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 13:44:29,217 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\subprocess.py', reloading
+2026-01-12 13:44:31,581 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 13:44:55,628 - WARNING -  * Debugger is active!
+2026-01-12 13:44:55,634 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 13:44:55,891 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\__init__.py', reloading
+2026-01-12 13:44:55,928 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_api.py', reloading
+2026-01-12 13:44:55,955 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_async\\__init__.py', reloading
+2026-01-12 13:44:55,984 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_async\\interfaces.py', reloading
+2026-01-12 13:44:56,012 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_async\\connection_pool.py', reloading
+2026-01-12 13:44:56,044 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_async\\http2.py', reloading
+2026-01-12 13:44:56,077 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_async\\http11.py', reloading
+2026-01-12 13:44:56,113 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_async\\connection.py', reloading
+2026-01-12 13:44:56,144 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_async\\http_proxy.py', reloading
+2026-01-12 13:44:56,182 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_async\\socks_proxy.py', reloading
+2026-01-12 13:44:56,209 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_backends\\base.py', reloading
+2026-01-12 13:44:56,246 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_backends\\mock.py', reloading
+2026-01-12 13:44:56,270 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_backends\\sync.py', reloading
+2026-01-12 13:44:56,295 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_exceptions.py', reloading
+2026-01-12 13:44:56,323 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_models.py', reloading
+2026-01-12 13:44:56,347 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_ssl.py', reloading
+2026-01-12 13:44:56,378 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_sync\\__init__.py', reloading
+2026-01-12 13:44:56,404 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_sync\\interfaces.py', reloading
+2026-01-12 13:44:56,434 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_sync\\connection_pool.py', reloading
+2026-01-12 13:44:56,467 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_sync\\http2.py', reloading
+2026-01-12 13:44:56,504 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_sync\\http11.py', reloading
+2026-01-12 13:44:56,542 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_sync\\connection.py', reloading
+2026-01-12 13:44:56,581 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_sync\\http_proxy.py', reloading
+2026-01-12 13:44:56,624 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_sync\\socks_proxy.py', reloading
+2026-01-12 13:44:56,753 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpx\\__version__.py', reloading
+2026-01-12 13:44:56,782 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\idna\\__init__.py', reloading
+2026-01-12 13:44:56,811 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\idna\\core.py', reloading
+2026-01-12 13:44:56,843 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\idna\\intranges.py', reloading
+2026-01-12 13:44:56,880 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\idna\\package_data.py', reloading
+2026-01-12 13:44:56,913 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\itsdangerous\\__init__.py', reloading
+2026-01-12 13:44:57,516 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 13:45:06,611 - WARNING -  * Debugger is active!
+2026-01-12 13:45:06,617 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 13:45:06,803 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jupyter_client\\launcher.py', reloading
+2026-01-12 13:45:06,829 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\ipywidgets\\__init__.py', reloading
+2026-01-12 13:45:06,862 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\iso639\\__init__.py', reloading
+2026-01-12 13:45:06,907 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\iso639\\language.py', reloading
+2026-01-12 13:45:06,934 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\isoduration\\__init__.py', reloading
+2026-01-12 13:45:06,963 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\isoduration\\formatter\\__init__.py', reloading
+2026-01-12 13:45:06,984 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\isoduration\\formatter\\exceptions.py', reloading
+2026-01-12 13:45:07,008 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\isoduration\\parser\\__init__.py', reloading
+2026-01-12 13:45:07,031 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\isoduration\\parser\\exceptions.py', reloading
+2026-01-12 13:45:07,075 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jedi\\__init__.py', reloading
+2026-01-12 13:45:07,102 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\joblib\\__init__.py', reloading
+2026-01-12 13:45:07,128 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\joblib\\_cloudpickle_wrapper.py', reloading
+2026-01-12 13:45:07,162 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\joblib\\_parallel_backends.py', reloading
+2026-01-12 13:45:07,197 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\joblib\\_store_backends.py', reloading
+2026-01-12 13:45:07,231 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\joblib\\compressor.py', reloading
+2026-01-12 13:45:07,269 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\joblib\\hashing.py', reloading
+2026-01-12 13:45:07,298 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\joblib\\logger.py', reloading
+2026-01-12 13:45:07,329 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\joblib\\memory.py', reloading
+2026-01-12 13:45:07,363 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\joblib\\numpy_pickle.py', reloading
+2026-01-12 13:45:07,401 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\joblib\\parallel.py', reloading
+2026-01-12 13:45:07,444 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\json5\\__init__.py', reloading
+2026-01-12 13:45:07,475 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\json5\\lib.py', reloading
+2026-01-12 13:45:07,500 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\json5\\version.py', reloading
+2026-01-12 13:45:07,525 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jsonschema_specifications\\__init__.py', reloading
+2026-01-12 13:45:07,548 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jupyterlab\\__init__.py', reloading
+2026-01-12 13:45:07,569 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jupyterlab_pygments\\__init__.py', reloading
+2026-01-12 13:45:07,596 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jupyterlab_server\\__init__.py', reloading
+2026-01-12 13:45:07,616 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jupyterlab_server\\_version.py', reloading
+2026-01-12 13:45:07,645 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jupyterlab_server\\app.py', reloading
+2026-01-12 13:45:07,689 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jupyterlab_server\\handlers.py', reloading
+2026-01-12 13:45:07,726 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jupyterlab_server\\config.py', reloading
+2026-01-12 13:45:07,757 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jupyterlab_server\\licenses_app.py', reloading
+2026-01-12 13:45:07,789 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jupyterlab_server\\translation_utils.py', reloading
+2026-01-12 13:45:07,829 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jupyterlab_server\\workspaces_app.py', reloading
+2026-01-12 13:45:07,863 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jupyterlab_server\\workspaces_handler.py', reloading
+2026-01-12 13:45:08,750 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 13:45:16,184 - WARNING -  * Debugger is active!
+2026-01-12 13:45:16,191 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 13:45:16,359 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\hlc3.py', reloading
+2026-01-12 13:45:16,380 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\hma.py', reloading
+2026-01-12 13:45:16,408 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\hwma.py', reloading
+2026-01-12 13:45:16,455 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\ichimoku.py', reloading
+2026-01-12 13:45:16,482 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\jma.py', reloading
+2026-01-12 13:45:16,505 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\kama.py', reloading
+2026-01-12 13:45:16,525 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\linreg.py', reloading
+2026-01-12 13:45:16,546 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\mama.py', reloading
+2026-01-12 13:45:16,572 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\mcgd.py', reloading
+2026-01-12 13:45:16,589 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\midpoint.py', reloading
+2026-01-12 13:45:16,609 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\midprice.py', reloading
+2026-01-12 13:45:16,627 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\ohlc4.py', reloading
+2026-01-12 13:45:16,654 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\pivots.py', reloading
+2026-01-12 13:45:16,675 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\pwma.py', reloading
+2026-01-12 13:45:16,697 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\rma.py', reloading
+2026-01-12 13:45:16,714 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\sinwma.py', reloading
+2026-01-12 13:45:16,733 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\sma.py', reloading
+2026-01-12 13:45:16,753 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\smma.py', reloading
+2026-01-12 13:45:16,773 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\ssf.py', reloading
+2026-01-12 13:45:16,794 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\ssf3.py', reloading
+2026-01-12 13:45:16,817 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\supertrend.py', reloading
+2026-01-12 13:45:16,837 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\swma.py', reloading
+2026-01-12 13:45:16,856 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\t3.py', reloading
+2026-01-12 13:45:16,874 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\tema.py', reloading
+2026-01-12 13:45:16,892 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\trima.py', reloading
+2026-01-12 13:45:16,909 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\vidya.py', reloading
+2026-01-12 13:45:16,928 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\wcp.py', reloading
+2026-01-12 13:45:16,948 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\wma.py', reloading
+2026-01-12 13:45:16,967 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\overlap\\zlma.py', reloading
+2026-01-12 13:45:16,988 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\performance\\drawdown.py', reloading
+2026-01-12 13:45:17,009 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\performance\\log_return.py', reloading
+2026-01-12 13:45:17,037 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\performance\\percent_return.py', reloading
+2026-01-12 13:45:17,057 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\statistics\\entropy.py', reloading
+2026-01-12 13:45:17,074 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\statistics\\kurtosis.py', reloading
+2026-01-12 13:45:17,090 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\statistics\\mad.py', reloading
+2026-01-12 13:45:17,110 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\statistics\\median.py', reloading
+2026-01-12 13:45:17,132 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\statistics\\quantile.py', reloading
+2026-01-12 13:45:17,160 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\statistics\\skew.py', reloading
+2026-01-12 13:45:17,204 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\statistics\\stdev.py', reloading
+2026-01-12 13:45:17,227 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\statistics\\tos_stdevall.py', reloading
+2026-01-12 13:45:17,249 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\statistics\\variance.py', reloading
+2026-01-12 13:45:17,288 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\statistics\\zscore.py', reloading
+2026-01-12 13:45:17,310 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\trend\\adx.py', reloading
+2026-01-12 13:45:17,350 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\trend\\alphatrend.py', reloading
+2026-01-12 13:45:17,377 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\trend\\amat.py', reloading
+2026-01-12 13:45:17,406 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\trend\\aroon.py', reloading
+2026-01-12 13:45:17,435 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\trend\\chop.py', reloading
+2026-01-12 13:45:17,461 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\pandas_ta\\trend\\cksp.py', reloading
+2026-01-12 13:45:18,107 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 13:45:25,590 - WARNING -  * Debugger is active!
+2026-01-12 13:45:25,597 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 13:45:25,792 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\signal\\_ltisys.py', reloading
+2026-01-12 13:45:25,836 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\signal\\_lti_conversion.py', reloading
+2026-01-12 13:45:25,888 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\signal\\_signaltools.py', reloading
+2026-01-12 13:45:25,939 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\signal\\_spectral_py.py', reloading
+2026-01-12 13:45:25,977 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\signal\\_short_time_fft.py', reloading
+2026-01-12 13:45:26,000 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\signal\\_peak_finding.py', reloading
+2026-01-12 13:45:26,047 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\signal\\_czt.py', reloading
+2026-01-12 13:45:26,072 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\sparse\\__init__.py', reloading
+2026-01-12 13:45:26,095 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\sparse\\_base.py', reloading
+2026-01-12 13:45:26,121 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\sparse\\_csr.py', reloading
+2026-01-12 13:45:26,142 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\sparse\\_csc.py', reloading
+2026-01-12 13:45:26,164 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\sparse\\_lil.py', reloading
+2026-01-12 13:45:26,188 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\sparse\\_dok.py', reloading
+2026-01-12 13:45:26,222 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\sparse\\_coo.py', reloading
+2026-01-12 13:45:26,245 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\sparse\\_dia.py', reloading
+2026-01-12 13:45:26,265 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\sparse\\_bsr.py', reloading
+2026-01-12 13:45:26,292 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\sparse\\_construct.py', reloading
+2026-01-12 13:45:26,313 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\sparse\\_extract.py', reloading
+2026-01-12 13:45:26,330 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\sparse\\_matrix_io.py', reloading
+2026-01-12 13:45:26,353 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\spatial\\__init__.py', reloading
+2026-01-12 13:45:26,375 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\spatial\\_kdtree.py', reloading
+2026-01-12 13:45:26,409 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\spatial\\_plotutils.py', reloading
+2026-01-12 13:45:26,442 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\special\\__init__.py', reloading
+2026-01-12 13:45:26,490 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\special\\_support_alternative_backends.py', reloading
+2026-01-12 13:45:26,553 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\special\\_basic.py', reloading
+2026-01-12 13:45:26,589 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\special\\_multiufuncs.py', reloading
+2026-01-12 13:45:26,631 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\special\\_sf_error.py', reloading
+2026-01-12 13:45:26,652 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\special\\_logsumexp.py', reloading
+2026-01-12 13:45:26,674 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\special\\_spfun_stats.py', reloading
+2026-01-12 13:45:26,696 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\special\\_ellip_harm.py', reloading
+2026-01-12 13:45:26,721 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\special\\_lambertw.py', reloading
+2026-01-12 13:45:26,746 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\special\\_spherical_bessel.py', reloading
+2026-01-12 13:45:26,772 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\stats\\__init__.py', reloading
+2026-01-12 13:45:26,818 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\scipy\\stats\\_stats_py.py', reloading
+2026-01-12 13:45:27,440 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 13:45:34,946 - WARNING -  * Debugger is active!
+2026-01-12 13:45:34,953 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 13:45:35,297 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\sympy\\polys\\domains\\gmpyfinitefield.py', reloading
+2026-01-12 13:45:35,327 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\sympy\\polys\\domains\\pythonfinitefield.py', reloading
+2026-01-12 13:45:35,499 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\sympy\\printing\\smtlib.py', reloading
+2026-01-12 13:45:35,519 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\sympy\\release.py', reloading
+2026-01-12 13:45:35,563 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\sympy\\series\\residues.py', reloading
+2026-01-12 13:45:35,587 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\sympy\\series\\series.py', reloading
+2026-01-12 13:45:35,962 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\altair\\__init__.py', reloading
+2026-01-12 13:45:36,008 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\altair\\vegalite\\__init__.py', reloading
+2026-01-12 13:45:36,042 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\altair\\vegalite\\v5\\__init__.py', reloading
+2026-01-12 13:45:36,133 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\altair\\vegalite\\v5\\api.py', reloading
+2026-01-12 13:45:36,274 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\altair\\vegalite\\v5\\schema\\__init__.py', reloading
+2026-01-12 13:45:36,322 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\altair\\vegalite\\v5\\schema\\channels.py', reloading
+2026-01-12 13:45:37,737 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 13:45:45,762 - WARNING -  * Debugger is active!
+2026-01-12 13:45:45,769 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 13:45:45,926 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\errors.py', reloading
+2026-01-12 13:45:45,953 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\_jobs_api.py', reloading
+2026-01-12 13:45:45,987 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\_login.py', reloading
+2026-01-12 13:45:46,011 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\_oauth.py', reloading
+2026-01-12 13:45:46,029 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\_snapshot_download.py', reloading
+2026-01-12 13:45:46,052 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\_space_api.py', reloading
+2026-01-12 13:45:46,071 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\_tensorboard_logger.py', reloading
+2026-01-12 13:45:46,093 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\_webhooks_payload.py', reloading
+2026-01-12 13:45:46,117 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\_webhooks_server.py', reloading
+2026-01-12 13:45:46,137 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\community.py', reloading
+2026-01-12 13:45:46,159 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\constants.py', reloading
+2026-01-12 13:45:46,180 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\fastai_utils.py', reloading
+2026-01-12 13:45:46,215 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\file_download.py', reloading
+2026-01-12 13:45:46,288 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\hf_api.py', reloading
+2026-01-12 13:45:46,371 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\_commit_api.py', reloading
+2026-01-12 13:45:46,395 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\hf_file_system.py', reloading
+2026-01-12 13:45:46,423 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\hub_mixin.py', reloading
+2026-01-12 13:45:46,508 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_client.py', reloading
+2026-01-12 13:45:46,556 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\_async_client.py', reloading
+2026-01-12 13:45:46,579 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\__init__.py', reloading
+2026-01-12 13:45:46,600 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\audio_classification.py', reloading
+2026-01-12 13:45:46,618 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\audio_to_audio.py', reloading
+2026-01-12 13:45:46,639 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\automatic_speech_recognition.py', reloading
+2026-01-12 13:45:46,667 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\chat_completion.py', reloading
+2026-01-12 13:45:46,683 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\depth_estimation.py', reloading
+2026-01-12 13:45:46,705 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\document_question_answering.py', reloading
+2026-01-12 13:45:46,725 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\feature_extraction.py', reloading
+2026-01-12 13:45:46,750 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\fill_mask.py', reloading
+2026-01-12 13:45:46,771 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\image_classification.py', reloading
+2026-01-12 13:45:46,789 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\image_segmentation.py', reloading
+2026-01-12 13:45:46,811 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\image_to_image.py', reloading
+2026-01-12 13:45:46,830 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\image_to_text.py', reloading
+2026-01-12 13:45:46,849 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\image_to_video.py', reloading
+2026-01-12 13:45:46,876 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\object_detection.py', reloading
+2026-01-12 13:45:46,900 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\table_question_answering.py', reloading
+2026-01-12 13:45:46,922 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\question_answering.py', reloading
+2026-01-12 13:45:46,945 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\sentence_similarity.py', reloading
+2026-01-12 13:45:46,971 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\summarization.py', reloading
+2026-01-12 13:45:46,994 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\huggingface_hub\\inference\\_generated\\types\\text2text_generation.py', reloading
+2026-01-12 13:45:47,497 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 13:45:53,830 - WARNING -  * Debugger is active!
+2026-01-12 13:45:53,836 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 13:45:53,966 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\torch\\_higher_order_ops\\__init__.py', reloading
+2026-01-12 13:45:53,988 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\torch\\_higher_order_ops\\cond.py', reloading
+2026-01-12 13:45:54,017 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\torch\\_higher_order_ops\\while_loop.py', reloading
+2026-01-12 13:45:54,044 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\torch\\func\\__init__.py', reloading
+2026-01-12 13:45:54,067 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\torch\\_functorch\\apis.py', reloading
+2026-01-12 13:45:54,083 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\torchgen\\__init__.py', reloading
+2026-01-12 13:45:54,101 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\__init__.py', reloading
+2026-01-12 13:45:54,605 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\__init__.py', reloading
+2026-01-12 13:45:55,615 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 13:46:02,146 - WARNING -  * Debugger is active!
+2026-01-12 13:46:02,153 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 13:46:02,348 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\codegen\\configuration_codegen.py', reloading
+2026-01-12 13:46:02,851 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 13:46:11,790 - WARNING -  * Debugger is active!
+2026-01-12 13:46:11,798 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 13:46:12,013 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\dinov2\\modeling_dinov2.py', reloading
+2026-01-12 13:46:12,687 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 13:46:19,455 - WARNING -  * Debugger is active!
+2026-01-12 13:46:19,462 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 13:46:19,644 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\granitemoehybrid\\modeling_granitemoehybrid.py', reloading
+2026-01-12 13:46:19,690 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\granitemoeshared\\__init__.py', reloading
+2026-01-12 13:46:19,717 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\granitemoeshared\\configuration_granitemoeshared.py', reloading
+2026-01-12 13:46:19,737 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\granitemoeshared\\modeling_granitemoeshared.py', reloading
+2026-01-12 13:46:19,772 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\grounding_dino\\__init__.py', reloading
+2026-01-12 13:46:19,797 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\grounding_dino\\configuration_grounding_dino.py', reloading
+2026-01-12 13:46:19,834 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\grounding_dino\\image_processing_grounding_dino.py', reloading
+2026-01-12 13:46:19,861 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\grounding_dino\\image_processing_grounding_dino_fast.py', reloading
+2026-01-12 13:46:19,894 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\grounding_dino\\modeling_grounding_dino.py', reloading
+2026-01-12 13:46:19,931 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\grounding_dino\\processing_grounding_dino.py', reloading
+2026-01-12 13:46:19,953 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\groupvit\\__init__.py', reloading
+2026-01-12 13:46:19,978 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\groupvit\\configuration_groupvit.py', reloading
+2026-01-12 13:46:20,003 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\groupvit\\modeling_groupvit.py', reloading
+2026-01-12 13:46:20,033 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\groupvit\\modeling_tf_groupvit.py', reloading
+2026-01-12 13:46:20,061 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\helium\\__init__.py', reloading
+2026-01-12 13:46:20,079 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\helium\\configuration_helium.py', reloading
+2026-01-12 13:46:20,095 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\helium\\modeling_helium.py', reloading
+2026-01-12 13:46:20,115 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\herbert\\__init__.py', reloading
+2026-01-12 13:46:20,145 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\herbert\\tokenization_herbert.py', reloading
+2026-01-12 13:46:20,164 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\herbert\\tokenization_herbert_fast.py', reloading
+2026-01-12 13:46:20,180 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\hgnet_v2\\__init__.py', reloading
+2026-01-12 13:46:20,194 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\hgnet_v2\\configuration_hgnet_v2.py', reloading
+2026-01-12 13:46:20,207 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\hgnet_v2\\modeling_hgnet_v2.py', reloading
+2026-01-12 13:46:20,229 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\hiera\\__init__.py', reloading
+2026-01-12 13:46:20,249 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\hiera\\configuration_hiera.py', reloading
+2026-01-12 13:46:20,270 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\hiera\\modeling_hiera.py', reloading
+2026-01-12 13:46:20,297 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\hubert\\__init__.py', reloading
+2026-01-12 13:46:20,316 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\hubert\\configuration_hubert.py', reloading
+2026-01-12 13:46:20,339 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\hubert\\modeling_hubert.py', reloading
+2026-01-12 13:46:20,382 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\hubert\\modeling_tf_hubert.py', reloading
+2026-01-12 13:46:20,430 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\hunyuan_v1_dense\\__init__.py', reloading
+2026-01-12 13:46:20,462 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\hunyuan_v1_dense\\configuration_hunyuan_v1_dense.py', reloading
+2026-01-12 13:46:20,563 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\hunyuan_v1_dense\\modeling_hunyuan_v1_dense.py', reloading
+2026-01-12 13:46:20,690 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\hunyuan_v1_moe\\__init__.py', reloading
+2026-01-12 13:46:20,721 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\hunyuan_v1_moe\\configuration_hunyuan_v1_moe.py', reloading
+2026-01-12 13:46:20,741 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\ibert\\__init__.py', reloading
+2026-01-12 13:46:20,769 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\ibert\\configuration_ibert.py', reloading
+2026-01-12 13:46:21,258 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 13:46:28,468 - WARNING -  * Debugger is active!
+2026-01-12 13:46:28,476 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 13:46:28,658 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\megatron_bert\\configuration_megatron_bert.py', reloading
+2026-01-12 13:46:29,340 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 13:46:36,521 - WARNING -  * Debugger is active!
+2026-01-12 13:46:36,532 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 13:46:36,693 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\phobert\\__init__.py', reloading
+2026-01-12 13:46:36,728 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\phobert\\tokenization_phobert.py', reloading
+2026-01-12 13:46:36,753 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pix2struct\\__init__.py', reloading
+2026-01-12 13:46:36,794 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pix2struct\\configuration_pix2struct.py', reloading
+2026-01-12 13:46:36,824 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pix2struct\\image_processing_pix2struct.py', reloading
+2026-01-12 13:46:36,852 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pix2struct\\modeling_pix2struct.py', reloading
+2026-01-12 13:46:36,887 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pix2struct\\processing_pix2struct.py', reloading
+2026-01-12 13:46:36,910 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pixtral\\__init__.py', reloading
+2026-01-12 13:46:36,931 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pixtral\\configuration_pixtral.py', reloading
+2026-01-12 13:46:36,954 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pixtral\\image_processing_pixtral.py', reloading
+2026-01-12 13:46:36,979 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pixtral\\image_processing_pixtral_fast.py', reloading
+2026-01-12 13:46:37,002 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pixtral\\modeling_pixtral.py', reloading
+2026-01-12 13:46:37,030 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pixtral\\processing_pixtral.py', reloading
+2026-01-12 13:46:37,053 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\plbart\\__init__.py', reloading
+2026-01-12 13:46:37,142 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\plbart\\configuration_plbart.py', reloading
+2026-01-12 13:46:37,214 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\plbart\\modeling_plbart.py', reloading
+2026-01-12 13:46:37,245 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\plbart\\tokenization_plbart.py', reloading
+2026-01-12 13:46:37,265 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\poolformer\\__init__.py', reloading
+2026-01-12 13:46:37,285 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\poolformer\\configuration_poolformer.py', reloading
+2026-01-12 13:46:37,309 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\poolformer\\feature_extraction_poolformer.py', reloading
+2026-01-12 13:46:37,335 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\poolformer\\image_processing_poolformer.py', reloading
+2026-01-12 13:46:37,362 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\poolformer\\image_processing_poolformer_fast.py', reloading
+2026-01-12 13:46:37,383 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\poolformer\\modeling_poolformer.py', reloading
+2026-01-12 13:46:37,402 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pop2piano\\__init__.py', reloading
+2026-01-12 13:46:37,432 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pop2piano\\configuration_pop2piano.py', reloading
+2026-01-12 13:46:37,462 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pop2piano\\modeling_pop2piano.py', reloading
+2026-01-12 13:46:37,499 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\prompt_depth_anything\\__init__.py', reloading
+2026-01-12 13:46:37,524 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\prophetnet\\__init__.py', reloading
+2026-01-12 13:46:37,547 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\prophetnet\\configuration_prophetnet.py', reloading
+2026-01-12 13:46:37,572 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\prophetnet\\modeling_prophetnet.py', reloading
+2026-01-12 13:46:37,607 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\prophetnet\\tokenization_prophetnet.py', reloading
+2026-01-12 13:46:37,626 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pvt\\__init__.py', reloading
+2026-01-12 13:46:37,646 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pvt\\configuration_pvt.py', reloading
+2026-01-12 13:46:37,665 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pvt\\image_processing_pvt.py', reloading
+2026-01-12 13:46:37,683 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pvt\\image_processing_pvt_fast.py', reloading
+2026-01-12 13:46:37,702 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pvt\\modeling_pvt.py', reloading
+2026-01-12 13:46:37,726 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pvt_v2\\__init__.py', reloading
+2026-01-12 13:46:37,745 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pvt_v2\\configuration_pvt_v2.py', reloading
+2026-01-12 13:46:37,769 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\pvt_v2\\modeling_pvt_v2.py', reloading
+2026-01-12 13:46:37,795 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\qwen2\\__init__.py', reloading
+2026-01-12 13:46:38,455 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 13:46:47,533 - WARNING -  * Debugger is active!
+2026-01-12 13:46:47,539 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 13:46:47,656 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\tapas\\tokenization_tapas.py', reloading
+2026-01-12 13:46:47,707 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\textnet\\__init__.py', reloading
+2026-01-12 13:46:47,725 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\textnet\\configuration_textnet.py', reloading
+2026-01-12 13:46:47,748 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\textnet\\image_processing_textnet.py', reloading
+2026-01-12 13:46:47,770 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\textnet\\image_processing_textnet_fast.py', reloading
+2026-01-12 13:46:47,790 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\textnet\\modeling_textnet.py', reloading
+2026-01-12 13:46:47,810 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\time_series_transformer\\__init__.py', reloading
+2026-01-12 13:46:47,829 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\time_series_transformer\\configuration_time_series_transformer.py', reloading
+2026-01-12 13:46:47,857 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\time_series_transformer\\modeling_time_series_transformer.py', reloading
+2026-01-12 13:46:47,884 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\timesfm\\__init__.py', reloading
+2026-01-12 13:46:47,906 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\timesfm\\configuration_timesfm.py', reloading
+2026-01-12 13:46:47,919 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\timesfm\\modeling_timesfm.py', reloading
+2026-01-12 13:46:47,942 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\timesformer\\__init__.py', reloading
+2026-01-12 13:46:47,959 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\timesformer\\configuration_timesformer.py', reloading
+2026-01-12 13:46:47,978 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\timesformer\\modeling_timesformer.py', reloading
+2026-01-12 13:46:48,008 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\timm_backbone\\__init__.py', reloading
+2026-01-12 13:46:48,027 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\timm_backbone\\configuration_timm_backbone.py', reloading
+2026-01-12 13:46:48,047 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\timm_backbone\\modeling_timm_backbone.py', reloading
+2026-01-12 13:46:48,066 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\timm_wrapper\\__init__.py', reloading
+2026-01-12 13:46:48,089 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\timm_wrapper\\configuration_timm_wrapper.py', reloading
+2026-01-12 13:46:48,115 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\timm_wrapper\\image_processing_timm_wrapper.py', reloading
+2026-01-12 13:46:48,151 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\timm_wrapper\\modeling_timm_wrapper.py', reloading
+2026-01-12 13:46:48,180 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\trocr\\__init__.py', reloading
+2026-01-12 13:46:48,218 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\trocr\\configuration_trocr.py', reloading
+2026-01-12 13:46:48,249 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\trocr\\modeling_trocr.py', reloading
+2026-01-12 13:46:48,277 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\trocr\\processing_trocr.py', reloading
+2026-01-12 13:46:48,297 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\tvp\\__init__.py', reloading
+2026-01-12 13:46:48,321 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\tvp\\configuration_tvp.py', reloading
+2026-01-12 13:46:48,349 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\tvp\\image_processing_tvp.py', reloading
+2026-01-12 13:46:48,390 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\tvp\\image_processing_tvp_fast.py', reloading
+2026-01-12 13:46:48,413 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\tvp\\modeling_tvp.py', reloading
+2026-01-12 13:46:48,431 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\tvp\\processing_tvp.py', reloading
+2026-01-12 13:46:48,448 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\udop\\__init__.py', reloading
+2026-01-12 13:46:48,466 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\udop\\configuration_udop.py', reloading
+2026-01-12 13:46:48,492 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\udop\\modeling_udop.py', reloading
+2026-01-12 13:46:48,527 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\udop\\processing_udop.py', reloading
+2026-01-12 13:46:48,547 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\udop\\tokenization_udop.py', reloading
+2026-01-12 13:46:48,573 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\udop\\tokenization_udop_fast.py', reloading
+2026-01-12 13:46:48,592 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\umt5\\__init__.py', reloading
+2026-01-12 13:46:48,609 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\umt5\\configuration_umt5.py', reloading
+2026-01-12 13:46:48,631 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\umt5\\modeling_umt5.py', reloading
+2026-01-12 13:46:48,654 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\unispeech\\__init__.py', reloading
+2026-01-12 13:46:48,673 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\unispeech\\configuration_unispeech.py', reloading
+2026-01-12 13:46:48,692 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\unispeech\\modeling_unispeech.py', reloading
+2026-01-12 13:46:48,719 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\unispeech_sat\\__init__.py', reloading
+2026-01-12 13:46:48,743 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\unispeech_sat\\configuration_unispeech_sat.py', reloading
+2026-01-12 13:46:49,202 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 13:46:55,661 - WARNING -  * Debugger is active!
+2026-01-12 13:46:55,667 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 13:46:55,839 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\image_utils.py', reloading
+2026-01-12 13:46:55,868 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\integrations\\__init__.py', reloading
+2026-01-12 13:46:55,911 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\integrations\\integration_utils.py', reloading
+2026-01-12 13:46:55,962 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\integrations\\executorch.py', reloading
+2026-01-12 13:46:55,992 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\keras_callbacks.py', reloading
+2026-01-12 13:46:56,029 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\masking_utils.py', reloading
+2026-01-12 13:46:56,058 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\model_debugging_utils.py', reloading
+2026-01-12 13:46:56,093 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\modelcard.py', reloading
+2026-01-12 13:46:56,127 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\modeling_flax_utils.py', reloading
+2026-01-12 13:46:56,161 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\modeling_layers.py', reloading
+2026-01-12 13:46:56,190 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\modeling_rope_utils.py', reloading
+2026-01-12 13:46:56,223 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\modeling_tf_pytorch_utils.py', reloading
+2026-01-12 13:46:56,259 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\modeling_tf_utils.py', reloading
+2026-01-12 13:46:56,294 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\tf_utils.py', reloading
+2026-01-12 13:46:56,336 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\modeling_utils.py', reloading
+2026-01-12 13:46:56,405 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\integrations\\deepspeed.py', reloading
+2026-01-12 13:46:56,424 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\integrations\\fsdp.py', reloading
+2026-01-12 13:46:56,456 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\prompt_depth_anything\\configuration_prompt_depth_anything.py', reloading
+2026-01-12 13:46:56,479 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\prompt_depth_anything\\image_processing_prompt_depth_anything.py', reloading
+2026-01-12 13:46:56,502 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\prompt_depth_anything\\image_processing_prompt_depth_anything_fast.py', reloading
+2026-01-12 13:46:56,520 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\models\\prompt_depth_anything\\modeling_prompt_depth_anything.py', reloading
+2026-01-12 13:46:56,564 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\optimization.py', reloading
+2026-01-12 13:46:56,592 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\optimization_tf.py', reloading
+2026-01-12 13:46:56,617 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\pipelines\\__init__.py', reloading
+2026-01-12 13:46:56,667 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\pipelines\\audio_classification.py', reloading
+2026-01-12 13:46:56,690 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\pipelines\\automatic_speech_recognition.py', reloading
+2026-01-12 13:46:56,719 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\pipelines\\base.py', reloading
+2026-01-12 13:46:56,749 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\pipelines\\depth_estimation.py', reloading
+2026-01-12 13:46:56,775 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\pipelines\\document_question_answering.py', reloading
+2026-01-12 13:46:56,801 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\pipelines\\feature_extraction.py', reloading
+2026-01-12 13:46:56,824 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\pipelines\\fill_mask.py', reloading
+2026-01-12 13:46:56,848 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\pipelines\\image_classification.py', reloading
+2026-01-12 13:46:56,867 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\pipelines\\image_feature_extraction.py', reloading
+2026-01-12 13:46:56,888 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\pipelines\\image_segmentation.py', reloading
+2026-01-12 13:46:56,907 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\pipelines\\image_text_to_text.py', reloading
+2026-01-12 13:46:56,929 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\transformers\\pipelines\\image_to_image.py', reloading
+2026-01-12 13:46:57,430 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 13:47:02,868 - WARNING -  * Debugger is active!
+2026-01-12 13:47:02,871 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 13:50:02,542 - INFO - WhatsApp notification initialized successfully
+2026-01-12 13:50:24,631 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-12 13:50:38,807 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2026-01-12 13:50:41,575 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2026-01-12 13:50:44,653 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSD
+2026-01-12 13:50:44,655 - INFO - WhatsApp notification initialized successfully
+2026-01-12 13:50:44,877 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 13:50:44,877 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 13:50:44,878 - INFO - Headers:
+2026-01-12 13:50:44,878 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 13:50:44,878 - INFO - Accept : application/json
+2026-01-12 13:50:44,878 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 13:50:44,878 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 13:50:44,879 - INFO - Accept-Charset : utf-8
+2026-01-12 13:50:44,879 - INFO - -- END Twilio API Request --
+2026-01-12 13:50:46,788 - INFO - Response Status Code: 400
+2026-01-12 13:50:46,788 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 12:50:46 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ70f357d2041c0c6e17bcf915819b100f', 'Twilio-Request-Duration': '0.045', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 dd11c9768f8b06d6759fe07ff69421ce.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'Qe95y2ZM8zWUT7xmu_DqILM3XFqKEHdtVmaXwC_3Vt4CprsOFD_6Qw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 13:50:46,788 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-12 13:50:47,788 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 13:50:47,789 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 13:50:47,789 - INFO - Headers:
+2026-01-12 13:50:47,789 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 13:50:47,789 - INFO - Accept : application/json
+2026-01-12 13:50:47,789 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 13:50:47,789 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 13:50:47,789 - INFO - Accept-Charset : utf-8
+2026-01-12 13:50:47,789 - INFO - -- END Twilio API Request --
+2026-01-12 13:50:48,398 - INFO - Response Status Code: 400
+2026-01-12 13:50:48,398 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 12:50:48 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ474efc72f185b6da548b52d5b12cb12a', 'Twilio-Request-Duration': '0.027', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 dd11c9768f8b06d6759fe07ff69421ce.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'wYnsTG56_HborjkJsqxOpF9-F4w-qVpV1qaX1P2mglHy-NbC364-6Q==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 13:50:48,398 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-12 13:50:50,399 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 13:50:50,399 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 13:50:50,399 - INFO - Headers:
+2026-01-12 13:50:50,399 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 13:50:50,399 - INFO - Accept : application/json
+2026-01-12 13:50:50,399 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 13:50:50,400 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 13:50:50,400 - INFO - Accept-Charset : utf-8
+2026-01-12 13:50:50,400 - INFO - -- END Twilio API Request --
+2026-01-12 13:50:50,676 - INFO - Response Status Code: 400
+2026-01-12 13:50:50,676 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 12:50:50 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQecb63dd586093ccb3c6ca29ef7369319', 'Twilio-Request-Duration': '0.029', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 dd11c9768f8b06d6759fe07ff69421ce.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'fA8wEyFpcLEFsxyoF9PzoS0qa0bncRaY6SDu8o06dmeCnh1Et7vbNg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 13:50:50,676 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-12 13:50:50,677 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-12 13:51:03,079 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 13:51:14,096 - WARNING - Telegram send attempt 2 failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7425081234:AAH8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q/sendMessage (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000021836722990>, 'Connection to api.telegram.org timed out. (connect timeout=10)'))
+2026-01-12 13:51:17,117 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 13:51:17,117 - ERROR - Telegram send failed after 3 attempts
+2026-01-12 13:51:17,118 - ERROR - Failed to send signal notification to any channel
+2026-01-12 13:51:17,118 - ERROR - WhatsApp client initialized: True
+2026-01-12 13:51:17,118 - ERROR - Telegram bot token: True
+2026-01-12 13:51:17,118 - ERROR - Telegram chat ID: True
+2026-01-12 13:51:17,118 - INFO - Signal generated for XAUUSD - Expires at 2026-01-12 13:55:24 UTC
+2026-01-12 13:51:17,120 - INFO - 127.0.0.1 - - [12/Jan/2026 13:51:17] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-12 14:05:22,142 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-12 14:05:36,208 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2026-01-12 14:05:39,007 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2026-01-12 14:05:41,629 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSD
+2026-01-12 14:05:41,630 - INFO - WhatsApp notification initialized successfully
+2026-01-12 14:05:41,630 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 14:05:41,630 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 14:05:41,630 - INFO - Headers:
+2026-01-12 14:05:41,630 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 14:05:41,630 - INFO - Accept : application/json
+2026-01-12 14:05:41,630 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 14:05:41,630 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 14:05:41,630 - INFO - Accept-Charset : utf-8
+2026-01-12 14:05:41,630 - INFO - -- END Twilio API Request --
+2026-01-12 14:05:54,402 - INFO - Response Status Code: 400
+2026-01-12 14:05:54,402 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 13:05:54 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ9f2b3f6e779d350ee33a1672add413f3', 'Twilio-Request-Duration': '0.048', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 d2a65e6cd7ddc4f5373432734cb3111c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'lxMevHQuRH-zbszGR-ruO0Elf8uKndi90HMTN3o_GfUuVXO9zfvX9A==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 14:05:54,402 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-12 14:05:55,402 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 14:05:55,403 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 14:05:55,403 - INFO - Headers:
+2026-01-12 14:05:55,403 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 14:05:55,403 - INFO - Accept : application/json
+2026-01-12 14:05:55,403 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 14:05:55,403 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 14:05:55,403 - INFO - Accept-Charset : utf-8
+2026-01-12 14:05:55,403 - INFO - -- END Twilio API Request --
+2026-01-12 14:05:56,211 - INFO - Response Status Code: 400
+2026-01-12 14:05:56,211 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 13:05:56 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQdedd2864b546443e866950400b6782b0', 'Twilio-Request-Duration': '0.025', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 d2a65e6cd7ddc4f5373432734cb3111c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'fYGx3DYFMREmryyRjf3SYf8F3H4JtX4NfDvTFy6lwPsEJeTUDORaNw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 14:05:56,211 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-12 14:05:58,212 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 14:05:58,212 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 14:05:58,212 - INFO - Headers:
+2026-01-12 14:05:58,212 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 14:05:58,212 - INFO - Accept : application/json
+2026-01-12 14:05:58,212 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 14:05:58,212 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 14:05:58,212 - INFO - Accept-Charset : utf-8
+2026-01-12 14:05:58,212 - INFO - -- END Twilio API Request --
+2026-01-12 14:05:58,471 - INFO - Response Status Code: 400
+2026-01-12 14:05:58,472 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 13:05:58 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQa48ce781fa260123b31cf8d7152b0534', 'Twilio-Request-Duration': '0.027', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 d2a65e6cd7ddc4f5373432734cb3111c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'MFqvAHHAbpq8bmV6fgiM3rdLT9EXk4TxuwwWJfqtYRAG7RGAC7txag==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 14:05:58,472 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-12 14:05:58,472 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-12 14:06:10,832 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 14:06:12,854 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 14:06:15,964 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 14:06:15,964 - ERROR - Telegram send failed after 3 attempts
+2026-01-12 14:06:15,965 - ERROR - Failed to send signal notification to any channel
+2026-01-12 14:06:15,965 - ERROR - WhatsApp client initialized: True
+2026-01-12 14:06:15,966 - ERROR - Telegram bot token: True
+2026-01-12 14:06:15,966 - ERROR - Telegram chat ID: True
+2026-01-12 14:06:15,966 - INFO - Signal generated for XAUUSD - Expires at 2026-01-12 14:10:22 UTC
+2026-01-12 14:06:15,967 - INFO - 127.0.0.1 - - [12/Jan/2026 14:06:15] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-12 14:20:01,905 - INFO - 127.0.0.1 - - [12/Jan/2026 14:20:01] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-12 14:35:01,898 - INFO - 127.0.0.1 - - [12/Jan/2026 14:35:01] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-12 14:48:01,286 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\__init__.py', reloading
+2026-01-12 14:48:01,327 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\app.py', reloading
+2026-01-12 14:48:01,412 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sansio\\app.py', reloading
+2026-01-12 14:48:01,445 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2026-01-12 14:48:01,484 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\templating.py', reloading
+2026-01-12 14:48:01,493 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jinja2\\__init__.py', reloading
+2026-01-12 14:48:01,495 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jinja2\\environment.py', reloading
+2026-01-12 14:48:01,551 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\globals.py', reloading
+2026-01-12 14:48:01,555 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\wrappers.py', reloading
+2026-01-12 14:48:01,596 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2026-01-12 14:48:01,609 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2026-01-12 14:48:01,623 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2026-01-12 14:48:01,682 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\json\\__init__.py', reloading
+2026-01-12 14:48:01,686 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2026-01-12 14:48:01,708 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2026-01-12 14:48:01,821 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\helpers.py', reloading
+2026-01-12 14:48:01,845 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sessions.py', reloading
+2026-01-12 14:48:03,481 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 14:48:13,692 - WARNING -  * Debugger is active!
+2026-01-12 14:48:13,704 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 14:50:02,454 - INFO - WhatsApp notification initialized successfully
+2026-01-12 14:50:02,473 - INFO - 127.0.0.1 - - [12/Jan/2026 14:50:02] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-12 15:01:45,616 - INFO - 127.0.0.1 - - [12/Jan/2026 15:01:45] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-12 15:01:45,683 - INFO - 127.0.0.1 - - [12/Jan/2026 15:01:45] "GET /login HTTP/1.1" 200 -
+2026-01-12 15:11:16,178 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\json\\__init__.py', reloading
+2026-01-12 15:11:16,891 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 15:11:20,905 - WARNING -  * Debugger is active!
+2026-01-12 15:11:20,909 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 15:18:29,205 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\datetime.py', reloading
+2026-01-12 15:18:29,206 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\_pydatetime.py', reloading
+2026-01-12 15:18:29,952 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 15:18:33,901 - WARNING -  * Debugger is active!
+2026-01-12 15:18:33,904 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 15:21:49,530 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 15:21:49,531 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 15:21:50,562 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 15:22:00,871 - WARNING -  * Debugger is active!
+2026-01-12 15:22:00,880 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 15:22:05,076 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 15:22:05,079 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 15:22:05,080 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 15:22:05,881 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 15:22:10,059 - WARNING -  * Debugger is active!
+2026-01-12 15:22:10,065 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 15:23:39,350 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_rule_based.py', reloading
+2026-01-12 15:23:41,584 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 15:23:46,027 - WARNING -  * Debugger is active!
+2026-01-12 15:23:46,033 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 15:23:47,364 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\os.py', reloading
+2026-01-12 15:23:48,137 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 15:23:52,863 - WARNING -  * Debugger is active!
+2026-01-12 15:23:52,871 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 15:29:13,245 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 15:29:13,246 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 15:29:13,247 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 15:29:14,848 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 15:29:20,995 - WARNING -  * Debugger is active!
+2026-01-12 15:29:21,000 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 15:29:32,895 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 15:29:32,896 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 15:29:34,439 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 15:29:38,110 - WARNING -  * Debugger is active!
+2026-01-12 15:29:38,117 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 15:30:17,224 - INFO - 127.0.0.1 - - [12/Jan/2026 15:30:17] "GET /login HTTP/1.1" 200 -
+2026-01-12 15:30:19,974 - INFO - 127.0.0.1 - - [12/Jan/2026 15:30:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-12 15:30:20,020 - INFO - 127.0.0.1 - - [12/Jan/2026 15:30:20] "GET / HTTP/1.1" 200 -
+2026-01-12 15:30:36,876 - INFO - 127.0.0.1 - - [12/Jan/2026 15:30:36] "GET /profile HTTP/1.1" 200 -
+2026-01-12 15:30:37,350 - INFO - 127.0.0.1 - - [12/Jan/2026 15:30:37] "[35m[1mGET /get_symbols HTTP/1.1[0m" 500 -
+2026-01-12 15:30:50,605 - INFO - 127.0.0.1 - - [12/Jan/2026 15:30:50] "GET / HTTP/1.1" 200 -
+2026-01-12 15:31:00,408 - INFO - WhatsApp notification initialized successfully
+2026-01-12 15:31:00,419 - INFO - 127.0.0.1 - - [12/Jan/2026 15:31:00] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-12 15:35:31,562 - INFO - 127.0.0.1 - - [12/Jan/2026 15:35:31] "GET / HTTP/1.1" 200 -
+2026-01-12 15:35:36,622 - INFO - 127.0.0.1 - - [12/Jan/2026 15:35:36] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-12 15:35:36,634 - INFO - 127.0.0.1 - - [12/Jan/2026 15:35:36] "GET /login HTTP/1.1" 200 -
+2026-01-12 15:35:39,589 - INFO - 127.0.0.1 - - [12/Jan/2026 15:35:39] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-12 15:35:39,604 - INFO - 127.0.0.1 - - [12/Jan/2026 15:35:39] "GET / HTTP/1.1" 200 -
+2026-01-12 15:36:09,944 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-12 15:36:24,143 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2026-01-12 15:36:26,795 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2026-01-12 15:36:29,477 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSD
+2026-01-12 15:36:29,478 - INFO - WhatsApp notification initialized successfully
+2026-01-12 15:36:29,694 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 15:36:29,694 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 15:36:29,695 - INFO - Headers:
+2026-01-12 15:36:29,695 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 15:36:29,695 - INFO - Accept : application/json
+2026-01-12 15:36:29,695 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 15:36:29,695 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 15:36:29,695 - INFO - Accept-Charset : utf-8
+2026-01-12 15:36:29,695 - INFO - -- END Twilio API Request --
+2026-01-12 15:36:42,154 - INFO - Response Status Code: 400
+2026-01-12 15:36:42,154 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 14:36:42 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ4db9ef776e6508ae04de3a8682227fee', 'Twilio-Request-Duration': '0.041', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 a9f4bdae1135d507d62df475ab78dc5e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'MW2qgMXEpHOGKb9Z3qoIVin6bPsmYvmaMPRocN1EiIrQtkpmVE_gig==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 15:36:42,155 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-12 15:36:43,155 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 15:36:43,156 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 15:36:43,156 - INFO - Headers:
+2026-01-12 15:36:43,156 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 15:36:43,156 - INFO - Accept : application/json
+2026-01-12 15:36:43,156 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 15:36:43,156 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 15:36:43,156 - INFO - Accept-Charset : utf-8
+2026-01-12 15:36:43,156 - INFO - -- END Twilio API Request --
+2026-01-12 15:36:44,045 - INFO - Response Status Code: 400
+2026-01-12 15:36:44,046 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 14:36:44 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ564b312105b66ee1b84c660198e0c772', 'Twilio-Request-Duration': '0.027', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 a9f4bdae1135d507d62df475ab78dc5e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '4isgccN0zLiPvIzxm_Bfm3oVqap7ZFhXBh4nMp4q0dtQvuBIr-Lxow==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 15:36:44,046 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-12 15:36:46,047 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 15:36:46,047 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 15:36:46,047 - INFO - Headers:
+2026-01-12 15:36:46,047 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 15:36:46,047 - INFO - Accept : application/json
+2026-01-12 15:36:46,047 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 15:36:46,047 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 15:36:46,047 - INFO - Accept-Charset : utf-8
+2026-01-12 15:36:46,047 - INFO - -- END Twilio API Request --
+2026-01-12 15:36:46,318 - INFO - Response Status Code: 400
+2026-01-12 15:36:46,318 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 14:36:46 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ77af8696b9cef5747e594b0bee069edb', 'Twilio-Request-Duration': '0.027', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 a9f4bdae1135d507d62df475ab78dc5e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '2kGMF-7LZbetYQAyt8VjWUEgUvJshTEHusrmm46-La7t_TADLmEC8A==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 15:36:46,319 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-12 15:36:46,319 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-12 15:36:48,395 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 15:36:50,527 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 15:37:02,536 - WARNING - Telegram send attempt 3 failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7425081234:AAH8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q/sendMessage (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001FF1BEC5A90>, 'Connection to api.telegram.org timed out. (connect timeout=10)'))
+2026-01-12 15:37:02,537 - ERROR - Telegram send failed after 3 attempts
+2026-01-12 15:37:02,537 - ERROR - Failed to send signal notification to any channel
+2026-01-12 15:37:02,537 - ERROR - WhatsApp client initialized: True
+2026-01-12 15:37:02,537 - ERROR - Telegram bot token: True
+2026-01-12 15:37:02,537 - ERROR - Telegram chat ID: True
+2026-01-12 15:37:02,537 - INFO - Signal generated for XAUUSD - Expires at 2026-01-12 15:41:09 UTC
+2026-01-12 15:37:02,538 - INFO - 127.0.0.1 - - [12/Jan/2026 15:37:02] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-12 15:51:13,379 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-12 15:51:27,602 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2026-01-12 15:51:30,345 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2026-01-12 15:51:32,986 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSD
+2026-01-12 15:51:32,986 - INFO - WhatsApp notification initialized successfully
+2026-01-12 15:51:32,987 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 15:51:32,987 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 15:51:32,987 - INFO - Headers:
+2026-01-12 15:51:32,987 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 15:51:32,987 - INFO - Accept : application/json
+2026-01-12 15:51:32,987 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 15:51:32,987 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 15:51:32,987 - INFO - Accept-Charset : utf-8
+2026-01-12 15:51:32,987 - INFO - -- END Twilio API Request --
+2026-01-12 15:51:45,652 - INFO - Response Status Code: 400
+2026-01-12 15:51:45,652 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 14:51:45 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQed2d2bd7241431f21cfaf7ffdfcd439a', 'Twilio-Request-Duration': '0.043', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f6eede9416393de137afc2f11d733fec.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '66zGagqAd5zMzrLeftFdA4jCV5R7-mbFi96IehiwOqegfoTwJ7muqw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 15:51:45,653 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-12 15:51:46,653 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 15:51:46,654 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 15:51:46,654 - INFO - Headers:
+2026-01-12 15:51:46,654 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 15:51:46,654 - INFO - Accept : application/json
+2026-01-12 15:51:46,654 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 15:51:46,654 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 15:51:46,654 - INFO - Accept-Charset : utf-8
+2026-01-12 15:51:46,654 - INFO - -- END Twilio API Request --
+2026-01-12 15:51:47,267 - INFO - Response Status Code: 400
+2026-01-12 15:51:47,267 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 14:51:47 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ01eb4cc014e375efaa34d658d987bf82', 'Twilio-Request-Duration': '0.024', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f6eede9416393de137afc2f11d733fec.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'UWE5Jh5FBTtE2jqmC_vC-8Pke2g6Wf3wsnqZ8DrFHAStapHyhY8edw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 15:51:47,267 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-12 15:51:49,267 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 15:51:49,268 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 15:51:49,268 - INFO - Headers:
+2026-01-12 15:51:49,268 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 15:51:49,268 - INFO - Accept : application/json
+2026-01-12 15:51:49,268 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 15:51:49,268 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 15:51:49,268 - INFO - Accept-Charset : utf-8
+2026-01-12 15:51:49,268 - INFO - -- END Twilio API Request --
+2026-01-12 15:51:49,526 - INFO - Response Status Code: 400
+2026-01-12 15:51:49,526 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 14:51:49 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ53312abe38b208519a005b3298b9e142', 'Twilio-Request-Duration': '0.025', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f6eede9416393de137afc2f11d733fec.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'jbOkfshm3uzFHKh8kBgvIReLIO3VVxPLKdSAX_o5_zCsoh_lqFuMZw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 15:51:49,527 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-12 15:51:49,527 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-12 15:52:07,305 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 15:52:18,318 - WARNING - Telegram send attempt 2 failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7425081234:AAH8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q/sendMessage (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001FF1BEC7D90>, 'Connection to api.telegram.org timed out. (connect timeout=10)'))
+2026-01-12 15:52:22,873 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 15:52:22,873 - ERROR - Telegram send failed after 3 attempts
+2026-01-12 15:52:22,874 - ERROR - Failed to send signal notification to any channel
+2026-01-12 15:52:22,874 - ERROR - WhatsApp client initialized: True
+2026-01-12 15:52:22,874 - ERROR - Telegram bot token: True
+2026-01-12 15:52:22,874 - ERROR - Telegram chat ID: True
+2026-01-12 15:52:22,874 - INFO - Signal generated for XAUUSD - Expires at 2026-01-12 15:56:13 UTC
+2026-01-12 15:52:22,876 - INFO - 127.0.0.1 - - [12/Jan/2026 15:52:22] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-12 16:06:08,275 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-12 16:06:24,246 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2026-01-12 16:06:26,945 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2026-01-12 16:06:29,740 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSD
+2026-01-12 16:06:29,741 - INFO - WhatsApp notification initialized successfully
+2026-01-12 16:06:29,741 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 16:06:29,741 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 16:06:29,742 - INFO - Headers:
+2026-01-12 16:06:29,742 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 16:06:29,742 - INFO - Accept : application/json
+2026-01-12 16:06:29,742 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 16:06:29,742 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 16:06:29,742 - INFO - Accept-Charset : utf-8
+2026-01-12 16:06:29,742 - INFO - -- END Twilio API Request --
+2026-01-12 16:06:42,487 - INFO - Response Status Code: 400
+2026-01-12 16:06:42,488 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 15:06:42 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQa6b40f9baf57e885cc53990b068a4e3e', 'Twilio-Request-Duration': '0.038', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 afc076a932b635d1fe9febfccf7103f0.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'TMuHSeGFAOt2uKxlrnj7kG87ZM0HJg9GFesDYlLQSWFBu9zAjE_L9Q==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 16:06:42,488 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-12 16:06:43,488 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 16:06:43,489 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 16:06:43,489 - INFO - Headers:
+2026-01-12 16:06:43,489 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 16:06:43,489 - INFO - Accept : application/json
+2026-01-12 16:06:43,489 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 16:06:43,489 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 16:06:43,489 - INFO - Accept-Charset : utf-8
+2026-01-12 16:06:43,489 - INFO - -- END Twilio API Request --
+2026-01-12 16:06:43,750 - INFO - Response Status Code: 400
+2026-01-12 16:06:43,750 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 15:06:43 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQa2e9cacd3b4d3a8c873f3f819af80e85', 'Twilio-Request-Duration': '0.028', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 afc076a932b635d1fe9febfccf7103f0.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'H3_5G0NO-Eue1aixlFC0yRV8Yu5Fq9fju3HTcciP9Y_t-Ebr1v0o1w==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 16:06:43,750 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-12 16:06:45,751 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 16:06:45,751 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 16:06:45,751 - INFO - Headers:
+2026-01-12 16:06:45,751 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 16:06:45,751 - INFO - Accept : application/json
+2026-01-12 16:06:45,751 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 16:06:45,751 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 16:06:45,751 - INFO - Accept-Charset : utf-8
+2026-01-12 16:06:45,751 - INFO - -- END Twilio API Request --
+2026-01-12 16:06:46,362 - INFO - Response Status Code: 400
+2026-01-12 16:06:46,362 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 15:06:46 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQe307bd5a94fc4be7ae6a1c9b88048652', 'Twilio-Request-Duration': '0.026', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 afc076a932b635d1fe9febfccf7103f0.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'K3-SjKhVbj8cTmQiTswt_9ICszHZCcVtD__sQ7s7AsW3_4OiOnCArw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 16:06:46,363 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-12 16:06:46,363 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-12 16:07:00,041 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 16:07:04,431 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 16:07:09,258 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 16:07:09,258 - ERROR - Telegram send failed after 3 attempts
+2026-01-12 16:07:09,260 - ERROR - Failed to send signal notification to any channel
+2026-01-12 16:07:09,260 - ERROR - WhatsApp client initialized: True
+2026-01-12 16:07:09,260 - ERROR - Telegram bot token: True
+2026-01-12 16:07:09,260 - ERROR - Telegram chat ID: True
+2026-01-12 16:07:09,260 - INFO - Signal generated for XAUUSD - Expires at 2026-01-12 16:11:10 UTC
+2026-01-12 16:07:09,261 - INFO - 127.0.0.1 - - [12/Jan/2026 16:07:09] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-12 16:14:32,322 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\MetaTrader5\\__init__.py', reloading
+2026-01-12 16:14:32,433 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\__init__.py', reloading
+2026-01-12 16:14:32,452 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\app.py', reloading
+2026-01-12 16:14:32,520 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sansio\\app.py', reloading
+2026-01-12 16:14:32,570 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2026-01-12 16:14:32,620 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\templating.py', reloading
+2026-01-12 16:14:32,626 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jinja2\\__init__.py', reloading
+2026-01-12 16:14:32,631 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jinja2\\environment.py', reloading
+2026-01-12 16:14:32,702 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\globals.py', reloading
+2026-01-12 16:14:32,705 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\wrappers.py', reloading
+2026-01-12 16:14:32,710 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2026-01-12 16:14:32,726 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2026-01-12 16:14:32,740 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2026-01-12 16:14:32,756 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\json\\__init__.py', reloading
+2026-01-12 16:14:32,760 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2026-01-12 16:14:32,776 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2026-01-12 16:14:32,789 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\helpers.py', reloading
+2026-01-12 16:14:32,822 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sessions.py', reloading
+2026-01-12 16:14:32,957 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\openai\\__init__.py', reloading
+2026-01-12 16:14:32,992 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\openai\\lib\\_old_api.py', reloading
+2026-01-12 16:14:33,165 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\dotenv\\__init__.py', reloading
+2026-01-12 16:14:33,168 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\dotenv\\main.py', reloading
+2026-01-12 16:14:33,452 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_login\\__init__.py', reloading
+2026-01-12 16:14:33,456 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_login\\login_manager.py', reloading
+2026-01-12 16:14:35,303 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 16:14:45,441 - WARNING -  * Debugger is active!
+2026-01-12 16:14:45,449 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 16:20:50,535 - INFO - WhatsApp notification initialized successfully
+2026-01-12 16:20:50,551 - INFO - 127.0.0.1 - - [12/Jan/2026 16:20:50] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-12 16:35:49,931 - INFO - 127.0.0.1 - - [12/Jan/2026 16:35:49] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-12 17:18:40,930 - INFO - 127.0.0.1 - - [12/Jan/2026 17:18:40] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -

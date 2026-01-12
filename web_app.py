@@ -293,13 +293,13 @@ def run_ai_analysis():
 
         # Get API key based on provider
         if ai_provider == 'anthropic':
-            api_key = os.getenv('ANTHROPIC_API_KEY', 'your-anthropic-api-key-here')
+            api_key = os.getenv('ANTHROPIC_API_KEY', '')
         elif ai_provider == 'openai':
-            api_key = os.getenv('OPENAI_API_KEY', 'your-openai-api-key-here')
+            api_key = os.getenv('OPENAI_API_KEY', '')
         elif ai_provider == 'deepseek':
-            api_key = os.getenv('DEEPSEEKER_API_KEY', 'your-deepseek-api-key-here')
+            api_key = os.getenv('DEEPSEEKER_API_KEY', '')
         elif ai_provider == 'grok':
-            api_key = os.getenv('GROK_API_KEY', 'your-grok-api-key-here')
+            api_key = os.getenv('GROK_API_KEY', '')
         
         else:
             return jsonify({'error': 'Invalid AI provider'}), 400
@@ -539,7 +539,9 @@ def get_symbols():
             return jsonify({'error': 'Failed to connect to MT5'}), 500
 
         # Get all available symbols
-        symbols = mt5.symbols_get()
+        #symbols = mt5.symbols_get()
+        all_symbols = mt5.symbols_get()
+        symbols = [symbol.name for symbol in all_symbols if symbol.visible]
 
         if symbols is None:
             mt5.shutdown()
