@@ -1694,3 +1694,784 @@
 2026-01-12 16:20:50,551 - INFO - 127.0.0.1 - - [12/Jan/2026 16:20:50] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
 2026-01-12 16:35:49,931 - INFO - 127.0.0.1 - - [12/Jan/2026 16:35:49] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
 2026-01-12 17:18:40,930 - INFO - 127.0.0.1 - - [12/Jan/2026 17:18:40] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-12 18:04:15,817 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.207.87.207:9000
+2026-01-12 18:04:15,817 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-12 18:04:15,842 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 18:04:21,262 - WARNING -  * Debugger is active!
+2026-01-12 18:04:21,266 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 18:04:46,710 - INFO - 127.0.0.1 - - [12/Jan/2026 18:04:46] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-12 18:04:46,810 - INFO - 127.0.0.1 - - [12/Jan/2026 18:04:46] "GET /login HTTP/1.1" 200 -
+2026-01-12 18:04:51,569 - INFO - 127.0.0.1 - - [12/Jan/2026 18:04:51] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-12 18:04:51,706 - INFO - 127.0.0.1 - - [12/Jan/2026 18:04:51] "GET / HTTP/1.1" 200 -
+2026-01-12 18:05:56,103 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\coverage\\__init__.py', reloading
+2026-01-12 18:05:56,104 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\coverage\\data.py', reloading
+2026-01-12 18:05:56,107 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\coverage\\sqldata.py', reloading
+2026-01-12 18:05:56,252 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\pytest\\__init__.py', reloading
+2026-01-12 18:05:56,253 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\coverage\\exceptions.py', reloading
+2026-01-12 18:05:56,279 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\coverage\\misc.py', reloading
+2026-01-12 18:05:56,310 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\coverage\\results.py', reloading
+2026-01-12 18:05:57,577 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 18:06:04,263 - WARNING -  * Debugger is active!
+2026-01-12 18:06:04,268 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 18:07:25,203 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\profile.py', reloading
+2026-01-12 18:07:25,951 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 18:07:31,181 - WARNING -  * Debugger is active!
+2026-01-12 18:07:31,197 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 18:08:45,188 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 18:08:45,191 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 18:08:46,038 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 18:08:51,386 - WARNING -  * Debugger is active!
+2026-01-12 18:08:51,393 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 18:10:50,006 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 18:10:50,006 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 18:10:50,756 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 18:10:54,926 - WARNING -  * Debugger is active!
+2026-01-12 18:10:54,930 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 18:52:57,515 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\__init__.py', reloading
+2026-01-12 18:52:57,530 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\app.py', reloading
+2026-01-12 18:52:57,587 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sansio\\app.py', reloading
+2026-01-12 18:52:57,603 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2026-01-12 18:52:57,665 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\templating.py', reloading
+2026-01-12 18:52:57,670 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jinja2\\__init__.py', reloading
+2026-01-12 18:52:57,675 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jinja2\\environment.py', reloading
+2026-01-12 18:52:57,779 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\globals.py', reloading
+2026-01-12 18:52:57,782 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\wrappers.py', reloading
+2026-01-12 18:52:57,786 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2026-01-12 18:52:57,787 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2026-01-12 18:52:57,814 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2026-01-12 18:52:57,829 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\json\\__init__.py', reloading
+2026-01-12 18:52:57,836 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2026-01-12 18:52:57,864 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2026-01-12 18:52:57,880 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\helpers.py', reloading
+2026-01-12 18:52:57,900 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sessions.py', reloading
+2026-01-12 18:52:58,135 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\openai\\__init__.py', reloading
+2026-01-12 18:52:58,141 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\MetaTrader5\\__init__.py', reloading
+2026-01-12 18:52:58,195 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\openai\\lib\\_old_api.py', reloading
+2026-01-12 18:52:59,808 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 18:53:09,659 - WARNING -  * Debugger is active!
+2026-01-12 18:53:09,664 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 18:53:41,292 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2026-01-12 18:53:41,295 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_rule_based.py', reloading
+2026-01-12 18:53:41,300 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\apply_trade.py', reloading
+2026-01-12 18:53:42,309 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 18:53:46,710 - WARNING -  * Debugger is active!
+2026-01-12 18:53:46,716 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 18:59:05,997 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 18:59:05,998 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 18:59:08,199 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 19:01:39,121 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.207.87.207:9000
+2026-01-12 19:01:39,121 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-12 19:01:39,139 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 19:01:42,748 - WARNING -  * Debugger is active!
+2026-01-12 19:01:42,753 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 19:01:53,341 - INFO - 127.0.0.1 - - [12/Jan/2026 19:01:53] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-12 19:01:53,447 - INFO - 127.0.0.1 - - [12/Jan/2026 19:01:53] "GET /login HTTP/1.1" 200 -
+2026-01-12 19:01:56,923 - INFO - 127.0.0.1 - - [12/Jan/2026 19:01:56] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-12 19:01:56,971 - INFO - 127.0.0.1 - - [12/Jan/2026 19:01:56] "GET / HTTP/1.1" 200 -
+2026-01-12 19:02:10,683 - INFO - 127.0.0.1 - - [12/Jan/2026 19:02:10] "GET / HTTP/1.1" 200 -
+2026-01-12 19:02:13,208 - INFO - 127.0.0.1 - - [12/Jan/2026 19:02:13] "GET / HTTP/1.1" 200 -
+2026-01-12 19:02:19,692 - INFO - 127.0.0.1 - - [12/Jan/2026 19:02:19] "GET /profile HTTP/1.1" 200 -
+2026-01-12 19:02:20,132 - INFO - 127.0.0.1 - - [12/Jan/2026 19:02:20] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 19:02:23,277 - INFO - 127.0.0.1 - - [12/Jan/2026 19:02:23] "GET / HTTP/1.1" 200 -
+2026-01-12 19:02:26,146 - INFO - 127.0.0.1 - - [12/Jan/2026 19:02:26] "GET /profile HTTP/1.1" 200 -
+2026-01-12 19:02:26,606 - INFO - 127.0.0.1 - - [12/Jan/2026 19:02:26] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 19:03:13,394 - INFO - 127.0.0.1 - - [12/Jan/2026 19:03:13] "GET /get_user_signals HTTP/1.1" 200 -
+2026-01-12 19:03:23,278 - INFO - 127.0.0.1 - - [12/Jan/2026 19:03:23] "GET / HTTP/1.1" 200 -
+2026-01-12 19:03:32,488 - INFO - WhatsApp notification initialized successfully
+2026-01-12 19:03:32,501 - INFO - 127.0.0.1 - - [12/Jan/2026 19:03:32] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-12 19:05:30,393 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 19:05:30,394 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 19:05:30,395 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 19:05:30,395 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 19:05:31,768 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 19:05:36,296 - WARNING -  * Debugger is active!
+2026-01-12 19:05:36,301 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 19:06:22,009 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 19:06:22,856 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\logging\\__init__.py', reloading
+2026-01-12 19:06:24,231 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 19:06:29,362 - WARNING -  * Debugger is active!
+2026-01-12 19:06:29,371 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 19:07:07,932 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 19:07:09,681 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 19:07:14,786 - WARNING -  * Debugger is active!
+2026-01-12 19:07:14,790 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 19:07:37,725 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.207.87.207:9000
+2026-01-12 19:07:37,726 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-12 19:07:37,762 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 19:07:41,867 - WARNING -  * Debugger is active!
+2026-01-12 19:07:41,871 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 19:08:06,980 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\test_symbols.py', reloading
+2026-01-12 19:08:06,980 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\test_symbols.py', reloading
+2026-01-12 19:08:08,809 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 19:08:09,072 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 19:08:19,696 - WARNING -  * Debugger is active!
+2026-01-12 19:08:19,703 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 19:08:19,754 - WARNING -  * Debugger is active!
+2026-01-12 19:08:19,761 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 19:08:28,857 - INFO - 127.0.0.1 - - [12/Jan/2026 19:08:28] "[32mGET /get_symbols HTTP/1.1[0m" 302 -
+2026-01-12 19:08:30,904 - INFO - 127.0.0.1 - - [12/Jan/2026 19:08:30] "GET /login?next=/get_symbols HTTP/1.1" 200 -
+2026-01-12 19:08:32,972 - INFO - 127.0.0.1 - - [12/Jan/2026 19:08:32] "POST /login HTTP/1.1" 200 -
+2026-01-12 19:08:35,004 - INFO - 127.0.0.1 - - [12/Jan/2026 19:08:35] "[32mGET /get_symbols HTTP/1.1[0m" 302 -
+2026-01-12 19:08:37,033 - INFO - 127.0.0.1 - - [12/Jan/2026 19:08:37] "GET /login?next=/get_symbols HTTP/1.1" 200 -
+2026-01-12 19:08:37,070 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\encodings\\cp1252.py', reloading
+2026-01-12 19:08:37,071 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\encodings\\cp1252.py', reloading
+2026-01-12 19:08:37,103 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\models.py', reloading
+2026-01-12 19:08:37,104 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\requests\\models.py', reloading
+2026-01-12 19:08:37,145 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\json\\decoder.py', reloading
+2026-01-12 19:08:37,145 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\json\\decoder.py', reloading
+2026-01-12 19:08:38,335 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 19:08:38,398 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 19:08:44,341 - WARNING -  * Debugger is active!
+2026-01-12 19:08:44,345 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 19:08:44,392 - WARNING -  * Debugger is active!
+2026-01-12 19:08:44,398 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 19:10:33,004 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\test_symbols_direct.py', reloading
+2026-01-12 19:10:33,005 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\test_symbols_direct.py', reloading
+2026-01-12 19:10:34,883 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 19:10:34,909 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 19:10:47,536 - WARNING -  * Debugger is active!
+2026-01-12 19:10:47,545 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 19:10:47,613 - WARNING -  * Debugger is active!
+2026-01-12 19:10:47,620 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 19:35:30,363 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.207.87.207:9000
+2026-01-12 19:35:30,364 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-12 19:35:30,385 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 19:35:34,450 - WARNING -  * Debugger is active!
+2026-01-12 19:35:34,454 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 19:35:46,308 - INFO - 127.0.0.1 - - [12/Jan/2026 19:35:46] "GET / HTTP/1.1" 200 -
+2026-01-12 19:35:55,064 - INFO - 127.0.0.1 - - [12/Jan/2026 19:35:55] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-12 19:35:55,083 - INFO - 127.0.0.1 - - [12/Jan/2026 19:35:55] "GET /login HTTP/1.1" 200 -
+2026-01-12 19:35:58,552 - INFO - 127.0.0.1 - - [12/Jan/2026 19:35:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-12 19:35:58,565 - INFO - 127.0.0.1 - - [12/Jan/2026 19:35:58] "GET / HTTP/1.1" 200 -
+2026-01-12 19:36:12,727 - INFO - 127.0.0.1 - - [12/Jan/2026 19:36:12] "GET /profile HTTP/1.1" 200 -
+2026-01-12 19:36:13,184 - INFO - 127.0.0.1 - - [12/Jan/2026 19:36:13] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 19:36:36,816 - INFO - 127.0.0.1 - - [12/Jan/2026 19:36:36] "GET /get_user_signals?symbol=XAUUSDm HTTP/1.1" 200 -
+2026-01-12 19:36:42,825 - INFO - 127.0.0.1 - - [12/Jan/2026 19:36:42] "GET / HTTP/1.1" 200 -
+2026-01-12 19:37:07,118 - INFO - 127.0.0.1 - - [12/Jan/2026 19:37:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-12 19:53:58,840 - INFO - 127.0.0.1 - - [12/Jan/2026 19:53:58] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 19:55:44,690 - INFO - 127.0.0.1 - - [12/Jan/2026 19:55:44] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 19:59:52,678 - INFO - 127.0.0.1 - - [12/Jan/2026 19:59:52] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 19:59:53,503 - INFO - 127.0.0.1 - - [12/Jan/2026 19:59:53] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 19:59:54,068 - INFO - 127.0.0.1 - - [12/Jan/2026 19:59:54] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 19:59:54,447 - INFO - 127.0.0.1 - - [12/Jan/2026 19:59:54] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 19:59:54,955 - INFO - 127.0.0.1 - - [12/Jan/2026 19:59:54] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 19:59:55,342 - INFO - 127.0.0.1 - - [12/Jan/2026 19:59:55] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 20:02:32,822 - INFO - 127.0.0.1 - - [12/Jan/2026 20:02:32] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 20:03:16,572 - INFO - 127.0.0.1 - - [12/Jan/2026 20:03:16] "GET / HTTP/1.1" 200 -
+2026-01-12 20:06:50,912 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\__init__.py', reloading
+2026-01-12 20:06:50,977 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\app.py', reloading
+2026-01-12 20:06:51,086 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sansio\\app.py', reloading
+2026-01-12 20:06:51,103 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2026-01-12 20:06:51,123 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\templating.py', reloading
+2026-01-12 20:06:51,128 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jinja2\\__init__.py', reloading
+2026-01-12 20:06:51,132 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jinja2\\environment.py', reloading
+2026-01-12 20:06:51,226 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\globals.py', reloading
+2026-01-12 20:06:51,229 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\wrappers.py', reloading
+2026-01-12 20:06:51,238 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2026-01-12 20:06:51,239 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2026-01-12 20:06:51,252 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2026-01-12 20:06:51,308 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\json\\__init__.py', reloading
+2026-01-12 20:06:51,311 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2026-01-12 20:06:51,329 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2026-01-12 20:06:51,361 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\helpers.py', reloading
+2026-01-12 20:06:51,378 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sessions.py', reloading
+2026-01-12 20:06:52,506 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 20:07:02,939 - WARNING -  * Debugger is active!
+2026-01-12 20:07:02,943 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 20:07:26,990 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 20:07:27,885 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 20:07:32,785 - WARNING -  * Debugger is active!
+2026-01-12 20:07:32,796 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 20:08:33,004 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\test_frontend_symbols.py', reloading
+2026-01-12 20:08:35,491 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 20:08:45,477 - WARNING -  * Debugger is active!
+2026-01-12 20:08:45,486 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 20:09:00,390 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\encodings\\cp1252.py', reloading
+2026-01-12 20:09:01,876 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 20:09:05,930 - WARNING -  * Debugger is active!
+2026-01-12 20:09:05,938 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 20:09:56,914 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\_pytest\\config\\__init__.py', reloading
+2026-01-12 20:09:56,915 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\_pytest\\_code\\__init__.py', reloading
+2026-01-12 20:09:56,918 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\_pytest\\_code\\code.py', reloading
+2026-01-12 20:09:56,919 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\_pytest\\_io\\__init__.py', reloading
+2026-01-12 20:09:56,919 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\site-packages\\_pytest\\_io\\terminalwriter.py', reloading
+2026-01-12 20:09:58,215 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 20:10:14,339 - WARNING -  * Debugger is active!
+2026-01-12 20:10:14,347 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 20:11:42,838 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\test_frontend_symbols.py', reloading
+2026-01-12 20:11:44,097 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 20:11:51,027 - WARNING -  * Debugger is active!
+2026-01-12 20:11:51,031 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 20:32:48,638 - INFO - 127.0.0.1 - - [12/Jan/2026 20:32:48] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-12 20:32:48,723 - INFO - 127.0.0.1 - - [12/Jan/2026 20:32:48] "GET /login HTTP/1.1" 200 -
+2026-01-12 20:32:51,382 - INFO - 127.0.0.1 - - [12/Jan/2026 20:32:51] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-12 20:32:51,509 - INFO - 127.0.0.1 - - [12/Jan/2026 20:32:51] "GET / HTTP/1.1" 200 -
+2026-01-12 20:32:56,078 - INFO - 127.0.0.1 - - [12/Jan/2026 20:32:56] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-12 20:32:56,170 - INFO - 127.0.0.1 - - [12/Jan/2026 20:32:56] "GET /login HTTP/1.1" 200 -
+2026-01-12 20:33:09,118 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.207.87.207:9000
+2026-01-12 20:33:09,118 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-12 20:33:09,137 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 20:33:13,022 - WARNING -  * Debugger is active!
+2026-01-12 20:33:13,029 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 20:33:18,419 - INFO - 127.0.0.1 - - [12/Jan/2026 20:33:18] "GET /login HTTP/1.1" 200 -
+2026-01-12 20:33:22,944 - INFO - 127.0.0.1 - - [12/Jan/2026 20:33:22] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-12 20:33:22,981 - INFO - 127.0.0.1 - - [12/Jan/2026 20:33:22] "GET / HTTP/1.1" 200 -
+2026-01-12 20:33:28,424 - INFO - 127.0.0.1 - - [12/Jan/2026 20:33:28] "GET /profile HTTP/1.1" 200 -
+2026-01-12 20:33:29,019 - INFO - 127.0.0.1 - - [12/Jan/2026 20:33:29] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 20:33:39,150 - INFO - 127.0.0.1 - - [12/Jan/2026 20:33:39] "GET /get_user_signals HTTP/1.1" 200 -
+2026-01-12 20:34:01,113 - INFO - 127.0.0.1 - - [12/Jan/2026 20:34:01] "GET / HTTP/1.1" 200 -
+2026-01-12 20:34:05,809 - INFO - WhatsApp notification initialized successfully
+2026-01-12 20:34:30,120 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-12 20:34:30,167 - INFO - Signal generated for XAUUSD - Expires at 2026-01-12 20:39:30 UTC
+2026-01-12 20:34:30,169 - INFO - 127.0.0.1 - - [12/Jan/2026 20:34:30] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-12 20:36:19,515 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.207.87.207:9000
+2026-01-12 20:36:19,516 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-12 20:36:19,536 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 20:36:23,728 - WARNING -  * Debugger is active!
+2026-01-12 20:36:23,736 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 20:36:51,219 - INFO - 127.0.0.1 - - [12/Jan/2026 20:36:51] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-12 20:36:51,335 - INFO - 127.0.0.1 - - [12/Jan/2026 20:36:51] "GET /login HTTP/1.1" 200 -
+2026-01-12 20:36:56,816 - INFO - 127.0.0.1 - - [12/Jan/2026 20:36:56] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-12 20:36:56,862 - INFO - 127.0.0.1 - - [12/Jan/2026 20:36:56] "GET / HTTP/1.1" 200 -
+2026-01-12 20:37:11,582 - INFO - WhatsApp notification initialized successfully
+2026-01-12 20:37:29,150 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-12 20:37:43,570 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2026-01-12 20:37:46,446 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2026-01-12 20:37:49,181 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSD
+2026-01-12 20:37:51,976 - INFO - Signal alert sent successfully to test@example.com for symbol XAUUSD
+2026-01-12 20:37:51,976 - INFO - WhatsApp notification initialized successfully
+2026-01-12 20:37:52,235 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 20:37:52,235 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 20:37:52,235 - INFO - Headers:
+2026-01-12 20:37:52,236 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 20:37:52,236 - INFO - Accept : application/json
+2026-01-12 20:37:52,236 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 20:37:52,236 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 20:37:52,236 - INFO - Accept-Charset : utf-8
+2026-01-12 20:37:52,236 - INFO - -- END Twilio API Request --
+2026-01-12 20:38:05,189 - INFO - Response Status Code: 400
+2026-01-12 20:38:05,189 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 19:38:05 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQdb0f00983ce7816ca92e1501b1067b67', 'Twilio-Request-Duration': '0.040', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 4375274d19e6a104d814374704f49a08.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'vEohwUyZlMiTofZUq6GjVFp7hPnPv1HcGBlI470nY2Qsb1CrUeuctQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 20:38:05,189 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-12 20:38:06,190 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 20:38:06,190 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 20:38:06,190 - INFO - Headers:
+2026-01-12 20:38:06,190 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 20:38:06,190 - INFO - Accept : application/json
+2026-01-12 20:38:06,191 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 20:38:06,191 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 20:38:06,191 - INFO - Accept-Charset : utf-8
+2026-01-12 20:38:06,191 - INFO - -- END Twilio API Request --
+2026-01-12 20:38:06,807 - INFO - Response Status Code: 400
+2026-01-12 20:38:06,807 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 19:38:06 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ1a7a2b9f925a8d8190f697a6a771d60d', 'Twilio-Request-Duration': '0.026', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 4375274d19e6a104d814374704f49a08.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'tyx0LVSisfvMyaECinJsvDHPYyEFIbujlsHq1VrO81SrImbjaooW5Q==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 20:38:06,807 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-12 20:38:08,808 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 20:38:08,808 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 20:38:08,808 - INFO - Headers:
+2026-01-12 20:38:08,808 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 20:38:08,808 - INFO - Accept : application/json
+2026-01-12 20:38:08,808 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 20:38:08,808 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 20:38:08,808 - INFO - Accept-Charset : utf-8
+2026-01-12 20:38:08,808 - INFO - -- END Twilio API Request --
+2026-01-12 20:38:09,072 - INFO - Response Status Code: 400
+2026-01-12 20:38:09,072 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 19:38:09 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ7bd1caf0f36b1eaba391be7ffc10014d', 'Twilio-Request-Duration': '0.023', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 4375274d19e6a104d814374704f49a08.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'RUFsob3O0cwiCDAn4RuCpp8INIzmY1Fqb_48Bsqd0tRjIIVSSzX4WQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 20:38:09,072 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-12 20:38:09,072 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-12 20:38:21,402 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 20:38:23,496 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 20:38:26,644 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 20:38:26,644 - ERROR - Telegram send failed after 3 attempts
+2026-01-12 20:38:26,645 - ERROR - Failed to send signal notification to any channel
+2026-01-12 20:38:26,646 - ERROR - WhatsApp client initialized: True
+2026-01-12 20:38:26,646 - ERROR - Telegram bot token: True
+2026-01-12 20:38:26,646 - ERROR - Telegram chat ID: True
+2026-01-12 20:38:26,646 - INFO - Signal generated for XAUUSD - Expires at 2026-01-12 20:42:29 UTC
+2026-01-12 20:38:26,647 - INFO - 127.0.0.1 - - [12/Jan/2026 20:38:26] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-12 20:40:36,893 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 20:40:36,896 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-12 20:40:39,699 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 20:40:46,297 - WARNING -  * Debugger is active!
+2026-01-12 20:40:46,301 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 20:41:16,540 - INFO - 127.0.0.1 - - [12/Jan/2026 20:41:16] "GET /profile HTTP/1.1" 200 -
+2026-01-12 20:41:17,932 - INFO - 127.0.0.1 - - [12/Jan/2026 20:41:17] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 20:41:52,508 - INFO - 127.0.0.1 - - [12/Jan/2026 20:41:52] "GET /get_user_signals?symbol=US30 HTTP/1.1" 200 -
+2026-01-12 20:42:05,115 - INFO - 127.0.0.1 - - [12/Jan/2026 20:42:05] "GET / HTTP/1.1" 200 -
+2026-01-12 20:42:23,136 - INFO - WhatsApp notification initialized successfully
+2026-01-12 20:42:46,290 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-12 20:43:00,389 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2026-01-12 20:43:03,136 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2026-01-12 20:43:07,253 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSD
+2026-01-12 20:43:10,312 - INFO - Signal alert sent successfully to test@example.com for symbol XAUUSD
+2026-01-12 20:43:10,312 - INFO - WhatsApp notification initialized successfully
+2026-01-12 20:43:11,537 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 20:43:11,537 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 20:43:11,538 - INFO - Headers:
+2026-01-12 20:43:11,538 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 20:43:11,538 - INFO - Accept : application/json
+2026-01-12 20:43:11,538 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 20:43:11,538 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 20:43:11,538 - INFO - Accept-Charset : utf-8
+2026-01-12 20:43:11,538 - INFO - -- END Twilio API Request --
+2026-01-12 20:43:25,304 - INFO - Response Status Code: 400
+2026-01-12 20:43:25,304 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 19:43:25 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ86bfa91c2e57874a059032fd6cc05b3f', 'Twilio-Request-Duration': '0.044', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 a9f4bdae1135d507d62df475ab78dc5e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'Y_aTzJH3Qiao6HshDTPzLADPfGC-78Beswkr0AsFLZUUkHEcVf2BHg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 20:43:25,304 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-12 20:43:26,305 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 20:43:26,305 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 20:43:26,305 - INFO - Headers:
+2026-01-12 20:43:26,305 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 20:43:26,305 - INFO - Accept : application/json
+2026-01-12 20:43:26,305 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 20:43:26,306 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 20:43:26,306 - INFO - Accept-Charset : utf-8
+2026-01-12 20:43:26,306 - INFO - -- END Twilio API Request --
+2026-01-12 20:43:27,157 - INFO - Response Status Code: 400
+2026-01-12 20:43:27,158 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 19:43:26 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQf7dfe2d235042e10539e7a64a73f4818', 'Twilio-Request-Duration': '0.028', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 a9f4bdae1135d507d62df475ab78dc5e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '7zAJWLWFFFaeIm9bfW8LuTQzGt7r5SiEUMmS4BzS2lW0lOqOKkumpA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 20:43:27,158 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-12 20:43:29,159 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 20:43:29,159 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 20:43:29,159 - INFO - Headers:
+2026-01-12 20:43:29,159 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 20:43:29,159 - INFO - Accept : application/json
+2026-01-12 20:43:29,159 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 20:43:29,159 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 20:43:29,159 - INFO - Accept-Charset : utf-8
+2026-01-12 20:43:29,159 - INFO - -- END Twilio API Request --
+2026-01-12 20:43:29,517 - INFO - Response Status Code: 400
+2026-01-12 20:43:29,517 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 19:43:29 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQef64b23315eeed9c6ff5ea312c2e0047', 'Twilio-Request-Duration': '0.024', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 a9f4bdae1135d507d62df475ab78dc5e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'c7ABUjTsKbEjGXdEzGpjoPVn94wdmZShZ0JxVz5SdxqTU19fZIVP6A==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 20:43:29,518 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-12 20:43:29,518 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-12 20:43:41,897 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 20:43:52,907 - WARNING - Telegram send attempt 2 failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7425081234:AAH8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q/sendMessage (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000244EB1C9E50>, 'Connection to api.telegram.org timed out. (connect timeout=10)'))
+2026-01-12 20:43:56,012 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 20:43:56,012 - ERROR - Telegram send failed after 3 attempts
+2026-01-12 20:43:56,012 - ERROR - Failed to send signal notification to any channel
+2026-01-12 20:43:56,012 - ERROR - WhatsApp client initialized: True
+2026-01-12 20:43:56,012 - ERROR - Telegram bot token: True
+2026-01-12 20:43:56,012 - ERROR - Telegram chat ID: True
+2026-01-12 20:43:56,013 - INFO - Signal generated for XAUUSD - Expires at 2026-01-12 20:47:46 UTC
+2026-01-12 20:43:56,014 - INFO - 127.0.0.1 - - [12/Jan/2026 20:43:56] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-12 20:57:35,068 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-12 20:57:38,304 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2026-01-12 20:57:41,030 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2026-01-12 20:57:44,896 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSD
+2026-01-12 20:57:47,538 - INFO - Signal alert sent successfully to test@example.com for symbol XAUUSD
+2026-01-12 20:57:47,539 - INFO - WhatsApp notification initialized successfully
+2026-01-12 20:57:47,540 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 20:57:47,540 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 20:57:47,540 - INFO - Headers:
+2026-01-12 20:57:47,540 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 20:57:47,540 - INFO - Accept : application/json
+2026-01-12 20:57:47,540 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 20:57:47,540 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 20:57:47,540 - INFO - Accept-Charset : utf-8
+2026-01-12 20:57:47,541 - INFO - -- END Twilio API Request --
+2026-01-12 20:57:49,182 - INFO - Response Status Code: 400
+2026-01-12 20:57:49,182 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 19:57:49 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ9dbdee856912f3118bddc4f5ba8dc5eb', 'Twilio-Request-Duration': '0.043', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 80ad73d9e8162f436b9f5199b04830b4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'DpiNLU0SKyt9Y8EA4bwfc506rV8alUImLInSvSQAjjB_oweUMvCkaQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 20:57:49,182 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-12 20:57:50,183 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 20:57:50,183 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 20:57:50,183 - INFO - Headers:
+2026-01-12 20:57:50,183 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 20:57:50,183 - INFO - Accept : application/json
+2026-01-12 20:57:50,183 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 20:57:50,183 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 20:57:50,183 - INFO - Accept-Charset : utf-8
+2026-01-12 20:57:50,183 - INFO - -- END Twilio API Request --
+2026-01-12 20:57:50,823 - INFO - Response Status Code: 400
+2026-01-12 20:57:50,824 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 19:57:50 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ56c05a1060849223ff2beef58ec28e40', 'Twilio-Request-Duration': '0.028', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 80ad73d9e8162f436b9f5199b04830b4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'JG_5TSRzs-zXLJpmdvOCkAmo7nMougFiU6nmJnhc92nkK9EumrZMWQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 20:57:50,824 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-12 20:57:52,824 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 20:57:52,825 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 20:57:52,825 - INFO - Headers:
+2026-01-12 20:57:52,825 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 20:57:52,825 - INFO - Accept : application/json
+2026-01-12 20:57:52,825 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 20:57:52,825 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 20:57:52,825 - INFO - Accept-Charset : utf-8
+2026-01-12 20:57:52,825 - INFO - -- END Twilio API Request --
+2026-01-12 20:57:53,450 - INFO - Response Status Code: 400
+2026-01-12 20:57:53,450 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 19:57:53 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ14f4b092f1dbd423a74f957552c25b29', 'Twilio-Request-Duration': '0.029', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 80ad73d9e8162f436b9f5199b04830b4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'ZoK9KUMRymyw9OQe0PTjOMQBuMkTT9KDMUZcA4gNfEyRNYlKVfwGlg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 20:57:53,450 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-12 20:57:53,450 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-12 20:58:05,643 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 20:58:07,759 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 20:58:10,897 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 20:58:10,897 - ERROR - Telegram send failed after 3 attempts
+2026-01-12 20:58:10,900 - ERROR - Failed to send signal notification to any channel
+2026-01-12 20:58:10,900 - ERROR - WhatsApp client initialized: True
+2026-01-12 20:58:10,900 - ERROR - Telegram bot token: True
+2026-01-12 20:58:10,900 - ERROR - Telegram chat ID: True
+2026-01-12 20:58:10,900 - INFO - Signal generated for XAUUSD - Expires at 2026-01-12 21:02:35 UTC
+2026-01-12 20:58:10,902 - INFO - 127.0.0.1 - - [12/Jan/2026 20:58:10] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-12 21:04:41,111 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.207.87.207:9000
+2026-01-12 21:04:41,111 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-12 21:04:41,130 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 21:04:44,825 - WARNING -  * Debugger is active!
+2026-01-12 21:04:44,831 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 21:04:59,899 - INFO - 127.0.0.1 - - [12/Jan/2026 21:04:59] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-12 21:04:59,979 - INFO - 127.0.0.1 - - [12/Jan/2026 21:04:59] "GET /login HTTP/1.1" 200 -
+2026-01-12 21:05:03,163 - INFO - 127.0.0.1 - - [12/Jan/2026 21:05:03] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-12 21:05:03,281 - INFO - 127.0.0.1 - - [12/Jan/2026 21:05:03] "GET / HTTP/1.1" 200 -
+2026-01-12 21:05:04,240 - INFO - 127.0.0.1 - - [12/Jan/2026 21:05:04] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 21:05:27,301 - INFO - WhatsApp notification initialized successfully
+2026-01-12 21:05:48,265 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-12 21:06:02,259 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSD
+2026-01-12 21:06:05,703 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSD
+2026-01-12 21:06:08,361 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSD
+2026-01-12 21:06:10,985 - INFO - Signal alert sent successfully to test@example.com for symbol XAUUSD
+2026-01-12 21:06:10,987 - INFO - WhatsApp notification initialized successfully
+2026-01-12 21:06:11,236 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 21:06:11,236 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 21:06:11,236 - INFO - Headers:
+2026-01-12 21:06:11,236 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 21:06:11,236 - INFO - Accept : application/json
+2026-01-12 21:06:11,236 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 21:06:11,236 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 21:06:11,236 - INFO - Accept-Charset : utf-8
+2026-01-12 21:06:11,236 - INFO - -- END Twilio API Request --
+2026-01-12 21:06:24,042 - INFO - Response Status Code: 400
+2026-01-12 21:06:24,043 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 20:06:24 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ522055e42dc053977214c2c96df42741', 'Twilio-Request-Duration': '0.038', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 4375274d19e6a104d814374704f49a08.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '6D8CO4SNNELkPuVv9dvgcrzCt4B4S_ji1T3DZV8vL_MsdFxrdBEEbg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 21:06:24,043 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-12 21:06:25,044 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 21:06:25,044 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 21:06:25,044 - INFO - Headers:
+2026-01-12 21:06:25,044 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 21:06:25,044 - INFO - Accept : application/json
+2026-01-12 21:06:25,044 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 21:06:25,044 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 21:06:25,044 - INFO - Accept-Charset : utf-8
+2026-01-12 21:06:25,044 - INFO - -- END Twilio API Request --
+2026-01-12 21:06:25,700 - INFO - Response Status Code: 400
+2026-01-12 21:06:25,700 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 20:06:25 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQfc67d579731a063a02f5fa6d02b09ff6', 'Twilio-Request-Duration': '0.026', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 4375274d19e6a104d814374704f49a08.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'HW5cEOViCvVf_ROqOa0zza5te0z9B1_TSaabMXG7DMlcM9hFFwTGIQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 21:06:25,700 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-12 21:06:27,701 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 21:06:27,701 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 21:06:27,701 - INFO - Headers:
+2026-01-12 21:06:27,701 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 21:06:27,701 - INFO - Accept : application/json
+2026-01-12 21:06:27,701 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 21:06:27,701 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 21:06:27,701 - INFO - Accept-Charset : utf-8
+2026-01-12 21:06:27,701 - INFO - -- END Twilio API Request --
+2026-01-12 21:06:28,308 - INFO - Response Status Code: 400
+2026-01-12 21:06:28,308 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 20:06:28 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ996c35d5b6c127c38926895b9a206659', 'Twilio-Request-Duration': '0.027', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 4375274d19e6a104d814374704f49a08.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '0NZ9IbxdHNPfPPbXxB0itzSS6UJyk-3Gg_LIeK1iWdrxABEQMVcVHg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 21:06:28,308 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-12 21:06:28,309 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-12 21:06:40,588 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 21:06:42,663 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 21:06:45,815 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 21:06:45,815 - ERROR - Telegram send failed after 3 attempts
+2026-01-12 21:06:45,817 - ERROR - Failed to send signal notification to any channel
+2026-01-12 21:06:45,817 - ERROR - WhatsApp client initialized: True
+2026-01-12 21:06:45,817 - ERROR - Telegram bot token: True
+2026-01-12 21:06:45,817 - ERROR - Telegram chat ID: True
+2026-01-12 21:06:45,817 - INFO - Signal generated for XAUUSD - Expires at 2026-01-12 21:10:48 UTC
+2026-01-12 21:06:45,818 - INFO - 127.0.0.1 - - [12/Jan/2026 21:06:45] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-12 21:08:49,153 - INFO - Attempting trade execution with IOC filling type
+2026-01-12 21:08:49,154 - ERROR - Trade execution failed: AutoTrading disabled by client
+2026-01-12 21:08:49,154 - INFO - Attempting trade execution with FOK filling type
+2026-01-12 21:08:49,155 - ERROR - Trade execution failed: AutoTrading disabled by client
+2026-01-12 21:08:49,155 - INFO - Attempting trade execution with RETURN filling type
+2026-01-12 21:08:49,155 - ERROR - Trade execution failed: AutoTrading disabled by client
+2026-01-12 21:08:49,155 - ERROR - Trade execution failed with all filling types (IOC, FOK, RETURN). Last error: None
+2026-01-12 21:08:49,155 - INFO - 127.0.0.1 - - [12/Jan/2026 21:08:49] "[35m[1mPOST /execute_trade HTTP/1.1[0m" 500 -
+2026-01-12 21:09:07,389 - INFO - Attempting trade execution with IOC filling type
+2026-01-12 21:09:07,390 - ERROR - Trade execution failed: No prices
+2026-01-12 21:09:07,390 - INFO - Attempting trade execution with FOK filling type
+2026-01-12 21:09:07,390 - ERROR - Trade execution failed: No prices
+2026-01-12 21:09:07,390 - INFO - Attempting trade execution with RETURN filling type
+2026-01-12 21:09:07,390 - ERROR - Trade execution failed: No prices
+2026-01-12 21:09:07,390 - ERROR - Trade execution failed with all filling types (IOC, FOK, RETURN). Last error: None
+2026-01-12 21:09:07,391 - INFO - 127.0.0.1 - - [12/Jan/2026 21:09:07] "[35m[1mPOST /execute_trade HTTP/1.1[0m" 500 -
+2026-01-12 21:09:12,343 - INFO - 127.0.0.1 - - [12/Jan/2026 21:09:12] "GET / HTTP/1.1" 200 -
+2026-01-12 21:09:13,575 - INFO - 127.0.0.1 - - [12/Jan/2026 21:09:13] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 21:09:20,336 - INFO - 127.0.0.1 - - [12/Jan/2026 21:09:20] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-12 21:10:21,290 - INFO - 127.0.0.1 - - [12/Jan/2026 21:10:21] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-12 21:10:21,292 - INFO - 127.0.0.1 - - [12/Jan/2026 21:10:21] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-12 21:11:42,342 - INFO - 127.0.0.1 - - [12/Jan/2026 21:11:42] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-12 21:11:42,429 - INFO - 127.0.0.1 - - [12/Jan/2026 21:11:42] "GET /login HTTP/1.1" 200 -
+2026-01-12 21:11:45,559 - INFO - 127.0.0.1 - - [12/Jan/2026 21:11:45] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-12 21:11:45,698 - INFO - 127.0.0.1 - - [12/Jan/2026 21:11:45] "GET / HTTP/1.1" 200 -
+2026-01-12 21:11:46,701 - INFO - 127.0.0.1 - - [12/Jan/2026 21:11:46] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 21:11:53,596 - INFO - 127.0.0.1 - - [12/Jan/2026 21:11:53] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-12 21:13:15,302 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\MetaTrader5\\__init__.py', reloading
+2026-01-12 21:13:15,952 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\dotenv\\__init__.py', reloading
+2026-01-12 21:13:15,961 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\dotenv\\main.py', reloading
+2026-01-12 21:13:18,377 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-12 21:13:29,204 - WARNING -  * Debugger is active!
+2026-01-12 21:13:29,210 - INFO -  * Debugger PIN: 137-776-963
+2026-01-12 21:16:12,273 - INFO - 127.0.0.1 - - [12/Jan/2026 21:16:12] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-12 21:16:12,365 - INFO - 127.0.0.1 - - [12/Jan/2026 21:16:12] "GET /login HTTP/1.1" 200 -
+2026-01-12 21:16:15,017 - INFO - 127.0.0.1 - - [12/Jan/2026 21:16:15] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-12 21:16:15,122 - INFO - 127.0.0.1 - - [12/Jan/2026 21:16:15] "GET / HTTP/1.1" 200 -
+2026-01-12 21:16:16,158 - INFO - 127.0.0.1 - - [12/Jan/2026 21:16:16] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-12 21:16:19,103 - INFO - WhatsApp notification initialized successfully
+2026-01-12 21:16:36,849 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-12 21:16:39,848 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol BTCUSD
+2026-01-12 21:16:42,388 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol BTCUSD
+2026-01-12 21:16:44,839 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol BTCUSD
+2026-01-12 21:16:47,407 - INFO - Signal alert sent successfully to test@example.com for symbol BTCUSD
+2026-01-12 21:16:47,408 - INFO - WhatsApp notification initialized successfully
+2026-01-12 21:16:47,600 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 21:16:47,600 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 21:16:47,601 - INFO - Headers:
+2026-01-12 21:16:47,601 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 21:16:47,601 - INFO - Accept : application/json
+2026-01-12 21:16:47,601 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 21:16:47,601 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 21:16:47,601 - INFO - Accept-Charset : utf-8
+2026-01-12 21:16:47,601 - INFO - -- END Twilio API Request --
+2026-01-12 21:17:00,018 - INFO - Response Status Code: 400
+2026-01-12 21:17:00,018 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 20:17:00 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQb2f43abecb54708c6ec544e7a771ac56', 'Twilio-Request-Duration': '0.040', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 7df0e12cb5a55cb5e64296e91e226fbe.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'NiBpGMn-Kz0xALFBFW37BLGHQfJD83uwk4uwDW66GY6Iq-fkcf-20g==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 21:17:00,019 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-12 21:17:01,022 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 21:17:01,022 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 21:17:01,022 - INFO - Headers:
+2026-01-12 21:17:01,023 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 21:17:01,023 - INFO - Accept : application/json
+2026-01-12 21:17:01,023 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 21:17:01,023 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 21:17:01,023 - INFO - Accept-Charset : utf-8
+2026-01-12 21:17:01,023 - INFO - -- END Twilio API Request --
+2026-01-12 21:17:01,649 - INFO - Response Status Code: 400
+2026-01-12 21:17:01,649 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 20:17:01 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ5b9b9162383ed888c5f684657abda404', 'Twilio-Request-Duration': '0.027', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 7df0e12cb5a55cb5e64296e91e226fbe.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'XNwIoZB718zLasOIXDgL8B6GL7pfqEt1kNauAj6_8jjT7MB4pPI0Sg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 21:17:01,650 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-12 21:17:03,650 - INFO - -- BEGIN Twilio API Request --
+2026-01-12 21:17:03,650 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-12 21:17:03,650 - INFO - Headers:
+2026-01-12 21:17:03,650 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-12 21:17:03,650 - INFO - Accept : application/json
+2026-01-12 21:17:03,650 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-12 21:17:03,651 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-12 21:17:03,651 - INFO - Accept-Charset : utf-8
+2026-01-12 21:17:03,651 - INFO - -- END Twilio API Request --
+2026-01-12 21:17:03,996 - INFO - Response Status Code: 400
+2026-01-12 21:17:03,996 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Mon, 12 Jan 2026 20:17:04 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQc351b8dfe780ea6caf8a30085ed4eff1', 'Twilio-Request-Duration': '0.024', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 7df0e12cb5a55cb5e64296e91e226fbe.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'rTAPvSKpgPYKx9p3puoUhA_oIy8NkLJl5DQ_aqTkMTP0pgLZ6IqXgA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-12 21:17:03,996 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-12 21:17:03,996 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-12 21:17:16,204 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 21:17:18,252 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 21:17:21,392 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-12 21:17:21,392 - ERROR - Telegram send failed after 3 attempts
+2026-01-12 21:17:21,395 - ERROR - Failed to send signal notification to any channel
+2026-01-12 21:17:21,396 - ERROR - WhatsApp client initialized: True
+2026-01-12 21:17:21,396 - ERROR - Telegram bot token: True
+2026-01-12 21:17:21,396 - ERROR - Telegram chat ID: True
+2026-01-12 21:17:21,396 - INFO - Signal generated for BTCUSD - Expires at 2026-01-12 21:21:36 UTC
+2026-01-12 21:17:21,398 - INFO - 127.0.0.1 - - [12/Jan/2026 21:17:21] "POST /run_ai_analysis HTTP/1.1" 200 -

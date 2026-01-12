@@ -201,7 +201,7 @@ def index():
     """Main page - redirect to login if not authenticated"""
     if current_user.is_authenticated:
         # Retrieve saved settings from session
-        selected_symbol = session.get('selected_symbol', 'XAUUSD')
+        selected_symbol = session.get('selected_symbol','')
         selected_timeframe = session.get('selected_timeframe', 16385)  # H1 default
         selected_ai_provider = session.get('selected_ai_provider', 'anthropic')
         selected_risk_percent = session.get('selected_risk_percent', 1.0)
@@ -539,9 +539,10 @@ def get_symbols():
             return jsonify({'error': 'Failed to connect to MT5'}), 500
 
         # Get all available symbols
-        #symbols = mt5.symbols_get()
         all_symbols = mt5.symbols_get()
         symbols = [symbol.name for symbol in all_symbols if symbol.visible]
+
+        print(f"Total symbols retrieved: {len(symbols)}")
 
         if symbols is None:
             mt5.shutdown()
@@ -549,22 +550,24 @@ def get_symbols():
 
         # Filter for forex and major symbols
         filtered_symbols = []
-        for symbol in symbols:
-            symbol_name = symbol.name
+        for symbol_name in symbols:
             # Include major forex pairs and common symbols
-            if any(pair in symbol_name.upper() for pair in ['USD', 'EUR', 'GBP', 'JPY', 'CHF', 'CAD', 'AUD', 'NZD']) or \
+            if any(pair in symbol_name.upper() for pair in ['USD', 'EUR', 'GBP', 'JPY', 'CHF', 'CAD', 'AUD', 'NZD','US']) or \
                'GOLD' in symbol_name.upper() or 'XAU' in symbol_name.upper() or \
                'VOLATILITY' in symbol_name.upper() or 'CRYPTO' in symbol_name.upper():
-                filtered_symbols.append({
-                    'name': symbol_name,
-                    'description': getattr(symbol, 'description', symbol_name),
-                    'path': getattr(symbol, 'path', ''),
-                    'currency_base': getattr(symbol, 'currency_base', ''),
-                    'currency_profit': getattr(symbol, 'currency_profit', ''),
-                    'point': symbol.point,
-                    'volume_min': symbol.volume_min,
-                    'volume_max': symbol.volume_max
-                })
+                # Get full symbol info for additional details
+                symbol_info = mt5.symbol_info(symbol_name)
+                if symbol_info:
+                    filtered_symbols.append({
+                        'name': symbol_name,
+                        'description': getattr(symbol_info, 'description', symbol_name),
+                        'path': getattr(symbol_info, 'path', ''),
+                        'currency_base': getattr(symbol_info, 'currency_base', ''),
+                        'currency_profit': getattr(symbol_info, 'currency_profit', ''),
+                        'point': symbol_info.point,
+                        'volume_min': symbol_info.volume_min,
+                        'volume_max': symbol_info.volume_max
+                    })
 
         mt5.shutdown()
 
