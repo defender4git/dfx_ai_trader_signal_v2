@@ -7610,3 +7610,856 @@ RETURN: None
 2026-01-14 15:28:09,768 - INFO -  * Restarting with watchdog (windowsapi)
 2026-01-14 15:28:18,282 - WARNING -  * Debugger is active!
 2026-01-14 15:28:18,288 - INFO -  * Debugger PIN: 137-776-963
+2026-01-14 20:25:07,684 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.207.87.207:9000
+2026-01-14 20:25:07,685 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-14 20:25:07,710 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-14 20:25:17,364 - WARNING -  * Debugger is active!
+2026-01-14 20:25:17,371 - INFO -  * Debugger PIN: 137-776-963
+2026-01-14 20:26:31,695 - INFO - WhatsApp notification initialized successfully
+2026-01-14 20:26:31,712 - INFO - 127.0.0.1 - - [14/Jan/2026 20:26:31] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-14 20:26:53,996 - INFO - 127.0.0.1 - - [14/Jan/2026 20:26:53] "GET /profile HTTP/1.1" 200 -
+2026-01-14 20:26:54,892 - INFO - 127.0.0.1 - - [14/Jan/2026 20:26:54] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 20:27:08,073 - INFO - 127.0.0.1 - - [14/Jan/2026 20:27:08] "GET / HTTP/1.1" 200 -
+2026-01-14 20:27:08,806 - INFO - 127.0.0.1 - - [14/Jan/2026 20:27:08] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 20:27:21,903 - INFO - WhatsApp notification initialized successfully
+2026-01-14 20:27:42,940 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 20:27:51,988 - ERROR - Error sending email alerts: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) database is locked
+[SQL: INSERT INTO activity_log (user_id, activity_type, description, status, timestamp, details) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (1, 'email_notification', 'Signal alert sent for XAUUSDm (LONG)', 'success', '2026-01-14 19:27:46.415021', 'Signal: LONG, Confidence: HIGH')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8) (Background on this error at: https://sqlalche.me/e/20/7s2a)
+2026-01-14 20:27:51,989 - ERROR - Error sending VIP email alerts: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) database is locked
+[SQL: INSERT INTO activity_log (user_id, activity_type, description, status, timestamp, details) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (1, 'email_notification', 'Signal alert sent for XAUUSDm (LONG)', 'success', '2026-01-14 19:27:46.415021', 'Signal: LONG, Confidence: HIGH')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8) (Background on this error at: https://sqlalche.me/e/20/7s2a)
+2026-01-14 20:27:51,990 - INFO - WhatsApp notification initialized successfully
+2026-01-14 20:27:52,218 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 20:27:52,218 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 20:27:52,218 - INFO - Headers:
+2026-01-14 20:27:52,219 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 20:27:52,219 - INFO - Accept : application/json
+2026-01-14 20:27:52,219 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 20:27:52,219 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 20:27:52,219 - INFO - Accept-Charset : utf-8
+2026-01-14 20:27:52,219 - INFO - -- END Twilio API Request --
+2026-01-14 20:28:04,778 - INFO - Response Status Code: 400
+2026-01-14 20:28:04,779 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 19:28:04 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQae972e01f34141a42835693bb4858476', 'Twilio-Request-Duration': '0.045', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 3502b4da22916485af0d3edbb185fb9c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'n5S1dMcsJGqufx0nvAl0CseL29AAFJmOZ4ApdHbDA410nbwRwvYWJw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 20:28:04,779 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-14 20:28:05,779 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 20:28:05,779 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 20:28:05,780 - INFO - Headers:
+2026-01-14 20:28:05,780 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 20:28:05,780 - INFO - Accept : application/json
+2026-01-14 20:28:05,780 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 20:28:05,780 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 20:28:05,780 - INFO - Accept-Charset : utf-8
+2026-01-14 20:28:05,780 - INFO - -- END Twilio API Request --
+2026-01-14 20:28:06,435 - INFO - Response Status Code: 400
+2026-01-14 20:28:06,435 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 19:28:06 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ325511870448cfb99d88bdb648a03246', 'Twilio-Request-Duration': '0.039', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 3502b4da22916485af0d3edbb185fb9c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'gOPbTkPQoeE2DxPaPitBiTzg-QZYYo2rL9NhhRmNbilCakTEhHEAvw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 20:28:06,435 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-14 20:28:08,436 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 20:28:08,436 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 20:28:08,436 - INFO - Headers:
+2026-01-14 20:28:08,436 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 20:28:08,436 - INFO - Accept : application/json
+2026-01-14 20:28:08,436 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 20:28:08,436 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 20:28:08,436 - INFO - Accept-Charset : utf-8
+2026-01-14 20:28:08,436 - INFO - -- END Twilio API Request --
+2026-01-14 20:28:08,700 - INFO - Response Status Code: 400
+2026-01-14 20:28:08,700 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 19:28:08 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQe70c18487e5fcae9bc5625c53c93e2f7', 'Twilio-Request-Duration': '0.028', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 3502b4da22916485af0d3edbb185fb9c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '2Xc9i50Kg-z0LtciMVzmwipYLnjXV-XPMb_6eWDBB98TuN8sdsL0GA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 20:28:08,700 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-14 20:28:08,700 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-14 20:28:10,105 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 20:28:16,177 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 20:28:19,210 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 20:28:19,210 - ERROR - Telegram send failed after 3 attempts
+2026-01-14 20:28:19,211 - ERROR - Failed to send signal notification to any channel
+2026-01-14 20:28:19,211 - ERROR - WhatsApp client initialized: True
+2026-01-14 20:28:19,212 - ERROR - Telegram bot token: True
+2026-01-14 20:28:19,212 - ERROR - Telegram chat ID: True
+2026-01-14 20:28:19,212 - INFO - Signal generated for XAUUSDm - Expires at 2026-01-14 20:32:42 UTC
+2026-01-14 20:28:19,213 - INFO - 127.0.0.1 - - [14/Jan/2026 20:28:19] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 20:28:35,106 - INFO - Attempting trade execution with IOC filling type
+2026-01-14 20:28:35,106 - INFO - Starting trade execution for XAUUSDm with IOC filling type
+2026-01-14 20:28:35,110 - ERROR - Trade execution failed: AutoTrading disabled by client (retcode: 10027)
+2026-01-14 20:28:35,110 - WARNING - Trade execution failed with IOC filling type: Trade execution failed: AutoTrading disabled by client (retcode: 10027)
+2026-01-14 20:28:35,110 - INFO - Attempting trade execution with FOK filling type
+2026-01-14 20:28:35,110 - INFO - Starting trade execution for XAUUSDm with FOK filling type
+2026-01-14 20:28:35,111 - ERROR - Trade execution failed: AutoTrading disabled by client (retcode: 10027)
+2026-01-14 20:28:35,111 - WARNING - Trade execution failed with FOK filling type: Trade execution failed: AutoTrading disabled by client (retcode: 10027)
+2026-01-14 20:28:35,111 - INFO - Attempting trade execution with RETURN filling type
+2026-01-14 20:28:35,111 - INFO - Starting trade execution for XAUUSDm with RETURN filling type
+2026-01-14 20:28:35,111 - ERROR - Trade execution failed: AutoTrading disabled by client (retcode: 10027)
+2026-01-14 20:28:35,111 - WARNING - Trade execution failed with RETURN filling type: Trade execution failed: AutoTrading disabled by client (retcode: 10027)
+2026-01-14 20:28:35,111 - ERROR - Trade execution failed with all filling types. Specific errors:
+IOC: Trade execution failed: AutoTrading disabled by client (retcode: 10027)
+FOK: Trade execution failed: AutoTrading disabled by client (retcode: 10027)
+RETURN: Trade execution failed: AutoTrading disabled by client (retcode: 10027)
+2026-01-14 20:28:35,112 - INFO - 127.0.0.1 - - [14/Jan/2026 20:28:35] "[35m[1mPOST /execute_trade HTTP/1.1[0m" 500 -
+2026-01-14 20:32:40,815 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_rule_based.py', reloading
+2026-01-14 20:32:42,766 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-14 20:32:50,689 - WARNING -  * Debugger is active!
+2026-01-14 20:32:50,698 - INFO -  * Debugger PIN: 137-776-963
+2026-01-14 20:34:49,044 - INFO - 127.0.0.1 - - [14/Jan/2026 20:34:49] "GET / HTTP/1.1" 200 -
+2026-01-14 20:34:50,010 - INFO - 127.0.0.1 - - [14/Jan/2026 20:34:50] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 20:34:59,959 - INFO - 127.0.0.1 - - [14/Jan/2026 20:34:59] "GET /profile HTTP/1.1" 200 -
+2026-01-14 20:35:00,433 - INFO - 127.0.0.1 - - [14/Jan/2026 20:35:00] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 20:35:13,428 - INFO - 127.0.0.1 - - [14/Jan/2026 20:35:13] "GET / HTTP/1.1" 200 -
+2026-01-14 20:35:13,893 - INFO - 127.0.0.1 - - [14/Jan/2026 20:35:13] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 20:35:30,404 - INFO - 127.0.0.1 - - [14/Jan/2026 20:35:30] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-14 20:35:30,724 - INFO - 127.0.0.1 - - [14/Jan/2026 20:35:30] "GET /login HTTP/1.1" 200 -
+2026-01-14 20:35:35,096 - INFO - 127.0.0.1 - - [14/Jan/2026 20:35:35] "[32mGET /mlm HTTP/1.1[0m" 302 -
+2026-01-14 20:35:35,243 - INFO - 127.0.0.1 - - [14/Jan/2026 20:35:35] "GET /login?next=/mlm HTTP/1.1" 200 -
+2026-01-14 20:35:45,216 - INFO - 127.0.0.1 - - [14/Jan/2026 20:35:45] "[32mPOST /login?next=/mlm HTTP/1.1[0m" 302 -
+2026-01-14 20:35:45,345 - INFO - 127.0.0.1 - - [14/Jan/2026 20:35:45] "GET / HTTP/1.1" 200 -
+2026-01-14 20:35:46,502 - INFO - 127.0.0.1 - - [14/Jan/2026 20:35:46] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 20:37:34,552 - INFO - 127.0.0.1 - - [14/Jan/2026 20:37:34] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-14 20:37:34,611 - INFO - 127.0.0.1 - - [14/Jan/2026 20:37:34] "GET /login HTTP/1.1" 200 -
+2026-01-14 20:37:44,202 - INFO - 127.0.0.1 - - [14/Jan/2026 20:37:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-14 20:37:44,341 - INFO - 127.0.0.1 - - [14/Jan/2026 20:37:44] "GET / HTTP/1.1" 200 -
+2026-01-14 20:37:45,341 - INFO - 127.0.0.1 - - [14/Jan/2026 20:37:45] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 20:37:58,896 - INFO - 127.0.0.1 - - [14/Jan/2026 20:37:58] "GET /profile HTTP/1.1" 200 -
+2026-01-14 20:37:59,449 - INFO - 127.0.0.1 - - [14/Jan/2026 20:37:59] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 20:38:02,555 - INFO - 127.0.0.1 - - [14/Jan/2026 20:38:02] "GET / HTTP/1.1" 200 -
+2026-01-14 20:38:03,133 - INFO - 127.0.0.1 - - [14/Jan/2026 20:38:03] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 20:39:12,137 - INFO - 127.0.0.1 - - [14/Jan/2026 20:39:12] "GET / HTTP/1.1" 200 -
+2026-01-14 20:39:15,757 - INFO - 127.0.0.1 - - [14/Jan/2026 20:39:15] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 20:39:20,402 - INFO - 127.0.0.1 - - [14/Jan/2026 20:39:20] "GET /mlm HTTP/1.1" 200 -
+2026-01-14 20:39:38,731 - INFO - 127.0.0.1 - - [14/Jan/2026 20:39:38] "[32mPOST /mlm HTTP/1.1[0m" 302 -
+2026-01-14 20:39:39,015 - INFO - 127.0.0.1 - - [14/Jan/2026 20:39:39] "GET /mlm HTTP/1.1" 200 -
+2026-01-14 20:39:56,747 - INFO - 127.0.0.1 - - [14/Jan/2026 20:39:56] "[32mPOST /mlm HTTP/1.1[0m" 302 -
+2026-01-14 20:39:56,760 - INFO - 127.0.0.1 - - [14/Jan/2026 20:39:56] "GET /mlm HTTP/1.1" 200 -
+2026-01-14 20:40:08,786 - INFO - 127.0.0.1 - - [14/Jan/2026 20:40:08] "[32mPOST /mlm HTTP/1.1[0m" 302 -
+2026-01-14 20:40:09,066 - INFO - 127.0.0.1 - - [14/Jan/2026 20:40:09] "GET /mlm HTTP/1.1" 200 -
+2026-01-14 20:40:25,570 - INFO - 127.0.0.1 - - [14/Jan/2026 20:40:25] "[32mPOST /mlm HTTP/1.1[0m" 302 -
+2026-01-14 20:40:25,585 - INFO - 127.0.0.1 - - [14/Jan/2026 20:40:25] "GET /mlm HTTP/1.1" 200 -
+2026-01-14 20:41:07,603 - INFO - 127.0.0.1 - - [14/Jan/2026 20:41:07] "[32mPOST /mlm HTTP/1.1[0m" 302 -
+2026-01-14 20:41:07,889 - INFO - 127.0.0.1 - - [14/Jan/2026 20:41:07] "GET /mlm HTTP/1.1" 200 -
+2026-01-14 20:41:20,434 - INFO - 127.0.0.1 - - [14/Jan/2026 20:41:20] "GET /profile HTTP/1.1" 200 -
+2026-01-14 20:41:20,860 - INFO - 127.0.0.1 - - [14/Jan/2026 20:41:20] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 20:41:31,529 - INFO - 127.0.0.1 - - [14/Jan/2026 20:41:31] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-14 20:41:31,829 - INFO - 127.0.0.1 - - [14/Jan/2026 20:41:31] "GET /login HTTP/1.1" 200 -
+2026-01-14 20:41:37,935 - INFO - 127.0.0.1 - - [14/Jan/2026 20:41:37] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-14 20:41:37,951 - INFO - 127.0.0.1 - - [14/Jan/2026 20:41:37] "GET / HTTP/1.1" 200 -
+2026-01-14 20:41:38,576 - INFO - 127.0.0.1 - - [14/Jan/2026 20:41:38] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 20:41:44,512 - INFO - 127.0.0.1 - - [14/Jan/2026 20:41:44] "GET /profile HTTP/1.1" 200 -
+2026-01-14 20:41:45,051 - INFO - 127.0.0.1 - - [14/Jan/2026 20:41:45] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 20:41:51,299 - INFO - 127.0.0.1 - - [14/Jan/2026 20:41:51] "GET / HTTP/1.1" 200 -
+2026-01-14 20:41:52,183 - INFO - 127.0.0.1 - - [14/Jan/2026 20:41:52] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 20:59:10,889 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-14 20:59:13,316 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-14 21:06:33,081 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.207.87.207:9000
+2026-01-14 21:06:33,081 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-14 21:06:33,096 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-14 21:06:36,884 - WARNING -  * Debugger is active!
+2026-01-14 21:06:36,887 - INFO -  * Debugger PIN: 137-776-963
+2026-01-14 21:06:44,256 - INFO - 127.0.0.1 - - [14/Jan/2026 21:06:44] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-14 21:06:44,357 - INFO - 127.0.0.1 - - [14/Jan/2026 21:06:44] "GET /login HTTP/1.1" 200 -
+2026-01-14 21:06:50,592 - INFO - 127.0.0.1 - - [14/Jan/2026 21:06:50] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-14 21:06:50,727 - INFO - 127.0.0.1 - - [14/Jan/2026 21:06:50] "GET / HTTP/1.1" 200 -
+2026-01-14 21:06:51,849 - INFO - 127.0.0.1 - - [14/Jan/2026 21:06:51] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 21:07:00,369 - INFO - 127.0.0.1 - - [14/Jan/2026 21:07:00] "GET /profile HTTP/1.1" 200 -
+2026-01-14 21:07:00,900 - INFO - 127.0.0.1 - - [14/Jan/2026 21:07:00] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 21:07:23,219 - INFO - 127.0.0.1 - - [14/Jan/2026 21:07:23] "GET / HTTP/1.1" 200 -
+2026-01-14 21:07:23,774 - INFO - 127.0.0.1 - - [14/Jan/2026 21:07:23] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 21:07:27,352 - INFO - 127.0.0.1 - - [14/Jan/2026 21:07:27] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-14 21:07:27,647 - INFO - 127.0.0.1 - - [14/Jan/2026 21:07:27] "GET /login HTTP/1.1" 200 -
+2026-01-14 21:07:33,176 - INFO - 127.0.0.1 - - [14/Jan/2026 21:07:33] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-14 21:07:33,188 - INFO - 127.0.0.1 - - [14/Jan/2026 21:07:33] "GET / HTTP/1.1" 200 -
+2026-01-14 21:07:33,860 - INFO - 127.0.0.1 - - [14/Jan/2026 21:07:33] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 21:07:37,003 - INFO - 127.0.0.1 - - [14/Jan/2026 21:07:37] "GET /mlm HTTP/1.1" 200 -
+2026-01-14 21:07:55,965 - INFO - 127.0.0.1 - - [14/Jan/2026 21:07:55] "[32mPOST /mlm HTTP/1.1[0m" 302 -
+2026-01-14 21:07:55,980 - INFO - 127.0.0.1 - - [14/Jan/2026 21:07:55] "GET /mlm HTTP/1.1" 200 -
+2026-01-14 21:08:30,053 - INFO - 127.0.0.1 - - [14/Jan/2026 21:08:30] "[32mPOST /mlm HTTP/1.1[0m" 302 -
+2026-01-14 21:08:30,075 - INFO - 127.0.0.1 - - [14/Jan/2026 21:08:30] "GET /mlm HTTP/1.1" 200 -
+2026-01-14 21:08:41,415 - INFO - 127.0.0.1 - - [14/Jan/2026 21:08:41] "[32mPOST /mlm HTTP/1.1[0m" 302 -
+2026-01-14 21:08:41,704 - INFO - 127.0.0.1 - - [14/Jan/2026 21:08:41] "GET /mlm HTTP/1.1" 200 -
+2026-01-14 21:09:15,954 - INFO - 127.0.0.1 - - [14/Jan/2026 21:09:15] "GET / HTTP/1.1" 200 -
+2026-01-14 21:09:16,797 - INFO - 127.0.0.1 - - [14/Jan/2026 21:09:16] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 21:09:29,112 - INFO - WhatsApp notification initialized successfully
+2026-01-14 21:09:47,659 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 21:10:01,944 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSDm
+2026-01-14 21:10:04,667 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSDm
+2026-01-14 21:10:04,671 - INFO - Daily signal limit (2) reached for user defender - skipping alert
+2026-01-14 21:10:04,681 - INFO - WhatsApp notification initialized successfully
+2026-01-14 21:10:04,836 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:10:04,837 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:10:04,837 - INFO - Headers:
+2026-01-14 21:10:04,837 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:10:04,837 - INFO - Accept : application/json
+2026-01-14 21:10:04,837 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:10:04,837 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:10:04,837 - INFO - Accept-Charset : utf-8
+2026-01-14 21:10:04,837 - INFO - -- END Twilio API Request --
+2026-01-14 21:10:18,923 - INFO - Response Status Code: 400
+2026-01-14 21:10:18,923 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:10:18 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQda4f2b2221d2f09b6f2d712a91d06865', 'Twilio-Request-Duration': '0.047', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 d2a65e6cd7ddc4f5373432734cb3111c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'RycQxDMP03nKE4mBI_lSDuuYeJEGpNFQ_or0dh8zgJJzHd-ZyFrNkg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:10:18,923 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-14 21:10:19,923 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:10:19,923 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:10:19,923 - INFO - Headers:
+2026-01-14 21:10:19,924 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:10:19,924 - INFO - Accept : application/json
+2026-01-14 21:10:19,924 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:10:19,924 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:10:19,924 - INFO - Accept-Charset : utf-8
+2026-01-14 21:10:19,924 - INFO - -- END Twilio API Request --
+2026-01-14 21:10:20,940 - INFO - Response Status Code: 400
+2026-01-14 21:10:20,941 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:10:21 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ1ab1839eb2f77d17534a98badbb14b56', 'Twilio-Request-Duration': '0.026', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 d2a65e6cd7ddc4f5373432734cb3111c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '1DIK4yQLT5ujXts4vAbKbZbMMPY8OCm5Jtmm2KvvBYzUAsCVFFcmvg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:10:20,941 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-14 21:10:22,942 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:10:22,942 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:10:22,942 - INFO - Headers:
+2026-01-14 21:10:22,942 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:10:22,942 - INFO - Accept : application/json
+2026-01-14 21:10:22,942 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:10:22,942 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:10:22,942 - INFO - Accept-Charset : utf-8
+2026-01-14 21:10:22,942 - INFO - -- END Twilio API Request --
+2026-01-14 21:10:23,573 - INFO - Response Status Code: 400
+2026-01-14 21:10:23,573 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:10:23 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQe0c754c53100cdc2edfa643626b671c7', 'Twilio-Request-Duration': '0.026', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 d2a65e6cd7ddc4f5373432734cb3111c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '39SGqJrVN3cfg1XFkrFKfXkjmT3lli3DaXHjqMhSteU3p_HL_q-9lQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:10:23,573 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-14 21:10:23,573 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-14 21:10:36,088 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:10:38,149 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:10:41,207 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:10:41,207 - ERROR - Telegram send failed after 3 attempts
+2026-01-14 21:10:41,208 - ERROR - Failed to send signal notification to any channel
+2026-01-14 21:10:41,209 - ERROR - WhatsApp client initialized: True
+2026-01-14 21:10:41,209 - ERROR - Telegram bot token: True
+2026-01-14 21:10:41,209 - ERROR - Telegram chat ID: True
+2026-01-14 21:10:41,209 - INFO - Signal generated for XAUUSDm - Expires at 2026-01-14 21:14:47 UTC
+2026-01-14 21:10:41,210 - INFO - 127.0.0.1 - - [14/Jan/2026 21:10:41] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 21:14:47,438 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 21:14:47,451 - INFO - Daily signal limit (2) reached for user defender - skipping alert
+2026-01-14 21:14:47,469 - INFO - Daily signal limit (5) reached for user Admin - skipping alert
+2026-01-14 21:14:47,482 - INFO - Daily signal limit (2) reached for user defender - skipping alert
+2026-01-14 21:14:47,492 - INFO - WhatsApp notification initialized successfully
+2026-01-14 21:14:47,492 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:14:47,492 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:14:47,492 - INFO - Headers:
+2026-01-14 21:14:47,492 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:14:47,492 - INFO - Accept : application/json
+2026-01-14 21:14:47,493 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:14:47,493 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:14:47,493 - INFO - Accept-Charset : utf-8
+2026-01-14 21:14:47,493 - INFO - -- END Twilio API Request --
+2026-01-14 21:14:59,836 - INFO - Response Status Code: 400
+2026-01-14 21:14:59,836 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:14:59 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQd33ad2c7e6e49d8f904185ab95b9817d', 'Twilio-Request-Duration': '0.024', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 80ad73d9e8162f436b9f5199b04830b4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'Dd0z6wpEK2g-eABm6COw_zGc5ci9Mb3cMR0m5tDtNwFPV13RHkKiPA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:14:59,837 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-14 21:15:00,837 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:15:00,837 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:15:00,837 - INFO - Headers:
+2026-01-14 21:15:00,837 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:15:00,837 - INFO - Accept : application/json
+2026-01-14 21:15:00,838 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:15:00,838 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:15:00,838 - INFO - Accept-Charset : utf-8
+2026-01-14 21:15:00,838 - INFO - -- END Twilio API Request --
+2026-01-14 21:15:01,504 - INFO - Response Status Code: 400
+2026-01-14 21:15:01,504 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:15:01 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ0329fa811d1f4f56edd88d8f5e5bfd70', 'Twilio-Request-Duration': '0.030', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 80ad73d9e8162f436b9f5199b04830b4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'FtqHSAmOauhkL9yGsJ_IwyYwcdKdOkowO2_Z736_c3AS1Bct1irjZQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:15:01,505 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-14 21:15:03,505 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:15:03,505 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:15:03,505 - INFO - Headers:
+2026-01-14 21:15:03,506 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:15:03,506 - INFO - Accept : application/json
+2026-01-14 21:15:03,506 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:15:03,506 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:15:03,506 - INFO - Accept-Charset : utf-8
+2026-01-14 21:15:03,507 - INFO - -- END Twilio API Request --
+2026-01-14 21:15:03,781 - INFO - Response Status Code: 400
+2026-01-14 21:15:03,781 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:15:03 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ21a7d6d38ab0700a15580814838b5774', 'Twilio-Request-Duration': '0.026', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 80ad73d9e8162f436b9f5199b04830b4.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'qXbIGNMAcCfujLcpDWLjzKuRUE8XnuIGLNpgtgqtxr3M_05Je-dObw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:15:03,781 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-14 21:15:03,781 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-14 21:15:05,296 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:15:07,379 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:15:10,543 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:15:10,543 - ERROR - Telegram send failed after 3 attempts
+2026-01-14 21:15:10,544 - ERROR - Failed to send signal notification to any channel
+2026-01-14 21:15:10,545 - ERROR - WhatsApp client initialized: True
+2026-01-14 21:15:10,545 - ERROR - Telegram bot token: True
+2026-01-14 21:15:10,545 - ERROR - Telegram chat ID: True
+2026-01-14 21:15:10,545 - INFO - Signal generated for XAUUSDm - Expires at 2026-01-14 21:19:47 UTC
+2026-01-14 21:15:10,546 - INFO - 127.0.0.1 - - [14/Jan/2026 21:15:10] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 21:19:35,192 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 21:19:35,196 - INFO - Daily signal limit (2) reached for user defender - skipping alert
+2026-01-14 21:19:35,215 - INFO - Daily signal limit (5) reached for user Admin - skipping alert
+2026-01-14 21:19:35,228 - INFO - Daily signal limit (2) reached for user defender - skipping alert
+2026-01-14 21:19:35,239 - INFO - WhatsApp notification initialized successfully
+2026-01-14 21:19:35,239 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:19:35,239 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:19:35,240 - INFO - Headers:
+2026-01-14 21:19:35,240 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:19:35,240 - INFO - Accept : application/json
+2026-01-14 21:19:35,240 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:19:35,240 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:19:35,240 - INFO - Accept-Charset : utf-8
+2026-01-14 21:19:35,240 - INFO - -- END Twilio API Request --
+2026-01-14 21:19:48,216 - INFO - Response Status Code: 400
+2026-01-14 21:19:48,216 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:19:48 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ8e64fd53a87be01f4277640cc2dcc8b5', 'Twilio-Request-Duration': '0.044', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 39721a78218c7c28e95e60fe0370079c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'sZq4mmLMx1u1N8QrtZpcGMkfVoaLzGW_8y9E_f72MmWUXke8Dq9Dgg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:19:48,217 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-14 21:19:49,217 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:19:49,217 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:19:49,217 - INFO - Headers:
+2026-01-14 21:19:49,217 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:19:49,218 - INFO - Accept : application/json
+2026-01-14 21:19:49,218 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:19:49,218 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:19:49,218 - INFO - Accept-Charset : utf-8
+2026-01-14 21:19:49,218 - INFO - -- END Twilio API Request --
+2026-01-14 21:19:49,893 - INFO - Response Status Code: 400
+2026-01-14 21:19:49,893 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:19:49 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQf24e5e20977a7646750cc16dd16269b0', 'Twilio-Request-Duration': '0.039', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 39721a78218c7c28e95e60fe0370079c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'hLY5HhtNhd_W9co_4U-xbGilPwbqmfucwfpmo7IoPGkvyWCFpiadTw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:19:49,893 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-14 21:19:51,901 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:19:51,901 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:19:51,901 - INFO - Headers:
+2026-01-14 21:19:51,901 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:19:51,901 - INFO - Accept : application/json
+2026-01-14 21:19:51,901 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:19:51,901 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:19:51,901 - INFO - Accept-Charset : utf-8
+2026-01-14 21:19:51,901 - INFO - -- END Twilio API Request --
+2026-01-14 21:19:52,606 - INFO - Response Status Code: 400
+2026-01-14 21:19:52,606 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:19:52 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ0e31030e1ee2e15c2dcd92cdead1d891', 'Twilio-Request-Duration': '0.025', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 39721a78218c7c28e95e60fe0370079c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'pBu7En3qiKlMx38AzV0v3G6OPzAn0yzIAuAi9TAYBkK4E4DF1JnPCg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:19:52,606 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-14 21:19:52,606 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-14 21:20:04,925 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:20:06,926 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:20:09,925 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:20:09,925 - ERROR - Telegram send failed after 3 attempts
+2026-01-14 21:20:09,926 - ERROR - Failed to send signal notification to any channel
+2026-01-14 21:20:09,927 - ERROR - WhatsApp client initialized: True
+2026-01-14 21:20:09,927 - ERROR - Telegram bot token: True
+2026-01-14 21:20:09,927 - ERROR - Telegram chat ID: True
+2026-01-14 21:20:09,927 - INFO - Signal generated for XAUUSDm - Expires at 2026-01-14 21:24:35 UTC
+2026-01-14 21:20:09,928 - INFO - 127.0.0.1 - - [14/Jan/2026 21:20:09] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 21:24:35,215 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 21:24:35,223 - INFO - Daily signal limit (2) reached for user defender - skipping alert
+2026-01-14 21:24:35,240 - INFO - Daily signal limit (5) reached for user Admin - skipping alert
+2026-01-14 21:24:35,253 - INFO - Daily signal limit (2) reached for user defender - skipping alert
+2026-01-14 21:24:35,263 - INFO - WhatsApp notification initialized successfully
+2026-01-14 21:24:35,264 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:24:35,264 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:24:35,264 - INFO - Headers:
+2026-01-14 21:24:35,264 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:24:35,264 - INFO - Accept : application/json
+2026-01-14 21:24:35,264 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:24:35,264 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:24:35,264 - INFO - Accept-Charset : utf-8
+2026-01-14 21:24:35,264 - INFO - -- END Twilio API Request --
+2026-01-14 21:24:48,332 - INFO - Response Status Code: 400
+2026-01-14 21:24:48,333 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:24:48 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQa10107960fe750dda68c21f82185537e', 'Twilio-Request-Duration': '0.042', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f6eede9416393de137afc2f11d733fec.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'ZofOqigwtoh79oMzB_W0llVdX7zyBwgsMiW-3GBqB09LB7-p7qkisQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:24:48,333 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-14 21:24:49,334 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:24:49,334 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:24:49,334 - INFO - Headers:
+2026-01-14 21:24:49,334 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:24:49,334 - INFO - Accept : application/json
+2026-01-14 21:24:49,334 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:24:49,334 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:24:49,334 - INFO - Accept-Charset : utf-8
+2026-01-14 21:24:49,334 - INFO - -- END Twilio API Request --
+2026-01-14 21:24:49,978 - INFO - Response Status Code: 400
+2026-01-14 21:24:49,978 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:24:50 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ22c1380e86de530bed6e7eb926237731', 'Twilio-Request-Duration': '0.027', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f6eede9416393de137afc2f11d733fec.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '-hqN_4ARqNJ9VUQtyIxIav7Z1IvYBvazdnV737TmJDL5sYUeqLm5eA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:24:49,978 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-14 21:24:51,979 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:24:51,979 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:24:51,979 - INFO - Headers:
+2026-01-14 21:24:51,979 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:24:51,979 - INFO - Accept : application/json
+2026-01-14 21:24:51,980 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:24:51,980 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:24:51,980 - INFO - Accept-Charset : utf-8
+2026-01-14 21:24:51,980 - INFO - -- END Twilio API Request --
+2026-01-14 21:24:52,257 - INFO - Response Status Code: 400
+2026-01-14 21:24:52,257 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:24:52 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ7b8eff43173ab49aa619edf89e5270b7', 'Twilio-Request-Duration': '0.026', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f6eede9416393de137afc2f11d733fec.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '9aiLWQ2fccCiLVZyx4z8c41JPTdLza6FUooW-n9QGzXG08KvF9tyAg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:24:52,258 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-14 21:24:52,258 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-14 21:25:05,583 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:25:11,257 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:25:20,491 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:25:20,491 - ERROR - Telegram send failed after 3 attempts
+2026-01-14 21:25:20,493 - ERROR - Failed to send signal notification to any channel
+2026-01-14 21:25:20,493 - ERROR - WhatsApp client initialized: True
+2026-01-14 21:25:20,493 - ERROR - Telegram bot token: True
+2026-01-14 21:25:20,493 - ERROR - Telegram chat ID: True
+2026-01-14 21:25:20,493 - INFO - Signal generated for XAUUSDm - Expires at 2026-01-14 21:29:35 UTC
+2026-01-14 21:25:20,494 - INFO - 127.0.0.1 - - [14/Jan/2026 21:25:20] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 21:29:50,264 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 21:29:50,270 - INFO - Daily signal limit (2) reached for user defender - skipping alert
+2026-01-14 21:29:50,294 - INFO - Daily signal limit (5) reached for user Admin - skipping alert
+2026-01-14 21:29:50,311 - INFO - Daily signal limit (2) reached for user defender - skipping alert
+2026-01-14 21:29:50,325 - INFO - WhatsApp notification initialized successfully
+2026-01-14 21:29:50,326 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:29:50,326 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:29:50,326 - INFO - Headers:
+2026-01-14 21:29:50,326 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:29:50,326 - INFO - Accept : application/json
+2026-01-14 21:29:50,326 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:29:50,326 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:29:50,326 - INFO - Accept-Charset : utf-8
+2026-01-14 21:29:50,326 - INFO - -- END Twilio API Request --
+2026-01-14 21:30:02,653 - INFO - Response Status Code: 400
+2026-01-14 21:30:02,653 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:30:02 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQc2d30971ccdcfdc85f6ad61c94480e6d', 'Twilio-Request-Duration': '0.045', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 7df0e12cb5a55cb5e64296e91e226fbe.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'A3-veeNjMZJSnj1lCuujk5HLEULjtbG-Lg_DTOaKiKnui3spoI0kiw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:30:02,654 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-14 21:30:03,654 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:30:03,655 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:30:03,655 - INFO - Headers:
+2026-01-14 21:30:03,655 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:30:03,655 - INFO - Accept : application/json
+2026-01-14 21:30:03,655 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:30:03,655 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:30:03,655 - INFO - Accept-Charset : utf-8
+2026-01-14 21:30:03,655 - INFO - -- END Twilio API Request --
+2026-01-14 21:30:04,360 - INFO - Response Status Code: 400
+2026-01-14 21:30:04,360 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:30:04 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ706623e1f31fc892b4a22f0044140ca6', 'Twilio-Request-Duration': '0.033', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 7df0e12cb5a55cb5e64296e91e226fbe.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'agv1lNIXE-lOf-bxNhelOMbmTIt3pSpYqSLnyImRqo1RlKKb3T3gvg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:30:04,360 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-14 21:30:06,361 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:30:06,361 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:30:06,361 - INFO - Headers:
+2026-01-14 21:30:06,361 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:30:06,361 - INFO - Accept : application/json
+2026-01-14 21:30:06,361 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:30:06,361 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:30:06,361 - INFO - Accept-Charset : utf-8
+2026-01-14 21:30:06,361 - INFO - -- END Twilio API Request --
+2026-01-14 21:30:07,200 - INFO - Response Status Code: 400
+2026-01-14 21:30:07,200 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:30:07 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQde873fda944eeddc20c742497d5c3edc', 'Twilio-Request-Duration': '0.025', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 7df0e12cb5a55cb5e64296e91e226fbe.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'M4GPKYoczYZcFHS8VTT1T_BkJRNRc95MptUr5im6Y8PRTDHs_xb6KA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:30:07,200 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-14 21:30:07,200 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-14 21:30:22,009 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:30:29,520 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:30:33,395 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:30:33,395 - ERROR - Telegram send failed after 3 attempts
+2026-01-14 21:30:33,398 - ERROR - Failed to send signal notification to any channel
+2026-01-14 21:30:33,398 - ERROR - WhatsApp client initialized: True
+2026-01-14 21:30:33,398 - ERROR - Telegram bot token: True
+2026-01-14 21:30:33,398 - ERROR - Telegram chat ID: True
+2026-01-14 21:30:33,398 - INFO - Signal generated for XAUUSDm - Expires at 2026-01-14 21:34:50 UTC
+2026-01-14 21:30:33,400 - INFO - 127.0.0.1 - - [14/Jan/2026 21:30:33] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 21:34:51,306 - INFO - Retrying request to /chat/completions in 0.434946 seconds
+2026-01-14 21:35:01,763 - INFO - Retrying request to /chat/completions in 0.822824 seconds
+2026-01-14 21:35:12,612 - INFO - Signal generated for XAUUSDm - Expires at 2026-01-14 21:40:12 UTC
+2026-01-14 21:35:12,613 - INFO - 127.0.0.1 - - [14/Jan/2026 21:35:12] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 21:39:40,273 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 21:39:40,277 - INFO - Daily signal limit (2) reached for user defender - skipping alert
+2026-01-14 21:39:40,309 - INFO - Daily signal limit (5) reached for user Admin - skipping alert
+2026-01-14 21:39:40,330 - INFO - Daily signal limit (2) reached for user defender - skipping alert
+2026-01-14 21:39:40,339 - INFO - WhatsApp notification initialized successfully
+2026-01-14 21:39:40,339 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:39:40,339 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:39:40,339 - INFO - Headers:
+2026-01-14 21:39:40,339 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:39:40,339 - INFO - Accept : application/json
+2026-01-14 21:39:40,340 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:39:40,340 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:39:40,340 - INFO - Accept-Charset : utf-8
+2026-01-14 21:39:40,340 - INFO - -- END Twilio API Request --
+2026-01-14 21:39:57,331 - INFO - Response Status Code: 400
+2026-01-14 21:39:57,331 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:39:57 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ0dc63fb78e8f85228312c5360a6d66fe', 'Twilio-Request-Duration': '0.044', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 ff2012aca0ae72bb05b003fad40aa354.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'jPS16ZRs1jSYmsNpY5lQeHZRdrYj3SheOBeYqwNcIXwjFQVMYrP53A==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:39:57,331 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-14 21:39:58,332 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:39:58,332 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:39:58,332 - INFO - Headers:
+2026-01-14 21:39:58,332 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:39:58,332 - INFO - Accept : application/json
+2026-01-14 21:39:58,332 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:39:58,332 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:39:58,332 - INFO - Accept-Charset : utf-8
+2026-01-14 21:39:58,332 - INFO - -- END Twilio API Request --
+2026-01-14 21:39:58,974 - INFO - Response Status Code: 400
+2026-01-14 21:39:58,974 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:39:58 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQa21365b7bd6ba414f2e26af263425955', 'Twilio-Request-Duration': '0.025', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 ff2012aca0ae72bb05b003fad40aa354.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '3YMplQ7qG5_oiks1UMVfvxNI0KxtxbUpP2gA_vTNEF2indE96e5XHg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:39:58,974 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-14 21:40:00,975 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:40:00,975 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:40:00,975 - INFO - Headers:
+2026-01-14 21:40:00,975 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:40:00,975 - INFO - Accept : application/json
+2026-01-14 21:40:00,975 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:40:00,975 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:40:00,975 - INFO - Accept-Charset : utf-8
+2026-01-14 21:40:00,975 - INFO - -- END Twilio API Request --
+2026-01-14 21:40:06,279 - INFO - Response Status Code: 400
+2026-01-14 21:40:06,279 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:40:06 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQe8df01102df8fabc7ca82cfb2d6622a7', 'Twilio-Request-Duration': '0.024', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 ff2012aca0ae72bb05b003fad40aa354.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'p1n1c_K2Qs5Zt7l7w4tuhwAGeOFRwG3gabJ37mCegfsWjCIP8jXggw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:40:06,279 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-14 21:40:06,279 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-14 21:40:21,650 - WARNING - Telegram send attempt 1 failed: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2026-01-14 21:40:23,981 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:40:27,198 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:40:27,198 - ERROR - Telegram send failed after 3 attempts
+2026-01-14 21:40:27,198 - ERROR - Failed to send signal notification to any channel
+2026-01-14 21:40:27,198 - ERROR - WhatsApp client initialized: True
+2026-01-14 21:40:27,198 - ERROR - Telegram bot token: True
+2026-01-14 21:40:27,198 - ERROR - Telegram chat ID: True
+2026-01-14 21:40:27,198 - INFO - Signal generated for XAUUSDm - Expires at 2026-01-14 21:44:40 UTC
+2026-01-14 21:40:27,199 - INFO - 127.0.0.1 - - [14/Jan/2026 21:40:27] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 21:44:54,237 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 21:44:54,241 - INFO - Daily signal limit (2) reached for user defender - skipping alert
+2026-01-14 21:44:54,263 - INFO - Daily signal limit (5) reached for user Admin - skipping alert
+2026-01-14 21:44:54,280 - INFO - Daily signal limit (2) reached for user defender - skipping alert
+2026-01-14 21:44:54,294 - INFO - WhatsApp notification initialized successfully
+2026-01-14 21:44:54,294 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:44:54,294 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:44:54,294 - INFO - Headers:
+2026-01-14 21:44:54,294 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:44:54,294 - INFO - Accept : application/json
+2026-01-14 21:44:54,294 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:44:54,295 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:44:54,295 - INFO - Accept-Charset : utf-8
+2026-01-14 21:44:54,295 - INFO - -- END Twilio API Request --
+2026-01-14 21:44:56,370 - INFO - Response Status Code: 400
+2026-01-14 21:44:56,370 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:44:56 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ2af3a893accc98e79266b4430887e656', 'Twilio-Request-Duration': '0.026', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f6eede9416393de137afc2f11d733fec.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'KF_dhl0wbC-eIw_gXq6HZHBobP3wRfzNvUJs_rr_8UKn22pnPfY7Zw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:44:56,370 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-14 21:44:57,371 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:44:57,371 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:44:57,371 - INFO - Headers:
+2026-01-14 21:44:57,371 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:44:57,371 - INFO - Accept : application/json
+2026-01-14 21:44:57,371 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:44:57,371 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:44:57,372 - INFO - Accept-Charset : utf-8
+2026-01-14 21:44:57,372 - INFO - -- END Twilio API Request --
+2026-01-14 21:45:02,314 - INFO - Response Status Code: 400
+2026-01-14 21:45:02,314 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:45:02 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ1fcf66b9ff5d84f84b39c0d197f095b9', 'Twilio-Request-Duration': '0.042', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f6eede9416393de137afc2f11d733fec.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'sfC-b1xXkfg1Klt61MSfKRZ6yi5bee9D0uzHMR4iQ2SRg5kiEJNwPA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:45:02,315 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-14 21:45:04,315 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 21:45:04,315 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 21:45:04,316 - INFO - Headers:
+2026-01-14 21:45:04,316 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 21:45:04,316 - INFO - Accept : application/json
+2026-01-14 21:45:04,316 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 21:45:04,316 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 21:45:04,316 - INFO - Accept-Charset : utf-8
+2026-01-14 21:45:04,316 - INFO - -- END Twilio API Request --
+2026-01-14 21:45:10,210 - INFO - Response Status Code: 400
+2026-01-14 21:45:10,210 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 20:45:04 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQb8fcc7acbeb272300307d028da743500', 'Twilio-Request-Duration': '0.031', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 f6eede9416393de137afc2f11d733fec.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'vcGyMBPntndVBTuSrD7UPH-6w71W9VmDDQqAGMynIZQBhqpaT5W0HA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 21:45:10,210 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-14 21:45:10,210 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-14 21:45:12,389 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:45:19,109 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:45:22,184 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 21:45:22,185 - ERROR - Telegram send failed after 3 attempts
+2026-01-14 21:45:22,187 - ERROR - Failed to send signal notification to any channel
+2026-01-14 21:45:22,187 - ERROR - WhatsApp client initialized: True
+2026-01-14 21:45:22,187 - ERROR - Telegram bot token: True
+2026-01-14 21:45:22,187 - ERROR - Telegram chat ID: True
+2026-01-14 21:45:22,188 - INFO - Signal generated for XAUUSDm - Expires at 2026-01-14 21:49:54 UTC
+2026-01-14 21:45:22,189 - INFO - 127.0.0.1 - - [14/Jan/2026 21:45:22] "POST /run_ai_analysis HTTP/1.1" 200 -

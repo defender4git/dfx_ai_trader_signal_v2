@@ -127,8 +127,15 @@
                         <span class="text-blue-100 text-sm sm:text-base hidden sm:inline">Welcome, {{
                             current_user.username }}!</span>
                         <div class="flex space-x-2">
+                            <a href="{{ url_for('index') }}"
+                                class="bg-blue-600 hover:bg-blue-700 text-white text-sm sm:text-base touch-button px-3 py-2 rounded-lg transition-colors">Dashboard</a>
                             <a href="{{ url_for('profile') }}"
                                 class="text-blue-100 hover:text-white text-sm sm:text-base touch-button px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors">Profile</a>
+                            {% if current_user.is_admin %}
+                            <a href="{{ url_for('mlm') }}"
+                                class="text-blue-100 hover:text-white text-sm sm:text-base touch-button px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors">Mailing
+                                List</a>
+                            {% endif %}
                             <a href="{{ url_for('logout') }}"
                                 class="bg-red-600 hover:bg-red-700 px-3 py-2 rounded-lg text-sm sm:text-base touch-button transition-colors">Logout</a>
                         </div>

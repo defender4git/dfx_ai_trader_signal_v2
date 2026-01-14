@@ -80,6 +80,7 @@ class User(UserMixin, db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     is_admin = db.Column(db.Boolean, default=False)
     email_notifications = db.Column(db.Boolean, default=True)
+    plan = db.Column(db.String(50), default='basic')  # basic, pro, vip
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -117,6 +118,36 @@ def send_signal_alert(user_email, signal_data):
     user = User.query.filter_by(email=user_email).first()
     if not user:
         logging.warning(f"No user found for email {user_email}, sending as VIP")
+
+    # Check daily signal limit for user
+    if user and user.email_notifications:
+        plan_limits = {'basic': 2, 'pro': 5, 'vip': 8}
+        daily_limit = plan_limits.get(user.plan, 2)
+        today = datetime.utcnow().date()
+        today_start = datetime(today.year, today.month, today.day)
+        today_end = today_start + timedelta(days=1)
+
+        # Count successful email notifications sent today
+        today_count = ActivityLog.query.filter_by(
+            user_id=user.id,
+            activity_type='email_notification',
+            status='success'
+        ).filter(ActivityLog.timestamp >= today_start, ActivityLog.timestamp < today_end).count()
+
+        if today_count >= daily_limit:
+            logging.info(f"Daily signal limit ({daily_limit}) reached for user {user.username} - skipping alert")
+            # Log the skip
+            activity_log = ActivityLog(
+                user_id=user.id,
+                activity_type='email_notification',
+                description=f'Daily signal limit ({daily_limit}) reached for {signal_data["symbol"]} - alert skipped',
+                status='failure',
+                details=f'Limit: {daily_limit}, Sent today: {today_count}'
+            )
+            db.session.add(activity_log)
+            db.session.commit()
+            print(f"⚠️  Daily limit reached for {user.username} - skipping alert")
+            return
 
     if not app.config['MAIL_USERNAME'] or not app.config['MAIL_PASSWORD']:
         logging.warning("Email configuration not found - skipping alert")
@@ -316,6 +347,14 @@ def mlm():
                 entry.is_active = not entry.is_active
                 db.session.commit()
                 flash('VIP email status updated', 'success')
+        elif action == 'change_plan':
+            user_id = request.form.get('user_id')
+            new_plan = request.form.get('new_plan')
+            user = User.query.get(user_id)
+            if user and new_plan in ['basic', 'pro', 'vip']:
+                user.plan = new_plan
+                db.session.commit()
+                flash(f'User plan updated to {new_plan.title()}', 'success')
         elif action == 'toggle_user':
             user_id = request.form.get('user_id')
             user = User.query.get(user_id)
@@ -742,16 +781,29 @@ if __name__ == '__main__':
 
         # Add email_notifications column if it doesn't exist (migration)
         try:
-            # Check if column exists by trying to query it
-            User.query.filter_by(email_notifications=True).first()
-        except Exception as e:
-            if 'no such column' in str(e):
-                print("Adding email_notifications column to User table...")
-                # For SQLAlchemy 2.0+, use connection.execute()
-                with db.engine.connect() as conn:
+            with db.engine.connect() as conn:
+                result = conn.execute(db.text("PRAGMA table_info(user)")).fetchall()
+                columns = [row[1] for row in result]
+                if 'email_notifications' not in columns:
+                    print("Adding email_notifications column to User table...")
                     conn.execute(db.text('ALTER TABLE user ADD COLUMN email_notifications BOOLEAN DEFAULT 1'))
                     conn.commit()
-                print("Database migration completed")
+                    print("Database migration completed")
+        except Exception as e:
+            print(f"Error during email_notifications migration: {e}")
+
+        # Add plan column if it doesn't exist (migration)
+        try:
+            with db.engine.connect() as conn:
+                result = conn.execute(db.text("PRAGMA table_info(user)")).fetchall()
+                columns = [row[1] for row in result]
+                if 'plan' not in columns:
+                    print("Adding plan column to User table...")
+                    conn.execute(db.text("ALTER TABLE user ADD COLUMN plan VARCHAR(50) DEFAULT 'basic'"))
+                    conn.commit()
+                    print("Plan column migration completed")
+        except Exception as e:
+            print(f"Error during plan migration: {e}")
 
         # Create ActivityLog table if it doesn't exist
         try:
