@@ -132,6 +132,8 @@ class TradeManager:
             signal: TradingSignal object
             filling_type: "IOC", "FOK", or "RETURN"
         """
+        logging.info(f"Starting trade execution for {signal.symbol} with {filling_type} filling type")
+        
         if signal.confidence.upper() not in ["HIGH", "MEDIUM"]:
             logging.info(f"Signal confidence is {signal.confidence}, skipping execution")
             return False
@@ -139,6 +141,18 @@ class TradeManager:
         if not self.should_trade():
             logging.info("Trading paused due to risk management rules")
             return False
+        
+        # Check if symbol is available and market is open
+        symbol_info = mt5.symbol_info(signal.symbol)
+        if symbol_info is None:
+            error_msg = f"Symbol {signal.symbol} not found or not available for trading"
+            logging.error(error_msg)
+            raise Exception(error_msg)
+        
+        if not symbol_info.visible:
+            error_msg = f"Symbol {signal.symbol} is not visible/available for trading"
+            logging.error(error_msg)
+            raise Exception(error_msg)
 
         # Check if signal has expired
         if signal.is_expired():
@@ -178,8 +192,9 @@ class TradeManager:
         result = mt5.order_send(request)
 
         if result.retcode != mt5.TRADE_RETCODE_DONE:
-            logging.error(f"Trade execution failed: {result.comment}")
-            return False
+            error_msg = f"Trade execution failed: {result.comment} (retcode: {result.retcode})"
+            logging.error(error_msg)
+            raise Exception(error_msg)
 
         # Create position tracking object
         position = TradePosition(

@@ -815,7 +815,7 @@ def main():
     # AI Provider selection - default to OpenAI from .env
     AI_PROVIDER = os.getenv("AI_PROVIDER", "openai").lower()
     if AI_PROVIDER == "anthropic":
-        API_KEY = os.getenv("ANTHROPIC_API_KEY", "your-anthropic-api-key-here")
+        API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
     elif AI_PROVIDER == "openai":
         API_KEY = os.getenv("OPENAI_API_KEY", openai.api_key)
     else:

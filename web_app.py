@@ -4,7 +4,7 @@ Provides a professional web UI for the AI-based trading system
 """
 
 import signal
-from flask import Flask, render_template, request, jsonify, redirect, url_for, session
+from flask import Flask, render_template, request, jsonify, redirect, url_for, session, flash
 import sys
 import os
 import json
@@ -56,6 +56,8 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
+#email library file
+email_filename = 'static/vip_email.txt'
 
 # Initialize extensions
 db = SQLAlchemy(app)
@@ -97,6 +99,14 @@ class ActivityLog(db.Model):
 
     user = db.relationship('User', backref=db.backref('activity_logs', lazy=True))
 
+# Mailing List model
+class MailingList(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(150), unique=True, nullable=False)
+    list_type = db.Column(db.String(50), nullable=False)  # 'vip'
+    is_active = db.Column(db.Boolean, default=True)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
@@ -106,8 +116,7 @@ def send_signal_alert(user_email, signal_data):
     # Get user from database
     user = User.query.filter_by(email=user_email).first()
     if not user:
-        logging.error(f"User not found for email {user_email}")
-        return
+        logging.warning(f"No user found for email {user_email}, sending as VIP")
 
     if not app.config['MAIL_USERNAME'] or not app.config['MAIL_PASSWORD']:
         logging.warning("Email configuration not found - skipping alert")
@@ -167,16 +176,17 @@ Real-time market analysis and automated signals
 
         mail.send(msg)
 
-        # Log success to activity log
-        activity_log = ActivityLog(
-            user_id=user.id,
-            activity_type='email_notification',
-            description=f'Signal alert sent for {signal_data["symbol"]} ({signal_data["signal_type"]})',
-            status='success',
-            details=f'Signal: {signal_data["signal_type"]}, Confidence: {signal_data["confidence"]}'
-        )
-        db.session.add(activity_log)
-        db.session.commit()
+        if user:
+            # Log success to activity log
+            activity_log = ActivityLog(
+                user_id=user.id,
+                activity_type='email_notification',
+                description=f'Signal alert sent for {signal_data["symbol"]} ({signal_data["signal_type"]})',
+                status='success',
+                details=f'Signal: {signal_data["signal_type"]}, Confidence: {signal_data["confidence"]}'
+            )
+            db.session.add(activity_log)
+            db.session.commit()
 
         logging.info(f"Signal alert sent successfully to {user_email} for symbol {signal_data['symbol']}")
         print(f"✅ Signal alert sent to {user_email}")
@@ -269,6 +279,55 @@ def profile():
         .limit(20)\
         .all()
     return render_template('profile.html', activity_logs=activity_logs)
+
+@app.route('/mailing_list_manager', methods=['GET', 'POST'])
+@login_required
+def mailing_list_manager():
+    if not current_user.is_admin:
+        flash('Access denied. Admin privileges required.', 'error')
+        return redirect(url_for('index'))
+
+    if request.method == 'POST':
+        action = request.form.get('action')
+        if action == 'add_vip':
+            email = request.form.get('email')
+            if email and '@' in email:
+                if not MailingList.query.filter_by(email=email).first():
+                    new_entry = MailingList(email=email, list_type='vip')
+                    db.session.add(new_entry)
+                    db.session.commit()
+                    flash('VIP email added successfully', 'success')
+                else:
+                    flash('Email already exists', 'error')
+            else:
+                flash('Invalid email address', 'error')
+        elif action == 'delete_vip':
+            email_id = request.form.get('email_id')
+            entry = MailingList.query.get(email_id)
+            if entry:
+                db.session.delete(entry)
+                db.session.commit()
+                flash('VIP email deleted', 'success')
+        elif action == 'toggle_vip':
+            email_id = request.form.get('email_id')
+            entry = MailingList.query.get(email_id)
+            if entry:
+                entry.is_active = not entry.is_active
+                db.session.commit()
+                flash('VIP email status updated', 'success')
+        elif action == 'toggle_user':
+            user_id = request.form.get('user_id')
+            user = User.query.get(user_id)
+            if user:
+                user.email_notifications = not user.email_notifications
+                db.session.commit()
+                flash('User email notifications updated', 'success')
+        return redirect(url_for('mailing_list_manager'))
+
+    # GET request
+    vip_emails = MailingList.query.filter_by(list_type='vip').all()
+    users = User.query.all()
+    return render_template('mailing_list_manager.html', vip_emails=vip_emails, users=users)
 
 @app.route('/run_ai_analysis', methods=['POST'])
 @login_required
@@ -407,6 +466,29 @@ def run_ai_analysis():
             logging.error(f"Error sending email alerts: {e}")
             print(f"⚠️  Error sending email alerts: {e}")
 
+        # Send email alerts to VIP emails in database
+        try:
+            if signal.confidence.upper() in ["HIGH", "MEDIUM"]:
+                vip_entries = MailingList.query.filter_by(list_type='vip', is_active=True).all()
+                for entry in vip_entries:
+                    signal_alert_data = {
+                        'symbol': signal.symbol,
+                        'signal_type': signal.signal_type,
+                        'confidence': signal.confidence,
+                        'entry_price': signal.entry_price,
+                        'stop_loss': signal.stop_loss,
+                        'take_profit_1': signal.take_profit_1,
+                        'take_profit_2': signal.take_profit_2,
+                        'take_profit_3': signal.take_profit_3,
+                        'position_size': signal.position_size,
+                        'reasoning': signal.reasoning,
+                        'timestamp': signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC'),
+                    }
+                    send_signal_alert(entry.email, signal_alert_data)
+        except Exception as e:
+            logging.error(f"Error sending VIP email alerts: {e}")
+            print(f"⚠️  Error sending VIP email alerts: {e}")
+
         # Send WhatsApp/Telegram notifications for HIGH and MEDIUM confidence signals (separate from email)
         try:
             if signal.confidence.upper() in ["HIGH", "MEDIUM"]:
@@ -477,6 +559,9 @@ def execute_trade():
         # Try different filling types in order: IOC -> FOK -> RETURN
         filling_types = ['IOC', 'FOK', 'RETURN']
         last_error = None
+        ioc_error = None
+        fok_error = None
+        return_error = None
 
         for filling_type in filling_types:
             try:
@@ -495,10 +580,25 @@ def execute_trade():
             except Exception as e:
                 last_error = str(e)
                 logging.warning(f"Trade execution failed with {filling_type} filling type: {e}")
+                # Store the specific error for this filling type
+                if filling_type == 'IOC':
+                    ioc_error = last_error
+                elif filling_type == 'FOK':
+                    fok_error = last_error
+                elif filling_type == 'RETURN':
+                    return_error = last_error
                 continue
 
         # If all filling types failed
-        error_msg = f"Trade execution failed with all filling types (IOC, FOK, RETURN). Last error: {last_error}"
+        error_details = []
+        if 'ioc_error' in locals():
+            error_details.append(f"IOC: {ioc_error}")
+        if 'fok_error' in locals():
+            error_details.append(f"FOK: {fok_error}")
+        if 'return_error' in locals():
+            error_details.append(f"RETURN: {return_error}")
+        
+        error_msg = f"Trade execution failed with all filling types. Specific errors:\n" + "\n".join(error_details)
         logging.error(error_msg)
         return jsonify({'error': error_msg}), 500
 
@@ -660,6 +760,19 @@ if __name__ == '__main__':
                 print("Creating ActivityLog table...")
                 db.create_all()
                 print("ActivityLog table created")
+
+        # Migrate VIP emails from file to database
+        try:
+            with open('static/vip_email.txt', 'r') as f:
+                vip_emails = [line.strip() for line in f if line.strip()]
+            for email in vip_emails:
+                if not MailingList.query.filter_by(email=email, list_type='vip').first():
+                    new_entry = MailingList(email=email, list_type='vip')
+                    db.session.add(new_entry)
+            db.session.commit()
+            print("VIP emails migrated to database")
+        except Exception as e:
+            print(f"Error migrating VIP emails: {e}")
 
     print("Starting AI Trading Signal Generator Web Interface with Advanced Trade Management...")
     print("Features:")
