@@ -6897,3 +6897,716 @@ RETURN: Trade execution failed: AutoTrading disabled by client (retcode: 10027)
 2026-01-14 07:34:01,645 - INFO - 127.0.0.1 - - [14/Jan/2026 07:34:01] "GET /profile HTTP/1.1" 200 -
 2026-01-14 07:34:03,273 - INFO - 127.0.0.1 - - [14/Jan/2026 07:34:03] "GET /get_symbols HTTP/1.1" 200 -
 2026-01-14 07:34:22,812 - INFO - 127.0.0.1 - - [14/Jan/2026 07:34:22] "[33mGET /mlm HTTP/1.1[0m" 404 -
+2026-01-14 07:38:58,515 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.207.87.207:9000
+2026-01-14 07:38:58,515 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-14 07:38:58,538 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-14 07:39:04,294 - WARNING -  * Debugger is active!
+2026-01-14 07:39:04,303 - INFO -  * Debugger PIN: 146-140-033
+2026-01-14 07:39:10,343 - INFO - 127.0.0.1 - - [14/Jan/2026 07:39:10] "[33mGET /mlm HTTP/1.1[0m" 404 -
+2026-01-14 07:39:13,137 - INFO - 127.0.0.1 - - [14/Jan/2026 07:39:13] "[33mGET /mlm HTTP/1.1[0m" 404 -
+2026-01-14 07:39:13,719 - INFO - 127.0.0.1 - - [14/Jan/2026 07:39:13] "[33mGET /mlm HTTP/1.1[0m" 404 -
+2026-01-14 07:39:14,263 - INFO - 127.0.0.1 - - [14/Jan/2026 07:39:14] "[33mGET /mlm HTTP/1.1[0m" 404 -
+2026-01-14 07:39:19,349 - INFO - 127.0.0.1 - - [14/Jan/2026 07:39:19] "GET / HTTP/1.1" 200 -
+2026-01-14 07:39:20,528 - INFO - 127.0.0.1 - - [14/Jan/2026 07:39:20] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 07:39:23,784 - INFO - 127.0.0.1 - - [14/Jan/2026 07:39:23] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-14 07:39:23,962 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\routing\\map.py', reloading
+2026-01-14 07:39:24,003 - INFO - 127.0.0.1 - - [14/Jan/2026 07:39:24] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2026-01-14 07:39:24,688 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-14 07:39:31,682 - WARNING -  * Debugger is active!
+2026-01-14 07:39:31,691 - INFO -  * Debugger PIN: 146-140-033
+2026-01-14 07:39:32,012 - INFO - 127.0.0.1 - - [14/Jan/2026 07:39:32] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-01-14 07:39:32,049 - INFO - 127.0.0.1 - - [14/Jan/2026 07:39:32] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-01-14 07:39:32,531 - INFO - 127.0.0.1 - - [14/Jan/2026 07:39:32] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=k0lp7h3Ec0Tl5xDHGTQO HTTP/1.1" 200 -
+2026-01-14 07:39:32,543 - INFO - 127.0.0.1 - - [14/Jan/2026 07:39:32] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-01-14 07:39:32,729 - INFO - 127.0.0.1 - - [14/Jan/2026 07:39:32] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2026-01-14 12:05:31,072 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.207.87.207:9000
+2026-01-14 12:05:31,073 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-14 12:05:31,100 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-14 12:05:37,965 - WARNING -  * Debugger is active!
+2026-01-14 12:05:37,974 - INFO -  * Debugger PIN: 137-776-963
+2026-01-14 12:11:50,117 - INFO - 127.0.0.1 - - [14/Jan/2026 12:11:50] "[32mGET / HTTP/1.1[0m" 302 -
+2026-01-14 12:11:50,141 - INFO - 127.0.0.1 - - [14/Jan/2026 12:11:50] "GET /login HTTP/1.1" 200 -
+2026-01-14 12:11:54,049 - INFO - 127.0.0.1 - - [14/Jan/2026 12:11:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-01-14 12:11:56,615 - INFO - 127.0.0.1 - - [14/Jan/2026 12:11:56] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-14 12:11:56,754 - INFO - 127.0.0.1 - - [14/Jan/2026 12:11:56] "GET / HTTP/1.1" 200 -
+2026-01-14 12:11:58,022 - INFO - 127.0.0.1 - - [14/Jan/2026 12:11:58] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 12:12:29,953 - INFO - WhatsApp notification initialized successfully
+2026-01-14 12:12:42,918 - INFO - Retrying request to /chat/completions in 0.441571 seconds
+2026-01-14 12:12:49,931 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 12:13:01,305 - ERROR - Failed to send email alert to kizito2008@yahoo.com: [Errno 11001] getaddrinfo failed
+2026-01-14 12:13:05,006 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSDm
+2026-01-14 12:13:07,957 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol XAUUSDm
+2026-01-14 12:13:10,929 - INFO - Signal alert sent successfully to test@example.com for symbol XAUUSDm
+2026-01-14 12:13:10,932 - WARNING - No user found for email info@otaoilfservices.com, sending as VIP
+2026-01-14 12:13:14,110 - INFO - Signal alert sent successfully to info@otaoilfservices.com for symbol XAUUSDm
+2026-01-14 12:13:16,733 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol XAUUSDm
+2026-01-14 12:13:19,569 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol XAUUSDm
+2026-01-14 12:13:19,569 - INFO - WhatsApp notification initialized successfully
+2026-01-14 12:13:19,816 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 12:13:19,816 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 12:13:19,816 - INFO - Headers:
+2026-01-14 12:13:19,816 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 12:13:19,816 - INFO - Accept : application/json
+2026-01-14 12:13:19,816 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 12:13:19,816 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 12:13:19,816 - INFO - Accept-Charset : utf-8
+2026-01-14 12:13:19,817 - INFO - -- END Twilio API Request --
+2026-01-14 12:13:31,161 - WARNING - WhatsApp send attempt 1 failed: HTTPSConnectionPool(host='api.twilio.com', port=443): Max retries exceeded with url: /2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020D5A025010>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). Retrying in 1s
+2026-01-14 12:13:32,161 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 12:13:32,161 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 12:13:32,162 - INFO - Headers:
+2026-01-14 12:13:32,162 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 12:13:32,162 - INFO - Accept : application/json
+2026-01-14 12:13:32,162 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 12:13:32,162 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 12:13:32,162 - INFO - Accept-Charset : utf-8
+2026-01-14 12:13:32,162 - INFO - -- END Twilio API Request --
+2026-01-14 12:13:34,268 - INFO - Response Status Code: 400
+2026-01-14 12:13:34,268 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 11:13:34 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ665c65b379ee404825b5efc2ef27a2dd', 'Twilio-Request-Duration': '0.060', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 d2a65e6cd7ddc4f5373432734cb3111c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'dOdai7aAzQcpREYoGBYzzHImarv-rIQyijVfEa-mzTqt5gEqKr1eMQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 12:13:34,269 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-14 12:13:36,269 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 12:13:36,269 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 12:13:36,270 - INFO - Headers:
+2026-01-14 12:13:36,270 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 12:13:36,270 - INFO - Accept : application/json
+2026-01-14 12:13:36,270 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 12:13:36,270 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 12:13:36,270 - INFO - Accept-Charset : utf-8
+2026-01-14 12:13:36,270 - INFO - -- END Twilio API Request --
+2026-01-14 12:13:36,552 - INFO - Response Status Code: 400
+2026-01-14 12:13:36,553 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 11:13:36 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ7542185b32b9085fe7dbde13cc440be4', 'Twilio-Request-Duration': '0.034', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 d2a65e6cd7ddc4f5373432734cb3111c.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'Nj28-KwfBJMcEcul_yHl2J3xpXMEK_QsOHVj74ojYdGkwl0oBXPq1w==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 12:13:36,553 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-14 12:13:36,553 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-14 12:13:47,881 - WARNING - Telegram send attempt 1 failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7425081234:AAH8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020D59F8F110>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2026-01-14 12:13:50,277 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 12:13:53,309 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 12:13:53,309 - ERROR - Telegram send failed after 3 attempts
+2026-01-14 12:13:53,310 - ERROR - Failed to send signal notification to any channel
+2026-01-14 12:13:53,311 - ERROR - WhatsApp client initialized: True
+2026-01-14 12:13:53,311 - ERROR - Telegram bot token: True
+2026-01-14 12:13:53,311 - ERROR - Telegram chat ID: True
+2026-01-14 12:13:53,311 - INFO - Signal generated for XAUUSDm - Expires at 2026-01-14 12:17:49 UTC
+2026-01-14 12:13:53,312 - INFO - 127.0.0.1 - - [14/Jan/2026 12:13:53] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 12:27:41,111 - INFO - Retrying request to /chat/completions in 0.381275 seconds
+2026-01-14 12:27:41,509 - INFO - Retrying request to /chat/completions in 0.798490 seconds
+2026-01-14 12:27:42,310 - INFO - Signal generated for XAUUSDm - Expires at 2026-01-14 12:32:42 UTC
+2026-01-14 12:27:42,311 - INFO - 127.0.0.1 - - [14/Jan/2026 12:27:42] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 12:29:26,997 - INFO - WhatsApp notification initialized successfully
+2026-01-14 12:29:38,420 - INFO - Retrying request to /chat/completions in 0.436359 seconds
+2026-01-14 12:29:38,858 - INFO - Retrying request to /chat/completions in 0.943861 seconds
+2026-01-14 12:29:51,699 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 12:30:03,019 - ERROR - Failed to send email alert to kizito2008@yahoo.com: [Errno 11001] getaddrinfo failed
+2026-01-14 12:30:14,354 - ERROR - Failed to send email alert to ict.tgil@gmail.com: [Errno 11001] getaddrinfo failed
+2026-01-14 12:30:14,367 - ERROR - Failed to send email alert to ict@otaoilfservices.com: [Errno 11001] getaddrinfo failed
+2026-01-14 12:30:14,381 - ERROR - Failed to send email alert to test@example.com: [Errno 11001] getaddrinfo failed
+2026-01-14 12:30:14,384 - WARNING - No user found for email info@otaoilfservices.com, sending as VIP
+2026-01-14 12:30:14,385 - ERROR - Error sending VIP email alerts: 'NoneType' object has no attribute 'id'
+2026-01-14 12:30:14,386 - INFO - WhatsApp notification initialized successfully
+2026-01-14 12:30:14,387 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 12:30:14,387 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 12:30:14,387 - INFO - Headers:
+2026-01-14 12:30:14,387 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 12:30:14,387 - INFO - Accept : application/json
+2026-01-14 12:30:14,388 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 12:30:14,388 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 12:30:14,388 - INFO - Accept-Charset : utf-8
+2026-01-14 12:30:14,388 - INFO - -- END Twilio API Request --
+2026-01-14 12:30:14,389 - WARNING - WhatsApp send attempt 1 failed: HTTPSConnectionPool(host='api.twilio.com', port=443): Max retries exceeded with url: /2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020D5A06CF50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). Retrying in 1s
+2026-01-14 12:30:15,390 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 12:30:15,390 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 12:30:15,391 - INFO - Headers:
+2026-01-14 12:30:15,391 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 12:30:15,391 - INFO - Accept : application/json
+2026-01-14 12:30:15,391 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 12:30:15,392 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 12:30:15,392 - INFO - Accept-Charset : utf-8
+2026-01-14 12:30:15,392 - INFO - -- END Twilio API Request --
+2026-01-14 12:30:26,725 - WARNING - WhatsApp send attempt 2 failed: HTTPSConnectionPool(host='api.twilio.com', port=443): Max retries exceeded with url: /2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020D5A06D1D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). Retrying in 2s
+2026-01-14 12:30:28,726 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 12:30:28,726 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 12:30:28,726 - INFO - Headers:
+2026-01-14 12:30:28,726 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 12:30:28,726 - INFO - Accept : application/json
+2026-01-14 12:30:28,726 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 12:30:28,726 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 12:30:28,726 - INFO - Accept-Charset : utf-8
+2026-01-14 12:30:28,726 - INFO - -- END Twilio API Request --
+2026-01-14 12:30:30,830 - INFO - Response Status Code: 400
+2026-01-14 12:30:30,830 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 11:30:30 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQb7a7aac8417f40bb12d8297e5e4a6944', 'Twilio-Request-Duration': '0.043', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 2753b41455655294f3c924b22dffed5e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'HIb5ajhEO3UvGKipjgmohPHwk4vYg8cDE8o-PwRrtQcMreNogksZhg==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 12:30:30,831 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-14 12:30:30,831 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-14 12:30:42,167 - WARNING - Telegram send attempt 1 failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7425081234:AAH8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000020D5A06D6D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2026-01-14 12:30:44,652 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 12:30:47,736 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 12:30:47,737 - ERROR - Telegram send failed after 3 attempts
+2026-01-14 12:30:47,739 - ERROR - Failed to send signal notification to any channel
+2026-01-14 12:30:47,739 - ERROR - WhatsApp client initialized: True
+2026-01-14 12:30:47,739 - ERROR - Telegram bot token: True
+2026-01-14 12:30:47,740 - ERROR - Telegram chat ID: True
+2026-01-14 12:30:47,740 - INFO - Signal generated for XAUUSDm - Expires at 2026-01-14 12:34:51 UTC
+2026-01-14 12:30:47,741 - INFO - 127.0.0.1 - - [14/Jan/2026 12:30:47] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 12:31:03,986 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-14 12:31:03,993 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\_internal.py', reloading
+2026-01-14 12:31:03,995 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\datastructures\\mixins.py', reloading
+2026-01-14 12:31:03,996 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\datastructures\\structures.py', reloading
+2026-01-14 12:31:03,996 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\datastructures\\headers.py', reloading
+2026-01-14 12:31:03,997 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\datastructures\\__init__.py', reloading
+2026-01-14 12:31:04,000 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\security.py', reloading
+2026-01-14 12:31:04,001 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\utils.py', reloading
+2026-01-14 12:31:04,001 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2026-01-14 12:31:04,002 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2026-01-14 12:31:04,003 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2026-01-14 12:31:04,003 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2026-01-14 12:31:04,004 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2026-01-14 12:31:04,005 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\local.py', reloading
+2026-01-14 12:31:04,005 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\globals.py', reloading
+2026-01-14 12:31:04,006 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\json\\__init__.py', reloading
+2026-01-14 12:31:04,007 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\blinker\\base.py', reloading
+2026-01-14 12:31:04,007 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\blinker\\__init__.py', reloading
+2026-01-14 12:31:04,008 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\signals.py', reloading
+2026-01-14 12:31:04,010 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\helpers.py', reloading
+2026-01-14 12:31:04,010 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\typing.py', reloading
+2026-01-14 12:31:04,011 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\ctx.py', reloading
+2026-01-14 12:31:04,011 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\config.py', reloading
+2026-01-14 12:31:04,012 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jinja2\\environment.py', reloading
+2026-01-14 12:31:04,012 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jinja2\\__init__.py', reloading
+2026-01-14 12:31:04,013 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\templating.py', reloading
+2026-01-14 12:31:04,013 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2026-01-14 12:31:04,014 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sansio\\app.py', reloading
+2026-01-14 12:31:04,014 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sessions.py', reloading
+2026-01-14 12:31:04,015 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\wrappers.py', reloading
+2026-01-14 12:31:04,015 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\app.py', reloading
+2026-01-14 12:31:04,016 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\__init__.py', reloading
+2026-01-14 12:31:04,315 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\openai\\lib\\_old_api.py', reloading
+2026-01-14 12:31:04,329 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\openai\\__init__.py', reloading
+2026-01-14 12:31:04,329 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\dotenv\\main.py', reloading
+2026-01-14 12:31:04,330 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\dotenv\\__init__.py', reloading
+2026-01-14 12:31:04,344 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\MetaTrader5\\__init__.py', reloading
+2026-01-14 12:31:04,472 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2026-01-14 12:31:04,472 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\apply_trade.py', reloading
+2026-01-14 12:31:04,473 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_login\\mixins.py', reloading
+2026-01-14 12:31:04,474 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_login\\signals.py', reloading
+2026-01-14 12:31:04,474 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_login\\utils.py', reloading
+2026-01-14 12:31:04,475 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_login\\login_manager.py', reloading
+2026-01-14 12:31:04,482 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_login\\__init__.py', reloading
+2026-01-14 12:31:04,485 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\util\\typing.py', reloading
+2026-01-14 12:31:04,486 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\util\\_collections.py', reloading
+2026-01-14 12:31:04,487 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\util\\langhelpers.py', reloading
+2026-01-14 12:31:04,488 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\util\\deprecations.py', reloading
+2026-01-14 12:31:04,488 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\util\\__init__.py', reloading
+2026-01-14 12:31:04,489 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\event\\registry.py', reloading
+2026-01-14 12:31:04,490 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\event\\__init__.py', reloading
+2026-01-14 12:31:04,490 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\log.py', reloading
+2026-01-14 12:31:04,494 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\roles.py', reloading
+2026-01-14 12:31:04,494 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\inspection.py', reloading
+2026-01-14 12:31:04,496 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\_typing.py', reloading
+2026-01-14 12:31:04,496 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\visitors.py', reloading
+2026-01-14 12:31:04,497 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\cache_key.py', reloading
+2026-01-14 12:31:04,497 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\operators.py', reloading
+2026-01-14 12:31:04,498 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\traversals.py', reloading
+2026-01-14 12:31:04,499 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\base.py', reloading
+2026-01-14 12:31:04,500 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\annotation.py', reloading
+2026-01-14 12:31:04,500 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\elements.py', reloading
+2026-01-14 12:31:04,501 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\selectable.py', reloading
+2026-01-14 12:31:04,501 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\schema.py', reloading
+2026-01-14 12:31:04,502 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\compiler.py', reloading
+2026-01-14 12:31:04,502 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\lambdas.py', reloading
+2026-01-14 12:31:04,503 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\sql\\__init__.py', reloading
+2026-01-14 12:31:04,504 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\engine\\interfaces.py', reloading
+2026-01-14 12:31:04,505 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\engine\\base.py', reloading
+2026-01-14 12:31:04,506 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\engine\\row.py', reloading
+2026-01-14 12:31:04,507 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\engine\\result.py', reloading
+2026-01-14 12:31:04,508 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\engine\\cursor.py', reloading
+2026-01-14 12:31:04,508 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\engine\\reflection.py', reloading
+2026-01-14 12:31:04,509 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\engine\\__init__.py', reloading
+2026-01-14 12:31:04,510 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\schema.py', reloading
+2026-01-14 12:31:04,510 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\__init__.py', reloading
+2026-01-14 12:31:04,511 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\orm\\_typing.py', reloading
+2026-01-14 12:31:04,512 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\orm\\base.py', reloading
+2026-01-14 12:31:04,513 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\orm\\interfaces.py', reloading
+2026-01-14 12:31:04,514 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\orm\\state.py', reloading
+2026-01-14 12:31:04,515 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\orm\\relationships.py', reloading
+2026-01-14 12:31:04,516 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\orm\\query.py', reloading
+2026-01-14 12:31:04,518 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\orm\\session.py', reloading
+2026-01-14 12:31:04,518 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\orm\\mapper.py', reloading
+2026-01-14 12:31:04,520 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\orm\\decl_api.py', reloading
+2026-01-14 12:31:04,520 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\orm\\scoping.py', reloading
+2026-01-14 12:31:04,521 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\orm\\__init__.py', reloading
+2026-01-14 12:31:04,522 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_sqlalchemy\\query.py', reloading
+2026-01-14 12:31:04,523 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_sqlalchemy\\model.py', reloading
+2026-01-14 12:31:04,542 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_sqlalchemy\\session.py', reloading
+2026-01-14 12:31:04,545 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_sqlalchemy\\table.py', reloading
+2026-01-14 12:31:04,546 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_sqlalchemy\\extension.py', reloading
+2026-01-14 12:31:04,546 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_sqlalchemy\\__init__.py', reloading
+2026-01-14 12:31:04,548 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask_mail\\__init__.py', reloading
+2026-01-14 12:31:06,213 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-14 12:31:11,091 - WARNING -  * Debugger is active!
+2026-01-14 12:31:11,095 - INFO -  * Debugger PIN: 137-776-963
+2026-01-14 12:31:15,256 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\sqlalchemy\\util\\_py_collections.py', reloading
+2026-01-14 12:31:17,384 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-14 12:31:31,925 - WARNING -  * Debugger is active!
+2026-01-14 12:31:31,932 - INFO -  * Debugger PIN: 137-776-963
+2026-01-14 12:32:19,633 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-14 12:32:19,754 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-14 12:32:19,755 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-14 12:32:21,352 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-14 12:32:25,810 - WARNING -  * Debugger is active!
+2026-01-14 12:32:25,814 - INFO -  * Debugger PIN: 137-776-963
+2026-01-14 13:29:27,116 - INFO - WhatsApp notification initialized successfully
+2026-01-14 13:29:39,373 - INFO - Retrying request to /chat/completions in 0.459388 seconds
+2026-01-14 13:29:51,148 - INFO - Retrying request to /chat/completions in 0.774454 seconds
+2026-01-14 13:30:00,531 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 13:30:11,986 - ERROR - Failed to send email alert to kizito2008@yahoo.com: [Errno 11001] getaddrinfo failed
+2026-01-14 13:30:23,351 - ERROR - Failed to send email alert to ict.tgil@gmail.com: [Errno 11001] getaddrinfo failed
+2026-01-14 13:30:23,374 - ERROR - Failed to send email alert to ict@otaoilfservices.com: [Errno 11001] getaddrinfo failed
+2026-01-14 13:30:23,392 - ERROR - Failed to send email alert to test@example.com: [Errno 11001] getaddrinfo failed
+2026-01-14 13:30:23,397 - WARNING - No user found for email info@otaoilfservices.com, sending as VIP
+2026-01-14 13:30:23,398 - ERROR - Error sending VIP email alerts: 'NoneType' object has no attribute 'id'
+2026-01-14 13:30:23,399 - INFO - WhatsApp notification initialized successfully
+2026-01-14 13:30:23,601 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 13:30:23,601 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 13:30:23,601 - INFO - Headers:
+2026-01-14 13:30:23,601 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 13:30:23,602 - INFO - Accept : application/json
+2026-01-14 13:30:23,602 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 13:30:23,602 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 13:30:23,602 - INFO - Accept-Charset : utf-8
+2026-01-14 13:30:23,602 - INFO - -- END Twilio API Request --
+2026-01-14 13:30:23,604 - WARNING - WhatsApp send attempt 1 failed: HTTPSConnectionPool(host='api.twilio.com', port=443): Max retries exceeded with url: /2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000229755A0980>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). Retrying in 1s
+2026-01-14 13:30:24,604 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 13:30:24,605 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 13:30:24,605 - INFO - Headers:
+2026-01-14 13:30:24,605 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 13:30:24,606 - INFO - Accept : application/json
+2026-01-14 13:30:24,606 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 13:30:24,606 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 13:30:24,606 - INFO - Accept-Charset : utf-8
+2026-01-14 13:30:24,606 - INFO - -- END Twilio API Request --
+2026-01-14 13:30:26,338 - INFO - Response Status Code: 400
+2026-01-14 13:30:26,338 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 12:30:26 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ5c954edc7edb8511a992ed72dc397218', 'Twilio-Request-Duration': '0.041', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 db0227634f5a6631ffed23eb54e5313e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'WkglVFgNTnJUtb4khnngCjpyXrqJqmst68nxNia0OexHifwBeCp9kQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 13:30:26,338 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-14 13:30:28,339 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 13:30:28,339 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 13:30:28,339 - INFO - Headers:
+2026-01-14 13:30:28,339 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 13:30:28,339 - INFO - Accept : application/json
+2026-01-14 13:30:28,340 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 13:30:28,340 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 13:30:28,340 - INFO - Accept-Charset : utf-8
+2026-01-14 13:30:28,340 - INFO - -- END Twilio API Request --
+2026-01-14 13:30:28,641 - INFO - Response Status Code: 400
+2026-01-14 13:30:28,641 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 12:30:28 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ25b517bdbd4be4c48b0b62cfd4a5e0e1', 'Twilio-Request-Duration': '0.030', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 db0227634f5a6631ffed23eb54e5313e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'XOAmcsGAoh324PtirAmhld4kxcN2C0-6k4V4Z1mX6XF5eQZvkUoJdA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 13:30:28,641 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-14 13:30:28,641 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-14 13:30:39,944 - WARNING - Telegram send attempt 1 failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7425081234:AAH8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000229754DB890>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2026-01-14 13:30:42,649 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 13:30:45,806 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 13:30:45,806 - ERROR - Telegram send failed after 3 attempts
+2026-01-14 13:30:45,807 - ERROR - Failed to send signal notification to any channel
+2026-01-14 13:30:45,808 - ERROR - WhatsApp client initialized: True
+2026-01-14 13:30:45,808 - ERROR - Telegram bot token: True
+2026-01-14 13:30:45,808 - ERROR - Telegram chat ID: True
+2026-01-14 13:30:45,808 - INFO - Signal generated for XAUUSDm - Expires at 2026-01-14 13:35:00 UTC
+2026-01-14 13:30:45,809 - INFO - 127.0.0.1 - - [14/Jan/2026 13:30:45] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 13:33:58,148 - INFO - 127.0.0.1 - - [14/Jan/2026 13:33:58] "GET /profile HTTP/1.1" 200 -
+2026-01-14 13:33:59,236 - INFO - 127.0.0.1 - - [14/Jan/2026 13:33:59] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 13:34:04,975 - INFO - 127.0.0.1 - - [14/Jan/2026 13:34:04] "GET / HTTP/1.1" 200 -
+2026-01-14 13:34:05,909 - INFO - 127.0.0.1 - - [14/Jan/2026 13:34:05] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 13:34:07,906 - INFO - 127.0.0.1 - - [14/Jan/2026 13:34:07] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-14 13:34:07,976 - INFO - 127.0.0.1 - - [14/Jan/2026 13:34:07] "GET /login HTTP/1.1" 200 -
+2026-01-14 13:34:20,586 - INFO - 127.0.0.1 - - [14/Jan/2026 13:34:20] "GET /register HTTP/1.1" 200 -
+2026-01-14 13:36:40,662 - INFO - 127.0.0.1 - - [14/Jan/2026 13:36:40] "[32mPOST /register HTTP/1.1[0m" 302 -
+2026-01-14 13:36:40,673 - INFO - 127.0.0.1 - - [14/Jan/2026 13:36:40] "GET /login HTTP/1.1" 200 -
+2026-01-14 13:36:56,739 - INFO - 127.0.0.1 - - [14/Jan/2026 13:36:56] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-14 13:36:56,853 - INFO - 127.0.0.1 - - [14/Jan/2026 13:36:56] "GET / HTTP/1.1" 200 -
+2026-01-14 13:36:57,926 - INFO - 127.0.0.1 - - [14/Jan/2026 13:36:57] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 13:37:12,267 - INFO - 127.0.0.1 - - [14/Jan/2026 13:37:12] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-14 13:37:58,129 - INFO - 127.0.0.1 - - [14/Jan/2026 13:37:58] "GET / HTTP/1.1" 200 -
+2026-01-14 13:37:58,909 - INFO - 127.0.0.1 - - [14/Jan/2026 13:37:58] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 13:38:25,278 - INFO - WhatsApp notification initialized successfully
+2026-01-14 13:38:36,704 - INFO - Retrying request to /chat/completions in 0.455263 seconds
+2026-01-14 13:38:37,161 - INFO - Retrying request to /chat/completions in 0.934424 seconds
+2026-01-14 13:38:48,907 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 13:39:00,246 - ERROR - Failed to send email alert to kizito2008@yahoo.com: [Errno 11001] getaddrinfo failed
+2026-01-14 13:39:11,589 - ERROR - Failed to send email alert to ict.tgil@gmail.com: [Errno 11001] getaddrinfo failed
+2026-01-14 13:39:11,605 - ERROR - Failed to send email alert to ict@otaoilfservices.com: [Errno 11001] getaddrinfo failed
+2026-01-14 13:39:11,625 - ERROR - Failed to send email alert to test@example.com: [Errno 11001] getaddrinfo failed
+2026-01-14 13:39:11,637 - ERROR - Failed to send email alert to lilysaly8@gmail.com: [Errno 11001] getaddrinfo failed
+2026-01-14 13:39:11,642 - WARNING - No user found for email info@otaoilfservices.com, sending as VIP
+2026-01-14 13:39:11,644 - ERROR - Error sending VIP email alerts: 'NoneType' object has no attribute 'id'
+2026-01-14 13:39:11,644 - INFO - WhatsApp notification initialized successfully
+2026-01-14 13:39:11,645 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 13:39:11,645 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 13:39:11,645 - INFO - Headers:
+2026-01-14 13:39:11,646 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 13:39:11,646 - INFO - Accept : application/json
+2026-01-14 13:39:11,646 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 13:39:11,646 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 13:39:11,646 - INFO - Accept-Charset : utf-8
+2026-01-14 13:39:11,646 - INFO - -- END Twilio API Request --
+2026-01-14 13:39:11,648 - WARNING - WhatsApp send attempt 1 failed: HTTPSConnectionPool(host='api.twilio.com', port=443): Max retries exceeded with url: /2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022975642490>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). Retrying in 1s
+2026-01-14 13:39:12,649 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 13:39:12,649 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 13:39:12,649 - INFO - Headers:
+2026-01-14 13:39:12,649 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 13:39:12,649 - INFO - Accept : application/json
+2026-01-14 13:39:12,649 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 13:39:12,649 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 13:39:12,649 - INFO - Accept-Charset : utf-8
+2026-01-14 13:39:12,649 - INFO - -- END Twilio API Request --
+2026-01-14 13:39:29,270 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.207.87.207:9000
+2026-01-14 13:39:29,270 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-14 13:39:29,286 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-14 13:39:37,498 - WARNING -  * Debugger is active!
+2026-01-14 13:39:37,505 - INFO -  * Debugger PIN: 137-776-963
+2026-01-14 13:39:45,937 - INFO - 127.0.0.1 - - [14/Jan/2026 13:39:45] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-14 13:39:46,007 - INFO - 127.0.0.1 - - [14/Jan/2026 13:39:46] "GET /login HTTP/1.1" 200 -
+2026-01-14 13:39:52,785 - INFO - 127.0.0.1 - - [14/Jan/2026 13:39:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-14 13:39:52,937 - INFO - 127.0.0.1 - - [14/Jan/2026 13:39:52] "GET / HTTP/1.1" 200 -
+2026-01-14 13:39:53,832 - INFO - 127.0.0.1 - - [14/Jan/2026 13:39:53] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 13:40:05,451 - INFO - WhatsApp notification initialized successfully
+2026-01-14 13:40:06,090 - INFO - Retrying request to /chat/completions in 0.441871 seconds
+2026-01-14 13:40:06,533 - INFO - Retrying request to /chat/completions in 0.870469 seconds
+2026-01-14 13:40:07,405 - INFO - Signal generated for GOLDs+ - Expires at 2026-01-14 13:45:07 UTC
+2026-01-14 13:40:07,406 - INFO - 127.0.0.1 - - [14/Jan/2026 13:40:07] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 13:41:38,755 - INFO - Retrying request to /chat/completions in 0.397782 seconds
+2026-01-14 13:41:39,157 - INFO - Retrying request to /chat/completions in 0.770990 seconds
+2026-01-14 13:41:39,932 - INFO - Signal generated for GOLDs+ - Expires at 2026-01-14 13:46:39 UTC
+2026-01-14 13:41:39,933 - INFO - 127.0.0.1 - - [14/Jan/2026 13:41:39] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 13:49:11,387 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.207.87.207:9000
+2026-01-14 13:49:11,387 - INFO - [33mPress CTRL+C to quit[0m
+2026-01-14 13:49:11,403 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-14 13:49:15,078 - WARNING -  * Debugger is active!
+2026-01-14 13:49:15,084 - INFO -  * Debugger PIN: 137-776-963
+2026-01-14 13:49:38,388 - INFO - 127.0.0.1 - - [14/Jan/2026 13:49:38] "GET / HTTP/1.1" 200 -
+2026-01-14 13:49:39,700 - INFO - 127.0.0.1 - - [14/Jan/2026 13:49:39] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 13:50:01,679 - INFO - WhatsApp notification initialized successfully
+2026-01-14 13:50:02,279 - INFO - Retrying request to /chat/completions in 0.452272 seconds
+2026-01-14 13:50:02,733 - INFO - Retrying request to /chat/completions in 0.951858 seconds
+2026-01-14 13:50:03,687 - INFO - Signal generated for GOLDs+ - Expires at 2026-01-14 13:55:03 UTC
+2026-01-14 13:50:03,688 - INFO - 127.0.0.1 - - [14/Jan/2026 13:50:03] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 13:50:26,976 - INFO - 127.0.0.1 - - [14/Jan/2026 13:50:26] "GET /profile HTTP/1.1" 200 -
+2026-01-14 13:50:27,774 - INFO - 127.0.0.1 - - [14/Jan/2026 13:50:27] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 13:50:35,645 - INFO - 127.0.0.1 - - [14/Jan/2026 13:50:35] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-14 13:50:35,950 - INFO - 127.0.0.1 - - [14/Jan/2026 13:50:35] "GET /login HTTP/1.1" 200 -
+2026-01-14 13:50:39,097 - INFO - 127.0.0.1 - - [14/Jan/2026 13:50:39] "[32mGET /mlm HTTP/1.1[0m" 302 -
+2026-01-14 13:50:39,235 - INFO - 127.0.0.1 - - [14/Jan/2026 13:50:39] "GET /login?next=/mlm HTTP/1.1" 200 -
+2026-01-14 13:50:48,766 - INFO - 127.0.0.1 - - [14/Jan/2026 13:50:48] "[32mPOST /login?next=/mlm HTTP/1.1[0m" 302 -
+2026-01-14 13:50:48,901 - INFO - 127.0.0.1 - - [14/Jan/2026 13:50:48] "GET / HTTP/1.1" 200 -
+2026-01-14 13:50:50,039 - INFO - 127.0.0.1 - - [14/Jan/2026 13:50:50] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 13:50:56,232 - INFO - 127.0.0.1 - - [14/Jan/2026 13:50:56] "[32mGET /mlm HTTP/1.1[0m" 302 -
+2026-01-14 13:50:56,542 - INFO - 127.0.0.1 - - [14/Jan/2026 13:50:56] "GET / HTTP/1.1" 200 -
+2026-01-14 13:50:57,356 - INFO - 127.0.0.1 - - [14/Jan/2026 13:50:57] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 13:51:14,791 - INFO - 127.0.0.1 - - [14/Jan/2026 13:51:14] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-14 13:52:05,952 - INFO - 127.0.0.1 - - [14/Jan/2026 13:52:05] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-14 13:52:06,048 - INFO - 127.0.0.1 - - [14/Jan/2026 13:52:06] "GET /login HTTP/1.1" 200 -
+2026-01-14 13:52:08,939 - INFO - 127.0.0.1 - - [14/Jan/2026 13:52:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-14 13:52:09,062 - INFO - 127.0.0.1 - - [14/Jan/2026 13:52:09] "GET / HTTP/1.1" 200 -
+2026-01-14 13:52:09,928 - INFO - 127.0.0.1 - - [14/Jan/2026 13:52:09] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 13:52:18,121 - INFO - 127.0.0.1 - - [14/Jan/2026 13:52:18] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-14 13:52:50,162 - INFO - 127.0.0.1 - - [14/Jan/2026 13:52:50] "GET / HTTP/1.1" 200 -
+2026-01-14 13:52:50,724 - INFO - 127.0.0.1 - - [14/Jan/2026 13:52:50] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 13:52:53,663 - INFO - 127.0.0.1 - - [14/Jan/2026 13:52:53] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-01-14 13:52:53,929 - INFO - 127.0.0.1 - - [14/Jan/2026 13:52:53] "GET /login HTTP/1.1" 200 -
+2026-01-14 13:53:01,120 - INFO - 127.0.0.1 - - [14/Jan/2026 13:53:01] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-01-14 13:53:01,131 - INFO - 127.0.0.1 - - [14/Jan/2026 13:53:01] "GET / HTTP/1.1" 200 -
+2026-01-14 13:53:01,621 - INFO - 127.0.0.1 - - [14/Jan/2026 13:53:01] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 13:53:17,153 - INFO - 127.0.0.1 - - [14/Jan/2026 13:53:17] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-14 13:59:05,768 - INFO - 127.0.0.1 - - [14/Jan/2026 13:59:05] "GET / HTTP/1.1" 200 -
+2026-01-14 13:59:06,491 - INFO - 127.0.0.1 - - [14/Jan/2026 13:59:06] "GET /get_symbols HTTP/1.1" 200 -
+2026-01-14 13:59:30,833 - INFO - WhatsApp notification initialized successfully
+2026-01-14 13:59:39,869 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 13:59:51,253 - ERROR - Failed to send email alert to kizito2008@yahoo.com: [Errno 11001] getaddrinfo failed
+2026-01-14 13:59:54,590 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol GOLD..
+2026-01-14 14:02:05,723 - ERROR - Failed to send email alert to ict@otaoilfservices.com: Connection unexpectedly closed
+2026-01-14 14:02:17,051 - ERROR - Failed to send email alert to test@example.com: [Errno 11001] getaddrinfo failed
+2026-01-14 14:02:28,404 - ERROR - Failed to send email alert to lilysaly8@gmail.com: [Errno 11001] getaddrinfo failed
+2026-01-14 14:02:28,406 - WARNING - No user found for email info@otaoilfservices.com, sending as VIP
+2026-01-14 14:02:28,408 - ERROR - Error sending VIP email alerts: 'NoneType' object has no attribute 'id'
+2026-01-14 14:02:28,408 - INFO - WhatsApp notification initialized successfully
+2026-01-14 14:02:28,552 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 14:02:28,552 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 14:02:28,553 - INFO - Headers:
+2026-01-14 14:02:28,553 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 14:02:28,553 - INFO - Accept : application/json
+2026-01-14 14:02:28,553 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 14:02:28,553 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 14:02:28,553 - INFO - Accept-Charset : utf-8
+2026-01-14 14:02:28,553 - INFO - -- END Twilio API Request --
+2026-01-14 14:02:28,555 - WARNING - WhatsApp send attempt 1 failed: HTTPSConnectionPool(host='api.twilio.com', port=443): Max retries exceeded with url: /2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000271D2F8FCB0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). Retrying in 1s
+2026-01-14 14:02:29,555 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 14:02:29,556 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 14:02:29,556 - INFO - Headers:
+2026-01-14 14:02:29,556 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 14:02:29,556 - INFO - Accept : application/json
+2026-01-14 14:02:29,556 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 14:02:29,556 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 14:02:29,556 - INFO - Accept-Charset : utf-8
+2026-01-14 14:02:29,556 - INFO - -- END Twilio API Request --
+2026-01-14 14:02:32,014 - INFO - Response Status Code: 400
+2026-01-14 14:02:32,015 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 13:02:31 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQa70a762d52dc37f58d14e2cc8f855aa1', 'Twilio-Request-Duration': '0.044', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 e9e1982b26fa05631ca01b6aee8693be.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'V5gP6shvjMhVRTS-FiCeojkV-lWRy5ntJTPKgs2ej0O7YPWCybbxcQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 14:02:32,015 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-14 14:02:34,015 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 14:02:34,016 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 14:02:34,016 - INFO - Headers:
+2026-01-14 14:02:34,016 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 14:02:34,016 - INFO - Accept : application/json
+2026-01-14 14:02:34,016 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 14:02:34,016 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 14:02:34,016 - INFO - Accept-Charset : utf-8
+2026-01-14 14:02:34,016 - INFO - -- END Twilio API Request --
+2026-01-14 14:02:34,702 - INFO - Response Status Code: 400
+2026-01-14 14:02:34,702 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 13:02:34 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQce55b0643f5c8e518fe4fb8a27d2ceef', 'Twilio-Request-Duration': '0.029', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 e9e1982b26fa05631ca01b6aee8693be.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'wSS3uUxaDyJOcZ8v6s7gR7emKn4kzhEZOdc2QKznXBBiuQlyK5PqZw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 14:02:34,702 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-14 14:02:34,702 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-14 14:02:46,047 - WARNING - Telegram send attempt 1 failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7425081234:AAH8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000271D2FE4050>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2026-01-14 14:02:48,379 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 14:02:51,386 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 14:02:51,386 - ERROR - Telegram send failed after 3 attempts
+2026-01-14 14:02:51,388 - ERROR - Failed to send signal notification to any channel
+2026-01-14 14:02:51,388 - ERROR - WhatsApp client initialized: True
+2026-01-14 14:02:51,388 - ERROR - Telegram bot token: True
+2026-01-14 14:02:51,388 - ERROR - Telegram chat ID: True
+2026-01-14 14:02:51,388 - INFO - Signal generated for GOLD.. - Expires at 2026-01-14 14:04:39 UTC
+2026-01-14 14:02:51,390 - INFO - 127.0.0.1 - - [14/Jan/2026 14:02:51] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 14:11:17,098 - INFO - Attempting trade execution with IOC filling type
+2026-01-14 14:11:17,098 - INFO - Starting trade execution for GOLD.. with IOC filling type
+2026-01-14 14:11:17,098 - WARNING - Signal has expired! Cannot execute trade. Signal expired at 2026-01-14 14:04:39.894012
+2026-01-14 14:11:17,098 - INFO - Attempting trade execution with FOK filling type
+2026-01-14 14:11:17,098 - INFO - Starting trade execution for GOLD.. with FOK filling type
+2026-01-14 14:11:17,098 - WARNING - Signal has expired! Cannot execute trade. Signal expired at 2026-01-14 14:04:39.894012
+2026-01-14 14:11:17,098 - INFO - Attempting trade execution with RETURN filling type
+2026-01-14 14:11:17,098 - INFO - Starting trade execution for GOLD.. with RETURN filling type
+2026-01-14 14:11:17,099 - WARNING - Signal has expired! Cannot execute trade. Signal expired at 2026-01-14 14:04:39.894012
+2026-01-14 14:11:17,099 - ERROR - Trade execution failed with all filling types. Specific errors:
+IOC: None
+FOK: None
+RETURN: None
+2026-01-14 14:11:17,099 - INFO - 127.0.0.1 - - [14/Jan/2026 14:11:17] "[35m[1mPOST /execute_trade HTTP/1.1[0m" 500 -
+2026-01-14 14:11:35,101 - INFO - Attempting trade execution with IOC filling type
+2026-01-14 14:11:35,101 - INFO - Starting trade execution for GOLD.. with IOC filling type
+2026-01-14 14:11:35,101 - WARNING - Signal has expired! Cannot execute trade. Signal expired at 2026-01-14 14:04:39.894012
+2026-01-14 14:11:35,102 - INFO - Attempting trade execution with FOK filling type
+2026-01-14 14:11:35,102 - INFO - Starting trade execution for GOLD.. with FOK filling type
+2026-01-14 14:11:35,102 - WARNING - Signal has expired! Cannot execute trade. Signal expired at 2026-01-14 14:04:39.894012
+2026-01-14 14:11:35,102 - INFO - Attempting trade execution with RETURN filling type
+2026-01-14 14:11:35,102 - INFO - Starting trade execution for GOLD.. with RETURN filling type
+2026-01-14 14:11:35,102 - WARNING - Signal has expired! Cannot execute trade. Signal expired at 2026-01-14 14:04:39.894012
+2026-01-14 14:11:35,102 - ERROR - Trade execution failed with all filling types. Specific errors:
+IOC: None
+FOK: None
+RETURN: None
+2026-01-14 14:11:35,103 - INFO - 127.0.0.1 - - [14/Jan/2026 14:11:35] "[35m[1mPOST /execute_trade HTTP/1.1[0m" 500 -
+2026-01-14 14:11:41,513 - INFO - Attempting trade execution with IOC filling type
+2026-01-14 14:11:41,513 - INFO - Starting trade execution for GOLD.. with IOC filling type
+2026-01-14 14:11:41,514 - WARNING - Signal has expired! Cannot execute trade. Signal expired at 2026-01-14 14:04:39.894012
+2026-01-14 14:11:41,514 - INFO - Attempting trade execution with FOK filling type
+2026-01-14 14:11:41,514 - INFO - Starting trade execution for GOLD.. with FOK filling type
+2026-01-14 14:11:41,514 - WARNING - Signal has expired! Cannot execute trade. Signal expired at 2026-01-14 14:04:39.894012
+2026-01-14 14:11:41,514 - INFO - Attempting trade execution with RETURN filling type
+2026-01-14 14:11:41,514 - INFO - Starting trade execution for GOLD.. with RETURN filling type
+2026-01-14 14:11:41,514 - WARNING - Signal has expired! Cannot execute trade. Signal expired at 2026-01-14 14:04:39.894012
+2026-01-14 14:11:41,514 - ERROR - Trade execution failed with all filling types. Specific errors:
+IOC: None
+FOK: None
+RETURN: None
+2026-01-14 14:11:41,515 - INFO - 127.0.0.1 - - [14/Jan/2026 14:11:41] "[35m[1mPOST /execute_trade HTTP/1.1[0m" 500 -
+2026-01-14 14:29:42,119 - INFO - Retrying request to /chat/completions in 0.446096 seconds
+2026-01-14 14:29:42,567 - INFO - Retrying request to /chat/completions in 0.839568 seconds
+2026-01-14 14:29:53,866 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-14 14:30:05,243 - ERROR - Failed to send email alert to kizito2008@yahoo.com: [Errno 11001] getaddrinfo failed
+2026-01-14 14:30:08,431 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol GOLD..
+2026-01-14 14:30:11,015 - INFO - Signal alert sent successfully to ict@otaoilfservices.com for symbol GOLD..
+2026-01-14 14:30:13,919 - INFO - Signal alert sent successfully to test@example.com for symbol GOLD..
+2026-01-14 14:30:16,803 - INFO - Signal alert sent successfully to lilysaly8@gmail.com for symbol GOLD..
+2026-01-14 14:30:16,805 - WARNING - No user found for email info@otaoilfservices.com, sending as VIP
+2026-01-14 14:32:28,421 - ERROR - Error sending VIP email alerts: 'NoneType' object has no attribute 'id'
+2026-01-14 14:32:28,422 - INFO - WhatsApp notification initialized successfully
+2026-01-14 14:32:28,422 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 14:32:28,422 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 14:32:28,423 - INFO - Headers:
+2026-01-14 14:32:28,423 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 14:32:28,423 - INFO - Accept : application/json
+2026-01-14 14:32:28,423 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 14:32:28,423 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 14:32:28,423 - INFO - Accept-Charset : utf-8
+2026-01-14 14:32:28,423 - INFO - -- END Twilio API Request --
+2026-01-14 14:32:39,780 - WARNING - WhatsApp send attempt 1 failed: HTTPSConnectionPool(host='api.twilio.com', port=443): Max retries exceeded with url: /2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000271D2FE5D10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). Retrying in 1s
+2026-01-14 14:32:40,781 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 14:32:40,781 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 14:32:40,781 - INFO - Headers:
+2026-01-14 14:32:40,781 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 14:32:40,781 - INFO - Accept : application/json
+2026-01-14 14:32:40,781 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 14:32:40,781 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 14:32:40,781 - INFO - Accept-Charset : utf-8
+2026-01-14 14:32:40,781 - INFO - -- END Twilio API Request --
+2026-01-14 14:32:40,783 - WARNING - WhatsApp send attempt 2 failed: HTTPSConnectionPool(host='api.twilio.com', port=443): Max retries exceeded with url: /2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000271D2BC6350>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). Retrying in 2s
+2026-01-14 14:32:42,783 - INFO - -- BEGIN Twilio API Request --
+2026-01-14 14:32:42,784 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-14 14:32:42,784 - INFO - Headers:
+2026-01-14 14:32:42,784 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-14 14:32:42,784 - INFO - Accept : application/json
+2026-01-14 14:32:42,784 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-14 14:32:42,784 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-14 14:32:42,784 - INFO - Accept-Charset : utf-8
+2026-01-14 14:32:42,784 - INFO - -- END Twilio API Request --
+2026-01-14 14:32:44,713 - INFO - Response Status Code: 400
+2026-01-14 14:32:44,713 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 13:32:44 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ1f2c6c851d7a00353d70fe201354b13f', 'Twilio-Request-Duration': '0.043', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 2753b41455655294f3c924b22dffed5e.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'WXT21GmyWtN6iF9nUAe50s0JCzgoFlz1Jk_L4yBHZhlpMHcmqhc9XQ==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-14 14:32:44,714 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-14 14:32:44,714 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-14 14:32:56,057 - WARNING - Telegram send attempt 1 failed: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7425081234:AAH8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000271D2CCAC10>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2026-01-14 14:32:58,390 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 14:33:01,520 - WARNING - Telegram send failed: HTTP 401 - {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-01-14 14:33:01,520 - ERROR - Telegram send failed after 3 attempts
+2026-01-14 14:33:01,522 - ERROR - Failed to send signal notification to any channel
+2026-01-14 14:33:01,552 - ERROR - WhatsApp client initialized: True
+2026-01-14 14:33:01,552 - ERROR - Telegram bot token: True
+2026-01-14 14:33:01,552 - ERROR - Telegram chat ID: True
+2026-01-14 14:33:01,552 - INFO - Signal generated for GOLD.. - Expires at 2026-01-14 14:34:53 UTC
+2026-01-14 14:33:01,554 - INFO - 127.0.0.1 - - [14/Jan/2026 14:33:01] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-14 14:59:30,715 - INFO - 127.0.0.1 - - [14/Jan/2026 14:59:30] "[35m[1mPOST /run_ai_analysis HTTP/1.1[0m" 500 -
+2026-01-14 15:27:59,460 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\web_app.py', reloading
+2026-01-14 15:28:00,202 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_ai_based.py', reloading
+2026-01-14 15:28:00,208 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\app_rule_based.py', reloading
+2026-01-14 15:28:00,214 - INFO -  * Detected change in 'c:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\apply_trade.py', reloading
+2026-01-14 15:28:01,199 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-14 15:28:07,066 - WARNING -  * Debugger is active!
+2026-01-14 15:28:07,073 - INFO -  * Debugger PIN: 137-776-963
+2026-01-14 15:28:07,970 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\MetaTrader5\\__init__.py', reloading
+2026-01-14 15:28:08,125 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\__init__.py', reloading
+2026-01-14 15:28:08,139 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\app.py', reloading
+2026-01-14 15:28:08,213 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sansio\\app.py', reloading
+2026-01-14 15:28:08,236 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2026-01-14 15:28:08,290 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\templating.py', reloading
+2026-01-14 15:28:08,302 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jinja2\\__init__.py', reloading
+2026-01-14 15:28:08,305 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\jinja2\\environment.py', reloading
+2026-01-14 15:28:08,391 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\globals.py', reloading
+2026-01-14 15:28:08,398 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\wrappers.py', reloading
+2026-01-14 15:28:08,421 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2026-01-14 15:28:08,422 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2026-01-14 15:28:08,446 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2026-01-14 15:28:08,474 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\json\\__init__.py', reloading
+2026-01-14 15:28:08,489 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2026-01-14 15:28:08,513 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2026-01-14 15:28:08,540 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\helpers.py', reloading
+2026-01-14 15:28:08,558 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\flask\\sessions.py', reloading
+2026-01-14 15:28:09,768 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-14 15:28:18,282 - WARNING -  * Debugger is active!
+2026-01-14 15:28:18,288 - INFO -  * Debugger PIN: 137-776-963

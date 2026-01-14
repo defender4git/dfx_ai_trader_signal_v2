@@ -120,16 +120,17 @@ def send_signal_alert(user_email, signal_data):
 
     if not app.config['MAIL_USERNAME'] or not app.config['MAIL_PASSWORD']:
         logging.warning("Email configuration not found - skipping alert")
-        # Log to activity log
-        activity_log = ActivityLog(
-            user_id=user.id,
-            activity_type='email_notification',
-            description=f'Failed to send signal alert for {signal_data["symbol"]} - Email configuration missing',
-            status='failure',
-            details='MAIL_USERNAME or MAIL_PASSWORD not configured'
-        )
-        db.session.add(activity_log)
-        db.session.commit()
+        # Log to activity log only if user exists
+        if user:
+            activity_log = ActivityLog(
+                user_id=user.id,
+                activity_type='email_notification',
+                description=f'Failed to send signal alert for {signal_data["symbol"]} - Email configuration missing',
+                status='failure',
+                details='MAIL_USERNAME or MAIL_PASSWORD not configured'
+            )
+            db.session.add(activity_log)
+            db.session.commit()
         print("⚠️  Email configuration not found - skipping alert")
         return
 
@@ -280,9 +281,9 @@ def profile():
         .all()
     return render_template('profile.html', activity_logs=activity_logs)
 
-@app.route('/mailing_list_manager', methods=['GET', 'POST'])
+@app.route('/mlm', methods=['GET', 'POST'])
 @login_required
-def mailing_list_manager():
+def mlm():
     if not current_user.is_admin:
         flash('Access denied. Admin privileges required.', 'error')
         return redirect(url_for('index'))
@@ -322,12 +323,12 @@ def mailing_list_manager():
                 user.email_notifications = not user.email_notifications
                 db.session.commit()
                 flash('User email notifications updated', 'success')
-        return redirect(url_for('mailing_list_manager'))
+        return redirect(url_for('mlm'))
 
     # GET request
     vip_emails = MailingList.query.filter_by(list_type='vip').all()
     users = User.query.all()
-    return render_template('mailing_list_manager.html', vip_emails=vip_emails, users=users)
+    return render_template('mlm.html', vip_emails=vip_emails, users=users)
 
 @app.route('/run_ai_analysis', methods=['POST'])
 @login_required
