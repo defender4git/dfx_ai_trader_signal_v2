@@ -4,7 +4,6 @@ from telegram.request import HTTPXRequest
 import os
 import logging
 from dotenv import load_dotenv
-import openai
 import MetaTrader5 as mt5
 import pandas as pd
 import numpy as np
@@ -489,56 +488,6 @@ class MT5TradingEA:
 
         return signal
 
-def analyze_with_openai(reasoning: str) -> str:
-    # Summarize reasoning to reduce token count and prevent rate limits
-    parts = reasoning.split(' | ')
-    summary_parts = []
-    for part in parts:
-        if 'Signal Strength' in part:
-            summary_parts.append(part)
-        elif 'Trend' in part:
-            summary_parts.append(part)
-        elif 'Volatility' in part:
-            summary_parts.append(part.replace('Volatility: ', 'Vol: '))
-        elif 'Bullish Factors' in part and len(part.split(': ')) > 1 and part.split(': ')[1].strip():
-            factors = part.split(': ')[1][:150]  # limit length
-            summary_parts.append(f'Bullish: {factors}')
-        elif 'Bearish Factors' in part and len(part.split(': ')) > 1 and part.split(': ')[1].strip():
-            factors = part.split(': ')[1][:150]
-            summary_parts.append(f'Bearish: {factors}')
-    summary = ' | '.join(summary_parts)
-    if not summary:
-        summary = reasoning[:300]
-
-    try:
-        client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                #{"role": "system", "content": "You are a trading analyst. Provide concise insights on this trading signal."},
-                {"role": "user", "content": summary}
-                #{"role": "user", "content": f"Analyze this trading signal for {select_symbol} with reasoning: and provide concise insights"}
-            ],
-            max_tokens=512,
-            temperature=0.7
-            #max_tokens=150
-        )
-        response_text = response.choices[0].message.content.strip()
-    
-        # Debug: Check if response_text is empty or not JSON
-        if not response_text or not response_text.strip():
-            print(f"OpenAI returned empty response")
-        return response_text
-    except openai.RateLimitError as rate_error:
-        logging.warning(f"OpenAI rate limit exceeded: {rate_error}")
-        print(f"OpenAI rate limit exceeded - using fallback analysis")
-        return 
-    except Exception as api_error:
-        print(f"OpenAI API Error: {api_error}")
-        return 
-    except Exception as e:
-        return f"AI analysis failed: {str(e)}"
-
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Send a message when the command /start is issued."""
     # Create quick access buttons for popular pairs
@@ -757,30 +706,27 @@ async def select_timeframe(update: Update, context: ContextTypes.DEFAULT_TYPE) -
 
     # Check confidence
     if signal.confidence.upper() in ["HIGH", "MEDIUM"]:
-        ai_analysis = await loop.run_in_executor(None, analyze_with_openai, "check gold market") #signal.reasoning)
         # Format message
         direction_emoji = "🟢" if signal.signal_type == "LONG" else "🔴"
         message = f"""
 🚨 *TRADING SIGNAL ALERT* 🚨
 
 {direction_emoji} *{signal.signal_type}* on {signal.symbol}
-📊 *Confidence:* {signal.confidence}
-📈 *Timeframe:* {signal.timeframe}
+📊 #*Confidence:* {signal.confidence}
+📈 #*Timeframe:* {signal.timeframe}
 
-💰 *Entry Price:* {signal.entry_price:.5f}
-📏 *Position Size:* {signal.position_size:.2f} lots
+💰 #*Entry Price:* {signal.entry_price:.5f}
+📏 #*Position Size:* {signal.position_size:.2f} lots
 
-🛡️ *Risk Management:*
+🛡️ #*Risk Management:*
 • Stop Loss: {signal.stop_loss:.5f}
 • Take Profit 1: {signal.take_profit_1:.5f}
 • Take Profit 2: {signal.take_profit_2:.5f} (Move SL to BE!)
 • Take Profit 3: {signal.take_profit_3:.5f} (Manual closure)
 
-💡 *Reasoning:* {signal.reasoning}
+💡 #*Reasoning:* {signal.reasoning}
 
-🤖 *AI Analysis:* {ai_analysis}
-
-⏰ *Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
+⏰ #*Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
 ⏱️ Valid for 5 minutes for entry.
         """.strip()
 
@@ -971,30 +917,27 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         
         # Check confidence and send signal
         if signal.confidence.upper() in ["HIGH", "MEDIUM"]:
-            ai_analysis = await loop.run_in_executor(None, analyze_with_openai, signal.reasoning)
             direction_emoji = "🟢" if signal.signal_type == "LONG" else "🔴"
             message = f"""
-    🚨 *TRADING SIGNAL ALERT* 🚨
-    
-    {direction_emoji} *{signal.signal_type}* on {signal.symbol}
-    📊 *Confidence:* {signal.confidence}
-    📈 *Timeframe:* {signal.timeframe}
-    
-    💰 *Entry Price:* {signal.entry_price:.5f}
-    📏 *Position Size:* {signal.position_size:.2f} lots
-    
-    🛡️ *Risk Management:*
-    • Stop Loss: {signal.stop_loss:.5f}
-    • Take Profit 1: {signal.take_profit_1:.5f}
-    • Take Profit 2: {signal.take_profit_2:.5f} (Move SL to BE!)
-    • Take Profit 3: {signal.take_profit_3:.5f} (Manual closure)
-    
-    💡 *Reasoning:* {signal.reasoning}
-    
-    🤖 *AI Analysis:* {ai_analysis}
-    
-    ⏰ *Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
-    ⏱️ Valid for 5 minutes for entry.
+🚨 *TRADING SIGNAL ALERT* 🚨
+
+{direction_emoji} *{signal.signal_type}* on {signal.symbol}
+📊 #*Confidence:* {signal.confidence}
+📈 #*Timeframe:* {signal.timeframe}
+
+💰 #*Entry Price:* {signal.entry_price:.5f}
+📏 #*Position Size:* {signal.position_size:.2f} lots
+
+🛡️ #*Risk Management:*
+• Stop Loss: {signal.stop_loss:.5f}
+• Take Profit 1: {signal.take_profit_1:.5f}
+• Take Profit 2: {signal.take_profit_2:.5f} (Move SL to BE!)
+• Take Profit 3: {signal.take_profit_3:.5f} (Manual closure)
+
+💡 #*Reasoning:* {signal.reasoning}
+
+⏰ #*Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
+⏱️ Valid for 5 minutes for entry.
             """.strip()
             
             await query.message.reply_text(message, parse_mode='Markdown')
