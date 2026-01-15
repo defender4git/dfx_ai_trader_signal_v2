@@ -1,5 +1,6 @@
 from telegram import Update
-from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, ConversationHandler
+from telegram.request import HTTPXRequest
 import os
 import logging
 from dotenv import load_dotenv
@@ -33,11 +34,14 @@ class TradingSignal:
     position_size: float
     confidence: str
     reasoning: str
-    timemframe: str
+    timeframe: str
     timestamp: datetime
     indicators: Dict
     trend: str
     entry_strategy: str
+
+# States for conversation
+SELECT_SYMBOL, SELECT_TIMEFRAME = range(2)
 
 class TechnicalAnalyzer:
     """Calculate technical indicators"""
@@ -474,7 +478,7 @@ class MT5TradingEA:
             confidence=analysis['confidence'],
             reasoning=analysis['reasoning'],
             timestamp=datetime.now(),
-            timemframe=tf_name,
+            timeframe=tf_name,
             indicators=indicators,
             trend=analysis['trend'],
             entry_strategy=analysis['entry_strategy']
@@ -484,59 +488,159 @@ class MT5TradingEA:
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Send a message when the command /start is issued."""
-    await update.message.reply_text('Hi! This is your trading signal bot.') 
+    await update.message.reply_text('Hi! This is your trading signal bot. type /help for guidance.') 
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Send a message when the command /help is issued."""
-    await update.message.reply_text('Help! Use /start to test this bot. Use /signal to get a trading signal.')
+    await update.message.reply_text('Help! Use /start to test this bot. Use /signal to start interactive signal generation. You will be prompted to select symbol and timeframe. Use /cancel to cancel.')
 
 async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Echo the user message."""
     await update.message.reply_text(update.message.text)
 
-async def signal_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Generate and send trading signal if confidence is HIGH or MEDIUM."""
-    # Configuration
-    SYMBOL = "XAUUSDm"
-    TIMEFRAME = mt5.TIMEFRAME_H1
+async def start_signal(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    """Start the signal generation conversation."""
+    
+    # Send initial message first
+    await update.message.reply_text("🔄 Connecting to server and fetching data...")
+    
+    # Run MT5 operations in executor to avoid blocking
+    import asyncio
+    loop = asyncio.get_event_loop()
+    
+    def get_mt5_symbols():
+        # Connect to MT5 to get symbols
+        if not mt5.initialize():
+            return None
+        
+        # Get only symbols visible in Market Watch
+        symbols = mt5.symbols_get()
+        if symbols is None or len(symbols) == 0:
+            mt5.shutdown()
+            return []
+        
+        # Filter only symbols that are visible in Market Watch
+        market_watch_symbols = [s.name for s in symbols if s.visible]
+        
+        mt5.shutdown()
+        return market_watch_symbols
+    
+    # Run in executor to avoid blocking
+    market_watch_symbols = await loop.run_in_executor(None, get_mt5_symbols)
+    
+    if market_watch_symbols is None:
+        await update.message.reply_text("❌ Failed to connect to MT5. Make sure MT5 is running.")
+        return ConversationHandler.END
+    
+    if len(market_watch_symbols) == 0:
+        await update.message.reply_text("❌ No symbols in Market Watch. Please add symbols to Market Watch in MT5.")
+        return ConversationHandler.END
+
+    context.user_data['symbols'] = market_watch_symbols
+
+    symbol_list = "\n".join(f"• {s}" for s in market_watch_symbols)
+    await update.message.reply_text(f"✅ Available symbols (from Market Watch):\n{symbol_list}\n\n📝 Reply with the symbol name:")
+
+    return SELECT_SYMBOL
+
+async def select_symbol(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    """Handle symbol selection."""
+    symbol = update.message.text.strip()  # Normalize symbol input
+    if symbol not in [s for s in context.user_data['symbols']]: #removed .upper()
+        await update.message.reply_text("Invalid symbol. Please select from the list.")
+        return SELECT_SYMBOL
+
+    context.user_data['selected_symbol'] = symbol
+
+    timeframes = ["M1", "M5", "M15", "M30", "H1", "H4", "D1"]
+    timeframe_list = "\n".join(f"• {tf}" for tf in timeframes)
+    await update.message.reply_text(f"Selected symbol: {symbol}\n\nAvailable timeframes:\n{timeframe_list}\n\nReply with the timeframe:")
+
+    return SELECT_TIMEFRAME
+
+async def select_timeframe(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    """Handle timeframe selection and generate signal."""
+    timeframe_str = update.message.text.strip().upper()
+    valid_timeframes = ["M1", "M5", "M15", "M30", "H1", "H4", "D1"]
+    if timeframe_str not in valid_timeframes:
+        await update.message.reply_text("❌ Invalid timeframe. Please select from the list.")
+        return SELECT_TIMEFRAME
+
+    symbol = context.user_data['selected_symbol']
+    timeframe_map = {
+        "M1": mt5.TIMEFRAME_M1,
+        "M5": mt5.TIMEFRAME_M5,
+        "M15": mt5.TIMEFRAME_M15,
+        "M30": mt5.TIMEFRAME_M30,
+        "H1": mt5.TIMEFRAME_H1,
+        "H4": mt5.TIMEFRAME_H4,
+        "D1": mt5.TIMEFRAME_D1
+    }
+    timeframe = timeframe_map[timeframe_str]
+
+    # Send processing message
+    await update.message.reply_text(f"🔄 Analyzing {symbol} on {timeframe_str} timeframe...")
+
     LOOKBACK = 150
     RISK_PERCENT = 1.0
 
-    # Create EA instance
-    ea = MT5TradingEA(
-        symbol=SYMBOL,
-        timeframe=TIMEFRAME,
-        lookback=LOOKBACK,
-        account_risk_percent=RISK_PERCENT
-    )
+    # Run MT5 operations in executor
+    import asyncio
+    loop = asyncio.get_event_loop()
+    
+    def generate_trading_signal():
+        # Create EA instance
+        ea = MT5TradingEA(
+            symbol=symbol,
+            timeframe=timeframe,
+            lookback=LOOKBACK,
+            account_risk_percent=RISK_PERCENT
+        )
 
-    if not ea.connect_mt5():
-        await update.message.reply_text("Failed to connect to MT5.")
-        return
+        if not ea.connect_mt5():
+            return None, "Failed to connect to MT5."
 
-    try:
-        # Get market data
-        df = ea.get_market_data()
-        if df is None:
-            await update.message.reply_text("Failed to get market data.")
-            return
+        try:
+            # Get market data
+            df = ea.get_market_data()
+            if df is None:
+                ea.disconnect_mt5()
+                return None, "Failed to get market data."
 
-        # Calculate indicators
-        indicators = ea.calculate_indicators(df)
+            # Calculate indicators
+            indicators = ea.calculate_indicators(df)
 
-        # Generate signal
-        signal = ea.generate_signal(indicators)
+            # Generate signal
+            signal = ea.generate_signal(indicators)
+            
+            ea.disconnect_mt5()
+            return signal, None
 
-        # Check confidence
-        if signal.confidence.upper() in ["HIGH", "MEDIUM"]:
-            # Format message
-            direction_emoji = "🟢" if signal.signal_type == "LONG" else "🔴"
-            message = f"""
+        except Exception as e:
+            ea.disconnect_mt5()
+            return None, f"Error: {str(e)}"
+    
+    # Run signal generation in executor
+    signal, error = await loop.run_in_executor(None, generate_trading_signal)
+    
+    if error:
+        await update.message.reply_text(f"❌ {error}")
+        return ConversationHandler.END
+    
+    if signal is None:
+        await update.message.reply_text("❌ Failed to generate signal.")
+        return ConversationHandler.END
+
+    # Check confidence
+    if signal.confidence.upper() in ["HIGH", "MEDIUM"]:
+        # Format message
+        direction_emoji = "🟢" if signal.signal_type == "LONG" else "🔴"
+        message = f"""
 🚨 *TRADING SIGNAL ALERT* 🚨
 
 {direction_emoji} *{signal.signal_type}* on {signal.symbol}
 📊 *Confidence:* {signal.confidence}
-    *Timeframe:* {signal.timemframe}
+📈 *Timeframe:* {signal.timeframe}
 
 💰 *Entry Price:* {signal.entry_price:.5f}
 📏 *Position Size:* {signal.position_size:.2f} lots
@@ -544,30 +648,58 @@ async def signal_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 🛡️ *Risk Management:*
 • Stop Loss: {signal.stop_loss:.5f}
 • Take Profit 1: {signal.take_profit_1:.5f}
-• Take Profit 2: {signal.take_profit_2:.5f} (Don't forget to move SL to BE!)
-• Take Profit 3: {signal.take_profit_3:.5f} (Consider manual closure)
+• Take Profit 2: {signal.take_profit_2:.5f} (Move SL to BE!)
+• Take Profit 3: {signal.take_profit_3:.5f} (Manual closure)
 
 💡 *Reasoning:* {signal.reasoning}
 
-⏰ *Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')} /n Valid for 5 minutes for entry.
-            """.strip()
+⏰ *Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
+⏱️ Valid for 5 minutes for entry.
+        """.strip()
 
-            await update.message.reply_text(message, parse_mode='Markdown')
-        else:
-            await update.message.reply_text(f"Signal generated but confidence is {signal.confidence}. No notification sent.")
+        await update.message.reply_text(message, parse_mode='Markdown')
+    else:
+        await update.message.reply_text(f"📊 Signal generated but confidence is {signal.confidence}. No actionable signal at this time.")
 
-    finally:
-        ea.disconnect_mt5()
+    return ConversationHandler.END
+
+async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    """Cancel the conversation."""
+    await update.message.reply_text("Signal generation cancelled.")
+    return ConversationHandler.END
 
 def main():
     """Start the bot."""
-    # Create the Application and pass it your bot's token.
-    application = Application.builder().token(os.getenv("TELEGRAM_BOT_TOKEN")).connect_timeout(10).read_timeout(30).build()
+    # Create custom request with proper timeouts
+    request = HTTPXRequest(
+        connection_pool_size=8,
+        connect_timeout=10.0,
+        read_timeout=30.0,
+    )
+    
+    # Create the Application with custom request
+    application = (
+        Application.builder()
+        .token(os.getenv("TELEGRAM_BOT_TOKEN"))
+        .request(request)
+        .build()
+    )
     
     # on different commands - answer in Telegram
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("help", help_command))
-    application.add_handler(CommandHandler("signal", signal_command))
+
+    # Signal conversation handler
+    signal_conv_handler = ConversationHandler(
+        entry_points=[CommandHandler("signal", start_signal)],
+        states={
+            SELECT_SYMBOL: [MessageHandler(filters.TEXT & ~filters.COMMAND, select_symbol)],
+            SELECT_TIMEFRAME: [MessageHandler(filters.TEXT & ~filters.COMMAND, select_timeframe)],
+        },
+        fallbacks=[CommandHandler("cancel", cancel)],
+    )
+    application.add_handler(signal_conv_handler)
+
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))
 
     # Start the bot

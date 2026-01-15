@@ -10913,3 +10913,238 @@ RETURN: Trade execution failed: AutoTrading disabled by client (retcode: 10027)
 2026-01-15 00:27:24,880 - INFO -  * Restarting with watchdog (windowsapi)
 2026-01-15 00:27:28,894 - WARNING -  * Debugger is active!
 2026-01-15 00:27:28,897 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:29:59,677 - INFO - WhatsApp notification initialized successfully
+2026-01-15 00:30:16,843 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-15 00:30:16,867 - INFO - Daily signal limit (2) reached for user defender - skipping alert
+2026-01-15 00:30:16,886 - INFO - Daily signal limit (5) reached for user Admin - skipping alert
+2026-01-15 00:30:16,899 - INFO - Daily signal limit (2) reached for user defender - skipping alert
+2026-01-15 00:30:16,909 - WARNING - No user found for email nsikak.p@gmail.com, sending as VIP
+2026-01-15 00:30:31,693 - INFO - Signal alert sent successfully to nsikak.p@gmail.com for symbol BTCUSDm
+2026-01-15 00:30:31,694 - INFO - WhatsApp notification initialized successfully
+2026-01-15 00:30:31,821 - INFO - -- BEGIN Twilio API Request --
+2026-01-15 00:30:31,821 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-15 00:30:31,822 - INFO - Headers:
+2026-01-15 00:30:31,822 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-15 00:30:31,822 - INFO - Accept : application/json
+2026-01-15 00:30:31,822 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-15 00:30:31,822 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-15 00:30:31,822 - INFO - Accept-Charset : utf-8
+2026-01-15 00:30:31,822 - INFO - -- END Twilio API Request --
+2026-01-15 00:30:33,775 - INFO - Response Status Code: 400
+2026-01-15 00:30:33,775 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 23:30:33 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQe7b2922aa34113395e26326b4c7da417', 'Twilio-Request-Duration': '0.037', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 dd11c9768f8b06d6759fe07ff69421ce.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': '4WC1j5OF5AjtaxoW46jzNKF1ehfGB0DOY8CZ0vCxmK9JZUNY5U3bXw==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-15 00:30:33,775 - WARNING - WhatsApp send attempt 1 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 1s
+2026-01-15 00:30:34,776 - INFO - -- BEGIN Twilio API Request --
+2026-01-15 00:30:34,776 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-15 00:30:34,776 - INFO - Headers:
+2026-01-15 00:30:34,777 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-15 00:30:34,777 - INFO - Accept : application/json
+2026-01-15 00:30:34,777 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-15 00:30:34,777 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-15 00:30:34,777 - INFO - Accept-Charset : utf-8
+2026-01-15 00:30:34,777 - INFO - -- END Twilio API Request --
+2026-01-15 00:30:35,440 - INFO - Response Status Code: 400
+2026-01-15 00:30:35,440 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 23:30:35 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQb779932ebcac9c40f8ca50f76394fc91', 'Twilio-Request-Duration': '0.026', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 dd11c9768f8b06d6759fe07ff69421ce.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'MwHC0_yH47ihhepBx5VslS9TDWjyPSbZe-VumsYw-c2eLwGOxi7GdA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-15 00:30:35,441 - WARNING - WhatsApp send attempt 2 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 2s
+2026-01-15 00:30:37,441 - INFO - -- BEGIN Twilio API Request --
+2026-01-15 00:30:37,441 - INFO - POST Request: https://api.twilio.com/2010-04-01/Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json
+2026-01-15 00:30:37,441 - INFO - Headers:
+2026-01-15 00:30:37,441 - INFO - Content-Type : application/x-www-form-urlencoded
+2026-01-15 00:30:37,441 - INFO - Accept : application/json
+2026-01-15 00:30:37,441 - INFO - User-Agent : twilio-python/9.8.5 (Windows AMD64) Python/3.13.7
+2026-01-15 00:30:37,441 - INFO - X-Twilio-Client : python-9.8.5
+2026-01-15 00:30:37,441 - INFO - Accept-Charset : utf-8
+2026-01-15 00:30:37,442 - INFO - -- END Twilio API Request --
+2026-01-15 00:30:38,066 - INFO - Response Status Code: 400
+2026-01-15 00:30:38,066 - INFO - Response Headers: {'Content-Type': 'application/json', 'Content-Length': '138', 'Connection': 'keep-alive', 'Date': 'Wed, 14 Jan 2026 23:30:37 GMT', 'X-Twilio-Error-Code': '21656', 'Twilio-Concurrent-Requests': '1', 'Twilio-Request-Id': 'RQ8abf37130e8a63a0fbe0159a1c475db6', 'Twilio-Request-Duration': '0.025', 'X-Home-Region': 'us1', 'X-API-Domain': 'api.twilio.com', 'Strict-Transport-Security': 'max-age=31536000', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 dd11c9768f8b06d6759fe07ff69421ce.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'LOS50-P2', 'X-Amz-Cf-Id': 'X6yWR80BJYQpZqvImO0tK6fbGM8w6uqLLg3vFg8tQNPWJoHwR-v3MA==', 'X-Powered-By': 'AT-5000', 'X-Shenanigans': 'none', 'Vary': 'Origin'}
+2026-01-15 00:30:38,066 - WARNING - WhatsApp send attempt 3 failed: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACb166f2f8a150387c693a17e08d11968b/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The Content Variables parameter is invalid.[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21656[0m
+
+. Retrying in 4s
+2026-01-15 00:30:38,067 - ERROR - WhatsApp send failed after 3 attempts
+2026-01-15 00:30:39,760 - WARNING - Telegram send failed: HTTP 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2026-01-15 00:30:41,950 - WARNING - Telegram send failed: HTTP 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2026-01-15 00:30:46,963 - WARNING - Telegram send failed: HTTP 400 - {"ok":false,"error_code":400,"description":"Bad Request: chat not found"}
+2026-01-15 00:30:46,963 - ERROR - Telegram send failed after 3 attempts
+2026-01-15 00:30:46,966 - ERROR - Failed to send signal notification to any channel
+2026-01-15 00:30:46,966 - ERROR - WhatsApp client initialized: True
+2026-01-15 00:30:46,966 - ERROR - Telegram bot token: True
+2026-01-15 00:30:46,966 - ERROR - Telegram chat ID: True
+2026-01-15 00:30:46,966 - INFO - Signal generated for BTCUSDm - Expires at 2026-01-15 00:35:16 UTC
+2026-01-15 00:30:46,969 - INFO - 127.0.0.1 - - [15/Jan/2026 00:30:46] "POST /run_ai_analysis HTTP/1.1" 200 -
+2026-01-15 00:31:21,646 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:31:23,358 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 00:31:33,168 - WARNING -  * Debugger is active!
+2026-01-15 00:31:33,175 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:31:40,219 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:31:40,221 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:31:40,222 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:31:41,598 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 00:31:49,807 - WARNING -  * Debugger is active!
+2026-01-15 00:31:49,811 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:31:54,858 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:31:54,858 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:31:54,860 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:31:56,577 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 00:32:03,701 - WARNING -  * Debugger is active!
+2026-01-15 00:32:03,708 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:36:54,301 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\telegram\\ext\\_handlers\\conversationhandler.py', reloading
+2026-01-15 00:36:56,068 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 00:37:05,079 - WARNING -  * Debugger is active!
+2026-01-15 00:37:05,083 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:37:08,034 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:37:08,035 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:37:08,036 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:37:09,898 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 00:37:15,416 - WARNING -  * Debugger is active!
+2026-01-15 00:37:15,421 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:37:25,411 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:37:25,412 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:37:26,350 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 00:37:35,882 - WARNING -  * Debugger is active!
+2026-01-15 00:37:35,889 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:37:41,261 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:37:41,263 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:37:42,716 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 00:37:49,590 - WARNING -  * Debugger is active!
+2026-01-15 00:37:49,597 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:39:52,121 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpx\\_client.py', reloading
+2026-01-15 00:39:52,122 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpx\\_transports\\default.py', reloading
+2026-01-15 00:39:52,122 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\contextlib.py', reloading
+2026-01-15 00:39:52,123 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_async\\connection_pool.py', reloading
+2026-01-15 00:39:52,124 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_async\\connection.py', reloading
+2026-01-15 00:39:52,124 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_backends\\auto.py', reloading
+2026-01-15 00:39:52,125 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_backends\\anyio.py', reloading
+2026-01-15 00:39:52,125 - INFO -  * Detected change in 'C:\\Users\\defender\\AppData\\Roaming\\Python\\Python313\\site-packages\\httpcore\\_exceptions.py', reloading
+2026-01-15 00:39:52,907 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 00:39:58,398 - WARNING -  * Debugger is active!
+2026-01-15 00:39:58,403 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:40:16,786 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\asyncio\\base_events.py', reloading
+2026-01-15 00:40:17,262 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 00:40:21,322 - WARNING -  * Debugger is active!
+2026-01-15 00:40:21,327 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:42:51,860 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:42:51,866 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:42:53,387 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 00:43:03,822 - WARNING -  * Debugger is active!
+2026-01-15 00:43:03,830 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:43:07,502 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:43:07,503 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:43:09,805 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 00:43:28,197 - WARNING -  * Debugger is active!
+2026-01-15 00:43:28,204 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:44:59,672 - INFO - WhatsApp notification initialized successfully
+2026-01-15 00:45:01,839 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:45:01,844 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:45:02,591 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 00:45:10,687 - WARNING -  * Debugger is active!
+2026-01-15 00:45:10,693 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:49:58,886 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:49:58,892 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:49:59,466 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 00:50:06,066 - WARNING -  * Debugger is active!
+2026-01-15 00:50:06,073 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:51:36,692 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:51:36,697 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:51:37,781 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 00:51:42,805 - WARNING -  * Debugger is active!
+2026-01-15 00:51:42,811 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:57:36,640 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:57:36,643 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:57:36,645 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:57:38,488 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 00:57:43,661 - WARNING -  * Debugger is active!
+2026-01-15 00:57:43,665 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:57:47,943 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:57:47,946 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:57:47,947 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 00:57:48,646 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 00:57:53,057 - WARNING -  * Debugger is active!
+2026-01-15 00:57:53,061 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 00:59:59,622 - INFO - WhatsApp notification initialized successfully
+2026-01-15 01:00:19,679 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-15 01:00:22,993 - INFO - Signal alert sent successfully to kizito2008@yahoo.com for symbol BTCUSDm
+2026-01-15 01:00:27,158 - INFO - Signal alert sent successfully to ict.tgil@gmail.com for symbol BTCUSDm
+2026-01-15 01:00:29,455 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:00:29,460 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:00:29,462 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:00:30,812 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 01:00:34,995 - WARNING -  * Debugger is active!
+2026-01-15 01:00:35,001 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 01:00:42,717 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:00:42,718 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:00:42,718 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:00:43,439 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 01:00:54,509 - WARNING -  * Debugger is active!
+2026-01-15 01:00:54,514 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 01:00:56,019 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:00:56,023 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:00:57,259 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 01:01:01,383 - WARNING -  * Debugger is active!
+2026-01-15 01:01:01,386 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 01:03:27,690 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:03:27,692 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:03:29,444 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 01:03:40,980 - WARNING -  * Debugger is active!
+2026-01-15 01:03:40,987 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 01:03:44,024 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:03:44,025 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:03:44,759 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 01:03:49,654 - WARNING -  * Debugger is active!
+2026-01-15 01:03:49,658 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 01:04:06,542 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:04:06,545 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:04:06,552 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:04:08,302 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 01:04:22,666 - WARNING -  * Debugger is active!
+2026-01-15 01:04:22,671 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 01:04:57,238 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:04:57,239 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:04:58,429 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 01:05:02,692 - WARNING -  * Debugger is active!
+2026-01-15 01:05:02,697 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 01:05:10,009 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:05:10,012 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:05:10,013 - INFO -  * Detected change in 'C:\\Users\\Public\\PythonMT5Codes\\pythonlesson\\Completed\\AI_USER_SIGNAL\\telebot.py', reloading
+2026-01-15 01:05:11,000 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 01:05:15,295 - WARNING -  * Debugger is active!
+2026-01-15 01:05:15,299 - INFO -  * Debugger PIN: 137-776-963
+2026-01-15 01:05:19,815 - INFO -  * Detected change in 'C:\\Program Files\\Python313\\Lib\\asyncio\\events.py', reloading
+2026-01-15 01:05:21,110 - INFO -  * Restarting with watchdog (windowsapi)
+2026-01-15 01:05:25,661 - WARNING -  * Debugger is active!
+2026-01-15 01:05:25,665 - INFO -  * Debugger PIN: 137-776-963
