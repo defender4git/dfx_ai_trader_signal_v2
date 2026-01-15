@@ -504,6 +504,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             InlineKeyboardButton("📈 US30 (M15)", callback_data="quick_us30_m15")
         ],
         [
+            InlineKeyboardButton("📈 US100 (H1)", callback_data="quick_us100_h1"),
+            InlineKeyboardButton("📈 US100 (M15)", callback_data="quick_us100_m15")
+        ],
+        [
             InlineKeyboardButton("💶 EURUSD (H1)", callback_data="quick_eurusd_h1"),
             InlineKeyboardButton("💶 EURUSD (M15)", callback_data="quick_eurusd_m15")
         ],
@@ -533,6 +537,8 @@ Use the menu buttons for instant signal generation on popular pairs:
 • 🥇 GOLD (XAUUSD variants)
 • 📈 US30 (US30, US30Cash, etc.)
 • 💶 EURUSD
+• 💶 USD100 (USD100, USD100.cash, etc.)
+
 
 *Commands:*
 /start - Show main menu with quick access buttons
@@ -718,7 +724,7 @@ async def select_timeframe(update: Update, context: ContextTypes.DEFAULT_TYPE) -
 • Take Profit 2: {signal.take_profit_2:.5f} (Move SL to BE!)
 • Take Profit 3: {signal.take_profit_3:.5f} (Manual closure)
 
-💡 *Reasoning:* {signal.reasoning}
+💡 #*Reasoning:* {signal.reasoning}
 
 ⏰ *Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
 ⏱️ Valid for 5 minutes for entry.
@@ -774,6 +780,7 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         symbol_variants = {
             "gold": ["XAUUSD", "XAUUSD.a", "XAUUSD.", "GOLD", "XAUUSDm", "GOLDs+"],
             "us30": ["US30", "US30Cash", "US30.cash", "US30USD", "US30.", "DJ30", "USTEC", "US30+"],
+            "us100": ["US100", "US100Cash", "US100.cash", "NAS100", "US100.", "NASDAQ", "US100+"],
             "eurusd": ["EURUSD", "EURUSD.a", "EURUSD.", "EURUSDm", "EURUSD+"]
         }
         
@@ -782,7 +789,7 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
             return
         
         # Send processing message
-        await query.message.reply_text(f"🔄 Analyzing {pair_key} on {timeframe_str} timeframe...")
+        await query.message.reply_text(f"🔄 Analyzing {pair_key}.upper() on {timeframe_str} timeframe...")
         
         # Get available symbols from MT5
         import asyncio
@@ -979,7 +986,7 @@ def main():
     application.add_handler(CallbackQueryHandler(button_callback))
 
     # Start the bot
-    print("Bot started...")
+    print("Signal Bot started...")
 
     # Run the bot until you press Ctrl-C (this is blocking and handles the event loop)
     #application.run_polling(allowed_updates=Update.ALL_TYPES)

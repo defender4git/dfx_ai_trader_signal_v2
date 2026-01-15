@@ -340,6 +340,8 @@ class MT5TradingEA:
         if account_info:
             print(f"Account: {account_info.login}")
             print(f"Balance: ${account_info.balance:.2f}")
+            print(f"Equity: ${account_info.equity:.2f}")
+            print(f"Leverage: {account_info.leverage}x")
         return True
 
     def disconnect_mt5(self):
@@ -727,6 +729,7 @@ async def select_timeframe(update: Update, context: ContextTypes.DEFAULT_TYPE) -
         await update.message.reply_text(f"📊 Signal generated but confidence is {signal.confidence}. No actionable signal at this time.")
 
     return ConversationHandler.END
+    #return MessageHandler.END
 
 async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """Cancel the conversation."""
@@ -736,19 +739,27 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Handle button callbacks for quick signal generation."""
     query = update.callback_query
-    await query.answer()
+    
+    # Log callback data for debugging
+    logging.info(f"Button callback received: {query.data}")
+    
+    # Acknowledge the callback immediately
+    await query.answer("Processing your request...")
     
     if query.data == "menu_help":
+        logging.info("Help button clicked")
         await help_command(update, context)
         return
     
     if query.data == "menu_signal":
+        logging.info("Signal menu button clicked")
         # Redirect to interactive signal generation
         await query.message.reply_text("Please use /signal command to start interactive signal generation.")
         return
     
     # Parse quick signal request
     if query.data.startswith("quick_"):
+        logging.info(f"Quick signal button clicked: {query.data}")
         parts = query.data.replace("quick_", "").split("_")
         if len(parts) != 2:
             await query.message.reply_text("❌ Invalid button data.")
@@ -757,11 +768,13 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         pair_key = parts[0]
         timeframe_str = parts[1].upper()
         
+        logging.info(f"Parsed: pair={pair_key}, timeframe={timeframe_str}")
+        
         # Map pair keys to possible broker symbols
         symbol_variants = {
-            "gold": ["XAUUSD", "XAUUSD.a", "XAUUSD.", "GOLD", "XAUUSDm"],
-            "us30": ["US30", "US30Cash", "US30.cash", "US30USD", "US30.", "DJ30", "USTEC"],
-            "eurusd": ["EURUSD", "EURUSD.a", "EURUSD.", "EURUSDm"]
+            "gold": ["XAUUSD", "XAUUSD.a", "XAUUSD.", "GOLD", "XAUUSDm", "GOLDs+"],
+            "us30": ["US30", "US30Cash", "US30.cash", "US30USD", "US30.", "DJ30", "USTEC", "US30+"],
+            "eurusd": ["EURUSD", "EURUSD.a", "EURUSD.", "EURUSDm", "EURUSD+"]
         }
         
         if pair_key not in symbol_variants:
@@ -775,31 +788,50 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         import asyncio
         loop = asyncio.get_event_loop()
         
+        logging.info("Connecting to MT5 to find matching symbol...")
+        
         def get_matching_symbol():
-            if not mt5.initialize():
-                return None, "Failed to connect to MT5"
-            
-            symbols = mt5.symbols_get()
-            if symbols is None:
-                mt5.shutdown()
-                return None, "Failed to get symbols"
-            
-            market_watch_symbols = [s.name for s in symbols if s.visible]
-            
-            # Find matching symbol
-            for variant in symbol_variants[pair_key]:
-                if variant in market_watch_symbols:
+            try:
+                if not mt5.initialize():
+                    logging.error(f"MT5 init failed: {mt5.last_error()}")
+                    return None, "Failed to connect to MT5"
+                
+                symbols = mt5.symbols_get()
+                if symbols is None:
                     mt5.shutdown()
-                    return variant, None
-            
-            mt5.shutdown()
-            return None, f"No {pair_key} symbol found in Market Watch. Available symbols: {', '.join(market_watch_symbols[:5])}"
+                    logging.error("Failed to get symbols")
+                    return None, "Failed to get symbols"
+                
+                market_watch_symbols = [s.name for s in symbols if s.visible]
+                logging.info(f"Found {len(market_watch_symbols)} symbols in Market Watch")
+                
+                # Find matching symbol
+                for variant in symbol_variants[pair_key]:
+                    if variant in market_watch_symbols:
+                        logging.info(f"Matched symbol: {variant}")
+                        mt5.shutdown()
+                        return variant, None
+                
+                mt5.shutdown()
+                logging.warning(f"No match found for {pair_key}")
+                return None, f"No {pair_key} symbol found in Market Watch. Available: {', '.join(market_watch_symbols[:5])}"
+            except Exception as e:
+                logging.error(f"Error in get_matching_symbol: {str(e)}")
+                return None, str(e)
         
         symbol, error = await loop.run_in_executor(None, get_matching_symbol)
         
         if error:
+            logging.error(f"Error finding symbol: {error}")
             await query.message.reply_text(f"❌ {error}")
             return
+        
+        if symbol is None:
+            logging.error(f"Symbol is None for {pair_key}")
+            await query.message.reply_text(f"❌ Symbol not found in Market Watch. Please add {pair_key} to your MT5 Market Watch.")
+            return
+        
+        logging.info(f"Using symbol: {symbol}")
         
         # Map timeframe
         timeframe_map = {
@@ -822,42 +854,59 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         LOOKBACK = 150
         RISK_PERCENT = 1.0
         
+        logging.info(f"Starting signal generation for {symbol} on {timeframe_str}")
+        
         def generate_trading_signal():
-            ea = MT5TradingEA(
-                symbol=symbol,
-                timeframe=timeframe,
-                lookback=LOOKBACK,
-                account_risk_percent=RISK_PERCENT
-            )
-            
-            if not ea.connect_mt5():
-                return None, "Failed to connect to MT5."
-            
             try:
+                ea = MT5TradingEA(
+                    symbol=symbol,
+                    timeframe=timeframe,
+                    lookback=LOOKBACK,
+                    account_risk_percent=RISK_PERCENT
+                )
+                
+                if not ea.connect_mt5():
+                    logging.error("EA failed to connect to MT5")
+                    return None, "Failed to connect to MT5."
+                
                 df = ea.get_market_data()
                 if df is None:
+                    logging.error("Failed to get market data")
                     ea.disconnect_mt5()
                     return None, "Failed to get market data."
                 
+                logging.info(f"Got {len(df)} candles of data")
+                
                 indicators = ea.calculate_indicators(df)
+                logging.info("Indicators calculated")
+                
                 signal = ea.generate_signal(indicators)
+                logging.info(f"Signal generated: {signal.signal_type} with {signal.confidence} confidence")
                 
                 ea.disconnect_mt5()
                 return signal, None
             
             except Exception as e:
-                ea.disconnect_mt5()
+                logging.error(f"Error in generate_trading_signal: {str(e)}")
+                try:
+                    ea.disconnect_mt5()
+                except:
+                    pass
                 return None, f"Error: {str(e)}"
         
         signal, error = await loop.run_in_executor(None, generate_trading_signal)
         
         if error:
+            logging.error(f"Signal generation error: {error}")
             await query.message.reply_text(f"❌ {error}")
             return
         
         if signal is None:
+            logging.error("Signal is None")
             await query.message.reply_text("❌ Failed to generate signal.")
             return
+        
+        logging.info(f"Signal ready to send: {signal.signal_type}")
         
         # Check confidence and send signal
         if signal.confidence.upper() in ["HIGH", "MEDIUM"]:
@@ -891,19 +940,13 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
                 f"No actionable signal at this time.\n\n"
                 f"💡 Current analysis: {signal.reasoning}"
             )
-        return ConversationHandler.END
-
-async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
-    """Cancel the conversation."""
-    await update.message.reply_text("Signal generation cancelled.")
-    return ConversationHandler.END
-
+ 
 def main():
     """Start the bot."""
     # Create custom request with proper timeouts
     request = HTTPXRequest(
         connection_pool_size=8,
-        connect_timeout=10.0,
+        connect_timeout=5.0,
         read_timeout=30.0,
     )
     
@@ -932,11 +975,15 @@ def main():
 
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))
 
+    # Add callback query handler for buttons
+    application.add_handler(CallbackQueryHandler(button_callback))
+
     # Start the bot
     print("Bot started...")
 
     # Run the bot until you press Ctrl-C (this is blocking and handles the event loop)
-    application.run_polling(allowed_updates=Update.ALL_TYPES)
+    #application.run_polling(allowed_updates=Update.ALL_TYPES)
+    application.run_polling()
 
 if __name__ == '__main__':
     main()
