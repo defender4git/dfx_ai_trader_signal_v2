@@ -4,6 +4,7 @@ from telegram.request import HTTPXRequest
 import os
 import logging
 from dotenv import load_dotenv
+import openai
 import MetaTrader5 as mt5
 import pandas as pd
 import numpy as np
@@ -373,7 +374,7 @@ class MT5TradingEA:
             'cci': self.analyzer.calculate_cci(df),
             'stochastic_k': 0.0,
             'stochastic_d': 0.0,
-            'ema_20': self.analyzer.calculate_ema(df, 20),
+            'ema_20': self.analyzer.calculate_ema(df, 11), # Changed to 11 for faster response from 20
             'ema_50': self.analyzer.calculate_ema(df, 50),
             'current_price': df['close'].iloc[-1]
         }
@@ -488,6 +489,68 @@ class MT5TradingEA:
 
         return signal
 
+def analyze_with_openai(reasoning: str, symbol: str) -> str:
+    # Summarize reasoning to reduce token count and prevent rate limits
+    parts = reasoning.split(' | ')
+    summary_parts = []
+    for part in parts:
+        if 'Signal Strength' in part:
+            summary_parts.append(part)
+        elif 'Trend' in part:
+            summary_parts.append(part)
+        elif 'Volatility' in part:
+            summary_parts.append(part.replace('Volatility: ', 'Vol: '))
+        elif 'Bullish Factors' in part and len(part.split(': ')) > 1 and part.split(': ')[1].strip():
+            factors = part.split(': ')[1][:150]  # limit length
+            summary_parts.append(f'Bullish: {factors}')
+        elif 'Bearish Factors' in part and len(part.split(': ')) > 1 and part.split(': ')[1].strip():
+            factors = part.split(': ')[1][:150]
+            summary_parts.append(f'Bearish: {factors}')
+    summary = ' | '.join(summary_parts)
+    if not summary:
+        summary = reasoning[:300]
+
+    try:
+        client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                #{"role": "system", "content": "You are a trading analyst. Provide concise insights on this trading signal."},
+                #{"role": "user", "content": summary}
+                {"role": "user", "content": f"Analyze this trading signal for {symbol} with reasoning: {summary}and provide concise insights"}
+            ],
+            max_tokens=512,
+            temperature=0.7
+            #max_tokens=150
+        )
+        response_text = response.choices[0].message.content.strip()
+        import re
+
+        response_text2 = re.findall(r"### Conclusion[\s\S]*?(?=\n\n|\Z)", response_text)
+
+
+        # mesgs = response_text.split(' | ')
+        # logging.info(f"OpenAI response parts: {mesgs}")
+        # mesgs_part = []
+        # for mesg in mesgs:
+        #   if '### Conclusion' in mesg:
+        #     mesgs_part.append(mesg)
+        # response_text2 = ' | '.join(mesgs_part)
+    
+        # Debug: Check if response_text is empty or not JSON
+        if not response_text2 or not response_text2.strip():
+            print(f"OpenAI returned empty response")
+        return response_text2
+    except openai.RateLimitError as rate_error:
+        logging.warning(f"OpenAI rate limit exceeded: {rate_error}")
+        print(f"OpenAI rate limit exceeded - using fallback analysis")
+        return response_text2
+    except Exception as api_error:
+        print(f"OpenAI API Error: {api_error}")
+        return response_text2
+    except Exception as e:
+        return f"AI analysis failed: {str(e)}"
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Send a message when the command /start is issued."""
     # Create quick access buttons for popular pairs
@@ -500,8 +563,16 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             InlineKeyboardButton("🥇 GOLD (M15)", callback_data="quick_gold_m15")
         ],
         [
+            InlineKeyboardButton("🥇 BITCOIN (H1)", callback_data="quick_btc_h1"),
+            InlineKeyboardButton("🥇 BITCOIN (M15)", callback_data="quick_btc_m15")
+        ],
+        [
             InlineKeyboardButton("📈 US30 (H1)", callback_data="quick_us30_h1"),
             InlineKeyboardButton("📈 US30 (M15)", callback_data="quick_us30_m15")
+        ],
+        [
+            InlineKeyboardButton("📈 US100 (H1)", callback_data="quick_us100_h1"),
+            InlineKeyboardButton("📈 US100 (M15)", callback_data="quick_us100_m15")
         ],
         [
             InlineKeyboardButton("💶 EURUSD (H1)", callback_data="quick_eurusd_h1"),
@@ -533,6 +604,9 @@ Use the menu buttons for instant signal generation on popular pairs:
 • 🥇 GOLD (XAUUSD variants)
 • 📈 US30 (US30, US30Cash, etc.)
 • 💶 EURUSD
+• 💶 USD100 (USD100, USD100.cash, etc.)
+• 💶 BITCOIN (BTCUSD.)
+
 
 *Commands:*
 /start - Show main menu with quick access buttons
@@ -700,6 +774,7 @@ async def select_timeframe(update: Update, context: ContextTypes.DEFAULT_TYPE) -
 
     # Check confidence
     if signal.confidence.upper() in ["HIGH", "MEDIUM"]:
+        ai_analysis = await loop.run_in_executor(None, analyze_with_openai, signal.reasoning)
         # Format message
         direction_emoji = "🟢" if signal.signal_type == "LONG" else "🔴"
         message = f"""
@@ -709,19 +784,21 @@ async def select_timeframe(update: Update, context: ContextTypes.DEFAULT_TYPE) -
 📊 *Confidence:* {signal.confidence}
 📈 *Timeframe:* {signal.timeframe}
 
-💰 *Entry Price:* {signal.entry_price:.5f}
+💰 *Entry Price:* {signal.entry_price:.3f}
 📏 *Position Size:* {signal.position_size:.2f} lots
 
 🛡️ *Risk Management:*
 • Stop Loss: {signal.stop_loss:.5f}
-• Take Profit 1: {signal.take_profit_1:.5f}
-• Take Profit 2: {signal.take_profit_2:.5f} (Move SL to BE!)
-• Take Profit 3: {signal.take_profit_3:.5f} (Manual closure)
+• Take Profit 1: {signal.take_profit_1:.3f}
+• Take Profit 2: {signal.take_profit_2:.3f} (Move SL to BE!)
+• Take Profit 3: {signal.take_profit_3:.3f} (Manual closure)
 
 💡 *Reasoning:* {signal.reasoning}
 
+🤖 *AI Analysis:* {ai_analysis}
+
 ⏰ *Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
-⏱️ Valid for 5 minutes for entry.
+⏱️ Valid for 5 minutes for entry. Powered by Nsikak Paulinus Trading Bot.
         """.strip()
 
         await update.message.reply_text(message, parse_mode='Markdown')
@@ -773,8 +850,10 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         # Map pair keys to possible broker symbols
         symbol_variants = {
             "gold": ["XAUUSD", "XAUUSD.a", "XAUUSD.", "GOLD", "XAUUSDm", "GOLDs+"],
-            "us30": ["US30", "US30Cash", "US30.cash", "US30USD", "US30.", "DJ30", "USTEC", "US30+"],
-            "eurusd": ["EURUSD", "EURUSD.a", "EURUSD.", "EURUSDm", "EURUSD+"]
+            "us30": ["US30", "US30Cash", "US30.cash", "US30USD", "US30.", "DJ30", "USTEC", "US30+","US30m"],
+            "us100": ["US100", "US100Cash", "US100.cash", "NAS100", "US100.", "NASDAQ", "US100+", "US100m"],
+            "eurusd": ["EURUSD", "EURUSD.a", "EURUSD.", "EURUSDm", "EURUSD+"],
+            "btc": ["BTCUSD", "BTCUSD.a", "BTCUSD.", "BTCUSDm", "BTUSD+"]
         }
         
         if pair_key not in symbol_variants:
@@ -910,27 +989,30 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         
         # Check confidence and send signal
         if signal.confidence.upper() in ["HIGH", "MEDIUM"]:
+            ai_analysis = await loop.run_in_executor(None, analyze_with_openai, signal.reasoning, signal.symbol)
             direction_emoji = "🟢" if signal.signal_type == "LONG" else "🔴"
             message = f"""
-🚨 *TRADING SIGNAL ALERT* 🚨
-
-{direction_emoji} *{signal.signal_type}* on {signal.symbol}
-📊 *Confidence:* {signal.confidence}
-📈 *Timeframe:* {signal.timeframe}
-
-💰 *Entry Price:* {signal.entry_price:.5f}
-📏 *Position Size:* {signal.position_size:.2f} lots
-
-🛡️ *Risk Management:*
-• Stop Loss: {signal.stop_loss:.5f}
-• Take Profit 1: {signal.take_profit_1:.5f}
-• Take Profit 2: {signal.take_profit_2:.5f} (Move SL to BE!)
-• Take Profit 3: {signal.take_profit_3:.5f} (Manual closure)
-
-💡 *Reasoning:* {signal.reasoning}
-
-⏰ *Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
-⏱️ Valid for 5 minutes for entry.
+    🚨 *TRADING SIGNAL ALERT* 🚨
+    
+    {direction_emoji} *{signal.signal_type}* on {signal.symbol}
+    📊 *Confidence:* {signal.confidence}
+    📈 *Timeframe:* {signal.timeframe}
+    
+    💰 *Entry Price:* {signal.entry_price:.3f}
+    📏 *Position Size:* {signal.position_size:.2f} lots
+    
+    🛡️ *Risk Management:*
+    • Stop Loss: {signal.stop_loss:.3f}
+    • Take Profit 1: {signal.take_profit_1:.3f}
+    • Take Profit 2: {signal.take_profit_2:.3f} (Move SL to BE!)
+    • Take Profit 3: {signal.take_profit_3:.3f} (Manual closure)
+    
+    💡 *Reasoning:* {signal.reasoning}
+    
+    🤖 *AI Analysis:* {ai_analysis}
+    
+    ⏰ *Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
+    ⏱️ Valid for 5 minutes for entry. Powered by Nsikak Paulinus Trading Bot.
             """.strip()
             
             await query.message.reply_text(message, parse_mode='Markdown')
@@ -979,10 +1061,12 @@ def main():
     application.add_handler(CallbackQueryHandler(button_callback))
 
     # Start the bot
-    print("Bot started...")
+    print("Signal Bot started...")
 
     # Run the bot until you press Ctrl-C (this is blocking and handles the event loop)
     #application.run_polling(allowed_updates=Update.ALL_TYPES)
+    import MetaTrader5 as mt5
+    mt5_connected = mt5.initialize()
     application.run_polling()
 
 if __name__ == '__main__':

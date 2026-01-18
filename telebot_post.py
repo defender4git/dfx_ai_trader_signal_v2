@@ -4,12 +4,15 @@ from telegram.request import HTTPXRequest
 import os
 import logging
 from dotenv import load_dotenv
+import openai
 import MetaTrader5 as mt5
 import pandas as pd
 import numpy as np
 from datetime import datetime
 from dataclasses import dataclass
 from typing import Dict, Optional, Tuple
+
+#this program sends trading signals to a telegram channel following technical analysis and AI evaluation.
 
 
 # Load environment variables from .env file
@@ -20,6 +23,9 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO
 )
+
+# TELEGRAM CHANNEL USERNAME - Add this to your .env file or set it here
+TELEGRAM_CHANNEL = "@dfxsignal1"  # Channel username with @
 
 @dataclass
 class TradingSignal:
@@ -373,7 +379,7 @@ class MT5TradingEA:
             'cci': self.analyzer.calculate_cci(df),
             'stochastic_k': 0.0,
             'stochastic_d': 0.0,
-            'ema_20': self.analyzer.calculate_ema(df, 20),
+            'ema_20': self.analyzer.calculate_ema(df, 11),
             'ema_50': self.analyzer.calculate_ema(df, 50),
             'current_price': df['close'].iloc[-1]
         }
@@ -488,9 +494,109 @@ class MT5TradingEA:
 
         return signal
 
+def analyze_with_openai(reasoning: str, symbol: str) -> str:
+    # Summarize reasoning to reduce token count and prevent rate limits
+    parts = reasoning.split(' | ')
+    summary_parts = []
+    for part in parts:
+        if 'Signal Strength' in part:
+            summary_parts.append(part)
+        elif 'Trend' in part:
+            summary_parts.append(part)
+        elif 'Volatility' in part:
+            summary_parts.append(part.replace('Volatility: ', 'Vol: '))
+        elif 'Bullish Factors' in part and len(part.split(': ')) > 1 and part.split(': ')[1].strip():
+            factors = part.split(': ')[1][:150]
+            summary_parts.append(f'Bullish: {factors}')
+        elif 'Bearish Factors' in part and len(part.split(': ')) > 1 and part.split(': ')[1].strip():
+            factors = part.split(': ')[1][:150]
+            summary_parts.append(f'Bearish: {factors}')
+    summary = ' | '.join(summary_parts)
+    if not summary:
+        summary = reasoning[:300]
+
+    try:
+        client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "user", "content": f"Analyze this trading signal for {symbol} with reasoning: {summary} and provide concise insights"}
+            ],
+            max_tokens=512,
+            temperature=0.7
+        )
+        response_text = response.choices[0].message.content.strip()
+        import re
+
+        response_text2 = re.findall(r"### Conclusion[\s\S]*?(?=\n\n|\Z)", response_text)
+        
+        if not response_text2 or not response_text2[0].strip():
+            return response_text
+        return response_text2[0]
+    except openai.RateLimitError as rate_error:
+        logging.warning(f"OpenAI rate limit exceeded: {rate_error}")
+        return "AI analysis temporarily unavailable"
+    except Exception as e:
+        logging.error(f"OpenAI API Error: {e}")
+        return "AI analysis failed"
+
+async def send_signal_to_channel(context: ContextTypes.DEFAULT_TYPE, signal: TradingSignal, ai_analysis: str) -> bool:
+    """
+    Send trading signal to Telegram channel
+    
+    Args:
+        context: Telegram context
+        signal: TradingSignal object
+        ai_analysis: AI analysis text
+        
+    Returns:
+        bool: True if successful, False otherwise
+    """
+    try:
+        direction_emoji = "🟢" if signal.signal_type == "LONG" else "🔴"
+        
+        channel_message = f"""
+🚨 *TRADING SIGNAL ALERT* 🚨
+
+{direction_emoji} *{signal.signal_type}* on {signal.symbol}
+📊 *Confidence:* {signal.confidence}
+📈 *Timeframe:* {signal.timeframe}
+
+💰 *Entry Price:* {signal.entry_price:.3f}
+📏 *Position Size:* {signal.position_size:.2f} lots
+
+🛡️ *Risk Management:*
+• Stop Loss: {signal.stop_loss:.3f}
+• Take Profit 1: {signal.take_profit_1:.3f}
+• Take Profit 2: {signal.take_profit_2:.3f} (Move SL to BE!)
+• Take Profit 3: {signal.take_profit_3:.3f} (Manual closure)
+
+💡 *Reasoning:* {signal.reasoning}
+
+🤖 *AI Analysis:* {ai_analysis}
+
+⏰ *Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
+⏱️ Valid for 5 minutes for entry.
+
+📢 *Powered by DFX Signal Master*
+        """.strip()
+        
+        # Send to channel
+        await context.bot.send_message(
+            chat_id=TELEGRAM_CHANNEL,
+            text=channel_message,
+            parse_mode='Markdown'
+        )
+        
+        logging.info(f"Signal sent to channel {TELEGRAM_CHANNEL}")
+        return True
+        
+    except Exception as e:
+        logging.error(f"Failed to send signal to channel: {e}")
+        return False
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Send a message when the command /start is issued."""
-    # Create quick access buttons for popular pairs
     keyboard = [
         [
             InlineKeyboardButton("📊 Generate Signal", callback_data="menu_signal")
@@ -498,6 +604,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         [
             InlineKeyboardButton("🥇 GOLD (H1)", callback_data="quick_gold_h1"),
             InlineKeyboardButton("🥇 GOLD (M15)", callback_data="quick_gold_m15")
+        ],
+        [
+            InlineKeyboardButton("🥇 BITCOIN (H1)", callback_data="quick_btc_h1"),
+            InlineKeyboardButton("🥇 BITCOIN (M15)", callback_data="quick_btc_m15")
         ],
         [
             InlineKeyboardButton("📈 US30 (H1)", callback_data="quick_us30_h1"),
@@ -522,23 +632,24 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         '🚀 Quick access to popular pairs or generate custom signals:\n\n'
         '• Click buttons below for instant analysis\n'
         '• Or use /signal for custom symbol/timeframe\n'
-        '• Use /help for more information',
+        '• Use /help for more information\n\n'
+        f'📢 *Signals are broadcast to {TELEGRAM_CHANNEL}*',
         reply_markup=reply_markup,
         parse_mode='Markdown'
     )
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Send a message when the command /help is issued."""
-    help_text = """
+    help_text = f"""
 📖 *Trading Signal Bot - Help Guide*
 
 *Quick Access Buttons:*
 Use the menu buttons for instant signal generation on popular pairs:
 • 🥇 GOLD (XAUUSD variants)
 • 📈 US30 (US30, US30Cash, etc.)
+• 📈 US100 (US100, US100Cash, etc.)
 • 💶 EURUSD
-• 💶 USD100 (USD100, USD100.cash, etc.)
-
+• 🥇 BITCOIN (BTCUSD)
 
 *Commands:*
 /start - Show main menu with quick access buttons
@@ -550,6 +661,7 @@ Use the menu buttons for instant signal generation on popular pairs:
 1. Click a quick button OR use /signal
 2. Bot analyzes market using multiple indicators
 3. Receive actionable signals with entry, SL, and TPs
+4. Signals are automatically broadcast to {TELEGRAM_CHANNEL}
 
 *Signal Confidence Levels:*
 • HIGH - Strong confirmation from multiple indicators
@@ -574,31 +686,25 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 async def start_signal(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """Start the signal generation conversation."""
     
-    # Send initial message first
     await update.message.reply_text("🔄 Connecting to server and fetching data...")
     
-    # Run MT5 operations in executor to avoid blocking
     import asyncio
     loop = asyncio.get_event_loop()
     
     def get_mt5_symbols():
-        # Connect to MT5 to get symbols
         if not mt5.initialize():
             return None
         
-        # Get only symbols visible in Market Watch
         symbols = mt5.symbols_get()
         if symbols is None or len(symbols) == 0:
             mt5.shutdown()
             return []
         
-        # Filter only symbols that are visible in Market Watch
         market_watch_symbols = [s.name for s in symbols if s.visible]
         
         mt5.shutdown()
         return market_watch_symbols
     
-    # Run in executor to avoid blocking
     market_watch_symbols = await loop.run_in_executor(None, get_mt5_symbols)
     
     if market_watch_symbols is None:
@@ -618,8 +724,8 @@ async def start_signal(update: Update, context: ContextTypes.DEFAULT_TYPE) -> in
 
 async def select_symbol(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """Handle symbol selection."""
-    symbol = update.message.text.strip()  # Normalize symbol input
-    if symbol not in [s for s in context.user_data['symbols']]: #removed .upper()
+    symbol = update.message.text.strip()
+    if symbol not in [s for s in context.user_data['symbols']]:
         await update.message.reply_text("Invalid symbol. Please select from the list.")
         return SELECT_SYMBOL
 
@@ -651,18 +757,15 @@ async def select_timeframe(update: Update, context: ContextTypes.DEFAULT_TYPE) -
     }
     timeframe = timeframe_map[timeframe_str]
 
-    # Send processing message
     await update.message.reply_text(f"🔄 Analyzing {symbol} on {timeframe_str} timeframe...")
 
     LOOKBACK = 150
     RISK_PERCENT = 1.0
 
-    # Run MT5 operations in executor
     import asyncio
     loop = asyncio.get_event_loop()
     
     def generate_trading_signal():
-        # Create EA instance
         ea = MT5TradingEA(
             symbol=symbol,
             timeframe=timeframe,
@@ -674,16 +777,12 @@ async def select_timeframe(update: Update, context: ContextTypes.DEFAULT_TYPE) -
             return None, "Failed to connect to MT5."
 
         try:
-            # Get market data
             df = ea.get_market_data()
             if df is None:
                 ea.disconnect_mt5()
                 return None, "Failed to get market data."
 
-            # Calculate indicators
             indicators = ea.calculate_indicators(df)
-
-            # Generate signal
             signal = ea.generate_signal(indicators)
             
             ea.disconnect_mt5()
@@ -693,7 +792,6 @@ async def select_timeframe(update: Update, context: ContextTypes.DEFAULT_TYPE) -
             ea.disconnect_mt5()
             return None, f"Error: {str(e)}"
     
-    # Run signal generation in executor
     signal, error = await loop.run_in_executor(None, generate_trading_signal)
     
     if error:
@@ -704,38 +802,46 @@ async def select_timeframe(update: Update, context: ContextTypes.DEFAULT_TYPE) -
         await update.message.reply_text("❌ Failed to generate signal.")
         return ConversationHandler.END
 
-    # Check confidence
     if signal.confidence.upper() in ["HIGH", "MEDIUM"]:
-        # Format message
+        ai_analysis = await loop.run_in_executor(None, analyze_with_openai, signal.reasoning, signal.symbol)
+        
         direction_emoji = "🟢" if signal.signal_type == "LONG" else "🔴"
         message = f"""
 🚨 *TRADING SIGNAL ALERT* 🚨
 
 {direction_emoji} *{signal.signal_type}* on {signal.symbol}
-📊 #*Confidence:* {signal.confidence}
-📈 #*Timeframe:* {signal.timeframe}
+📊 *Confidence:* {signal.confidence}
+📈 *Timeframe:* {signal.timeframe}
 
-💰 #*Entry Price:* {signal.entry_price:.5f}
-📏 #*Position Size:* {signal.position_size:.2f} lots
+💰 *Entry Price:* {signal.entry_price:.3f}
+📏 *Position Size:* {signal.position_size:.2f} lots
 
-🛡️ #*Risk Management:*
-• Stop Loss: {signal.stop_loss:.5f}
-• Take Profit 1: {signal.take_profit_1:.5f}
-• Take Profit 2: {signal.take_profit_2:.5f} (Move SL to BE!)
-• Take Profit 3: {signal.take_profit_3:.5f} (Manual closure)
+🛡️ *Risk Management:*
+• Stop Loss: {signal.stop_loss:.3f}
+• Take Profit 1: {signal.take_profit_1:.3f}
+• Take Profit 2: {signal.take_profit_2:.3f} (Move SL to BE!)
+• Take Profit 3: {signal.take_profit_3:.3f} (Manual closure)
 
-💡 #*Reasoning:* {signal.reasoning}
+💡 *Reasoning:* {signal.reasoning}
 
-⏰ #*Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
-⏱️ Valid for 5 minutes for entry.
+🤖 *AI Analysis:* {ai_analysis}
+
+⏰ *Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
+⏱️ Valid for 5 minutes for entry. Powered by Nsikak Paulinus Trading Bot.
         """.strip()
 
         await update.message.reply_text(message, parse_mode='Markdown')
+        
+        # Send to channel
+        channel_sent = await send_signal_to_channel(context, signal, ai_analysis)
+        if channel_sent:
+            await update.message.reply_text(f"✅ Signal also broadcast to {TELEGRAM_CHANNEL}")
+        else:
+            await update.message.reply_text("⚠️ Signal sent to you, but channel broadcast failed")
     else:
         await update.message.reply_text(f"📊 Signal generated but confidence is {signal.confidence}. No actionable signal at this time.")
 
     return ConversationHandler.END
-    #return MessageHandler.END
 
 async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """Cancel the conversation."""
@@ -746,10 +852,8 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     """Handle button callbacks for quick signal generation."""
     query = update.callback_query
     
-    # Log callback data for debugging
     logging.info(f"Button callback received: {query.data}")
     
-    # Acknowledge the callback immediately
     await query.answer("Processing your request...")
     
     if query.data == "menu_help":
@@ -759,11 +863,9 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     
     if query.data == "menu_signal":
         logging.info("Signal menu button clicked")
-        # Redirect to interactive signal generation
         await query.message.reply_text("Please use /signal command to start interactive signal generation.")
         return
     
-    # Parse quick signal request
     if query.data.startswith("quick_"):
         logging.info(f"Quick signal button clicked: {query.data}")
         parts = query.data.replace("quick_", "").split("_")
@@ -776,22 +878,20 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         
         logging.info(f"Parsed: pair={pair_key}, timeframe={timeframe_str}")
         
-        # Map pair keys to possible broker symbols
         symbol_variants = {
             "gold": ["XAUUSD", "XAUUSD.a", "XAUUSD.", "GOLD", "XAUUSDm", "GOLDs+"],
-            "us30": ["US30", "US30Cash", "US30.cash", "US30USD", "US30.", "DJ30", "USTEC", "US30+"],
-            "us100": ["US100", "US100Cash", "US100.cash", "NAS100", "US100.", "NASDAQ", "US100+"],
-            "eurusd": ["EURUSD", "EURUSD.a", "EURUSD.", "EURUSDm", "EURUSD+"]
+            "us30": ["US30", "US30Cash", "US30.cash", "US30USD", "US30.", "DJ30", "USTEC", "US30+","US30m"],
+            "us100": ["US100", "US100Cash", "US100.cash", "NAS100", "US100.", "NASDAQ", "US100+", "US100m"],
+            "eurusd": ["EURUSD", "EURUSD.a", "EURUSD.", "EURUSDm", "EURUSD+"],
+            "btc": ["BTCUSD", "BTCUSD.a", "BTCUSD.", "BTCUSDm", "BTUSD+"]
         }
         
         if pair_key not in symbol_variants:
             await query.message.reply_text("❌ Unknown symbol key.")
             return
         
-        # Send processing message
-        await query.message.reply_text(f"🔄 Analyzing {pair_key} on {timeframe_str} timeframe...")
+        await query.message.reply_text(f"🔄 Analyzing {pair_key.upper()} on {timeframe_str} timeframe...")
         
-        # Get available symbols from MT5
         import asyncio
         loop = asyncio.get_event_loop()
         
@@ -812,7 +912,6 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
                 market_watch_symbols = [s.name for s in symbols if s.visible]
                 logging.info(f"Found {len(market_watch_symbols)} symbols in Market Watch")
                 
-                # Find matching symbol
                 for variant in symbol_variants[pair_key]:
                     if variant in market_watch_symbols:
                         logging.info(f"Matched symbol: {variant}")
@@ -840,7 +939,6 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         
         logging.info(f"Using symbol: {symbol}")
         
-        # Map timeframe
         timeframe_map = {
             "M1": mt5.TIMEFRAME_M1,
             "M5": mt5.TIMEFRAME_M5,
@@ -857,7 +955,6 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         
         timeframe = timeframe_map[timeframe_str]
         
-        # Generate signal
         LOOKBACK = 150
         RISK_PERCENT = 1.0
         
@@ -915,32 +1012,41 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         
         logging.info(f"Signal ready to send: {signal.signal_type}")
         
-        # Check confidence and send signal
         if signal.confidence.upper() in ["HIGH", "MEDIUM"]:
+            ai_analysis = await loop.run_in_executor(None, analyze_with_openai, signal.reasoning, signal.symbol)
             direction_emoji = "🟢" if signal.signal_type == "LONG" else "🔴"
             message = f"""
 🚨 *TRADING SIGNAL ALERT* 🚨
 
 {direction_emoji} *{signal.signal_type}* on {signal.symbol}
-📊 #*Confidence:* {signal.confidence}
-📈 #*Timeframe:* {signal.timeframe}
+📊 *Confidence:* {signal.confidence}
+📈 *Timeframe:* {signal.timeframe}
 
-💰 #*Entry Price:* {signal.entry_price:.5f}
-📏 #*Position Size:* {signal.position_size:.2f} lots
+💰 *Entry Price:* {signal.entry_price:.3f}
+📏 *Position Size:* {signal.position_size:.2f} lots
 
-🛡️ #*Risk Management:*
-• Stop Loss: {signal.stop_loss:.5f}
-• Take Profit 1: {signal.take_profit_1:.5f}
-• Take Profit 2: {signal.take_profit_2:.5f} (Move SL to BE!)
-• Take Profit 3: {signal.take_profit_3:.5f} (Manual closure)
+🛡️ *Risk Management:*
+• Stop Loss: {signal.stop_loss:.3f}
+• Take Profit 1: {signal.take_profit_1:.3f}
+• Take Profit 2: {signal.take_profit_2:.3f} (Move SL to BE!)
+• Take Profit 3: {signal.take_profit_3:.3f} (Manual closure)
 
-💡 #*Reasoning:* {signal.reasoning}
+💡 *Reasoning:* {signal.reasoning}
 
-⏰ #*Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
-⏱️ Valid for 5 minutes for entry.
+🤖 *AI Analysis:* {ai_analysis}
+
+⏰ *Generated:* {signal.timestamp.strftime('%Y-%m-%d %H:%M:%S UTC')}
+⏱️ Valid for 5 minutes for entry. Powered by Nsikak Paulinus Trading Bot.
             """.strip()
             
             await query.message.reply_text(message, parse_mode='Markdown')
+            
+            # Send to channel
+            channel_sent = await send_signal_to_channel(context, signal, ai_analysis)
+            if channel_sent:
+                await query.message.reply_text(f"✅ Signal also broadcast to {TELEGRAM_CHANNEL}")
+            else:
+                await query.message.reply_text("⚠️ Signal sent to you, but channel broadcast failed")
         else:
             await query.message.reply_text(
                 f"📊 Signal generated but confidence is {signal.confidence}. "
@@ -950,14 +1056,12 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
  
 def main():
     """Start the bot."""
-    # Create custom request with proper timeouts
     request = HTTPXRequest(
         connection_pool_size=8,
         connect_timeout=5.0,
         read_timeout=30.0,
     )
     
-    # Create the Application with custom request
     application = (
         Application.builder()
         .token(os.getenv("TELEGRAM_BOT_TOKEN"))
@@ -965,11 +1069,9 @@ def main():
         .build()
     )
     
-    # on different commands - answer in Telegram
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("help", help_command))
 
-    # Signal conversation handler
     signal_conv_handler = ConversationHandler(
         entry_points=[CommandHandler("signal", start_signal)],
         states={
@@ -981,16 +1083,16 @@ def main():
     application.add_handler(signal_conv_handler)
 
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))
-
-    # Add callback query handler for buttons
     application.add_handler(CallbackQueryHandler(button_callback))
 
-    # Start the bot
     print("Signal Bot started...")
+    logging.info(f"Bot configured to broadcast signals to channel: {TELEGRAM_CHANNEL}")
 
-    # Run the bot until you press Ctrl-C (this is blocking and handles the event loop)
-    #application.run_polling(allowed_updates=Update.ALL_TYPES)
+    import MetaTrader5 as mt5
+    mt5_connected = mt5.initialize()
     application.run_polling()
 
 if __name__ == '__main__':
     main()
+
+
